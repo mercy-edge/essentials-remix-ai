@@ -1,0 +1,5879 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 55,
+  "exported": true,
+  "exported_note": "Generated from Data/Map055.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "5": {
+      "id": 5,
+      "name": "Singles results",
+      "x": 4,
+      "y": 3,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "Check results for which challenge?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Level 50",
+                  "Open Level",
+                  "Cancel"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Level 50"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbBattleChallenge.getPreviousWins("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"towersingle\")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbBattleChallenge.getMaxWins("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"towersingle\")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\PN's Battle Tower Level 50 Single Battle results:"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Last win streak: \\v[1]\\nRecord win streak: \\v[2]"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Open Level"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbBattleChallenge.getPreviousWins("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"towersingleopen\")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbBattleChallenge.getMaxWins("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"towersingleopen\")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\PN's Battle Tower Open Level Single Battle results:"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Last win streak: \\v[1]\\nRecord win streak: \\v[2]"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "11": {
+      "id": 11,
+      "name": "Nurse",
+      "x": 9,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 16",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This line of code sets the player's current position as "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "the spot they will return to after they lose a battle "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "and lack out."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Page 2 of this event detects when this happens, and "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "heals the player's Pokémon and wishes them better "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "luck in future."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbSetPokemonCenter"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rHello, and welcome to the Pokémon Center."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWe restore your tired Pokémon to full health."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWould you like to rest your Pokémon?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOK, I'll take your Pokémon for a few seconds."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$stats.poke_center_count += 1"
+              ]
+            ],
+            [
+              314,
+              1,
+              [
+                0
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Nurse turns to face the healing machine."
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFm87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Nurse places Poké Balls on the healing machine one at "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "a time."
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                1,
+                1,
+                0,
+                7,
+                1
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                6,
+                6,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              118,
+              1,
+              [
+                "Place ball"
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                6,
+                6,
+                1,
+                0,
+                1
+              ]
+            ],
+            [
+              250,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIhZCYXR0bGUgYmFsbCBzaGFrZQY6BkVUOgtAcGl0Y2hpaQ=="
+                }
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                6,
+                1,
+                1,
+                4
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "Place ball"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Healing animation and ME jingle."
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                10,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJm87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJg=="
+                }
+              ]
+            ],
+            [
+              249,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhFQa21uIGhlYWxpbmcGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                58
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Poké Balls are removed from healing machine, nurse "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "turns to face the player."
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                6,
+                6,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "get_character(10).pattern = 0"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                10,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJ287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJw=="
+                }
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkUOgpAY29kZWkUbzsHBzsIWwA7CWkVbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkUOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Pokérus check."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbPokerus?"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rYour Pokémon may be infected by Pokérus."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rLittle is known about the Pokérus except that they "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "are microscopic life-forms that attach to Pokémon."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWhile infected, Pokémon are said to grow "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "exceptionally well."
+              ]
+            ],
+            [
+              121,
+              2,
+              [
+                2,
+                2,
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rThank you for waiting."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWe've restored your Pokémon to full health."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Nurse bows."
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwlvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kGOgpAY29kZWkubzsHBzsIWwZpDzsKaRRvOwcHOwhbCUkiC05QQyAxNgY7CVRpAGkHaQA7CmkubzsHBzsIWwA7CmkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kGOgpAY29kZWku"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkPOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kAOgpAY29kZWku"
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWe hope to see you again!"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rWe hope to see you again!"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 16",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "Every map you can end up in after having all your "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Pokémon faint (typically Poké Centers and home) "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "must have an Autorun event in it like this one."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "This event fully heals all the player's Pokémon, says "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "something to that effect, and turns the \"Starting "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "over\" switch OFF again."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "For convenience, this can be a single page in an "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "NPC's event (e.g. Mom, a nurse)."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rFirst, you should restore your Pokémon to full "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "health."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$stats.poke_center_count += 1"
+              ]
+            ],
+            [
+              314,
+              0,
+              [
+                0
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Nurse turns to face the healing machine."
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFm87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "Nurse places Poké Balls on the healing machine one at "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "a time."
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                1,
+                1,
+                0,
+                7,
+                1
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                6,
+                6,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Place ball"
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                6,
+                6,
+                1,
+                0,
+                1
+              ]
+            ],
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIhZCYXR0bGUgYmFsbCBzaGFrZQY6BkVUOgtAcGl0Y2hpaQ=="
+                }
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                1,
+                6,
+                1,
+                1,
+                4
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Place ball"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "Healing animation and ME jingle."
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                10,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJm87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJg=="
+                }
+              ]
+            ],
+            [
+              249,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhFQa21uIGhlYWxpbmcGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                58
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Poké Balls are removed from healing machine, nurse "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "turns to face the player."
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                6,
+                6,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "get_character(10).pattern = 0"
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                10,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJ287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJw=="
+                }
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkUOgpAY29kZWkUbzsHBzsIWwA7CWkVbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkUOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rYour Pokémon have been healed to perfect health."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Nurse bows."
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwlvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kGOgpAY29kZWkubzsHBzsIWwZpDzsKaRRvOwcHOwhbCUkiC05QQyAxNgY7CVRpAGkHaQA7CmkubzsHBzsIWwA7CmkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kGOgpAY29kZWku"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkPOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kAOgpAY29kZWku"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWe hope you excel!"
+              ]
+            ],
+            [
+              121,
+              0,
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Doubles results",
+      "x": 18,
+      "y": 3,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "Check results for which challenge?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Level 50",
+                  "Open Level",
+                  "Cancel"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Level 50"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbBattleChallenge.getPreviousWins("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"towerdouble\")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbBattleChallenge.getMaxWins("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"towerdouble\")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\PN's Battle Tower Level 50 Double Battle results:"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Last win streak: \\v[1]\\nRecord win streak: \\v[2]"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Open Level"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbBattleChallenge.getPreviousWins("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"towerdoubleopen\")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbBattleChallenge.getMaxWins("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"towerdoubleopen\")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\PN's Battle Tower Open Level Double Battle results:"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Last win streak: \\v[1]\\nRecord win streak: \\v[2]"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 9,
+      "y": 13,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                52,
+                29,
+                9,
+                2,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "name": "Battle recorder",
+      "x": 13,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                8
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Play recorded battle",
+                  "Exit"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Play recorded battle"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "$PokemonGlobal.lastbattle != nil"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbPlayLastBattle"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "There is no battle recorded."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "Exit"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "PC",
+      "x": 5,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                8
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbPokeCenterPC"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "13": {
+      "id": 13,
+      "name": "Stairs to Stadium Cup",
+      "x": 17,
+      "y": 11,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpLG87Bwc7CFsAOwlpF287Bwc7CFsAOwlpDW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpLW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpLA=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpDQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpLQ=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                57,
+                16,
+                11,
+                4,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "name": "Elevator door singles",
+      "x": 2,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "doors9",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 1
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Single battles NPC",
+      "x": 2,
+      "y": 3,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 23",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rWelcome to the Battle Tower."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWould you like to participate in a single battle?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rDo you want to take the Level 50 challenge, or the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Open Level challenge?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Level 50",
+                  "Open Level",
+                  "Cancel"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Level 50"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbBattleChallenge.set("
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  \"towersingle\","
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  7,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  pbBattleTowerRules(false, false)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "Open Level"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbBattleChallenge.set("
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  \"towersingleopen\","
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  7,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  pbBattleTowerRules(false, true)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                2,
+                "Cancel"
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "End"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Has 3 or more eligible Pokemon level 100 or less?"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "!pbHasEligible?(3, 100)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rSorry, you can't participate. You need three "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "different Pokémon to enter."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rThey must be of a different species and hold "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "different items."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rCertain exotic species, as well as eggs, are "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "ineligible."
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "End"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rPlease choose the three Pokémon that will enter."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "!pbEntryScreen(3, 100)"
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "End"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbSaveScreen"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rPlease come this way."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Starting challenge type 0 (7 rounds)"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbBattleChallenge.start(0, 7)"
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwtvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsGaQk7CWkUbzsHBzsIWwA7CWkYbzsHBzsIWwA7CWkJbzsHBzsIWwA7CWkrbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWkibzsHBzsIWwA7CWkqbzsHBzsIWwZpCTsJaRRvOwcHOwhbADsJaRhvOwcHOwhbADsJaQlvOwcHOwhbADsJaStvOwcHOwhbADsJaQA6D0Bza2lwcGFibGVGOgxAcmVwZWF0Rg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWki"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              209,
+              2,
+              [
+                8,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              209,
+              2,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwpvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsGaQA7CWkvbzsHBzsIWwA7CWkrbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWkibzsHBzsIWwA7CWkqbzsHBzsIWwZpCTsJaRRvOwcHOwhbADsJaQlvOwcHOwhbADsJaQlvOwcHOwhbBmkAOwlpL287Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWki"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              208,
+              2,
+              [
+                0
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                8,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkUbzsHBzsIWwA7CWkXbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRZvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpFW87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              223,
+              2,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              2,
+              [
+                8
+              ]
+            ],
+            [
+              208,
+              2,
+              [
+                1
+              ]
+            ],
+            [
+              201,
+              2,
+              [
+                0,
+                56,
+                0,
+                6,
+                6,
+                1
+              ]
+            ],
+            [
+              223,
+              2,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              119,
+              2,
+              [
+                "End"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              118,
+              1,
+              [
+                "End"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rCome back another time."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbCancel"
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 23",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "If Won"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbBattleChallenge.decision == 1"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rCongratulations for winning."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "$player.battle_points < Settings::MAX_BATTLE_POINTS"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rPlease accept these Battle Point(s)."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "rounds = pbBattleChallenge.wins / 7"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "points = rounds"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "points = 15 if points > 15"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "max = Settings::MAX_BATTLE_POINTS"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "points = ["
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  max - $player.battle_points,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  points"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "].min"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pbSet(1, points)"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$player.battle_points += points"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "$stats.battle_points_won += points"
+              ]
+            ],
+            [
+              249,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIgtCUCBnZXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\PN obtained \\v[1] Battle Point(s)."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "$game_temp.last_battle_record != nil"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWould you like to record your last battle?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbRecordLastBattle"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\se[Pkmn exp full]The battle was recorded."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "Your results will be recorded.\\wtnp[15]"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbEnd"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rCome back another time."
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "If Lost or Forfeited"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbBattleChallenge.decision == 2"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rThanks for playing."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "$game_temp.last_battle_record != nil"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWould you like to record your last battle?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbRecordLastBattle"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\se[Pkmn exp full]The battle was recorded."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "Your results will be recorded.\\wtnp[15]"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbEnd"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rCome back another time."
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbBattleChallenge.pbResting?"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rWe've been waiting for you. Please come this way."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbGoOn"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwtvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsGaQk7CWkUbzsHBzsIWwA7CWkYbzsHBzsIWwA7CWkJbzsHBzsIWwA7CWkrbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWkibzsHBzsIWwA7CWkqbzsHBzsIWwZpCTsJaRRvOwcHOwhbADsJaRhvOwcHOwhbADsJaQlvOwcHOwhbADsJaStvOwcHOwhbADsJaQA6D0Bza2lwcGFibGVGOgxAcmVwZWF0Rg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWki"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              209,
+              1,
+              [
+                8,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwpvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsGaQA7CWkvbzsHBzsIWwA7CWkrbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWkibzsHBzsIWwA7CWkqbzsHBzsIWwZpCTsJaRRvOwcHOwhbADsJaQlvOwcHOwhbADsJaQlvOwcHOwhbBmkAOwlpL287Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWki"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              208,
+              1,
+              [
+                0
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                8,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkUbzsHBzsIWwA7CWkXbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRZvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpFW87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              208,
+              1,
+              [
+                1
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                56,
+                0,
+                6,
+                6,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rExcuse me, but you didn't save before finishing "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "your challenge last time."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rSorry, but your challenge has been canceled."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbEnd"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpIToTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "name": "Elevator door doubles",
+      "x": 16,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "doors9",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 1
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Double battles NPC",
+      "x": 16,
+      "y": 3,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 23",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rWelcome to the Battle Tower."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWould you like to participate in a double battle?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rDo you want to take the Level 50 challenge, or the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Open Level challenge?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Level 50",
+                  "Open Level",
+                  "Cancel"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Level 50"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbBattleChallenge.set("
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  \"towerdouble\","
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  7,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  pbBattleTowerRules(true, false)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "Open Level"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbBattleChallenge.set("
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  \"towerdoubleopen\","
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  7,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  pbBattleTowerRules(true, true)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                2,
+                "Cancel"
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "End"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Has 3 or more eligible Pokemon level 100 or less?"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "!pbHasEligible?(3, 100)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rSorry, you can't participate. You need three "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "different Pokémon to enter."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rThey must be of a different species and hold "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "different items."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rCertain exotic species, as well as eggs, are "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "ineligible."
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "End"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rPlease choose the four Pokémon that will enter."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "!pbEntryScreen(3, 100)"
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "End"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbSaveScreen"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rPlease come this way."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Starting challenge type 0 (7 rounds)"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbBattleChallenge.start(0, 7)"
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwtvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsGaQk7CWkUbzsHBzsIWwA7CWkYbzsHBzsIWwA7CWkJbzsHBzsIWwA7CWkrbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWkibzsHBzsIWwA7CWkqbzsHBzsIWwZpCTsJaRRvOwcHOwhbADsJaRhvOwcHOwhbADsJaQlvOwcHOwhbADsJaStvOwcHOwhbADsJaQA6D0Bza2lwcGFibGVGOgxAcmVwZWF0Rg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWki"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              209,
+              2,
+              [
+                9,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              209,
+              2,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwpvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsGaQA7CWkvbzsHBzsIWwA7CWkrbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWkibzsHBzsIWwA7CWkqbzsHBzsIWwZpCTsJaRRvOwcHOwhbADsJaQlvOwcHOwhbADsJaQlvOwcHOwhbBmkAOwlpL287Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWki"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              208,
+              2,
+              [
+                0
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                9,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkUbzsHBzsIWwA7CWkXbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRZvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpFW87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              223,
+              2,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              2,
+              [
+                8
+              ]
+            ],
+            [
+              208,
+              2,
+              [
+                1
+              ]
+            ],
+            [
+              201,
+              2,
+              [
+                0,
+                56,
+                0,
+                6,
+                6,
+                1
+              ]
+            ],
+            [
+              223,
+              2,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              119,
+              2,
+              [
+                "End"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              118,
+              1,
+              [
+                "End"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rCome back another time."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbCancel"
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 23",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "If Won"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbBattleChallenge.decision == 1"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rCongratulations for winning."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "$player.battle_points < Settings::MAX_BATTLE_POINTS"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rPlease accept these Battle Point(s)."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "rounds = pbBattleChallenge.wins / 7"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "points = rounds + 1"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "points = 15 if points > 15"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "max = Settings::MAX_BATTLE_POINTS"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "points = ["
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  max - $player.battle_points,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  points"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "].min"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pbSet(1, points)"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$player.battle_points += points"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "$stats.battle_points_won += points"
+              ]
+            ],
+            [
+              249,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIgtCUCBnZXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\PN obtained \\v[1] Battle Point(s)."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "$game_temp.last_battle_record != nil"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWould you like to record your last battle?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbRecordLastBattle"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\se[Pkmn exp full]The battle was recorded."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "Your results will be recorded.\\wtnp[15]"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbEnd"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rCome back another time."
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "If Lost or Forfeited"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbBattleChallenge.decision == 2"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rThanks for playing."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "$game_temp.last_battle_record != nil"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWould you like to record your last battle?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbRecordLastBattle"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\se[Pkmn exp full]The battle was recorded."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "Your results will be recorded.\\wtnp[15]"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbEnd"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rCome back another time."
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbBattleChallenge.pbResting?"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rWe've been waiting for you. Please come this way."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbGoOn"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwtvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsGaQk7CWkUbzsHBzsIWwA7CWkYbzsHBzsIWwA7CWkJbzsHBzsIWwA7CWkrbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWkibzsHBzsIWwA7CWkqbzsHBzsIWwZpCTsJaRRvOwcHOwhbADsJaRhvOwcHOwhbADsJaQlvOwcHOwhbADsJaStvOwcHOwhbADsJaQA6D0Bza2lwcGFibGVGOgxAcmVwZWF0Rg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWki"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              209,
+              1,
+              [
+                9,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwpvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsGaQA7CWkvbzsHBzsIWwA7CWkrbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWkibzsHBzsIWwA7CWkqbzsHBzsIWwZpCTsJaRRvOwcHOwhbADsJaQlvOwcHOwhbADsJaQlvOwcHOwhbBmkAOwlpL287Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkIOgpAY29kZWki"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              208,
+              1,
+              [
+                0
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                9,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkUbzsHBzsIWwA7CWkXbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRZvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpFW87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              208,
+              1,
+              [
+                1
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                56,
+                0,
+                6,
+                6,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rExcuse me, but you didn't save before finishing "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "your challenge last time."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rSorry, but your challenge has been canceled."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBattleChallenge.pbEnd"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpIToTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "10": {
+      "id": 10,
+      "name": "Healing balls",
+      "x": 7,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaTA6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 1",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpBjoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 1",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpBzoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 1",
+            "character_hue": 0,
+            "direction": 8,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpCDoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 2",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpCToXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 2",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpCjoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 2",
+            "character_hue": 0,
+            "direction": 8,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpCzoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

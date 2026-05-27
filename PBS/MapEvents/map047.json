@@ -1,0 +1,2150 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 47,
+  "exported": true,
+  "exported_note": "Generated from Data/Map047.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "5": {
+      "id": 5,
+      "name": "Shadow trainer - basic",
+      "x": 14,
+      "y": 18,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_TEAMROCKET_M",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:TEAMROCKET_M)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bI'm a basic trainer with a Shadow Pokémon."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:TEAMROCKET_M, \"Grunt\", 1)"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_TEAMROCKET_M",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bDid you manage to snag my Shadow Pokémon?  "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "Because you can't battle me again for another "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "chance."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "11": {
+      "id": 11,
+      "name": "SmashRock",
+      "x": 44,
+      "y": 15,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object rock",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbRockSmash"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSmashThisEvent"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbRockSmashRandomEncounter"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Shadow trainer - repeat",
+      "x": 14,
+      "y": 19,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_TEAMROCKET_F",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:TEAMROCKET_F)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rYou can battle me repeatedly, and have unlimited "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "attempts to snag my Shadow Pokémon."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:TEAMROCKET_F, \"Grunt\", 1)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "$player.pokedex.owned_shadow_pokemon?(:ELECTABUZZ)"
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_TEAMROCKET_F",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rYou've managed to snag my Shadow Electabuzz.  "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "I'm not going to do anything now."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "12": {
+      "id": 12,
+      "name": "SmashRock",
+      "x": 58,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object rock",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbRockSmash"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSmashThisEvent"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbRockSmashRandomEncounter"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Cave entrance",
+      "x": 46,
+      "y": 11,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    255.0,
+                    255.0,
+                    255.0,
+                    255.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbCaveEntrance"
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                49,
+                12,
+                14,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "get_self.onEvent?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.hide_followers"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMW87Bwc7CFsAOw5pBm87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.put_followers_on_player"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "name": "Purify expert",
+      "x": 18,
+      "y": 22,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_SCIENTIST",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI can tell you some things about Shadow Pokémon"
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "in Essentials. However, the wiki has far more "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "information about them."
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bWhat do you want to know?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Information",
+                  "Shadow Pokémon battles",
+                  "Purifying Pokémon",
+                  "Exit"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Information"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bShadow Pokémon are a special kind of Pokémon "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "which appeared in Pokémon Colosseum and "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Pokémon XD."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThey can be included in Essentials as well. See "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "the wiki for information on how to do this."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Shadow Pokémon battles"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bTrainers with Shadow Pokémon are set up in "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "exactly the same way as any other trainer."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bAny Poké Ball can be defined as a Snag Ball in "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "items.txt. If $player.has_snag_machine is TRUE, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "all types of Poké Ball will be Snag Balls automatically."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$player.has_snag_machine = true"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\b$player.pokedex.owned_shadow is an array "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "that keeps track of which Shadow Pokémon species "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "have been caught."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Purifying Pokémon"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYou can purify Shadow Pokémon in two ways."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThe first is by bringing them to the Relic Stone here, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "as in Pokémon Colosseum."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThe second is by placing them in the Purify "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Chamber, as in Pokémon XD. You can access it from "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "the PC in Poké Centers."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "!$player.seen_purify_chamber"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bI've now given you access to the Purify Chamber."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$player.seen_purify_chamber = true"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThe effects of Heart Gauge-lowering items are "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "already in Essentials. You just need to add the items "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "themselves via a PBS file."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Exit"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "13": {
+      "id": 13,
+      "name": "Weather controller",
+      "x": 49,
+      "y": 20,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 21",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI can control the weather. Which weather would "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "you like to see?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "None",
+                  "Rain",
+                  "Heavy rain",
+                  "Storm"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "None"
+              ]
+            ],
+            [
+              236,
+              1,
+              [
+                0,
+                5,
+                20
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Rain"
+              ]
+            ],
+            [
+              236,
+              1,
+              [
+                1,
+                9,
+                20
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Heavy rain"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Heavy rain is like storm but with no lightning flashes."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$game_screen.weather("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :HeavyRain, 9, 20"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Storm"
+              ]
+            ],
+            [
+              236,
+              1,
+              [
+                2,
+                9,
+                20
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Snow",
+                  "Blizzard",
+                  "Sandstorm"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Snow"
+              ]
+            ],
+            [
+              236,
+              1,
+              [
+                3,
+                9,
+                20
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Blizzard"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$game_screen.weather("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :Blizzard, 9, 20"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Sandstorm"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$game_screen.weather("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :Sandstorm, 9, 20"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Sun",
+                  "Fog"
+                ],
+                5
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Sun"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$game_screen.weather(:Sun, 9, 20)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThis weather can occur even at night, but doesn't "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "negate the day/night shading. It's better if you don't "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "use it."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Fog"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$game_screen.weather(:Fog, 9, 20)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              403,
+              0,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bNote that the weather metadata for this map is set, "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "even though its probability is 0. This prevents the "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "weather from lingering when you leave this map."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Cave entrance",
+      "x": 55,
+      "y": 16,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    255.0,
+                    255.0,
+                    255.0,
+                    255.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbCaveEntrance"
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                49,
+                19,
+                20,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "get_self.onEvent?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.hide_followers"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMW87Bwc7CFsAOw5pCG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.put_followers_on_player"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "name": "Relic Stone",
+      "x": 15,
+      "y": 23,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbRelicStone"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "SmashRock",
+      "x": 43,
+      "y": 15,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object rock",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbRockSmash"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSmashThisEvent"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbRockSmashRandomEncounter"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Duel NPC",
+      "x": 34,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_BLACKBELT",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bHaiiiii-yaaaaaah!"
+              ]
+            ],
+            [
+              247,
+              0,
+              []
+            ],
+            [
+              242,
+              0,
+              [
+                1
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                20
+              ]
+            ],
+            [
+              241,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhNCYXR0bGUgdHJhaW5lcgY6BkVUOgtAcGl0Y2hpaQ=="
+                }
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Duel Minigame, based on the version written by Alael, "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "modified for Pokémon Essentials."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "The duel takes place in a row of 4 tiles, with the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "player and opponent using the centre two. Make "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "sure you have enough space."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "3 texts for defense, 3 for precise attacks, 3 for fierce "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "attacks, 3 for special attacks."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$speeches = []"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$speeches.push("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"I shall block all your "
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "attacks!\"),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"Nothing can pierce my armor!\"),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"Behold my dodging skills!\")"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                ")"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$speeches.push("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                " _I(\"I'll show you my fighting "
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "skills!\"),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"Awe at the perfection of my "
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "skills!\"),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"I'll deliver a perfect blow!\")"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                ")"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$speeches.push("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"Feel my power!\"),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"AAAAHHHH!\"),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"I'll attack with all my "
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "strength!\")"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                ")"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$speeches.push("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"Face my secret technique!\"),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"This is my secret technique!\"),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  _I(\"Evil Blade Strike!\")"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                ")"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "The opponent in a duel needs a trainer type to be "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "defined in trainertypes.txt. This is used to display a "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "name and graphic for the opponent."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "The opponent does NOT need to appear in "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "trainers.txt, though."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbDuel(:BLACKBELT, \"Dan\", get_self, $speeches)"
+              ]
+            ],
+            [
+              242,
+              1,
+              [
+                1
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                20
+              ]
+            ],
+            [
+              248,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYou won, good job."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              242,
+              1,
+              [
+                1
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                20
+              ]
+            ],
+            [
+              248,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "You lost, too bad."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "10": {
+      "id": 10,
+      "name": "Time-dependent NPC",
+      "x": 18,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 01",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bHello. This is what I say if you talk to me during the "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "day."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 01",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bHalt! Who goes there?"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bThis is what I say if you talk to me at night."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bI could battle you... but I won't."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpFDoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

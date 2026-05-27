@@ -1,0 +1,792 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 6,
+  "exported": true,
+  "exported_note": "Generated from Data/Map006.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 6,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                5,
+                11,
+                6,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Kurt",
+      "x": 7,
+      "y": 4,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                2,
+                "C",
+                1
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bHello! I'm Kurt!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI specialise in turning Apricorns into Poké Balls."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bIf you like, I can convert one of yours into a Poké "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Ball."
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "C",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bHello again."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bDo you have an Apricorn for me?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bWhich Apricorn would you like me to convert?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbChooseApricorn(8)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbGet(8) == :NONE"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Player didn't choose an Apricorn."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bLet me know when you want me to convert an "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Apricorn for you."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Player chose an Apricorn."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$bag.remove(pbGet(8))"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "data = GameData::Item.get(pbGet(8))"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pbSet(3, data.name)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bOkay. I'll turn your \\v[3] into a Poké Ball for you."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bI should be finished by tomorrow."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Convert Apricorn into Ball now."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "conversion_hash = {"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :REDAPRICORN    => :LEVELBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :YELLOWAPRICORN => :MOONBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :BLUEAPRICORN   => :LUREBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :GREENAPRICORN  => :FRIENDBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :PINKAPRICORN   => :LOVEBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :WHITEAPRICORN  => :FASTBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :BLACKAPRICORN  => :HEAVYBALL"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "}"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "conversion_hash.merge!({"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :YLWAPRICORN => :MOONBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :BLUAPRICORN => :LUREBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :GRNAPRICORN => :FRIENDBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :PNKAPRICORN => :LOVEBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :WHTAPRICORN => :FASTBALL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :BLKAPRICORN => :HEAVYBALL"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "})"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "item = pbGet(8)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "new_item = conversion_hash[item]"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pbSet(8, new_item)"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbSetEventTime"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Player doesn't want to choose an Apricorn."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bCome back when you have an Apricorn for me."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "pbGet(8).is_a?(Symbol)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI've been waiting for you. I've completed the Poké "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Ball you asked me to make."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbReceiveItem(pbGet(8))"
+              ]
+            ],
+            [
+              122,
+              2,
+              [
+                8,
+                8,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "B",
+                1
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bYou have no room left. Make room, then come see "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "me."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "This only happens when Kurt is given an item that "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "couldn't be turned into a Poké Ball on page 1."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "This should never happen. If it does, there is a "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "mistake in the conversion_hash on page 1, namely "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "that it doesn't contain an \"apricorn => Poké Ball\" pair "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "for the item given to Kurt."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI tried making a Poké Ball out of what you gave me, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "but it didn't work."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bSorry."
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "B",
+                1
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkIGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI'm still working on your Apricorn. Come back later."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              123,
+              0,
+              [
+                "A",
+                1
+              ]
+            ],
+            [
+              123,
+              0,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpHDoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

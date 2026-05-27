@@ -1,0 +1,1277 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 29,
+  "exported": true,
+  "exported_note": "Generated from Data/Map029.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "1": {
+      "id": 1,
+      "name": "Exit left",
+      "x": 0,
+      "y": 5,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                23,
+                32,
+                21,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Exit right",
+      "x": 12,
+      "y": 5,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                28,
+                8,
+                24,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "PC",
+      "x": 2,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbPokeCenterPC"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Man",
+      "x": 6,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 01",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "pbIsWeekday(1, 2, 4, 6)"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Today is Tuesday (2), Thursday (4) or Saturday (6), "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "and the Bug Contest is running today. The weekday's "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "name is put in Game Variable 1."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbBugContestState.pbContestHeld?"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bWe hope you'll take part in a Bug-Catching Contest "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "in the future!"
+              ]
+            ],
+            [
+              115,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bToday's \\v[1]."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThat means the Bug-Catching Contest is on today."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThe rules are simple."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bUsing one of your Pokémon, catch a Bug-type "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Pokémon to be judged."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bWould you like to give it a try?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "pbBoxesFull?"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bSorry, your PC boxes are full."
+              ]
+            ],
+            [
+              115,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bYou are only allowed to take 1 Pokémon into the "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Contest."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bPlease choose which Pokémon you want to enter "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "with."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Opens a screen for choosing an able Pokémon (i.e. a "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "non-egg, non-fainted Pokémon)."
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "The party index of the chosen Pokémon is put in "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Game Variable 1, and the chosen Pokémon's name is "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "put in Game Variable 2."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbChooseAblePokemon(1, 2)"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                1,
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              108,
+              3,
+              [
+                "Cancelled choosing a Pokémon."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bOK. We hope you'll take part in the future."
+              ]
+            ],
+            [
+              115,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bYou will be entering with \\v[2], then."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bWe'll hold your other Pokémon while you compete."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\PN's Pokémon were left with the Contest "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "Helper.\\se[Pkmn exp full]\\wtnp[20]"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bHere are the Sport Balls for the Contest."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\PN received 20 Sport Balls.\\me[Item get]\\wtnp[40]"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bThe person who gets the strongest bug Pokémon is "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "the winner."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bYou have 20 minutes."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bIf you run out of Sport Balls, you're done."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bYou can keep the last Pokémon you catch as your "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "own."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bGo out and catch the strongest Bug-type Pokémon "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "you can find!"
+              ]
+            ],
+            [
+              108,
+              3,
+              [
+                "- Set the map ID and X/Y coordinates of the spot the "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "player is teleported to at the end for judging."
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "- Set the map IDs of reception maps which, if you "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "enter them, will not immediately end the contest "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "(those maps should prompt the player to go back into "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "the contest's map or to end the contest)."
+              ]
+            ],
+            [
+              108,
+              3,
+              [
+                "- Set the map ID of the map where the contest takes "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "place (there can only be one). NPC participants have "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "random wild Pokémon found on this map."
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "- Set the party index of the Pokémon chosen by the "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "player to use in the contest."
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "- Start the contest with 20 Sport Balls."
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "contest = pbBugContestState"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "contest.pbSetJudgingPoint(30, 5, 6)"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "contest.pbSetReception("
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  \"BugContestReception\""
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                ")"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "contest.pbSetContestMap("
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  \"BugContest\""
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                ")"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "contest.pbSetPokemon(pbGet(1))"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "contest.pbStart(20)"
+              ]
+            ],
+            [
+              209,
+              3,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww9vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpBm87Bwc7CFsAOwlpCG87Bwc7CFsAOwlpCG87Bwc7CFsAOwlpCG87Bwc7CFsAOwlpCG87Bwc7CFsAOwlpCG87Bwc7CFsGaQA7CWkvbzsHBzsIWwA7CWkrbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              3,
+              []
+            ],
+            [
+              250,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              3,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              3,
+              [
+                8
+              ]
+            ],
+            [
+              209,
+              3,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkB/zoKQGNvZGVpL287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkB/zoKQGNvZGVpLw=="
+                }
+              ]
+            ],
+            [
+              201,
+              3,
+              [
+                0,
+                28,
+                8,
+                24,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              3,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              115,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bOK. We hope you'll take part in the future."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Today is not a Contest day."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bWe hold contests regularly in the Park. You should "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "give it a shot."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 01",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "Event page called when the contest is still in "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "progress."
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                20
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bYou still have some time left. Do you want to finish "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "now?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOK. Please wait in the pavillion for the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "announcement of the winners."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBugContestState.pbStartJudging"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOK. Please go back outside and finish up."
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwlvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpF287Bwc7CFsGaQk7CWkUbzsHBzsIWwZpADsJaS9vOwcHOwhbADsJaQA6D0Bza2lwcGFibGVGOgxAcmVwZWF0Rg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkJOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkAOgpAY29kZWkv"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              250,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkB/zoKQGNvZGVpL287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkB/zoKQGNvZGVpLw=="
+                }
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                28,
+                8,
+                24,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpHzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

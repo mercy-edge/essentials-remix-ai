@@ -1,0 +1,1749 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 27,
+  "exported": true,
+  "exported_note": "Generated from Data/Map027.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 4,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                23,
+                28,
+                10,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "PC",
+      "x": 5,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbPokeCenterPC"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Day Care Lady",
+      "x": 4,
+      "y": 4,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 11",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "DayCare.egg_generated?"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rAh, there you are! My husband was looking for "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "you."
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              123,
+              0,
+              [
+                "A",
+                1
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "DayCare.count == 0"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rI'm the Day-Care Lady. We can raise Pokémon for "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "you."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rWould you like us to raise your Pokémon?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "$player.pokemon_count <= 1"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rOh? But you only have one Pokémon with you."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rYou can't go off without a Pokémon. Come back "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "another time."
+              ]
+            ],
+            [
+              115,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWhich Pokémon should we raise for you?"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbChooseNonEggPokemon(1, 3)"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                1,
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rOh, fine, then.\\nCome again."
+              ]
+            ],
+            [
+              115,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "!$player.has_other_able_pokemon?(pbGet(1))"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rIf you leave me that Pokémon, what are you gonna "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "battle with?"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rCome back another time."
+              ]
+            ],
+            [
+              115,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              355,
+              2,
+              [
+                "DayCare.deposit(pbGet(1))"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rFine, we'll raise your \\v[3] for a while."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rCome back for it later."
+              ]
+            ],
+            [
+              118,
+              2,
+              [
+                "RaiseAnother"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWe can raise two of your Pokémon. Would you like "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "us to raise another?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "$player.pokemon_count <= 1"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rOh? But you only have one Pokémon with you."
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rYou can't go off without a Pokémon. Come back "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "another time."
+              ]
+            ],
+            [
+              115,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rWhich Pokémon should we raise for you?"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbChooseNonEggPokemon(1, 3)"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                1,
+                1,
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rVery good. Come again."
+              ]
+            ],
+            [
+              115,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "!$player.has_other_able_pokemon?(pbGet(1))"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rIf you leave me that Pokémon, what are you gonna "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "battle with?"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rCome back another time."
+              ]
+            ],
+            [
+              115,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "pbGetPokemon(1).cannot_store"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rThat Pokémon looks like it would rather stay with "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "you."
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rCome back another time."
+              ]
+            ],
+            [
+              115,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              355,
+              3,
+              [
+                "DayCare.deposit(pbGet(1))"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rFine, we'll raise your \\v[3] for a while."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rCome back for it later."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                2,
+                "A",
+                0
+              ]
+            ],
+            [
+              119,
+              4,
+              [
+                "TakeBack"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rVery good. Come again."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rOh, fine, then.\\nCome again."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rAh, it's you! Good to see you. Now, about your "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Pokémon..."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "DayCare.get_level_gain(0, 3, 4) && pbGet(4) > 0"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rBy level, your \\v[3] has grown by about \\v[4]."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "DayCare.get_level_gain(1, 3, 4) && pbGet(4) > 0"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rBy level, your \\v[3] has grown by about \\v[4]."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "DayCare.count == 1"
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "RaiseAnother"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              118,
+              2,
+              [
+                "TakeBack"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rDo you want your Pokémon back?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              118,
+              3,
+              [
+                "TakeBackChosen"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "$player.party_full?"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rYour Pokémon team is full. Make room, then come "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "see me."
+              ]
+            ],
+            [
+              115,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              355,
+              3,
+              [
+                "DayCare.choose("
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  _I(\"Which one do you want back?\"),"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  1"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                ")"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                1,
+                1,
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rVery good. Come again."
+              ]
+            ],
+            [
+              115,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              355,
+              3,
+              [
+                "DayCare.get_details(pbGet(1), 3, 4)"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\G\\rIf you want your \\v[3] back, it will cost $\\v[4]."
+              ]
+            ],
+            [
+              102,
+              3,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              3,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              122,
+              4,
+              [
+                5,
+                5,
+                0,
+                7,
+                2
+              ]
+            ],
+            [
+              111,
+              4,
+              [
+                1,
+                5,
+                1,
+                4,
+                4
+              ]
+            ],
+            [
+              101,
+              5,
+              [
+                "\\G\\rYou don't have enough money..."
+              ]
+            ],
+            [
+              115,
+              5,
+              []
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              412,
+              4,
+              []
+            ],
+            [
+              125,
+              4,
+              [
+                1,
+                1,
+                4
+              ]
+            ],
+            [
+              250,
+              4,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhJNYXJ0IGJ1eSBpdGVtBjoGRVQ6C0BwaXRjaGlp"
+                }
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "DayCare.withdraw(pbGet(1))"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\G\\rExcellent\\nHere's your Pokémon."
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\PN took \\v[3] back from the Day-Care Lady."
+              ]
+            ],
+            [
+              111,
+              4,
+              [
+                12,
+                "DayCare.count == 1"
+              ]
+            ],
+            [
+              101,
+              5,
+              [
+                "\\G\\rDo you want to take back the other one, too?"
+              ]
+            ],
+            [
+              102,
+              5,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              5,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              119,
+              6,
+              [
+                "TakeBackChosen"
+              ]
+            ],
+            [
+              0,
+              6,
+              []
+            ],
+            [
+              402,
+              5,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              6,
+              [
+                "\\rVery good. Come again."
+              ]
+            ],
+            [
+              0,
+              6,
+              []
+            ],
+            [
+              404,
+              5,
+              []
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              411,
+              4,
+              []
+            ],
+            [
+              101,
+              5,
+              [
+                "\\rVery good. Come again."
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              412,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              402,
+              3,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rVery good. Come again."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              404,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rVery good. Come again."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Hidden Power checker",
+      "x": 6,
+      "y": 5,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_BIRDKEEPER",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI'll tell you what type your Pokémon's Hidden Power "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "will be."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bMy own hidden power lets me do that."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbChooseNonEggPokemon(1, 3)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                1,
+                0,
+                0,
+                1
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "The below scripts check whether the chosen Pokémon "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "knows or is able to learn Hidden Power (by level "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "up/TM/Move Tutor)."
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Game Variable 2 will contain the name of Hidden "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Power's type if it is learnable, or \"\" if it can't be "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "learned."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "move = :HIDDENPOWER"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn = pbGetPokemon(1)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "data = pkmn.species_data"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "compatible = false"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "if pkmn.hasMove?(move) ||"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "   pkmn.compatible_with_move?(move)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  compatible = true"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "end"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "# Check level-up moves"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "if !compatible"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  lvm = pkmn.getMoveList"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  if lvm.any? { |m| m[1] == move }"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "    compatible = true"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  end"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "end"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "# Get type's name"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "if compatible"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  type = pbHiddenPower(pkmn)[0]"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  nm = GameData::Type.get(type).name"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  pbSet(2, nm)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "else"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  pbSet(2, \"\")"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "end"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "pbGet(2) == \"\""
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bOh, no. This Pokémon can't learn the move Hidden "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "Power in the first place."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "pbGetPokemon(1).hasMove?(:HIDDENPOWER)"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bThis Pokémon's Hidden Power is the \\v[2] type."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bIf this Pokémon were to learn Hidden Power, the "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "move's type would be \\v[2]."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "No Pokémon was chosen."
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              118,
+              1,
+              [
+                "Cancel"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bIf you want to know, ask me, and I'll activate my "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "hidden power for you."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

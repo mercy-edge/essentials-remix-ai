@@ -1,0 +1,462 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 28,
+  "exported": true,
+  "exported_note": "Generated from Data/Map028.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "1": {
+      "id": 1,
+      "name": "North door left",
+      "x": 26,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                30,
+                5,
+                8,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "get_self.onEvent?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.hide_followers"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMW87Bwc7CFsAOw5pBm87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.put_followers_on_player"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "North door right",
+      "x": 27,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                30,
+                5,
+                8,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "get_self.onEvent?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.hide_followers"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMW87Bwc7CFsAOw5pBm87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.put_followers_on_player"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Bug Contest door",
+      "x": 7,
+      "y": 24,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                29,
+                11,
+                5,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

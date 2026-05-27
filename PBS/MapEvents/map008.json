@@ -1,0 +1,2356 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 8,
+  "exported": true,
+  "exported_note": "Generated from Data/Map008.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "5": {
+      "id": 5,
+      "name": "Contest ribbon giver",
+      "x": 3,
+      "y": 4,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_LADY",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "Gives or upgrades a contest ribbon for the lead "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Pokémon."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "The method upgradeRibbon either upgrades an "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "existing ribbon to the next one listed, or gives the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "first ribbon if the Pokémon has none of them."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Returns nil if couldn't add/upgrade a ribbon."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rHi! I'm the Contest Lady!"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rI give out contest ribbons. Do you want one?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pkmn = $player.first_pokemon"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "ret = pkmn.upgradeRibbon("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :HOENNCOOL,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :HOENNCOOLSUPER,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :HOENNCOOLHYPER,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :HOENNCOOLMASTER"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, ret || :NONE)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, pkmn.name)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "if ret"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  data = GameData::Ribbon.get(ret)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbSet(3, data.name)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "end"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbGet(1) == :NONE"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rSorry, your \\v[2] already has the highest ranked "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Cool Ribbon."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\PN received the \\v[3]."
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "\\me[Item get]\\wtnp[40]"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\PN put the \\v[3] on \\v[2]."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rThat's your choice."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Stats judge",
+      "x": 8,
+      "y": 4,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 10",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bIf you'd like, I could judge the intriguing potential of "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "your Pokémon."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bWhich Pokémon would you like me to judge?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbChooseNonEggPokemon(1, 2)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                1,
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\b...Oh? You don't need me to judge. I get it."
+              ]
+            ],
+            [
+              115,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Say something depending on the total number of IVs "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "the Pokémon has."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "ivs = pbGetPokemon(1).calcIV"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "total = 0"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "ivs.each_value { |v| total += v }"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, total)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI see, I see..."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                1,
+                0,
+                150,
+                3
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bThis Pokémon's potential is outstanding overall."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                1,
+                0,
+                120,
+                3
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bThis Pokémon's potential is relatively superior "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "overall."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              111,
+              3,
+              [
+                1,
+                1,
+                0,
+                90,
+                3
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bThis Pokémon's potential is above average overall."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bThis Pokémon's potential is decent overall."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThat's my determination, and it's final."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Find out which stat(s) have the highest value, and "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "show a message about each of them."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pkmn = pbGetPokemon(1)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "ivs  = pkmn.calcIV"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "best = []"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "val  = -1"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "[:HP, :ATTACK, :DEFENSE,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                " :SPECIAL_ATTACK, :SPECIAL_DEFENSE,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                " :SPEED].each do |s|"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  if ivs[s] > val"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "    best = [s]"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "    val  = ivs[s]"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  elsif ivs[s] == val"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "    best.push(s)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  end"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "end"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(2, best)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(3, val)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "data = GameData::Stat.get(best[0])"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(4, data.name)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(5, best.length - 1)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bIncidentally, I would say the best potential lies in its "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\\v[4] stat."
+              ]
+            ],
+            [
+              112,
+              1,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                5,
+                0,
+                0,
+                3
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "best = pbGet(2)"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "best[0] = nil"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "best.compact!"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "num = {"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  :HP              => 0,"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  :ATTACK          => 1,"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  :DEFENSE         => 2,"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  :SPEED           => 3,"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  :SPECIAL_ATTACK  => 4,"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  :SPECIAL_DEFENSE => 5"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "}[best[0]]"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "pbSet(4, num)"
+              ]
+            ],
+            [
+              122,
+              3,
+              [
+                5,
+                5,
+                2,
+                0,
+                1
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                1,
+                4,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bAnd its Attack stat is also good."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              111,
+              4,
+              [
+                1,
+                4,
+                0,
+                2,
+                0
+              ]
+            ],
+            [
+              101,
+              5,
+              [
+                "\\bI see, its Defense stat is also good."
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              411,
+              4,
+              []
+            ],
+            [
+              111,
+              5,
+              [
+                1,
+                4,
+                0,
+                3,
+                0
+              ]
+            ],
+            [
+              101,
+              6,
+              [
+                "\\bWell, its Speed stat is also good."
+              ]
+            ],
+            [
+              0,
+              6,
+              []
+            ],
+            [
+              411,
+              5,
+              []
+            ],
+            [
+              111,
+              6,
+              [
+                1,
+                4,
+                0,
+                4,
+                0
+              ]
+            ],
+            [
+              101,
+              7,
+              [
+                "\\bIts Special Attack stat is equally good."
+              ]
+            ],
+            [
+              0,
+              7,
+              []
+            ],
+            [
+              411,
+              6,
+              []
+            ],
+            [
+              111,
+              7,
+              [
+                1,
+                4,
+                0,
+                5,
+                0
+              ]
+            ],
+            [
+              101,
+              8,
+              [
+                "\\bIts Special Defense stat is good as well."
+              ]
+            ],
+            [
+              0,
+              8,
+              []
+            ],
+            [
+              411,
+              7,
+              []
+            ],
+            [
+              0,
+              8,
+              []
+            ],
+            [
+              412,
+              7,
+              []
+            ],
+            [
+              0,
+              7,
+              []
+            ],
+            [
+              412,
+              6,
+              []
+            ],
+            [
+              0,
+              6,
+              []
+            ],
+            [
+              412,
+              5,
+              []
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              412,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              113,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              413,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Show a message depending on the value of the "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "highest stat IV."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                3,
+                0,
+                30,
+                3
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bIt can't be better in that regard. That's how I judged "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "it."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                3,
+                0,
+                25,
+                3
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bIt's fantastic in that regard. That's how I judged it."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              111,
+              3,
+              [
+                1,
+                3,
+                0,
+                15,
+                3
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bIt's very good in that regard. That's how I judged it."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bIt's rather decent in that regard. That's how I judged "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "it."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\b...Oh? You don't need me to judge. I get it."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 3,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                2,
+                17,
+                7,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Daisy",
+      "x": 5,
+      "y": 4,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 26",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rDaisy: Hi, \\PN!"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rDaisy: Would you like me to groom one of your "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "Pokémon?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rDaisy: Which Pokémon do you want me to groom?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbChooseNonEggPokemon(1, 2)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                1,
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rDaisy: Oh, okay then."
+              ]
+            ],
+            [
+              115,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "pkmn = pbGetPokemon(1)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.changeHappiness(\"groom\")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.beauty += 40"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rDaisy: There! \\v[2] looks a lot happier and prettier "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "now!"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rDaisy: Oh, okay then."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Dr Footstep",
+      "x": 1,
+      "y": 4,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 07",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bDr. Footstep: Hi! I rate the footprints of Pokémon!"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bDr. Footstep: Can I rate your Pokémon for you?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bDr. Footstep: Which Pokémon do you want me to "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "rate?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbChooseNonEggPokemon(1, 2)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                1,
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bDr. Footstep: Maybe next time, then."
+              ]
+            ],
+            [
+              115,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "pkmn = pbGetPokemon(1)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "h = pkmn.happiness"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "stage = 0"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "stage = 1 if h >= 1"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "stage = 2 if h >= 50"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "stage = 3 if h >= 100"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "stage = 4 if h >= 150"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "stage = 5 if h >= 200"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "stage = 6 if h >= 255"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(3, stage)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                3,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bDr. Footstep: By any chance, you... Are you a very "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "strict person? I feel that your \\v[2] really doesn't like "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "you..."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                3,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bDr. Footstep: Hmmm... Your \\v[2] may not like you "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "very much."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                3,
+                0,
+                2,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bDr. Footstep: The relationship is neither good nor "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "bad... Your \\v[2] looks neutral."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                3,
+                0,
+                3,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bDr. Footstep: Your \\v[2] is a little friendly to you... "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "That's what I'm getting."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                3,
+                0,
+                4,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bDr. Footstep: Your \\v[2] is friendly to you. It must be "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "happy with you."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                3,
+                0,
+                5,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bDr. Footstep: Your \\v[2] is quite friendly to you! You "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "must be a kind person!"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                3,
+                0,
+                6,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bDr. Footstep: Your \\v[2] is super friendly to you! I'm "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "a bit jealous!"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "!pbGetPokemon(1).hasRibbon?(:FOOTPRINT)"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bDr. Footstep: I shall reward your \\v[2] with a ribbon!"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pkmn = pbGetPokemon(1)"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "pkmn.giveRibbon(:FOOTPRINT)"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\PN received the Footprint Ribbon."
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "\\me[Item get]\\wtnp[20]"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\PN put the Footprint Ribbon on \\v[2]."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bDr. Footstep: Maybe next time, then."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Effort ribbon giver",
+      "x": 2,
+      "y": 4,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 04",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "Looks at the total EVs of the lead Pokémon, and "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "rewards a ribbon to it if the total is maxed (equal to "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Pokemon::EV_LIMIT, which is 510 by default)."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pkmn = $player.first_pokemon"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "total = 0"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "pkmn.ev.each_value { |v| total += v }"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "maxed = 0"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "if total >= Pokemon::EV_LIMIT"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  maxed = 1"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "end"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "maxed = 2 if pkmn.hasRibbon?(:EFFORT)"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "pbSet(1, pkmn.name)"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "pbSet(2, maxed)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rOh?\\nYour \\v[1]..."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                1,
+                2,
+                0,
+                2,
+                0
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Pokémon already has an Effort Ribbon."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOh! Your \\v[1], that Effort Ribbon looks good on it!"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                2,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Pokémon has full EVs and does not already have an "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Effort Ribbon - give it that ribbon."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWent for it stupendously!"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rAs its reward, please give it this Effort Ribbon."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pkmn = $player.first_pokemon"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.giveRibbon(:EFFORT)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\PN received the Effort Ribbon."
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "\\me[Item get]\\wtnp[20]"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\PN put the Effort Ribbon on \\v[1]."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Pokémon does not have full EVs."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rYou have to go for it a little harder."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rIf you do, I'll give your Pokémon something nice."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

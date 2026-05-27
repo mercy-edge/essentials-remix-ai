@@ -1,0 +1,180 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 1,
+  "exported": true,
+  "exported_note": "Generated from Data/Map001.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "2": {
+      "id": 2,
+      "name": "Quick start intro",
+      "x": 0,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This is the Debug intro, used to quickly start a game. "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "The player's name and trainer type are chosen "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "automatically."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbChangePlayer(1)"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerName(\"Red\")"
+              ]
+            ],
+            [
+              123,
+              0,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbToneChangeAll("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  Tone.new(-255, -255, -255, 0),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  0"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                ")"
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                3,
+                25,
+                6,
+                2,
+                1
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbToneChangeAll("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  Tone.new(0, 0, 0, 0),"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  10"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                ")"
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                10
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

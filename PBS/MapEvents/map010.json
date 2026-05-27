@@ -1,0 +1,518 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 10,
+  "exported": true,
+  "exported_note": "Generated from Data/Map010.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 6,
+      "y": 15,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                7,
+                11,
+                29,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Gym Guy",
+      "x": 7,
+      "y": 12,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 15",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bThis is an example of a Pokémon Gym."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bThe only differences are that the trainers become "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "inactive when the Leader is defeated, and the "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "Leader gives you a Gym Badge and TM as a reward."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Brock",
+      "x": 6,
+      "y": 5,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_LEADER_Brock",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "$stats.gym_leader_attempts[0] += 1"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:LEADER_Brock)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bYou've made it this far, but can you beat me?"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:LEADER_Brock, \"Brock\")"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\me[Badge get]\\bYou've earned the Boulder Badge."
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\\wtnp[110]"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$stats.set_time_to_badge(0)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "$player.badges[0] = true"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bHere, have this TM too."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbReceiveItem(:TM80)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYou may find the Pokémon on Route 1 are a little "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "tougher now."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$PokemonGlobal.encounter_version = 1"
+              ]
+            ],
+            [
+              121,
+              1,
+              [
+                4,
+                4,
+                0
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_LEADER_Brock",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI often work in the caves on Route 7, digging up "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "fossils."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bThere's a man in the Pokémon Institute who can "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "revive fossils into living Pokémon."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Trainer(3)",
+      "x": 3,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_CAMPER",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 2,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:CAMPER)"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbNoticePlayer(get_self)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bBattle me now!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:CAMPER, \"Liam\")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_CAMPER",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bYou're pretty hot. But not as hot as"
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "Brock!"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_CAMPER",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bYou're pretty hot. But not as hot as"
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "Brock!"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpCToTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

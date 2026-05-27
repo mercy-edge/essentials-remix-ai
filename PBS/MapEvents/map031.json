@@ -1,0 +1,5574 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 31,
+  "exported": true,
+  "exported_note": "Generated from Data/Map031.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "5": {
+      "id": 5,
+      "name": "Trainer(2)",
+      "x": 7,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_CAMPER",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 2,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:CAMPER)"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbNoticePlayer(get_self)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bDid I notice you, or did you notice me?"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerCheck(:CAMPER,\"Jeff\", 2)"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:CAMPER, \"Jeff\")"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "Phone.can_add?(:CAMPER, \"Jeff\")"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bShall we exchange numbers, so we can have a "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "rematch?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "Phone.add(get_self,"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  :CAMPER, \"Jeff\", 2"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_CAMPER",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:CAMPER)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bLet's have a rematch!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "Phone.battle(:CAMPER, \"Jeff\")"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Phone.reset_after_win("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :CAMPER, \"Jeff\""
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkIGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_CAMPER",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "Phone.variant(:CAMPER, \"Jeff\") == 0"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI'll get even stronger, and beat you next time!"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "Phone.variant(:CAMPER, \"Jeff\") >= 1"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI don't think I'll ever be able to beat you."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "Phone.can_add?(:CAMPER, \"Jeff\")"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bShall we exchange numbers, so we can have a "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "rematch?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "Phone.add(get_self,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :CAMPER, \"Jeff\", 2"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "27": {
+      "id": 27,
+      "name": "HeadbuttTree",
+      "x": 50,
+      "y": 61,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 2",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbHeadbutt"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "16": {
+      "id": 16,
+      "name": "Remove follower size(1,4)",
+      "x": 1,
+      "y": 17,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This event removes a follower (May) and moves it to "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "a particular position. It only triggers if the player has "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "moved left onto this event, and only if they have a "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "follower. Note that this event is 4 tiles tall, covering "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "the whole path."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "These trigger requirements let us know exactly where "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "the follower will be in relation to the player, which is "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "information we can use below to ensure the correct "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "move route is given to the follower to make it end up "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "in the correct position."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "$game_player.has_follower?"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Turn the player towards the follower while it talks."
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpF287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Make the follower show an exclamation bubble. The "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "script here means that the next Show Animation "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "command will play over the follower instead of "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "whatever target it says it applies to."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "follower_animation"
+              ]
+            ],
+            [
+              207,
+              2,
+              [
+                0,
+                3
+              ]
+            ],
+            [
+              106,
+              2,
+              [
+                10
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rI'll wait here, then."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "This line of code means that the next Set Move Route "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "command will apply to the follower, rather than to the "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "event/player it says it applies to. Only one Set Move "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Route command is reassigned by the use of this "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "code."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "follower_move_route"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Give the follower a different move route depending "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "on where the player currently is, to ensure it ends up "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "at the correct position. Note that Through is set ON "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "because the follower will be moved into the tile "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "occupied by the event it will be replaced with."
+              ]
+            ],
+            [
+              122,
+              2,
+              [
+                1,
+                1,
+                0,
+                6,
+                -1,
+                1
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                1,
+                0,
+                14,
+                0
+              ]
+            ],
+            [
+              209,
+              3,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwtvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpBm87Bwc7CFsAOwlpCG87Bwc7CFsAOwlpFW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                1,
+                0,
+                15,
+                0
+              ]
+            ],
+            [
+              209,
+              3,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwpvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCG87Bwc7CFsAOwlpFW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                1,
+                0,
+                16,
+                0
+              ]
+            ],
+            [
+              209,
+              3,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwtvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCG87Bwc7CFsAOwlpFW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                1,
+                0,
+                17,
+                0
+              ]
+            ],
+            [
+              209,
+              3,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCG87Bwc7CFsAOwlpFW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCA=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Wait for the follower to finish moving."
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Once the follower has finished moving, remove it as a "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "follower. At the same time, turn event 44's Self "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Switch A on, which depicts May."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "Followers.remove(\"May\")"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbSetSelfSwitch(44, \"A\", true)"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Deregister the trainer."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbDeregisterPartner"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "11": {
+      "id": 11,
+      "name": "Double trainer F",
+      "x": 14,
+      "y": 13,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_COOLTRAINER_F",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "!pbCanDoubleBattle?"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rYou'll need at least two Pokémon or a partner if you "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "want to battle us."
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:COOLCOUPLE)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rAh, looks like a challenging trainer. Ready, Bob?"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "setBattleRule(\"double\")"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:COOLCOUPLE, \"Alice & Bob\")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Set the partner event's Self Switch \"A\" on."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSetSelfSwitch(12, \"A\", true)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_COOLTRAINER_F",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rOur events weren't created by comments, "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "because we need to check how many Pokémon you "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "had."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "22": {
+      "id": 22,
+      "name": "SmashRock",
+      "x": 51,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object rock",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbRockSmash"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSmashThisEvent"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbRockSmashRandomEncounter"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "44": {
+      "id": 44,
+      "name": "May west reflection",
+      "x": 3,
+      "y": 15,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_POKEMONTRAINER_May",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "Normally, once you have escorted an NPC trainer to "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "the end of a dungeon, they will just remain there "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "and cannot be made to follow the player again. "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "However, for the sake of example, this page does let "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "May follow the player again."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rDo you want to team up with me again?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Makes this event follow the player. The first "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "parameter means \"this event\", the second is a name "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "that identifies this follower, and the third is the "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Common Event number run when this follower is "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "interacted with."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.add(@event_id, \"May\", 2)"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Followers.add does not make this event disappear. It "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "should be hidden by using a Self Switch to make it use "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "a blank event page instead."
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                1
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Creates a partner trainer to battle alongside the "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "player. The parameters are the trainer type and "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "name of the partner. The partner trainer is defined "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "in trainers.txt just like any other trainer."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbRegisterPartner("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :POKEMONTRAINER_May,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"May\""
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Note that the above two features are entirely "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "unrelated. You can have a follower which isn't also a "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "partner trainer (e.g. escort mission), or a partner "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "trainer who doesn't visibly follow you around."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\PN teamed up with May!\\me[Item get]\\wtnp[40]"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "This Set Move Route command is to ensure that May "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "faces down once she stops following the player. "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Without this, she will be facing in whichever direction "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "she was facing when the player talked to this event "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "to add May as a follower."
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOK then."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Trainer(2)",
+      "x": 7,
+      "y": 17,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_PICNICKER",
+            "character_hue": 0,
+            "direction": 8,
+            "pattern": 0
+          },
+          "trigger": 2,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:PICNICKER)"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbNoticePlayer(get_self)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rBattle me now!"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerCheck("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  :PICNICKER, \"Susie\", 2"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                ")"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:PICNICKER, \"Susie\")"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "Phone.can_add?(:PICNICKER, \"Susie\")"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rCan I add you to my contacts list?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "Phone.add(get_self,"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                "  :PICNICKER, \"Susie\", 2"
+              ]
+            ],
+            [
+              655,
+              3,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_PICNICKER",
+            "character_hue": 0,
+            "direction": 8,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:PICNICKER)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rBattle me now!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "Phone.battle(:PICNICKER, \"Susie\")"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Phone.reset_after_win("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :PICNICKER, \"Susie\""
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkIGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_PICNICKER",
+            "character_hue": 0,
+            "direction": 8,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "Phone.variant(:PICNICKER, \"Susie\") == 0"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rI say the same thing after every battle. Why? Just "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "because."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "Phone.variant(:PICNICKER, \"Susie\") >= 1"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rI say the same thing after every battle. Why? Just "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "because."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "Phone.can_add?(:PICNICKER, \"Susie\")"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rCan I add you to my contacts list?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "Phone.add(get_self,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :PICNICKER, \"Susie\", 2"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "17": {
+      "id": 17,
+      "name": "Cave entrance",
+      "x": 55,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    255.0,
+                    255.0,
+                    255.0,
+                    255.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbCaveEntrance"
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                34,
+                23,
+                17,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "get_self.onEvent?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.hide_followers"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMW87Bwc7CFsAOw5pBm87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlVOgpAbmFtZUkiDkRvb3IgZXhpdAY6BkVUOgtAcGl0Y2hpaToKQGNvZGVpMQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.put_followers_on_player"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "28": {
+      "id": 28,
+      "name": "Invisible Kecleon",
+      "x": 45,
+      "y": 44,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "$bag.has?(:SILPHSCOPE)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Something unseeable is in the way. Want to use the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Silph Scope?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "Battle"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "$bag.has?(:DEVONSCOPE)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "Something unseeable is in the way. Want to use the "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Devon Scope?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "Battle"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "Something unseeable is in the way."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              115,
+              0,
+              []
+            ],
+            [
+              118,
+              0,
+              [
+                "Battle"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "The invisible Pokémon became completely visible!"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "The startled Pokémon attacked!"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "WildBattle.start(:KECLEON, 30)"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "If won"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                1,
+                1,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbFadeOutIn(99999){}"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "If escaped"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                1,
+                1,
+                0,
+                3,
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbFadeOutIn(99999){}"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "If caught"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                1,
+                1,
+                0,
+                4,
+                0
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": true,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "CutTree",
+      "x": 17,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 1",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbCut"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSmashThisEvent"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "12": {
+      "id": 12,
+      "name": "Double trainer M",
+      "x": 15,
+      "y": 13,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_COOLTRAINER_M",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "!pbCanDoubleBattle?"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYou'll need at least two Pokémon or a partner if you "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "want to battle us."
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:COOLCOUPLE)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bAh, looks like a challenging trainer. Ready, Alice?"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "setBattleRule(\"double\")"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:COOLCOUPLE, \"Alice & Bob\")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Set the partner event's Self Switch \"A\" on."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSetSelfSwitch(11, \"A\", true)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_COOLTRAINER_M",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bOur events weren't created by comments, "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "because we need to check how many Pokémon you "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "had."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "23": {
+      "id": 23,
+      "name": "SmashRock",
+      "x": 51,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object rock",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbRockSmash"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSmashThisEvent"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbRockSmashRandomEncounter"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "name": "Trainer(1)",
+      "x": 10,
+      "y": 13,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_BEAUTY",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 2,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:BEAUTY)"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbNoticePlayer(get_self)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rI've brought my own special backdrop!"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "setBattleRule("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  \"backdrop\", \"champion1\""
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                ")"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:BEAUTY, \"Bridget\")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_BEAUTY",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rIf exactly 2 trainers notice you at the same time, "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "they become a double battle."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rHere, though, 3 trainers noticed you at once, so I "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "battled you by myself. Then the 2 remaining trainers "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "noticing you at the same time became a double battle."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rI battled you first because my event's ID number (7) "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "comes before the Hiker's and Fisherman's event ID "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "numbers (8 and 9)."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "18": {
+      "id": 18,
+      "name": "HeadbuttTree",
+      "x": 48,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 2",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbHeadbutt"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "29": {
+      "id": 29,
+      "name": "CutTree",
+      "x": 51,
+      "y": 31,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 1",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbCut"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSmashThisEvent"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "13": {
+      "id": 13,
+      "name": "May initial reflection",
+      "x": 30,
+      "y": 16,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_POKEMONTRAINER_May",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rDo you want to team up with me?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Makes this event follow the player. The first "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "parameter means \"this event\", the second is a name "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "that identifies this follower, and the third is the "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Common Event number run when this follower is "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "interacted with."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.add(@event_id, \"May\", 2)"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Followers.add does not make this event disappear. It "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "should be hidden by using a Self Switch to make it use "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "a blank event page instead."
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Creates a partner trainer to battle alongside the "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "player. The parameters are the trainer type and "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "name of the partner. The partner trainer is defined "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "in trainers.txt just like any other trainer."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbRegisterPartner("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :POKEMONTRAINER_May,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"May\""
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Note that the above two features are entirely "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "unrelated. You can have a follower which isn't also a "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "partner trainer (e.g. escort mission), or a partner "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "trainer who doesn't visibly follow you around."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\PN teamed up with May!\\me[Item get]\\wtnp[40]"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOK then."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "If the player blacked out while May was following "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "them, May should return to being this event. This "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "page of this event runs automatically whenever this "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "map is loaded, and at no other time."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "May should only reappear here if she is not currently "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "following the player. This first Conditional Branch "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "checks for that."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "!$game_player.has_follower?"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Event 44 is another May event, and is the only way "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "to make May appear somewhere else on her own (i.e. "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "not being a follower)."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "While event 44 is May, its Self Switch A will be ON. "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Therefore, if its Self Switch A is OFF, it is not May, "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "and this event should be May (because she is not a "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "follower). This second Conditional Branch checks if "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "event 44's Self Switch A is off."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "get_event(44).isOff?(\"A\")"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Since event 44 is not May, this event should be May. "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "This event's Self Switch A should be turned OFF to "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "make its page 1 active (which shows May)."
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                1
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "HeadbuttTree",
+      "x": 22,
+      "y": 20,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 2",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbHeadbutt"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "24": {
+      "id": 24,
+      "name": "CutTree",
+      "x": 44,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 1",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbCut"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSmashThisEvent"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "name": "Trainer(1)",
+      "x": 9,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_HIKER",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 2,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:HIKER)"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbNoticePlayer(get_self)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bThis battle will go without a hitch!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:HIKER, \"Ford\")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_HIKER",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bHow did you manage to face all three of us?"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "19": {
+      "id": 19,
+      "name": "HeadbuttTree",
+      "x": 48,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 2",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbHeadbutt"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "14": {
+      "id": 14,
+      "name": "Rival",
+      "x": 18,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_RIVAL1",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This event should be somewhere where the player "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "can't possibly see it."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "It is moved from here to where it is needed when its "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "appearance is triggered."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Note that this event does nothing except look like an "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "NPC (the Rival). The actual battle and movements "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "are done by the controlling event at the entrance of "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "this short path."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "HeadbuttTree",
+      "x": 22,
+      "y": 21,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 2",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbHeadbutt"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "25": {
+      "id": 25,
+      "name": "HeadbuttTree",
+      "x": 48,
+      "y": 61,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 2",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbHeadbutt"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "name": "Trainer(1)",
+      "x": 11,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_FISHERMAN",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 2,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:FISHERMAN)"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbNoticePlayer(get_self)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bI'll get my tackle out for you!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:FISHERMAN, \"Andrew\")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_FISHERMAN",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI don't understand why my Magikarp couldn't beat "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "you."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "20": {
+      "id": 20,
+      "name": "HeadbuttTree",
+      "x": 48,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 2",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbHeadbutt"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "15": {
+      "id": 15,
+      "name": "Rival controller size(2,1)",
+      "x": 22,
+      "y": 13,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This event is size 2x1. It is 2 tiles wide and 1 tile tall. "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "An event's size can be set by adding \"size(x,y)\" in the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "event's name, where x and y are numbers."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "The event's placed position determines the bottom "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "left tile occupied by the event in-game."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "There are a lot of reasons to change an event's size. "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Here, it is covering the whole path with just one "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "event, rather than needing two events that do the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "same thing."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:RIVAL1)"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Position the Rival event level with the player."
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                1,
+                1,
+                0,
+                6,
+                -1,
+                0
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                2,
+                2,
+                0,
+                0,
+                6
+              ]
+            ],
+            [
+              202,
+              0,
+              [
+                14,
+                1,
+                1,
+                2,
+                2
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                14,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpBm87Bwc7CFsAOwlpBm87Bwc7CFsAOwlpBm87Bwc7CFsAOwlpBm87Bwc7CFsAOwlpBm87Bwc7CFsAOwlpBm87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bHi \\PN! I'm your Rival!"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bDo you want to name me, or leave me with my "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "default name as defined in trainers.txt?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Rename",
+                  "Cancel"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Rename"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "name = pbEnterNPCName("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  _I(\"Rival's name?\"),"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  1, Settings::MAX_PLAYER_NAME_SIZE,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"Blue\","
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"trainer_RIVAL1\""
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(12, name)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bSo my name is \\v[12], huh? Okay then."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Cancel"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(12, nil)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bLet's get down to the battle!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                1,
+                7,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Player chose Bulbasaur, rival has Charmander."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "TrainerBattle.start(:RIVAL1, \"Blue\", 1)"
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                7,
+                0,
+                2,
+                0
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Player chose Charmander, rival has Squirtle."
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "TrainerBattle.start(:RIVAL1, \"Blue\", 2)"
+              ]
+            ],
+            [
+              123,
+              3,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Player chose Squirtle, rival has Bulbasaur."
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "TrainerBattle.start(:RIVAL1, \"Blue\", 0)"
+              ]
+            ],
+            [
+              123,
+              3,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              111,
+              0,
+              [
+                2,
+                "A",
+                0
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI'm going to leave now. Smell you later!"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Move the Rival event off-screen."
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                14,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Clear the rival's event."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSetSelfSwitch(14, \"A\", true)"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Disable this event."
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Trainer(2)",
+      "x": 5,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_YOUNGSTER",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 2,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:YOUNGSTER)"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbNoticePlayer(get_self)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bHi! I like shorts! They're comfy and easy to wear!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:YOUNGSTER, \"Ben\")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_YOUNGSTER",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bYou can't get a trainer event simpler than me!"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "26": {
+      "id": 26,
+      "name": "HeadbuttTree",
+      "x": 49,
+      "y": 61,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 2",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbHeadbutt"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "10": {
+      "id": 10,
+      "name": "Trainer(2)",
+      "x": 13,
+      "y": 17,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_LASS",
+            "character_hue": 0,
+            "direction": 8,
+            "pattern": 0
+          },
+          "trigger": 2,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerIntro(:LASS)"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbNoticePlayer(get_self)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rGet ready for a double battle!"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "setBattleRule(\"double\")"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "TrainerBattle.start(:LASS, \"Crissy\")"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbTrainerEnd"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_LASS",
+            "character_hue": 0,
+            "direction": 8,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rMake sure all double battle opponents have at least "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "2 Pokémon!"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "21": {
+      "id": 21,
+      "name": "HeadbuttTree",
+      "x": 48,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object tree 2",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbHeadbutt"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

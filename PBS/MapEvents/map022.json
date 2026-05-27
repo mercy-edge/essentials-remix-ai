@@ -1,0 +1,9 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 22,
+  "exported": true,
+  "exported_note": "Generated from Data/Map022.rxdata. Edit events below; save; run game to merge.",
+  "events": {}
+}
+

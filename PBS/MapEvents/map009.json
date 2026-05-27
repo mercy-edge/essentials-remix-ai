@@ -1,0 +1,1641 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 9,
+  "exported": true,
+  "exported_note": "Generated from Data/Map009.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "5": {
+      "id": 5,
+      "name": "Bill",
+      "x": 12,
+      "y": 5,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 25",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbSet(2, pbGetStorageCreator)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bBill: Hello! I'm \\v[2]."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bI invented the Pokémon Storage System."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$player.seen_storage_creator = true"
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bWhat do you want to know?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Wallpapers",
+                  "Cancel"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Wallpapers"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bAll storage box wallpapers need to be listed in "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "class PokemonStorage, in def allWallpapers."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThey correspond to box_0.png, box_1.png, etc. in "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "order without gaps. These images are in the folder "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Graphics/Pictures/Storage."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bStorage wallpapers are split into two categories: "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "basic and special.All basic wallpapers are listed "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "before the special wallpapers."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bBasic wallpapers are always accessible, and "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "boxes use these wallpapers by default. Numbers 0 "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "to 15 inclusive are basic wallpapers."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bSpecial wallpapers start off locked and unavailable. "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "You can unlock them with pbUnlockWallpaper(id), "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "where id is the wallpaper's number."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Town Map, size(2,1)",
+      "x": 12,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This event is size 2x1. It is 2 tiles wide and 1 tile tall. "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "An event's size can be set by adding \"size(x,y)\" in the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "event's name, where x and y are numbers."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "The event's placed position determines the bottom "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "left tile occupied by the event in-game."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "There are a lot of reasons to change an event's size. "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Here, it is covering the whole wall map with just one "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "event, rather than needing two events that do the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "same thing."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbShowMap"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 7,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                7,
+                47,
+                10,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Nurse",
+      "x": 7,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 16",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This line of code sets the player's current position as "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "the spot they will return to after they lose a battle "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "and lack out."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Page 2 of this event detects when this happens, and "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "heals the player's Pokémon and wishes them better "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "luck in future."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbSetPokemonCenter"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rHello, and welcome to the Pokémon Center."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWe restore your tired Pokémon to full health."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWould you like to rest your Pokémon?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOK, I'll take your Pokémon for a few seconds."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$stats.poke_center_count += 1"
+              ]
+            ],
+            [
+              314,
+              1,
+              [
+                0
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Nurse turns to face the healing machine."
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFm87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Nurse places Poké Balls on the healing machine one at "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "a time."
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                1,
+                1,
+                0,
+                7,
+                1
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                6,
+                6,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              118,
+              1,
+              [
+                "Place ball"
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                6,
+                6,
+                1,
+                0,
+                1
+              ]
+            ],
+            [
+              250,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIhZCYXR0bGUgYmFsbCBzaGFrZQY6BkVUOgtAcGl0Y2hpaQ=="
+                }
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                6,
+                1,
+                1,
+                4
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "Place ball"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Healing animation and ME jingle."
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                4,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJm87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJg=="
+                }
+              ]
+            ],
+            [
+              249,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhFQa21uIGhlYWxpbmcGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                58
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Poké Balls are removed from healing machine, nurse "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "turns to face the player."
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                6,
+                6,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "get_character(4).pattern = 0"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                4,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJ287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJw=="
+                }
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkUOgpAY29kZWkUbzsHBzsIWwA7CWkVbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkUOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "Pokérus check."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbPokerus?"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rYour Pokémon may be infected by Pokérus."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rLittle is known about the Pokérus except that they "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "are microscopic life-forms that attach to Pokémon."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWhile infected, Pokémon are said to grow "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "exceptionally well."
+              ]
+            ],
+            [
+              121,
+              2,
+              [
+                2,
+                2,
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rThank you for waiting."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWe've restored your Pokémon to full health."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Nurse bows."
+              ]
+            ],
+            [
+              209,
+              2,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwlvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kGOgpAY29kZWkubzsHBzsIWwZpDzsKaRRvOwcHOwhbCUkiC05QQyAxNgY7CVRpAGkHaQA7CmkubzsHBzsIWwA7CmkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kGOgpAY29kZWku"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkPOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kAOgpAY29kZWku"
+                }
+              ]
+            ],
+            [
+              210,
+              2,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rWe hope to see you again!"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rWe hope to see you again!"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 16",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "Every map you can end up in after having all your "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Pokémon faint (typically Poké Centers and home) "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "must have an Autorun event in it like this one."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "This event fully heals all the player's Pokémon, says "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "something to that effect, and turns the \"Starting "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "over\" switch OFF again."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "For convenience, this can be a single page in an "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "NPC's event (e.g. Mom, a nurse)."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rFirst, you should restore your Pokémon to full "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "health."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$stats.poke_center_count += 1"
+              ]
+            ],
+            [
+              314,
+              0,
+              [
+                0
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Nurse turns to face the healing machine."
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFm87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "Nurse places Poké Balls on the healing machine one at "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "a time."
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                1,
+                1,
+                0,
+                7,
+                1
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                6,
+                6,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Place ball"
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                6,
+                6,
+                1,
+                0,
+                1
+              ]
+            ],
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIhZCYXR0bGUgYmFsbCBzaGFrZQY6BkVUOgtAcGl0Y2hpaQ=="
+                }
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                1,
+                6,
+                1,
+                1,
+                4
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Place ball"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "Healing animation and ME jingle."
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                4,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJm87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJg=="
+                }
+              ]
+            ],
+            [
+              249,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhFQa21uIGhlYWxpbmcGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                58
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Poké Balls are removed from healing machine, nurse "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "turns to face the player."
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                6,
+                6,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "get_character(4).pattern = 0"
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                4,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJ287Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpJw=="
+                }
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkUOgpAY29kZWkUbzsHBzsIWwA7CWkVbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkUOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rYour Pokémon have been healed to perfect health."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Nurse bows."
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwlvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kGOgpAY29kZWkubzsHBzsIWwZpDzsKaRRvOwcHOwhbCUkiC05QQyAxNgY7CVRpAGkHaQA7CmkubzsHBzsIWwA7CmkAOg9Ac2tpcHBhYmxlRjoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kGOgpAY29kZWku"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkPOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbCUkiC05QQyAxNgY6BkVUaQBpB2kAOgpAY29kZWku"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWe hope you excel!"
+              ]
+            ],
+            [
+              121,
+              0,
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "PC",
+      "x": 11,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbPokeCenterPC"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Healing balls",
+      "x": 5,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaTA6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 1",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpBjoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 1",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpBzoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 1",
+            "character_hue": 0,
+            "direction": 8,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpCDoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 2",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpCToXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 2",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpCjoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "Healing balls 2",
+            "character_hue": 0,
+            "direction": 8,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpCzoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQs6FEB2YXJpYWJsZV92YWxpZFQ6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

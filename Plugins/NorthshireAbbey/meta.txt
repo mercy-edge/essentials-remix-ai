@@ -1,0 +1,8 @@
+Name = Northshire Abbey scripted events
+Version = 1.0
+Essentials = 21.1
+Requires = Quest Journal
+Requires = Player Class Selection
+Requires = Generic Map Warp
+Link = https://github.com
+Credits = Local

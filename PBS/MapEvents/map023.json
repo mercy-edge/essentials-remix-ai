@@ -1,0 +1,3613 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 23,
+  "exported": true,
+  "exported_note": "Generated from Data/Map023.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "5": {
+      "id": 5,
+      "name": "Natural Park door",
+      "x": 33,
+      "y": 21,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                29,
+                1,
+                5,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Day Care Man",
+      "x": 26,
+      "y": 11,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "DayCare.egg_generated?"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bAh, it's you!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bWe were raising your Pokémon, and my goodness, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "were we surprised!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYour Pokémon was holding an Egg!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bWe don't know how it got there, but your Pokémon "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "had it."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYou do want it, don't you?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              118,
+              2,
+              [
+                "ReceiveEgg"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "$player.party_full?"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bYou have no room for it right now... Come back "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "when you've made room."
+              ]
+            ],
+            [
+              115,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\me[Egg get]\\PN received the Egg from the Day-Care "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Man."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bYou take good care of it."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "DayCare.collect_egg"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bI really will keep it. You do want this Egg, yes?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "ReceiveEgg"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bWell all right then, I'll take it. Thank you."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bThat is, I don't think we'll ever find another..."
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bNo, no, I'm sure we'll find another one. I'm definitely "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "sure of it!"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "DayCare.reset_egg_counters"
+              ]
+            ],
+            [
+              115,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "DayCare.count == 0"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bI'm the Day-Care Man."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bI help take care of the precious Pokémon of "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "trainers."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bAny Pokémon you'd like to have raised you can "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "leave in my wife's care."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "DayCare.count == 1"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "DayCare.get_details(-1, 3, -1)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bAh, it's you!\\nGood to see you!"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bYour \\v[3] is doing just fine."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "DayCare.count == 2"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "DayCare.get_details(0, 3, -1)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "DayCare.get_details(1, 4, -1)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "DayCare.get_compatibility(5)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bAh, it's you!\\nGood to see you!"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bYour \\v[3] and \\v[4] are doing just fine."
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                5,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bThe two play with other Pokémon rather than with "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "each other..."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                5,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bThe two don't seem to like each other much."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                5,
+                0,
+                2,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bThe two seem to get along."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                5,
+                0,
+                3,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bThe two seem to get along very well."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Poké Center door",
+      "x": 11,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "doors3",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              209,
+              0,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwlvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              208,
+              0,
+              [
+                0
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "Followers.follow_into_door"
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkUbzsHBzsIWwA7CWkXbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRZvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpFW87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              208,
+              0,
+              [
+                1
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                24,
+                7,
+                8,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "doors3",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "get_self.onEvent?"
+              ]
+            ],
+            [
+              208,
+              1,
+              [
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.hide_followers"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              208,
+              1,
+              [
+                1
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBm87Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.put_followers_on_player"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpF287Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkWbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRVvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "name": "Vendor",
+      "x": 12,
+      "y": 21,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 19",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "Poké Balls are cheaper on Saturdays (day 6)."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "If the first value (the 0) is greater than 0, then the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "name of today (\"Saturday\") is stored in the Game "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Variable of that number."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbIsWeekday(0, 6)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bWe're having a sale today. 25% off all Poké Balls."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "setPrice(item, buy price, sell price)"
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "If the sell price isn't given, it will be half of the buy "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "price. If the sell price is 0, the player cannot sell it to "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "the Mart."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "You can use this to change the sell price of items sold "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "by the player to the Mart, even if the Mart doesn't "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "stock them."
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Price changes only apply to the next call to "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "pbPokemonMart. After that, they are forgotten."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "setPrice(:GREATBALL, 450)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "setPrice(:ULTRABALL, 600)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "setPrice(:TIMERBALL, 750)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "setPrice(:REPEATBALL, 750)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "This vendor is selling a Key Item, the Silph Scope. If "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "the player has a Silph Scope already, it will not "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "appear in the vendor's inventory."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Key Items sold by vendors/Marts should have a non-"
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "zero price."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "setPrice(:SILPHSCOPE, 5000)"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                0,
+                12,
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbPokemonMart(["
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :SILPHSCOPE,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :GREATBALL, :ULTRABALL,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :LEMONADE, :SODAPOP, :FRESHWATER,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :MOOMOOMILK,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :TIMERBALL, :REPEATBALL,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :LAVACOOKIE"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "])"
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "pbPokemonMart(["
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  :SILPHSCOPE,"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  :GREATBALL, :ULTRABALL,"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  :SODAPOP, :FRESHWATER"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "])"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Mart door",
+      "x": 16,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "doors3",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              209,
+              0,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwlvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              208,
+              0,
+              [
+                0
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "Followers.follow_into_door"
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkUbzsHBzsIWwA7CWkXbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRZvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpFW87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              208,
+              0,
+              [
+                1
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                25,
+                4,
+                7,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "doors3",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "get_self.onEvent?"
+              ]
+            ],
+            [
+              208,
+              1,
+              [
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.hide_followers"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3Igc2xpZGUGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              208,
+              1,
+              [
+                1
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBm87Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.put_followers_on_player"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpF287Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkWbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRVvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "name": "EV008",
+      "x": 22,
+      "y": 18,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\w[signskin]Pokémon Fan Club"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Fan club door",
+      "x": 24,
+      "y": 18,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "doors1",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3IgZW50ZXIGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3IgZW50ZXIGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              209,
+              0,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwlvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              208,
+              0,
+              [
+                0
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "Followers.follow_into_door"
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkUbzsHBzsIWwA7CWkXbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRZvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpFW87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              208,
+              0,
+              [
+                1
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                26,
+                5,
+                10,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "doors1",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 3
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "get_self.onEvent?"
+              ]
+            ],
+            [
+              208,
+              1,
+              [
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.hide_followers"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3IgZW50ZXIGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3IgZW50ZXIGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              208,
+              1,
+              [
+                1
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBm87Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.put_followers_on_player"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpF287Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkWbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRVvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "name": "Bicycle NPC",
+      "x": 13,
+      "y": 27,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 19",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This NPC swaps a Lemonade for a Bicycle (because "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Essentials doesn't come with a Bike Voucher item)."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bHi! I'm super thirsty. Do you have a Lemonade? I'll "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "trade you a Bicycle for one. I have too many "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "Bicycles."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "$bag.has?(:LEMONADE)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOh, you have a Lemonade? Would you consider "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "exchanging it for a Bicycle?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bExcellent! Here you go."
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "pbReceiveItem(:BICYCLE)"
+              ]
+            ],
+            [
+              108,
+              3,
+              [
+                "There is no need to check whether it's possible to "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "delete a Lemonade from the player's Bag, because "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "the check above made sure there is at least one of "
+              ]
+            ],
+            [
+              408,
+              3,
+              [
+                "them in the Bag, so it can definitely be deleted."
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "$bag.remove(:LEMONADE)"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bThank you! I really needed this."
+              ]
+            ],
+            [
+              123,
+              3,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bYou have no space in your Bag. I don't want to just "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "take your Lemonade, so come back when I can give "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "you a Bicycle in return."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bThat's too bad. I really am thirsty."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 19",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bAre you enjoying your Bicycle? The Lemonade you "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "gave me was just what I needed."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Day Care door",
+      "x": 28,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "doors4",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3IgZW50ZXIGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3IgZW50ZXIGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              209,
+              0,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwlvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              208,
+              0,
+              [
+                0
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "Followers.follow_into_door"
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              209,
+              0,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww1vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkUbzsHBzsIWwA7CWkXbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRZvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpFW87Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkAOg9Ac2tpcHBhYmxlVDoMQHJlcGVhdEY="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              208,
+              0,
+              [
+                1
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                27,
+                4,
+                7,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "doors4",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "get_self.onEvent?"
+              ]
+            ],
+            [
+              208,
+              1,
+              [
+                0
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.hide_followers"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3IgZW50ZXIGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTFvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pFm87Bwc7CFsGaQc7DmkUbzsHBzsIWwA7DmkXbzsHBzsIWwZpBzsOaRRvOwcHOwhbADsOaRhvOwcHOwhbBmkHOw5pFG87Bwc7CFsAOw5pADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBm86E1JQRzo6QXVkaW9GaWxlCDoMQHZvbHVtZWlpOgpAbmFtZUkiD0Rvb3IgZW50ZXIGOgZFVDoLQHBpdGNoaWk6CkBjb2RlaTE="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              208,
+              1,
+              [
+                1
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBm87Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBg=="
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "Followers.put_followers_on_player"
+              ]
+            ],
+            [
+              209,
+              1,
+              [
+                0,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpF287Bwc7CFsGaQc7CWkUbzsHBzsIWwA7CWkWbzsHBzsIWwZpBzsJaRRvOwcHOwhbADsJaRVvOwcHOwhbBmkHOwlpFG87Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbBmkHOgpAY29kZWkU"
+                }
+              ]
+            ],
+            [
+              210,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpGzoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,2928 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 11,
+  "exported": true,
+  "exported_note": "Generated from Data/Map011.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "5": {
+      "id": 5,
+      "name": "Old Amber",
+      "x": 11,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "pbItemBall(:OLDAMBER)"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 7,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This command makes the fossil reviver finish reviving "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "a Pokémon."
+              ]
+            ],
+            [
+              121,
+              0,
+              [
+                13,
+                13,
+                1
+              ]
+            ],
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                7,
+                35,
+                28,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Fossil reviver",
+      "x": 10,
+      "y": 3,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_SCIENTIST",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "The fossil reviver finishes reviving the Pokémon as "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "soon as you step out of the door. See the exit event "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "on this map."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                2,
+                "B",
+                1
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOh, hello. I'm a scientist."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI can turn fossils into living, breathing Pokémon!"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bAiyah! You come again!"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bDo you have a fossil for me?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bWhich fossil do you want me to revive?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbChooseFossil(9)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbGet(9) == :NONE"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Player didn't choose a fossil."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bLet me know when you want me to revive a "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "fossil for you."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Player chose a fossil."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$bag.remove(pbGet(9))"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "data = GameData::Item.get(pbGet(9))"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pbSet(3, data.name)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bOkay. I'll see if I can revive your \\v[3]."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bCome back later."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Convert fossil into species now."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "conversion_hash = {"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :HELIXFOSSIL => :OMANYTE,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :DOMEFOSSIL  => :KABUTO,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :OLDAMBER    => :AERODACTYL,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :ROOTFOSSIL  => :LILEEP,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :CLAWFOSSIL  => :ANORITH,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :SKULLFOSSIL => :CRANIDOS,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :ARMORFOSSIL => :SHIELDON"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "}"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "conversion_hash.merge!({"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :COVERFOSSIL => :TIRTOUGA,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :PLUMEFOSSIL => :ARCHEN,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :JAWFOSSIL   => :TYRUNT,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :SAILFOSSIL  => :AMAURA"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "})"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "item = pbGet(9)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "species = conversion_hash[item]"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pbSet(9, species)"
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              121,
+              2,
+              [
+                13,
+                13,
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Player doesn't want to choose a fossil."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI'll be here if you want my help."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaSE6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_SCIENTIST",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "pbGet(9).is_a?(Symbol)"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "data = GameData::Species.get("
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  pbGet(9))"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(3, data.name)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bWhere have you been? I've finished reviving your"
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "fossil."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bIt was \\v[3] like I thought."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbAddToParty(pbGet(9), 1)"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$stats.revived_fossil_count += 1"
+              ]
+            ],
+            [
+              122,
+              2,
+              [
+                9,
+                9,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                1
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bYou have no room left. Make room, then come see "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "me."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "This only happens when the fossil reviver is given an "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "item that couldn't be turned into a species on page 1."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "This should never happen. If it does, there is a "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "mistake in the conversion_hash on page 1, namely "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "that it doesn't contain a \"fossil => species\" pair for "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "the item given to the fossil reviver."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bI managed to revive your fossil."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bHowever, what I brought back didn't live long...\\1 "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "fortunately."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bSorry."
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                1
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_SCIENTIST",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI told you, come back later."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpEjoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "PC",
+      "x": 1,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbPokeCenterPC"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Fossil combiner",
+      "x": 5,
+      "y": 3,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_SCIENTIST",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "The fossil combiner is from Gen 8. They take two "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "different fossil items and produce a Pokémon based "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "on the combination. This is a relatively "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "straightforward \"choose an item from each of two "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "lists, add a Pokémon based on what was chosen\"."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                2,
+                "B",
+                1
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bHello, huh! My name is Carl Ess. I can turn "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "combinations of partial Fossils into living, breathing "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Pokémon!"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Check whether the player has at least one top fossil "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "and at least one bottom fossil. The result of this "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "check could have been stored in a Game Switch "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "rather than a Game Variable, because it's just \"yes or "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "no\", but there are no Game Switches for temporary "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "values and I didn't feel like makng one just for this."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "top = $bag.has?(:FOSSILIZEDBIRD) ||"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "      $bag.has?(:FOSSILIZEDFISH)"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "btm = $bag.has?(:FOSSILIZEDDRAKE) ||"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "      $bag.has?(:FOSSILIZEDDINO)"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "pbSet(1, (top && btm) ? 1 : 0)"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                1,
+                1,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "The choice of top fossil will be stored in Game Variable "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "1 (1=Bird, 2=Fish, 0=Quit)."
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "The choice of bottom fossil will be stored in Game "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Variable 2 (1=Drake, 2=Dino, 0=Quit)."
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                1,
+                1,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bHm? You've got some Fossils there, huh. Will you "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "show them to me, Carl Ess?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              118,
+              2,
+              [
+                "Start choices"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Choose the top half."
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "$bag.has?(:FOSSILIZEDBIRD) && $bag.has?(:FOSSILIZEDFISH)"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bWhich of your Fossils do you think stands up to the "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "high standards of Carl Ess?"
+              ]
+            ],
+            [
+              102,
+              3,
+              [
+                [
+                  "Fossilized Bird",
+                  "Fossilized Fish",
+                  "Quit"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              3,
+              [
+                0,
+                "Fossilized Bird"
+              ]
+            ],
+            [
+              122,
+              4,
+              [
+                1,
+                1,
+                0,
+                0,
+                1
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              402,
+              3,
+              [
+                1,
+                "Fossilized Fish"
+              ]
+            ],
+            [
+              122,
+              4,
+              [
+                1,
+                1,
+                0,
+                0,
+                2
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              402,
+              3,
+              [
+                2,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              4,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              404,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "$bag.has?(:FOSSILIZEDBIRD)"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bWhich of your Fossils do you think stands up to the "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "high standards of Carl Ess?"
+              ]
+            ],
+            [
+              102,
+              4,
+              [
+                [
+                  "Fossilized Bird",
+                  "Quit"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              4,
+              [
+                0,
+                "Fossilized Bird"
+              ]
+            ],
+            [
+              122,
+              5,
+              [
+                1,
+                1,
+                0,
+                0,
+                1
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              402,
+              4,
+              [
+                1,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              5,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              404,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bWhich of your Fossils do you think stands up to the "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "high standards of Carl Ess?"
+              ]
+            ],
+            [
+              102,
+              4,
+              [
+                [
+                  "Fossilized Fish",
+                  "Quit"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              4,
+              [
+                0,
+                "Fossilized Fish"
+              ]
+            ],
+            [
+              122,
+              5,
+              [
+                1,
+                1,
+                0,
+                0,
+                2
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              402,
+              4,
+              [
+                1,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              5,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              404,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Choose the bottom half."
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "$bag.has?(:FOSSILIZEDDRAKE) && $bag.has?(:FOSSILIZEDDINO)"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\bWhich of your Fossils do you think will pique the "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "curiosity of Carl Ess?"
+              ]
+            ],
+            [
+              102,
+              3,
+              [
+                [
+                  "Fossilized Drake",
+                  "Fossilized Dino",
+                  "Quit"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              3,
+              [
+                0,
+                "Fossilized Drake"
+              ]
+            ],
+            [
+              122,
+              4,
+              [
+                2,
+                2,
+                0,
+                0,
+                1
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              402,
+              3,
+              [
+                1,
+                "Fossilized Dino"
+              ]
+            ],
+            [
+              122,
+              4,
+              [
+                2,
+                2,
+                0,
+                0,
+                2
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              402,
+              3,
+              [
+                2,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              4,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              404,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "$bag.has?(:FOSSILIZEDDRAKE)"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bWhich of your Fossils do you think will pique the "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "curiosity of Carl Ess?"
+              ]
+            ],
+            [
+              102,
+              4,
+              [
+                [
+                  "Fossilized Drake",
+                  "Quit"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              4,
+              [
+                0,
+                "Fossilized Drake"
+              ]
+            ],
+            [
+              122,
+              5,
+              [
+                2,
+                2,
+                0,
+                0,
+                1
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              402,
+              4,
+              [
+                1,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              5,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              404,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\bWhich of your Fossils do you think will pique the "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "curiosity of Carl Ess?"
+              ]
+            ],
+            [
+              102,
+              4,
+              [
+                [
+                  "Fossilized Dino",
+                  "Quit"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              4,
+              [
+                0,
+                "Fossilized Dino"
+              ]
+            ],
+            [
+              122,
+              5,
+              [
+                2,
+                2,
+                0,
+                0,
+                2
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              402,
+              4,
+              [
+                1,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              5,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              404,
+              4,
+              []
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              119,
+              2,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Player doesn't have at least one fossil for each end."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bCome see me when you have some interesting "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Fossils."
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Determine which Pokémon will be revived from the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "chosen fossils. Its species is stored in Game Variable "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "14."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                1,
+                1,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                2,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Bird + Drake = Dracozolt"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bSo I should restore the Fossilized Bird and the "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Fossilized Drake together, huh?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes, please",
+                  "I want to try something else",
+                  "Quit"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes, please"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbSet(14, :DRACOZOLT)"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "I want to try something else"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "Start choices"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                2,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Bird + Dino = Arctozolt"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bSo I should restore the Fossilized Bird and the "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Fossilized Dino together, huh?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes, please",
+                  "I want to try something else",
+                  "Quit"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes, please"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbSet(14, :ARCTOZOLT)"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "I want to try something else"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "Start choices"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                2,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                2,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Fish + Drake = Dracovish"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bSo I should restore the Fossilized Fish and the "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Fossilized Drake together, huh?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes, please",
+                  "I want to try something else",
+                  "Quit"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes, please"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbSet(14, :DRACOVISH)"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "I want to try something else"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "Start choices"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                2,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Fish + Dino = Arctovish"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bSo I should restore the Fossilized Fish and the "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Fossilized Dino together, huh?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes, please",
+                  "I want to try something else",
+                  "Quit"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes, please"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbSet(14, :ARCTOVISH)"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "I want to try something else"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "Start choices"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                2,
+                "Quit"
+              ]
+            ],
+            [
+              119,
+              3,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Create the Pokémon from the chosen fossils, and "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "give it to the player."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "GameData::Species.exists?(pbGet(14))"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Fossils can be combined and will make a Pokémon. "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Remove the fossil items and add the Pokémon."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                1,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$bag.remove(:FOSSILIZEDBIRD)"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              355,
+              2,
+              [
+                "$bag.remove(:FOSSILIZEDFISH)"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                2,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$bag.remove(:FOSSILIZEDDRAKE)"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              355,
+              2,
+              [
+                "$bag.remove(:FOSSILIZEDDINO)"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOK. Restoration time. Let's unravel the mystery of "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "these Fossils!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bAll right, I'll stick 'em together! Here... we... GO!"
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                20
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bObjective complete. It seems the restoration was a "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "great success."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYes, I can see it in its eyes. This is a Pokémon that "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "walked the face of Essen in ancient times! Please "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "take and care for this Pokémon, huh."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbAddToParty(pbGet(14), 1)"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$stats.revived_fossil_count += 1"
+              ]
+            ],
+            [
+              122,
+              2,
+              [
+                14,
+                14,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Pokémon was added!"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "The Pokémon couldn't be added to the party. Keep its "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "species in Game Variable 14 and turn Self Switch A "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "on, to let the player collect it once they have space in "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "their party. See page 2 of this event."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bOh, you don't have space in your party, huh. Make "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "some room and then come back here for your "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Pokémon."
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              108,
+              1,
+              [
+                "The species to be revived is not defined. Do nothing."
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                14,
+                14,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOh. They don't seem to work together."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              115,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Quit"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bMaybe some other time, then."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaRM6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_SCIENTIST",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bHuh, have you made some room for your Pokémon "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "yet?"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbAddToParty(pbGet(14), 1)"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$stats.revived_fossil_count += 1"
+              ]
+            ],
+            [
+              122,
+              1,
+              [
+                14,
+                14,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                1
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYou haven't. Make some room and then come back "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "here."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

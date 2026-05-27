@@ -1,0 +1,5 @@
+Name = Player Class Selection
+Version = 1.0
+Essentials = 21.1
+Link = https://github.com
+Credits = Essentials Remix AI

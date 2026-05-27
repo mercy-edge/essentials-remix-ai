@@ -1,0 +1,5115 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 3,
+  "exported": true,
+  "exported_note": "Generated from Data/Map003.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "11": {
+      "id": 11,
+      "name": "Warp tile 2",
+      "x": 2,
+      "y": 3,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "Choose a destination."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Game Corner",
+                  "Trainer area",
+                  "Shadow Pokémon area"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Game Corner"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                13,
+                9,
+                13,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Trainer area"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                31,
+                10,
+                18,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Shadow Pokémon area"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                47,
+                16,
+                21,
+                2,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Bridges map",
+                  "Water map"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Bridges map"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                21,
+                16,
+                26,
+                2,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Water map"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                69,
+                28,
+                12,
+                2,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Harbor",
+                  "Cycle Road",
+                  "Cancel"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Harbor"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                71,
+                8,
+                3,
+                2,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Cycle Road"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                46,
+                11,
+                6,
+                4,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Trainer, Visual Editor, Terrain Tags",
+      "x": 29,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              118,
+              0,
+              [
+                "Start"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "Choose a topic."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "About the trainer",
+                  "Map connections",
+                  "Terrain Tags",
+                  "Cancel"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "About the trainer"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "The $player global variable contains information "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "about the player, such as their trainer type, ID "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "number, name, party Pokémon and money."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "This information is in class Player."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Map connections"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Map connections are how two maps are displayed "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "next to each other in the overworld, allowing you to "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "walk from one to the other."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "The connections are defined in the PBS file "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\"map_connections.txt\". There is a Debug feature that "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "makes connecting maps easier."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "In the Debug menu, go to \"PBS File Editors...\" > "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\"Edit map_connections.txt\". Instructions are available "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "within. You can move maps around with the mouse."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Terrain Tags"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Every tile in a tileset has a terrain tag, which is a "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "number. This number is used to give certain tiles "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "special effects."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "For example, ledge tiles have terrain tag 1, which "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "means the player jumps over them. Ledge tiles also "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "have a single passable direction (set separately)."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Grass tiles (in which you can have wild encounters) "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "have terrain tag 2. Water tiles have terrain tag 6 or 7."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Terrain tag 0 means the tile has no special effect. "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "See the wiki for more information and a complete list "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "of all terrain tags and their effects."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "You can only set terrain tags up to 7 via RPG Maker "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "XP's Database. Essentials has terrain tags with "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "higher numbers."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "To fully set a tileset's terrain tags, open the Debug "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "menu and go to \"Other Editors...\" > \"Edit Terrain "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Tags\"."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 3,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                2,
+                8,
+                7,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "12": {
+      "id": 12,
+      "name": "Choices NPC",
+      "x": 9,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 08",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "The \"Show Choices\" event command only allows you "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "to input up to 4 choices. If you want more, you can "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "have multiple \"Show Choices\" in a row, and they will "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "be joined together and treated as one."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "You can have as many or as few choices in each "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "\"Show Choices\" event command as you want. You "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "don't have to have the maximum 4 choices in one "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "before adding another one."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rI will offer you more than 4 choices at once. You "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "can put multiple \"Show Choices\" commands in a row "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "to do this."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rPlease choose one."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Choice 1",
+                  "Choice 2",
+                  "Choice 3",
+                  "Choice 4"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Choice 1"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 1 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Choice 2"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 2 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Choice 3"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 3 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Choice 4"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 4 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Choice 5",
+                  "Choice 6"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Choice 5"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 5 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Choice 6"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 6 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Choice 7"
+                ],
+                5
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Choice 7"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 7 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              403,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "The choice was cancelled."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Each \"Show Choices\" command has its own \"When "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "cancel\" property. The last one that isn't \"Disallow\" is "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "the one that will be used."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "To forbid cancelling a choice, set all of the \"Show "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Choices\" commands to \"Disallow\"."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rPlease choose one. This choice can't be cancelled."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Choice 1",
+                  "Choice 2",
+                  "Choice 3",
+                  "Choice 4"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Choice 1"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 1 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Choice 2"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 2 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Choice 3"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 3 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Choice 4"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 4 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Choice 5",
+                  "Choice 6",
+                  "Choice 7"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Choice 5"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 5 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Choice 6"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 6 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Choice 7"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 7 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "This is an example of setting the \"When cancel\" "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "property in a \"Show Choices\" command that isn't the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "last one. The \"When cancel\" properties in all later "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "\"Show Choices\" commands should be set to "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "\"Disallow\"."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rPlease choose one. Cancelling will result in Choice "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "3."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Choice 1",
+                  "Choice 2",
+                  "Choice 3",
+                  "Choice 4"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Choice 1"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 1 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Choice 2"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 2 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Choice 3"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 3 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Choice 4"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 4 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Choice 5",
+                  "Choice 6",
+                  "Choice 7"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Choice 5"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 5 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Choice 6"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 6 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Choice 7"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Choice 7 was chosen."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "This is an example of renaming and hiding choices."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "rename_choice and hide_choice apply to the next "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Show Choices command in the same event page, no "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "matter how much later it happens."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Renaming is useful if the name you want for a choice "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "is longer than RPG Maker XP allows, or if you want "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "that choice's name to vary, e.g. saying \"Potions: X\" "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "where \"X\" is how many Potions the player has."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "if rand(2) == 0"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  rename_choice(1,"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "_I(\"This choice's name is too long!\")"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  )"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "else"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  qty = $bag.quantity(:POTION)"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  rename_choice(1,"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "    _I(\"Potions: {1}\", qty)"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  )"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "end"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Hiding is useful for an NPC who unlocks choices "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "depending on certain conditions, e.g. the player "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "having particular Key Items. See the Route 8 harbor "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "map for an example of this."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "hide_choice(2, !$player.male?)"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "hide_choice(3, !$player.female?)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rThis is an example of how to modify choices, using "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "the hide_choice and rename_choice scripts."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "You won't see me!",
+                  "The player is male",
+                  "The player is female",
+                  "Cancel"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "You won't see me!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "This choice was renamed by rename_choice."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "The player is male"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "This choice is hidden if the player is not male."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "The player is female"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "This choice is hidden if the player is not female."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "name": "Debug, badges, screenshots",
+      "x": 30,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              118,
+              0,
+              [
+                "Start"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "Choose a topic."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Debug mode",
+                  "Give all badges",
+                  "Taking screenshots",
+                  "Cancel"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Debug mode"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Debug mode is a special way of playing the game. It "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "unlocks various developer features to make it easier "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "to access all parts of the game and test things."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Playing in Debug mode allows you to access the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Debug menu (press F9 or find it in the pause menu)."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "The party screen and Pokémon storage have a "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "similar debug menu for modifying a Pokémon's "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "properties, such as its level or species."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "You can use field moves at any time, and hold Ctrl to "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "skip any battles and decide the outcome of Trainer "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "battles. Hold Ctrl while moving to walk over anything."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "A full list of Debug mode features is available on the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "wiki."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$DEBUG = true"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "The $DEBUG variable was set to true. This flag is set "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "automatically during playtesting within RMXP. This is "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "what causes the game to be in Debug mode."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Give all badges"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "for i in 0...16"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  $player.badges[i] = true"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "end"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Obtained all Gym Badges for the first and second "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "regions."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "To add a Gym Badge, use $player.badges[X]=true "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "where X is a number from 0 through 7. Use"
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "$player.badges[X] to see if you have a Badge."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Note that the first Gym Badge is number 0, the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "second Badge is number 1, and so on."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "In Debug mode, you can set which Gym Badges you "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "have via the Debug menu."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Taking screenshots"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Press F8 to take a screenshot of the game."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "The screenshot will be put in the same folder as the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "one containing the save file."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Stairs up",
+      "x": 10,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpLG87Bwc7CFsAOwlpF287Bwc7CFsAOwlpDW87Bwc7CFsAOwlpK287Bwc7CFsAOwlpLW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpLA=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpDQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpLQ=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                3,
+                29,
+                2,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "13": {
+      "id": 13,
+      "name": "Text formatting NPC",
+      "x": 10,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 07",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              118,
+              0,
+              [
+                "Start"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "Choose a text option."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Text colours",
+                  "Text formatting",
+                  "Insert text/in-line graphics",
+                  "Graphic and info windows"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Text colours"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThis is the text of a male character."
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\\rThis is the text of a female character."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\pgThis text is the colour of the player's gender. "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\\pogThis text is the colour of the opposite gender to "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "the player."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\c[0]Default, \\c[1]blue, \\c[2]red, \\c[3]green, \\c[4]cyan, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\\c[5]magenta, \\c[6]yellow, \\c[7]grey, \\c[8]white, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\\c[9]purple, \\c[10]orange, \\c[11]dark, \\c[12]light."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Text formatting"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "<b>Bold text,</b> <i>italic text,</i> <u>underlined "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "text,</u> <s>strikethrough text,</s> <outln>outline "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "text,</outln> <outln2>thicker outline text.</outln2>"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "<fn=Power Clear Bold>Power Clear Bold text,</fn> "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "<fs=25>size 25 text,</fs> <fs=40>size 40 text,</fs> "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "<o=128>half-transparent text.</o>"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "This is a line\\n break. Text is \\n<r>right-aligned until "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "next line\\n break. Text is <ac>centred</ac> here. "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Text is <ar>right-aligned</ar> here."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Insert text/in-line graphics"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\PN is the player's name, \\PM is the player's money, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\\v[12] is the content of Game Variable 12."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "This is <icon=bagPocket3> bagPocket3 from the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "folder Graphics/Icons. Icons shown this "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "way are not padded."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Graphic and info windows"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\GThe money window is shown."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\CNThe coins window is shown."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\G\\CNThe money and coins windows are both "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "shown. The coins window must be shown second."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\f[introBoy]The introBoy picture from the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Graphics/Pictures folder is shown."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\ff[introBoy]The introBoy picture is shown again, but "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "cropped to the top-left 96x96 pixels of it."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Message box appearance",
+                  "Text speed and audio",
+                  "Audio",
+                  "Cancel"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Message box appearance"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\w[signskin]The windowskin has changed to "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\"signskin\" here."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\l[3]This message box has 3 lines to it rather than 2, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "so more text can be shown at once. Lorem ipsum "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "dolor sit amet, consectetur adipisicing elit."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\wuThis message box is at the top."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\wmThis message box is in the middle."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\wuThis message box is\\wm jumping around the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "screen\\wd in a rather off-putting way."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\opThis message box slides on-screen at the start."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\clThis message box slides off-screen at the end."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Text speed and audio"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\ts[]This text appeared instantly!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\ts[5]This text is slow to appear."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Slow text speed is 4, normal speed is 2, fast speed "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "is 1. It takes this many 1/80ths of a second for the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "next character in a message to appear."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Audio"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\se[Pkmn move learnt]Sound effect \"Pkmn move "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "learnt\" was played."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "Music effect \"Item get\" will be played."
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\\me[Item get]"
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "A complete list of all message options is available on "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "the wiki."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "name": "Pokédex",
+      "x": 5,
+      "y": 4,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                12,
+                "!$player.has_pokedex"
+              ]
+            ],
+            [
+              249,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIg1JdGVtIGdldAY6BkVUOgtAcGl0Y2hpaQ=="
+                }
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\PN received a Pokédex!"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "$player.has_pokedex = true"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "You already have a Pokédex."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaR46FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Stairs down",
+      "x": 28,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwxvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKm87Bwc7CFsAOwlpLG87Bwc7CFsAOwlpFm87Bwc7CFsAOwlpB287Bwc7CFsAOwlpK287Bwc7CFsAOwlpLW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpLA=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFg=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpBw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpKw=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpLQ=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                3,
+                9,
+                2,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "14": {
+      "id": 14,
+      "name": "Pokémon-checking NPC",
+      "x": 1,
+      "y": 5,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_SCIENTIST",
+            "character_hue": 0,
+            "direction": 6,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              118,
+              0,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "Choose a topic."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "What is your first Pokémon?",
+                  "Is a Celebi in your party?",
+                  "Give a Celebi",
+                  "Cancel"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "What is your first Pokémon?"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Get the first able Pokémon in the party, and store its "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "party index in Game Variable 1."
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Stores -1 if it can't find an able Pokémon in the party."
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "An \"able\" Pokémon is a non-Egg, non-fainted "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Pokémon."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbFirstAblePokemon(1)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                1,
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "You don't have any able Pokémon with you."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Retrieve the Pokémon whose party index is in "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Game Variable 1."
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Store that Pokémon's name in Game Variable 2."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pkmn = pbGetPokemon(1)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pbSet(2, pkmn.name)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\v[2] is the first Pokémon in your party."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Is a Celebi in your party?"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Counts fainted Pokémon, but not Eggs."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "$player.has_species?(:CELEBI)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "You have a Celebi in your party."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "You don't have a Celebi in your party."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Give a Celebi"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Gives the player a Level 20 Celebi."
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "If it can't be added to the party, it is stored in the PC "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "instead."
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "To only let the Pokémon be added to the party, use "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "pbAddToParty instead."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "See the Pokémon Fan Club events for more "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "examples."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbAddPokemon(:CELEBI, 20)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "name": "Mom",
+      "x": 7,
+      "y": 4,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 28",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                2,
+                "A",
+                0
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rRemember to read the wiki for further information.  "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "An Internet shortcut to the wiki can be found in the "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "project's main folder."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              355,
+              1,
+              [
+                "$player.has_pokegear = true"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "$player.has_running_shoes = true"
+              ]
+            ],
+            [
+              249,
+              1,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIg1JdGVtIGdldAY6BkVUOgtAcGl0Y2hpaQ=="
+                }
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "You received a Pokégear and Running Shoes."
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 28",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "Every map you can end up in after having all your "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Pokémon faint (typically Poké Centers and home) "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "must have an Autorun event in it like this one."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "This event fully heals all the player's Pokémon, says "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "something to that effect, and turns the \"Starting "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "over\" switch OFF again."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "For convenience, this can be a single page in an "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "NPC's event (e.g. Mom, a nurse)."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rOh... Are you all right? Well, you'll have better luck "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "this time."
+              ]
+            ],
+            [
+              314,
+              0,
+              [
+                0
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "[This message was triggered by the \"Starting Over\" "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "Game Switch being ON. Now turning that Game "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "Switch off.]"
+              ]
+            ],
+            [
+              121,
+              0,
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "PC",
+      "x": 20,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbTrainerPC"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "15": {
+      "id": 15,
+      "name": "Roaming Pokémon",
+      "x": 5,
+      "y": 1,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              118,
+              0,
+              [
+                "Start"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "Choose a roaming Pokémon."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Latias/Latios",
+                  "Kyogre",
+                  "Entei",
+                  "Cancel"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Latias/Latios"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                0,
+                53,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "Switch 53 is on. Latias and Latios are roaming."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "Switch 53 is off. Latias and Latios are not roaming. "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "Do you want to make Latias and Latios roam?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              121,
+              3,
+              [
+                53,
+                53,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "Latias and Latios are now roaming."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Kyogre"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                0,
+                54,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "Switch 54 is on. Kyogre is roaming."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "Switch 54 is off. Kyogre is not roaming. Do you want "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "to make Kyogre roam?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              121,
+              3,
+              [
+                54,
+                54,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "Kyogre is now roaming."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Entei"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                0,
+                55,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "Switch 55 is on. Entei is roaming."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "Switch 55 is off. Entei is not roaming. Do you want to "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "make Entei roam?"
+              ]
+            ],
+            [
+              102,
+              2,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              2,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              121,
+              3,
+              [
+                55,
+                55,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "Entei is now roaming."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              402,
+              2,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              404,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              119,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaSc="
+        }
+      ]
+    },
+    "10": {
+      "id": 10,
+      "name": "Warp tile 1",
+      "x": 1,
+      "y": 3,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "Choose a destination."
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Poké Center",
+                  "Poké Mart",
+                  "Pokémon Gym",
+                  "Day Care"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Poké Center"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                9,
+                7,
+                8,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Poké Mart"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                25,
+                4,
+                7,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Pokémon Gym"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                10,
+                6,
+                14,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Day Care"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                27,
+                4,
+                7,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Cave",
+                  "Safari Zone",
+                  "Bug Catching Contest",
+                  "Battle Frontier"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Cave"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                49,
+                12,
+                14,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Safari Zone"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                67,
+                4,
+                7,
+                8,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Bug Catching Contest"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                29,
+                1,
+                5,
+                6,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Battle Frontier"
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              1,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              1,
+              [
+                0,
+                52,
+                18,
+                16,
+                2,
+                1
+              ]
+            ],
+            [
+              223,
+              1,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Cancel"
+                ],
+                1
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Cancel"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,547 @@
+# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[0]
+StartMoney = 3000
+StartItemStorage = POTION
+Home = 3,7,5,8
+StorageCreator = Bill
+WildBattleBGM = Battle wild
+TrainerBattleBGM = Battle trainer
+WildVictoryBGM = Battle victory wild
+TrainerVictoryBGM = Battle victory trainer
+SurfBGM = Surfing
+BicycleBGM = Bicycle
+#-------------------------------
+[1]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Warrior
+#-------------------------------
+[2]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Warrior
+#-------------------------------
+[3]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Paladin
+#-------------------------------
+[4]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Paladin
+#-------------------------------
+[5]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Mage
+#-------------------------------
+[6]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Mage
+#-------------------------------
+[7]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Warlock
+#-------------------------------
+[8]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Warlock
+#-------------------------------
+[9]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Priest
+#-------------------------------
+[10]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Priest
+#-------------------------------
+[11]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Rogue
+#-------------------------------
+[12]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Rogue
+#-------------------------------
+# Dwarf (race 1): IDs 13-24
+#-------------------------------
+[13]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Warrior
+#-------------------------------
+[14]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Warrior
+#-------------------------------
+[15]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Paladin
+#-------------------------------
+[16]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Paladin
+#-------------------------------
+[17]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Mage
+#-------------------------------
+[18]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Mage
+#-------------------------------
+[19]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Warlock
+#-------------------------------
+[20]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Warlock
+#-------------------------------
+[21]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Priest
+#-------------------------------
+[22]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Priest
+#-------------------------------
+[23]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Rogue
+#-------------------------------
+[24]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Rogue
+#-------------------------------
+# Gnome (race 2): IDs 25-36
+#-------------------------------
+[25]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Warrior
+#-------------------------------
+[26]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Warrior
+#-------------------------------
+[27]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Paladin
+#-------------------------------
+[28]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Paladin
+#-------------------------------
+[29]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Mage
+#-------------------------------
+[30]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Mage
+#-------------------------------
+[31]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Warlock
+#-------------------------------
+[32]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Warlock
+#-------------------------------
+[33]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Priest
+#-------------------------------
+[34]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Priest
+#-------------------------------
+[35]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Rogue
+#-------------------------------
+[36]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Rogue
+#-------------------------------
+# Night Elf (race 3): IDs 37-48
+#-------------------------------
+[37]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Warrior
+#-------------------------------
+[38]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Warrior
+#-------------------------------
+[39]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Paladin
+#-------------------------------
+[40]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Paladin
+#-------------------------------
+[41]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Mage
+#-------------------------------
+[42]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Mage
+#-------------------------------
+[43]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Warlock
+#-------------------------------
+[44]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Warlock
+#-------------------------------
+[45]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Priest
+#-------------------------------
+[46]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Priest
+#-------------------------------
+[47]
+TrainerType = POKEMONTRAINER_Red
+WalkCharset = trainer_POKEMONTRAINER_Red
+RunCharset = boy_run
+CycleCharset = boy_bike
+SurfCharset = boy_surf
+DiveCharset = boy_surf
+FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
+Class = Rogue
+#-------------------------------
+[48]
+TrainerType = POKEMONTRAINER_Leaf
+WalkCharset = trainer_POKEMONTRAINER_Leaf
+RunCharset = girl_run
+CycleCharset = girl_bike
+SurfCharset = girl_surf
+DiveCharset = girl_surf
+FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
+Class = Rogue

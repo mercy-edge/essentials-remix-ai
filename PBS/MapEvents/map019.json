@@ -1,0 +1,886 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 19,
+  "exported": true,
+  "exported_note": "Generated from Data/Map019.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "5": {
+      "id": 5,
+      "name": "Floor sign",
+      "x": 21,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\sign[signskin]Rooftop Square: Vending Machines"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 23,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                18,
+                3,
+                2,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Vending machine size(3,1)",
+      "x": 17,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                8
+              ]
+            ],
+            [
+              118,
+              1,
+              [
+                "Start"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "It's a vending machine.\\nWhich drink would you like?"
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "\\G"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "Fresh Water - $200",
+                  "Soda Pop - $300",
+                  "Lemonade - $350",
+                  "Cancel"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "Fresh Water - $200"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                7,
+                200,
+                0
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "$bag.can_add?(:FRESHWATER)"
+              ]
+            ],
+            [
+              125,
+              4,
+              [
+                1,
+                0,
+                200
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "$stats.drinks_bought += 1"
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "$bag.add(:FRESHWATER)"
+              ]
+            ],
+            [
+              250,
+              4,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIh1WZW5kaW5nIG1hY2hpbmUgZGlzcGVuc2UGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\GA Fresh Water dropped down!"
+              ]
+            ],
+            [
+              122,
+              4,
+              [
+                1,
+                1,
+                0,
+                2,
+                0,
+                10
+              ]
+            ],
+            [
+              111,
+              4,
+              [
+                1,
+                1,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              111,
+              5,
+              [
+                12,
+                "$bag.can_add?(:FRESHWATER)"
+              ]
+            ],
+            [
+              355,
+              6,
+              [
+                "$stats.drinks_won += 1"
+              ]
+            ],
+            [
+              355,
+              6,
+              [
+                "$bag.add(:FRESHWATER)"
+              ]
+            ],
+            [
+              250,
+              6,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIh1WZW5kaW5nIG1hY2hpbmUgZGlzcGVuc2UGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              101,
+              6,
+              [
+                "\\GBonus! Another Fresh Water dropped down."
+              ]
+            ],
+            [
+              0,
+              6,
+              []
+            ],
+            [
+              412,
+              5,
+              []
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              412,
+              4,
+              []
+            ],
+            [
+              119,
+              4,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\GYou have no room left in the Bag."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "\\GYou don't have enough money."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "Soda Pop - $300"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                7,
+                300,
+                0
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "$bag.can_add?(:SODAPOP)"
+              ]
+            ],
+            [
+              125,
+              4,
+              [
+                1,
+                0,
+                300
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "$stats.drinks_bought += 1"
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "$bag.add(:SODAPOP)"
+              ]
+            ],
+            [
+              250,
+              4,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIh1WZW5kaW5nIG1hY2hpbmUgZGlzcGVuc2UGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\GA Soda Pop dropped down!"
+              ]
+            ],
+            [
+              122,
+              4,
+              [
+                1,
+                1,
+                0,
+                2,
+                0,
+                10
+              ]
+            ],
+            [
+              111,
+              4,
+              [
+                1,
+                1,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              111,
+              5,
+              [
+                12,
+                "$bag.can_add?(:SODAPOP)"
+              ]
+            ],
+            [
+              355,
+              6,
+              [
+                "$stats.drinks_won += 1"
+              ]
+            ],
+            [
+              355,
+              6,
+              [
+                "$bag.add(:SODAPOP)"
+              ]
+            ],
+            [
+              250,
+              6,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIh1WZW5kaW5nIG1hY2hpbmUgZGlzcGVuc2UGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              101,
+              6,
+              [
+                "\\GBonus! Another Soda Pop dropped down."
+              ]
+            ],
+            [
+              0,
+              6,
+              []
+            ],
+            [
+              412,
+              5,
+              []
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              412,
+              4,
+              []
+            ],
+            [
+              119,
+              4,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\GYou have no room left in the Bag."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "\\GYou don't have enough money."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                2,
+                "Lemonade - $350"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                7,
+                350,
+                0
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "$bag.can_add?(:LEMONADE)"
+              ]
+            ],
+            [
+              125,
+              4,
+              [
+                1,
+                0,
+                350
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "$stats.drinks_bought += 1"
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "$bag.add(:LEMONADE)"
+              ]
+            ],
+            [
+              250,
+              4,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIh1WZW5kaW5nIG1hY2hpbmUgZGlzcGVuc2UGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\GA Lemonade dropped down!"
+              ]
+            ],
+            [
+              122,
+              4,
+              [
+                1,
+                1,
+                0,
+                2,
+                0,
+                10
+              ]
+            ],
+            [
+              111,
+              4,
+              [
+                1,
+                1,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              111,
+              5,
+              [
+                12,
+                "$bag.can_add?(:LEMONADE)"
+              ]
+            ],
+            [
+              355,
+              6,
+              [
+                "$stats.drinks_won += 1"
+              ]
+            ],
+            [
+              355,
+              6,
+              [
+                "$bag.add(:LEMONADE)"
+              ]
+            ],
+            [
+              250,
+              6,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIh1WZW5kaW5nIG1hY2hpbmUgZGlzcGVuc2UGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              101,
+              6,
+              [
+                "\\GBonus! Another Lemonade dropped down."
+              ]
+            ],
+            [
+              0,
+              6,
+              []
+            ],
+            [
+              412,
+              5,
+              []
+            ],
+            [
+              0,
+              5,
+              []
+            ],
+            [
+              412,
+              4,
+              []
+            ],
+            [
+              119,
+              4,
+              [
+                "Start"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\GYou have no room left in the Bag."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "\\GYou don't have enough money."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                3,
+                "Cancel"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\GDecided not to buy a drink."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

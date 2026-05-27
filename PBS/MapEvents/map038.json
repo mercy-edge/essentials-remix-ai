@@ -1,0 +1,352 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 38,
+  "exported": true,
+  "exported_note": "Generated from Data/Map038.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "1": {
+      "id": 1,
+      "name": "Hall of Fame autorun",
+      "x": 2,
+      "y": 13,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "Set various switches and counters."
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Also reset stationary Pokémon that reappear each "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "time the player defeats the Elite Four."
+              ]
+            ],
+            [
+              121,
+              0,
+              [
+                12,
+                12,
+                0
+              ]
+            ],
+            [
+              122,
+              0,
+              [
+                13,
+                13,
+                1,
+                0,
+                1
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$stats.hall_of_fame_entry_count += 1"
+              ]
+            ],
+            [
+              121,
+              0,
+              [
+                56,
+                56,
+                0
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Heal the player's party, and give the party Pokémon "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "ribbons for defeating the Elite Four."
+              ]
+            ],
+            [
+              314,
+              0,
+              [
+                0
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$player.pokemon_party.each do |pkmn|"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "  pkmn.giveRibbon(:CHAMPION)"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "end"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Make the player walk up to the recording station, "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "and fade to black."
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              209,
+              0,
+              [
+                -1,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0Ww5vOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGG87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpCW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZVQ6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpGA=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpCQ=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Record an entry in the Hall of Fame."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$stats.set_time_to_hall_of_fame"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbHallOfFameEntry"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Play the credits."
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "$scene = Scene_Credits.new"
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Return the player to the entrance of the League."
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                36,
+                13,
+                12,
+                2,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

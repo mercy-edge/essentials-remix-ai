@@ -1,0 +1,1886 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 26,
+  "exported": true,
+  "exported_note": "Generated from Data/Map026.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "5": {
+      "id": 5,
+      "name": "Trade - Advanced",
+      "x": 3,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_PSYCHIC_F",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rI'm looking for a female Dragonair."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWant to trade it for my Dodrio?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "Because there are more requirements than just "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "wanting the correct species, the method "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "pbChoosePokemonForTrade cannot be used here. "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Instead, it is recreated using method "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "pbChooseTradeablePokemon."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "The chosen Pokémon's party index goes in Game "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Variable 1. A value of -1 means no Pokémon was "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "chosen."
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "The chosen Pokémon's name goes in Game Variable 2."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbChooseTradablePokemon(1, 2,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  proc { |pkmn|"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "    pkmn.isSpecies?(:DRAGONAIR) &&"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "    pkmn.female?"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  }"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                1,
+                0,
+                -1,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rYou don't want to trade? Aww..."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rOK, let's get started."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "This trade is providing a special Dodrio with certain "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "custom modifications. You should define this Pokémon "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "first and modify it, and then perform the trade. This "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "is because the modifications may affect the "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Pokémon's appearance (form/gender/shininess) which "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "will be seen during the trade animation."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Remember to add \"pkmn.calcStats\" at the end. It "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "makes sure the Pokémon's stats are correct, as some "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "modifications can affect them, e.g.changing "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "IVs/nature."
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "It doesn't hurt to have this line there anyway, even if "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "you don't affect the stats after all."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pkmn = Pokemon.new(:DODRIO,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  pbGetPokemon(1).level"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.item = :SMOKEBALL"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.makeFemale"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.ability_index = 0     # Run Away"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.nature = :IMPISH"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.poke_ball = :LUXURYBALL"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.learn_move(:SURF)"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pkmn.iv[:HP]              = 20"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.iv[:ATTACK]          = 20"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.iv[:DEFENSE]         = 20"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.iv[:SPECIAL_ATTACK]  = 15"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.iv[:SPECIAL_DEFENSE] = 15"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.iv[:SPEED]           = 15"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pkmn.calc_stats"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbStartTrade(pbGet(1), pkmn,"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  _I(\"Doris\"), _I(\"Ayana\"), 1"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "The trade itself sets the received Pokémon's "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "nickname, obtain method and OT details. These can "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "only be modified after the trade, although you "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "shouldn't need to do so."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\PN traded Dragonair for Dodrio!"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rThanks!"
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rYou don't want to trade?  Aww..."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_PSYCHIC_F",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rAre you taking good care of Doris?"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Gift Pokémon - Basic",
+      "x": 8,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_POKEMANIAC",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bMy Shuckie is a great Pokémon, but I can't train"
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "it anymore."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bWould you take Shuckie and raise it like it "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "deserves?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "pbAddForeignPokemon can only add a Pokémon to "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "the player's party, so a space is required."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbAddForeignPokemon(:SHUCKLE, 20, _I(\"Kirk\"), _I(\"Shuckie\"))"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bTake good care of Shuckie!"
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bOh, you don't have any space for it."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOh, that's a shame."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_POKEMANIAC",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bAre you raising my Shuckie well?"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Exit",
+      "x": 5,
+      "y": 11,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                23,
+                24,
+                18,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "name": "Gift egg",
+      "x": 7,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_GENTLEMAN",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bOh, hi!"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bWould you like this Pokémon Egg?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "pbGenerateEgg can only add an egg to the player's "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "party, so a space is required."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbGenerateEgg(:TOGEPI, _I(\"Fan Club President\"))"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\me[Egg get]\\PN received the Egg from the Fan Club "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "President."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bTake good care of it!"
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bOh, you can't carry it with you."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bMake some space in your party and come back."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOh. Will I ever find someone to take this Egg?"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "trainer_GENTLEMAN",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI wonder what that Egg will hatch into?"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Trader - Basic",
+      "x": 2,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 06",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI'm looking for a Rattata."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bWant to trade it for my Haunter?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "The chosen Pokémon's party index goes in Game "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Variable 1. A value of -1 means no Pokémon was "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "chosen."
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "The chosen Pokémon's name goes in Game Variable 2."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbChoosePokemonForTrade(1, 2,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :RATTATA"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                1,
+                0,
+                -1,
+                0
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bYou don't want to trade?  Aww..."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bOK, let's get started."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbStartTrade(pbGet(1),"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  :HAUNTER, _I(\"HaHa\"), _I(\"Andy\")"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\PN traded Rattata for Haunter!"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\bThanks!"
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYou don't want to trade? Aww..."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 06",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bThanks for trading with me!"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "name": "Pokémon ball - Advanced",
+      "x": 6,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This is an example of giving a Pokémon which has "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "been modified. The Pokémon is defined separately "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "before being given to the player."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "!pbBoxesFull?"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pkmn = Pokemon.new(:PICHU, 30)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.item = :ZAPPLATE"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.form = 2           # Spiky-eared"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.makeFemale"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.shiny = false"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.learn_move(:VOLTTACKLE)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.learn_move(:HELPINGHAND)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.learn_move(:SWAGGER)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.learn_move(:PAINSPLIT)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pkmn.calc_stats"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbAddPokemon(pkmn)"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "There's no more room for Pokémon!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "The Pokémon Boxes are full and can't accept any more!"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Pokémon ball - Basic",
+      "x": 5,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "This is a straightforward example of giving a "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "Pokémon to the player. Its OT will be the player."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbAddPokemon(:FARFETCHD, 20)"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Gift Pokémon - Advanced",
+      "x": 9,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 08",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rI have a rather special Bulbasaur! Its ability is"
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "something I could only dream of."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rI can't look after it, though. Would you like "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "Bulbasaur?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "pbAddForeignPokemon can only add a Pokémon to "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "the player's party, so a space is required."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbAddForeignPokemon(:BULBASAUR, 10, _I(\"Dorima\"), _I(\"Sauri\"), 1)"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Editing a foreign Pokémon added with this method "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "can only be done afterwards. Remember to add "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "\"poke.calcStats\" at the end, just in case a "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "modification affects the Pokémon's stats."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "The added Pokémon will always be at the end of the "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "player's party, so you can use $Trainer.last_party to "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "locate it."
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pkmn = $player.last_party"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.ability_index = 2  # Hidden abil"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.nature = :MODEST"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.poke_ball = :CHERISHBALL"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.shiny = true"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "pkmn.calc_stats"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rTake good care of Sauri!"
+              ]
+            ],
+            [
+              123,
+              2,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rOh, you don't have any space."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOh, that's a shame."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 08",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rI hope you're taking good care of my Sauri!"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

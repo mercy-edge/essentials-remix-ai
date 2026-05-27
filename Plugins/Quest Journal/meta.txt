@@ -1,0 +1,5 @@
+Name = Quest Journal
+Version = 1.0
+Essentials = 21.1
+Link = https://github.com
+Credits = Local

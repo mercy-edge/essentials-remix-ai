@@ -1,0 +1,5376 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 13,
+  "exported": true,
+  "exported_note": "Generated from Data/Map013.rxdata. Edit events below; save; run game to merge.",
+  "events": {
+    "27": {
+      "id": 27,
+      "name": "Triple Triad duel with prize",
+      "x": 16,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_COOLTRAINER_F",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rIf you win, I'll give you an Arceus card!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbCanTriadDuel?"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "This duel has a prize card defined, which the player "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "gets if they win (ignoring any rule which affects "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "prizes).  If the player draws or loses, however, the "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "rules apply normally."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbTriadDuel(\"Sophie\", 0, 5, nil, nil,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  :ARCEUS"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOh, you don't have enough cards to play. You need "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "at least 5."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "name": "Slot Machine 5",
+      "x": 0,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "16": {
+      "id": 16,
+      "name": "Voltorb Flip",
+      "x": 11,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              209,
+              0,
+              [
+                18,
+                {
+                  "_marshal64": "BAhvOhNSUEc6Ok1vdmVSb3V0ZQg6CkBsaXN0WwdvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFW87Bwc7CFsAOwlpADoPQHNraXBwYWJsZUY6DEByZXBlYXRG"
+                }
+              ]
+            ],
+            [
+              509,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhVSUEc6Ok1vdmVDb21tYW5kBzoQQHBhcmFtZXRlcnNbADoKQGNvZGVpFQ=="
+                }
+              ]
+            ],
+            [
+              210,
+              0,
+              []
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bMr. Game: Show me how you play and make my "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "heart pound with excitement!"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "pbVoltorbFlip"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "22": {
+      "id": 22,
+      "name": "Triple Triad explainer",
+      "x": 13,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 08",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rI'm here to explain the rules of Triple Triad."
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWhich topic do you want to learn about?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Basics",
+                  "Game rules",
+                  "Prizes",
+                  "Exit"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Basics"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rTriple Triad is a game played with special cards "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "placed on a 3x3 board."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rEach card has 4 numbers on it, one per side.  "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "These numbers are so-called stats."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rPlayers take turns placing cards on the board. As "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "they do so, they try to capture and gain control of "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "their opponent's cards."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rThat's where the numbers come in. If a player "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "places a card with a higher number next to a card "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "with a lower number, the player captures that card."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rThus, the goal of the game is to gain control of more "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "cards than the other player by the end of the game."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Game rules"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rThere are a number of optional game rules you can "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "apply to individual games."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rThey can affect card stats, how cards capture "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "each other, the scoring and the prizes."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Prizes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rWhen you win a game, you will recive 1 random "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "card from your opponent from their Deck."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rThis also works the other way around: if you lose, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "you have to give your opponent one of your cards, "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "chosen at random."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rYou can change what you win or lose from a game "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "by using an optional game rule."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Exit"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "11": {
+      "id": 11,
+      "name": "Slot Machine 11",
+      "x": 6,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Slot Machine 6",
+      "x": 5,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                6
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "17": {
+      "id": 17,
+      "name": "Lottery",
+      "x": 9,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 23",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rThis is the Pokémon Lottery Corner. I'm Felicity, your "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "attendant today."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rIf the drawn number matches the ID No. of any of "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "your Pokémon, you could win fabulous gifts."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\rWould you like to check today's lucky number?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rFirst, I'll look up today's Pokémon Lottery Corner "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "lucky number."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "..."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "This line of code calculates a winning ID number "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "depending on the date, and puts it in Game Variable "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "1."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSetLotteryNumber(1)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rYour Loto Ticket number is \\v[1]."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rNow, let's see if it matches the ID No. of any of your "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Pokémon."
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "This line of code checks all Pokémon in the player's "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "party and storage for one that best matches the "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "given ID number. The Pokémon's name is put in Game "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Variable 2, its location (1=party, 2=storage) is put in "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "Game Variable 3, and the number of digits matched is "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "put in Game Variable 4."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbLottery(pbGet(1), 2, 3, 4)"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                1,
+                4,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "No digits were matched."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rI'm sorry. You didn't get a match..."
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rPlease do visit again."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              355,
+              2,
+              [
+                "$stats.lottery_prize_count += 1"
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "1 or more digits were matched."
+              ]
+            ],
+            [
+              108,
+              2,
+              [
+                "Show a message depending on whether the matching "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "Pokémon is in the player's party or Pokémon storage."
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                3,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rCongratulations!"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rThe ID number of your team's \\v[2] matches your "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "Loto Ticket number!"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rCongratulations!"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rThe ID number of your PC-boxed \\v[2] matches your "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "Loto Ticket number!"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              108,
+              2,
+              [
+                "Award a prize based on how many digits were "
+              ]
+            ],
+            [
+              408,
+              2,
+              [
+                "matched."
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                4,
+                0,
+                5,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rOh my goodness, all five digits matched!"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rYou've won the jackpot prize!"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "pbReceiveItem(:MASTERBALL)"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rPlease do visit again! Good-bye from Felicity, your "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "attendant!"
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "pbSetEventTime"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rYou have no room left. Make room, then come see "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "me."
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "setVariable(:MASTERBALL)"
+              ]
+            ],
+            [
+              123,
+              4,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                4,
+                0,
+                4,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rThe last four digits matched, so you win the first "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "prize!"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "pbReceiveItem(:MAXREVIVE)"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rPlease do visit again! Good-bye from Felicity, your "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "attendant!"
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "pbSetEventTime"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rYou have no room left. Make room, then come see "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "me."
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "setVariable(:MAXREVIVE)"
+              ]
+            ],
+            [
+              123,
+              4,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                4,
+                0,
+                3,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rThe last three digits matched, so you win the "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "second prize!"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "pbReceiveItem(:EXPSHARE)"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rPlease do visit again! Good-bye from Felicity, your "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "attendant!"
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "pbSetEventTime"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rYou have no room left. Make room, then come see "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "me."
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "setVariable(:EXPSHARE)"
+              ]
+            ],
+            [
+              123,
+              4,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                4,
+                0,
+                2,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rThe last two digits matched, so you win the third "
+              ]
+            ],
+            [
+              401,
+              3,
+              [
+                "prize!"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "pbReceiveItem(:PPUP)"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rPlease do visit again! Good-bye from Felicity, your "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "attendant!"
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "pbSetEventTime"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rYou have no room left. Make room, then come see "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "me."
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "setVariable(:PPUP)"
+              ]
+            ],
+            [
+              123,
+              4,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                1,
+                4,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\rThe last digit matched, so you win the fourth prize!"
+              ]
+            ],
+            [
+              111,
+              3,
+              [
+                12,
+                "pbReceiveItem(:ULTRABALL)"
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rPlease do visit again! Good-bye from Felicity, your "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "attendant!"
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "pbSetEventTime"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              101,
+              4,
+              [
+                "\\rYou have no room left. Make room, then come see "
+              ]
+            ],
+            [
+              401,
+              4,
+              [
+                "me."
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "setVariable(:ULTRABALL)"
+              ]
+            ],
+            [
+              123,
+              4,
+              [
+                "B",
+                0
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOh, I see.\\nPlease do visit us again."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 23",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rYou've already drawn a Loto Ticket today. Please "
+              ]
+            ],
+            [
+              401,
+              0,
+              [
+                "come back tomorrow."
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 23",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 3,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              123,
+              0,
+              [
+                "A",
+                1
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "setTempSwitchOn(\"A\")"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpHToTQHN3aXRjaDFfdmFsaWRUOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 23",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rI've been waiting for you. Here's the item you won."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbReceiveItem(getVariable())"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "B",
+                1
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSetEventTime"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rYou have no room left. Make room, then come see "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "me."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkIGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "28": {
+      "id": 28,
+      "name": "Prize vendor left",
+      "x": 2,
+      "y": 23,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 07",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\CN\\bWe exchange your coins for prizes."
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Choice"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\CN\\bWhich prize would you like?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Smoke Ball - 800 coins",
+                  "Miracle Seed - 1000 coins",
+                  "Charcoal - 1000 coins",
+                  "Mystic Water - 1000 coins"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Smoke Ball - 800 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :SMOKEBALL)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 800)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Miracle Seed - 1000 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :MIRACLESEED)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 1000)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Charcoal - 1000 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :CHARCOAL)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 1000)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Mystic Water - 1000 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :MYSTICWATER)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 1000)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yellow Flute - 1600 coins",
+                  "No thanks"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yellow Flute - 1600 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :YELLOWFLUTE)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 1600)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No thanks"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\CN\\bPlease save your Coins and come again!"
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Chose an item, try to buy it."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "itm = GameData::Item.get(pbGet(1))"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "pbSet(3, itm.name)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\CN\\bSo, you want the \\v[3]?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbGet(2) > $player.coins"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\CN\\bSorry, you'll need more coins than that."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "$bag.can_add?(pbGet(1))"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\CN\\bHere you go!\\1"
+              ]
+            ],
+            [
+              250,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhJNYXJ0IGJ1eSBpdGVtBjoGRVQ6C0BwaXRjaGlp"
+                }
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "$player.coins -= pbGet(2)"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbBuyPrize(pbGet(1))"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "\\CN\\bYou have no room in your Bag."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              119,
+              0,
+              [
+                "Choice"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "23": {
+      "id": 23,
+      "name": "Triple Triad card shop",
+      "x": 14,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 19",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              118,
+              0,
+              [
+                "Shop Start"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\bWelcome to the Triad Card Shop."
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Buy Cards",
+                  "Sell Cards",
+                  "Information",
+                  "Exit"
+                ],
+                4
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Buy Cards"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbBuyTriads"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bAnything else I can do for you?"
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Sell Cards"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSellTriads"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bAnything else I can do for you?"
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Choices"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Information"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bHere is where you can purchase new cards for "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Triple Triad duels."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bThe selection grows as you catch and find new "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Pokémon, so check often."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bAnd, of course, stronger Pokémon cards cost more "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "than weaker cards."
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bYou don't have to use this shop in your game. It's "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "just an example of how the player could gain Triple "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "Triad cards. You could implement other ways."
+              ]
+            ],
+            [
+              119,
+              1,
+              [
+                "Shop Start"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Exit"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bPlease come again."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Slot Machine 1",
+      "x": 0,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "12": {
+      "id": 12,
+      "name": "Slot Machine 12",
+      "x": 6,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "29": {
+      "id": 29,
+      "name": "Prize vendor middle",
+      "x": 4,
+      "y": 23,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 07",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\CN\\bWe exchange your coins for prizes."
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Choice"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\CN\\bWhich prize would you like?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Abra - 180 coins",
+                  "Clefairy - 500 coins",
+                  "Dratini - 2800 coins",
+                  "Scyther - 5500 coins"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Abra - 180 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :ABRA)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 180)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(4, 9)   # Level"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "Clefairy - 500 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :CLEFAIRY)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 500)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(4, 8)   # Level"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "Dratini - 2800 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :DRATINI)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 2800)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(4, 18)   # Level"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "Scyther - 5500 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :SCYTHER)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 5500)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(4, 25)   # Level"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Porygon - 9999 coins",
+                  "No thanks"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Porygon - 9999 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :PORYGON)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 9999)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(4, 26)   # Level"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No thanks"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\CN\\bPlease save your Coins and come again!"
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Chose a Pokémon, try to buy it."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "$player.party_full?"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\CN\\bYour party's full!\\nPlease make some room "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "before you come back."
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              355,
+              0,
+              [
+                "sp = GameData::Species.get(pbGet(1))"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "pbSet(3, sp.name)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\CN\\bWould you like \\v[3]?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbGet(2) > $player.coins"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\CN\\bSorry, you'll need more coins than that."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\CN\\bHere you go!\\1"
+              ]
+            ],
+            [
+              250,
+              2,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhJNYXJ0IGJ1eSBpdGVtBjoGRVQ6C0BwaXRjaGlp"
+                }
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "$player.coins -= pbGet(2)"
+              ]
+            ],
+            [
+              355,
+              2,
+              [
+                "pbAddPokemonSilent("
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                "  pbGet(1), pbGet(4)"
+              ]
+            ],
+            [
+              655,
+              2,
+              [
+                ")"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\CN\\PN received the \\v[3]!"
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              119,
+              0,
+              [
+                "Choice"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "name": "Slot Machine 7",
+      "x": 5,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                6
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "18": {
+      "id": 18,
+      "name": "Voltorb Flip man",
+      "x": 11,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 17",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                2,
+                "A",
+                1
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bMy name is Mr. Game!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bMy heart pounds with excitement when people "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "enjoy my Coin game!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bIn fact, that's what I live for!\\nGo ahead and play it!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bMake my heart pound with excitement!"
+              ]
+            ],
+            [
+              123,
+              1,
+              [
+                "A",
+                0
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bGo ahead and play my Coin game!"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bMake my heart pound with excitement!"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "24": {
+      "id": 24,
+      "name": "Triple Triad duel",
+      "x": 16,
+      "y": 5,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_YOUNGSTER",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI'm ready to duel with you."
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbCanTriadDuel?"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "The two numbers are the min and max level of the "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "opponent respectively. Each number can be between "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "0 and 9 inclusive, and the max level must be higher "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "than or equal to the min level."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbTriadDuel(\"Jack\", 0, 5)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOh, you don't have enough cards to play. You need "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "at least 5."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Slot Machine 2",
+      "x": 0,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "13": {
+      "id": 13,
+      "name": "Slot Machine 13",
+      "x": 6,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "30": {
+      "id": 30,
+      "name": "Prize vendor right",
+      "x": 6,
+      "y": 23,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 07",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\CN\\bWe exchange your coins for prizes."
+              ]
+            ],
+            [
+              118,
+              0,
+              [
+                "Choice"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "The \"Show Choices\" command doesn't let you type in "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "long choice names, so a choice name as long as"
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "\"TM24 Thunderbolt - 4000 coins\""
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "won't fit."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "You could use rename_choice here to replace the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "choice names. rename_choice doesn't have a limit on "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "the length of the choice name it sets."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "However, doing so here to include the moves' names "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "in the choices will usually make the choice window too "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "wide, and it will overlap the coins window."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "This event settles for showing the move's name in the "
+              ]
+            ],
+            [
+              408,
+              0,
+              [
+                "message below, upon choosing an item."
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\CN\\bWhich prize would you like?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "TM13 - 4000 coins",
+                  "TM23 - 3500 coins",
+                  "TM24 - 4000 coins",
+                  "TM30 - 4500 coins"
+                ],
+                0
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "TM13 - 4000 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :TM13)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 4000)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "TM23 - 3500 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :TM23)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 3500)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                2,
+                "TM24 - 4000 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :TM24)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 4000)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                3,
+                "TM30 - 4500 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :TM30)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 4500)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "TM35 - 4000 coins",
+                  "No thanks"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "TM35 - 4000 coins"
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSet(1, :TM35)"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "pbSet(2, 4000)"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No thanks"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\CN\\bPlease save your Coins and come again!"
+              ]
+            ],
+            [
+              115,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "Chose an item, try to buy it."
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "================================"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "itm = GameData::Item.get(pbGet(1))"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "move = itm.move"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "mov = GameData::Move.get(move)"
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "pbSet(3, itm.name + \" \" + mov.name)"
+              ]
+            ],
+            [
+              101,
+              0,
+              [
+                "\\CN\\bSo, you want the \\v[3]?"
+              ]
+            ],
+            [
+              102,
+              0,
+              [
+                [
+                  "Yes",
+                  "No"
+                ],
+                2
+              ]
+            ],
+            [
+              402,
+              0,
+              [
+                0,
+                "Yes"
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbGet(2) > $player.coins"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\CN\\bSorry, you'll need more coins than that."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "$bag.can_add?(pbGet(1))"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\CN\\bHere you go!\\1"
+              ]
+            ],
+            [
+              250,
+              3,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhJNYXJ0IGJ1eSBpdGVtBjoGRVQ6C0BwaXRjaGlp"
+                }
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "$player.coins -= pbGet(2)"
+              ]
+            ],
+            [
+              355,
+              3,
+              [
+                "pbBuyPrize(pbGet(1))"
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              101,
+              3,
+              [
+                "\\CN\\bYou have no room in your Bag."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              402,
+              0,
+              [
+                1,
+                "No"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              404,
+              0,
+              []
+            ],
+            [
+              119,
+              0,
+              [
+                "Choice"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "name": "Slot Machine 8",
+      "x": 5,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                6
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "19": {
+      "id": 19,
+      "name": "Coin seller",
+      "x": 4,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 07",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\G\\CN\\bWelcome to Rocket Game Corner!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "!$bag.has?(:COINCASE)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\G\\CN\\bDo you need some game coins?\\nWould you "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "like to buy some?"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\G\\CN\\bYou don't have a Coin Case."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              118,
+              1,
+              [
+                "Start menu"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\G\\CN\\bDo you need some game coins?\\nWould you "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "like to buy some?"
+              ]
+            ],
+            [
+              102,
+              1,
+              [
+                [
+                  "50 coins [$1,000]",
+                  "500 coins [$10,000]",
+                  "Exit"
+                ],
+                3
+              ]
+            ],
+            [
+              402,
+              1,
+              [
+                0,
+                "50 coins [$1,000]"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "$player.coins + 50 >= Settings::MAX_COINS"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\G\\CN\\bWhoops!\\nYour Coin Case is full."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              111,
+              3,
+              [
+                7,
+                999,
+                1
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\G\\CN\\bYou can't afford the coins."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              125,
+              4,
+              [
+                1,
+                0,
+                1000
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "$player.coins += 50"
+              ]
+            ],
+            [
+              250,
+              4,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhJNYXJ0IGJ1eSBpdGVtBjoGRVQ6C0BwaXRjaGlp"
+                }
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\G\\CN\\bThank you\\nHere are your coins!"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                1,
+                "500 coins [$10,000]"
+              ]
+            ],
+            [
+              111,
+              2,
+              [
+                12,
+                "$player.coins + 500 >= Settings::MAX_COINS"
+              ]
+            ],
+            [
+              101,
+              3,
+              [
+                "\\G\\CN\\bWhoops!\\nYour Coin Case is full."
+              ]
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              411,
+              2,
+              []
+            ],
+            [
+              111,
+              3,
+              [
+                7,
+                9999,
+                1
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\G\\CN\\bYou can't afford the coins."
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              411,
+              3,
+              []
+            ],
+            [
+              125,
+              4,
+              [
+                1,
+                0,
+                10000
+              ]
+            ],
+            [
+              355,
+              4,
+              [
+                "$player.coins += 500"
+              ]
+            ],
+            [
+              250,
+              4,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpaToKQG5hbWVJIhJNYXJ0IGJ1eSBpdGVtBjoGRVQ6C0BwaXRjaGlp"
+                }
+              ]
+            ],
+            [
+              101,
+              4,
+              [
+                "\\G\\CN\\bThank you\\nHere are your coins!"
+              ]
+            ],
+            [
+              0,
+              4,
+              []
+            ],
+            [
+              412,
+              3,
+              []
+            ],
+            [
+              0,
+              3,
+              []
+            ],
+            [
+              412,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              402,
+              1,
+              [
+                2,
+                "Exit"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\G\\CN\\bNo?\\nPlease come play sometime!"
+              ]
+            ],
+            [
+              115,
+              2,
+              []
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              404,
+              1,
+              []
+            ],
+            [
+              119,
+              1,
+              [
+                "Start menu"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Slot Machine 3",
+      "x": 0,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "14": {
+      "id": 14,
+      "name": "Slot Machine 14",
+      "x": 6,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "25": {
+      "id": 25,
+      "name": "Triple Triad duel with rules",
+      "x": 16,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_LASS",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rReady for a real rule duel?"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbCanTriadDuel?"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "This duel includes certain battle rules. See the wiki "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "for details of what rules can be applied."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbTriadDuel(\"Alice\", 0, 5,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  [\"countunplayed\","
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"samewins\","
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"elements\","
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  \"direct\"]"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOh, you don't have enough cards to play. You need "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "at least 5."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "31": {
+      "id": 31,
+      "name": "Shop exit",
+      "x": 4,
+      "y": 30,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                7,
+                39,
+                19,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "name": "Slot Machine 9",
+      "x": 5,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                6
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "20": {
+      "id": 20,
+      "name": "Exit",
+      "x": 9,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 1,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              250,
+              0,
+              [
+                {
+                  "_marshal64": "BAhvOhNSUEc6OkF1ZGlvRmlsZQg6DEB2b2x1bWVpVToKQG5hbWVJIg5Eb29yIGV4aXQGOgZFVDoLQHBpdGNoaWk="
+                }
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    -255.0,
+                    -255.0,
+                    -255.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              106,
+              0,
+              [
+                8
+              ]
+            ],
+            [
+              201,
+              0,
+              [
+                0,
+                7,
+                34,
+                20,
+                0,
+                1
+              ]
+            ],
+            [
+              223,
+              0,
+              [
+                {
+                  "_tone": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                6
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "26": {
+      "id": 26,
+      "name": "Triple Triad duel with deck",
+      "x": 16,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_CAMPER",
+            "character_hue": 0,
+            "direction": 4,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\bI built my deck specially for this!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "pbCanTriadDuel?"
+              ]
+            ],
+            [
+              108,
+              1,
+              [
+                "This duel has no special rules, and has a predefined "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "opponent's deck. The level numbers are unused, but "
+              ]
+            ],
+            [
+              408,
+              1,
+              [
+                "still need to be defined (each being 0-9)."
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbTriadDuel(\"Tim\", 0, 5, nil,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "  [:BULBASAUR, :CHARMANDER,"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                "   :SQUIRTLE, :PIKACHU, :CLEFAIRY]"
+              ]
+            ],
+            [
+              655,
+              1,
+              [
+                ")"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\bOh, you don't have enough cards to play. You need "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "at least 5."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Slot Machine 4",
+      "x": 0,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "15": {
+      "id": 15,
+      "name": "Slot Machine 15",
+      "x": 6,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                4
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "21": {
+      "id": 21,
+      "name": "Coin Case giver",
+      "x": 3,
+      "y": 2,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 08",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              101,
+              0,
+              [
+                "\\rWelcome!"
+              ]
+            ],
+            [
+              111,
+              0,
+              [
+                12,
+                "!$bag.has?(:COINCASE)"
+              ]
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rOh, you don't have a Coin Case? Here."
+              ]
+            ],
+            [
+              111,
+              1,
+              [
+                12,
+                "pbReceiveItem(:COINCASE)"
+              ]
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rYou can exchange your coins for fabulous prizes "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "next door."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              411,
+              1,
+              []
+            ],
+            [
+              101,
+              2,
+              [
+                "\\rYou don't have any room for it. Come back when "
+              ]
+            ],
+            [
+              401,
+              2,
+              [
+                "you do."
+              ]
+            ],
+            [
+              0,
+              2,
+              []
+            ],
+            [
+              412,
+              1,
+              []
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              411,
+              0,
+              []
+            ],
+            [
+              101,
+              1,
+              [
+                "\\rYou can exchange your coins for fabulous prizes "
+              ]
+            ],
+            [
+              401,
+              1,
+              [
+                "next door."
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "10": {
+      "id": 10,
+      "name": "Slot Machine 10",
+      "x": 5,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              111,
+              0,
+              [
+                6,
+                -1,
+                6
+              ]
+            ],
+            [
+              355,
+              1,
+              [
+                "pbSlotMachine"
+              ]
+            ],
+            [
+              0,
+              1,
+              []
+            ],
+            [
+              412,
+              0,
+              []
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    }
+  }
+}
+

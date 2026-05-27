@@ -1,0 +1,4 @@
+Name = Unified level curve
+Version = 1.0
+Essentials = 21.1
+Credits = Local

@@ -1,0 +1,142 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 33,
+  "exported": true,
+  "force_import": true,
+  "_readme": "Uses Data/Map033.rxdata (Echo Ridge Mine). Exit event 300 pairs with Northshire event 255 (25,2): arrive mine at (9,13), leave from south mouth (9,14) back to abbey.",
+  "events": {
+    "300": {
+      "id": 300,
+      "name": "Echo Ridge Mine Exit",
+      "x": 9,
+      "y": 14,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 1,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [355, 0, ["pbDoorWarpTo(76, 25, 2, facing: 2)"]],
+            [0, 0, []]
+          ]
+        }
+      ]
+    },
+    "301": {
+      "id": 301,
+      "name": "Kobold Laborer",
+      "x": 6,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_YOUNGSTER",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 2,
+            "frequency": 3
+          },
+          "list": [
+            [108, 0, ["NPC_LEVEL:3"]],
+            [108, 0, ["NPC_RELATION:neutral"]],
+            [355, 0, ["NorthshireAbbeyEvents.run(:kobold_laborer)"]],
+            [0, 0, []]
+          ]
+        }
+      ]
+    },
+    "302": {
+      "id": 302,
+      "name": "Kobold Laborer",
+      "x": 14,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_YOUNGSTER",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 2,
+            "frequency": 3
+          },
+          "list": [
+            [108, 0, ["NPC_LEVEL:3"]],
+            [108, 0, ["NPC_RELATION:neutral"]],
+            [355, 0, ["NorthshireAbbeyEvents.run(:kobold_laborer)"]],
+            [0, 0, []]
+          ]
+        }
+      ]
+    },
+    "303": {
+      "id": 303,
+      "name": "Kobold Laborer",
+      "x": 10,
+      "y": 6,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_YOUNGSTER",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 2,
+            "frequency": 3
+          },
+          "list": [
+            [108, 0, ["NPC_LEVEL:3"]],
+            [108, 0, ["NPC_RELATION:neutral"]],
+            [355, 0, ["NorthshireAbbeyEvents.run(:kobold_laborer)"]],
+            [0, 0, []]
+          ]
+        }
+      ]
+    }
+  }
+}

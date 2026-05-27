@@ -1,0 +1,78 @@
+================================================================================
+HOW TO APPLY RACE → GENDER → CLASS TO THE INTRO EVENT
+================================================================================
+
+Your Intro is on MAP 001 (Intro). Edit it in RPG Maker XP.
+
+1. OPEN THE INTRO MAP
+   - In RPG Maker XP: File → Open Project → open Game.rxproj
+   - In the map list (left), double-click "001: Intro" (or the map named Intro)
+
+2. FIND THE INTRO EVENT
+   - Look for the event that runs when the game starts (name input, gender choice).
+   - It's usually an "Autorun" or "Parallel Process" event that runs once, or is
+     triggered by the player (e.g. talking to Prof. Oak or a sign).
+   - Double-click that event to open the Event Commands window.
+
+3. EVENT ORDER (top to bottom)
+   Do these in this order. If you already have name/gender, insert RACE first and
+   change the gender/class steps as below.
+
+   --- STEP A: Name (keep what you have) ---
+   Your existing "Name Input" or "Name Entry" for the player.
+   (e.g. "Change Name" or a script that does name entry.)
+
+   --- STEP B: Race (NEW - add this next) ---
+   Script:
+     pbChoosePlayerRace
+
+   --- STEP C: Gender choice ---
+   Use "Show Choices" with two options, e.g. "Boy" and "Girl".
+
+   When the player picks "Boy" (usually Choice 1):
+     Script:
+       pbChangePlayerForGender(1)
+     Script:
+       pbChoosePlayerClass(1)
+
+   When the player picks "Girl" (usually Choice 2):
+     Script:
+       pbChangePlayerForGender(2)
+     Script:
+       pbChoosePlayerClass(2)
+
+   --- STEP D: Rest of intro ---
+   Continue with your usual intro (e.g. receive starter, go to lab, etc.).
+
+4. HOW TO ADD A SCRIPT COMMAND IN RPG MAKER XP
+   - In the event list, double-click a line (or right-click → Insert).
+   - Choose "Script..." from the list.
+   - In the script box, type exactly (e.g.):  pbChoosePlayerRace
+   - Click OK.
+
+5. EXAMPLE FLOW IN THE EVENT EDITOR
+
+   [1] Show Text: "Welcome! What is your name?"
+   [2] (your name input command)
+   [3] Script: pbChoosePlayerRace
+   [4] Show Choices: Boy, Girl
+        - When Boy:
+          [5a] Script: pbChangePlayerForGender(1)
+          [6a] Script: pbChoosePlayerClass(1)
+        - When Girl:
+          [5b] Script: pbChangePlayerForGender(2)
+          [6b] Script: pbChoosePlayerClass(2)
+   [7] (continue with rest of intro...)
+
+6. IF YOU ALREADY USE pbChangePlayer(1) / pbChangePlayer(2)
+   Replace those two with:
+     pbChangePlayerForGender(1)   (for male)
+     pbChangePlayerForGender(2)   (for female)
+   Then add pbChoosePlayerClass(1) or pbChoosePlayerClass(2) right after in
+   each branch.
+
+7. COMPILE BEFORE TESTING
+   - Run the game with Ctrl held once to recompile plugins.
+   - Compile PBS (Debug → Compile Data, or run the game) if you changed metadata.
+
+================================================================================
