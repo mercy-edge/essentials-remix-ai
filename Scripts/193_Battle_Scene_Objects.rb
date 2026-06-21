@@ -247,7 +247,7 @@ class Battle::Scene::PokemonDataBox < Sprite
   def draw_status
     return if @battler.status == :NONE
     if @battler.status == :POISON && @battler.statusCount > 0   # Badly poisoned
-      s = GameData::Status.count - 1
+      s = GameData::Status::TOXIC_ICON_POSITION
     else
       s = GameData::Status.get(@battler.status).icon_position
     end

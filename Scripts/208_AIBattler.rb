@@ -151,6 +151,8 @@ class Battle::AI::AIBattler
         amt = (amt / 2.0).round if has_active_ability?(:HEATPROOF)
         ret += [amt, 1].max
       end
+    elsif self.status == :FROSTBITE
+      ret += [(Settings::MECHANICS_GENERATION >= 7) ? self.totalhp / 16 : self.totalhp / 8, 1].max if battler.takesIndirectDamage?
     elsif battler.asleep? && self.statusCount > 1 && self.effects[PBEffects::Nightmare]
       ret += [self.totalhp / 4, 1].max if battler.takesIndirectDamage?
     end

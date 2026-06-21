@@ -304,6 +304,21 @@ Name = Team Rocket
 Gender = Female
 BaseMoney = 32
 #-------------------------------
+[KOBOLD]
+Name = Kobold
+Gender = Unknown
+BaseMoney = 16
+#-------------------------------
+[DEFIAS_M]
+Name = Defias
+Gender = Male
+BaseMoney = 32
+#-------------------------------
+[DEFIAS_F]
+Name = Defias
+Gender = Female
+BaseMoney = 32
+#-------------------------------
 [ROCKETBOSS]
 Name = Rocket Boss
 Gender = Male

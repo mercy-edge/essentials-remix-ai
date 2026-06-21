@@ -509,14 +509,19 @@ ItemHandlers::UseOnPokemon.add(:PARALYZEHEAL, proc { |item, qty, pkmn, scene|
 ItemHandlers::UseOnPokemon.copy(:PARALYZEHEAL, :PARLYZHEAL, :CHERIBERRY)
 
 ItemHandlers::UseOnPokemon.add(:ICEHEAL, proc { |item, qty, pkmn, scene|
-  if pkmn.fainted? || pkmn.status != :FROZEN
+  if pkmn.fainted? || ![:FROZEN, :FROSTBITE].include?(pkmn.status)
     scene.pbDisplay(_INTL("It won't have any effect."))
     next false
   end
+  old_status = pkmn.status
   pbSEPlay("Use item in party")
   pkmn.heal_status
   scene.pbRefresh
-  scene.pbDisplay(_INTL("{1} was thawed out.", pkmn.name))
+  if old_status == :FROSTBITE
+    scene.pbDisplay(_INTL("{1} was cured of its frostbite.", pkmn.name))
+  else
+    scene.pbDisplay(_INTL("{1} was thawed out.", pkmn.name))
+  end
   next true
 })
 

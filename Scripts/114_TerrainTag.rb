@@ -14,6 +14,7 @@ module GameData
     attr_reader :double_wild_encounters
     attr_reader :battle_environment
     attr_reader :ledge
+    attr_reader :fence
     attr_reader :ice
     attr_reader :bridge
     attr_reader :shows_reflections
@@ -54,6 +55,7 @@ module GameData
       @double_wild_encounters = hash[:double_wild_encounters] || false
       @battle_environment     = hash[:battle_environment]
       @ledge                  = hash[:ledge]                  || false
+      @fence                  = hash[:fence]                  || false
       @ice                    = hash[:ice]                    || false
       @bridge                 = hash[:bridge]                 || false
       @shows_reflections      = hash[:shows_reflections]      || false
@@ -201,4 +203,10 @@ GameData::TerrainTag.register({
 GameData::TerrainTag.register({
   :id                     => :NoEffect,
   :id_number              => 17
+})
+
+GameData::TerrainTag.register({
+  :id                     => :Fence,
+  :id_number              => 18,
+  :fence                  => true
 })

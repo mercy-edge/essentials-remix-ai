@@ -35,6 +35,8 @@ class Battle::Battler
         when :BURN      then msg = _INTL("{1} already has a burn!", pbThis)
         when :PARALYSIS then msg = _INTL("{1} is already paralyzed!", pbThis)
         when :FROZEN    then msg = _INTL("{1} is already frozen solid!", pbThis)
+        when :FROSTBITE then msg = _INTL("{1} is already frostbitten!", pbThis)
+        when :POLYMORPH then msg = _INTL("{1} is already polymorphed!", pbThis)
         end
         @battle.pbDisplay(msg)
       end
@@ -95,6 +97,10 @@ class Battle::Battler
       hasImmuneType |= pbHasType?(:ELECTRIC) && Settings::MORE_TYPE_EFFECTS
     when :FROZEN
       hasImmuneType |= pbHasType?(:ICE)
+    when :FROSTBITE
+      hasImmuneType |= pbHasType?(:ICE)
+    when :POLYMORPH
+      # No type is immune to polymorph
     end
     if hasImmuneType
       @battle.pbDisplay(_INTL("It doesn't affect {1}...", pbThis(true))) if showMessages
@@ -129,6 +135,8 @@ class Battle::Battler
           when :BURN      then msg = _INTL("{1} cannot be burned!", pbThis)
           when :PARALYSIS then msg = _INTL("{1} cannot be paralyzed!", pbThis)
           when :FROZEN    then msg = _INTL("{1} cannot be frozen solid!", pbThis)
+          when :FROSTBITE then msg = _INTL("{1} cannot be frostbitten!", pbThis)
+          when :POLYMORPH then msg = _INTL("{1} cannot be polymorphed!", pbThis)
           end
         elsif immAlly
           case newStatus
@@ -147,6 +155,12 @@ class Battle::Battler
           when :FROZEN
             msg = _INTL("{1} cannot be frozen solid because of {2}'s {3}!",
                         pbThis, immAlly.pbThis(true), immAlly.abilityName)
+          when :FROSTBITE
+            msg = _INTL("{1} cannot be frostbitten because of {2}'s {3}!",
+                        pbThis, immAlly.pbThis(true), immAlly.abilityName)
+          when :POLYMORPH
+            msg = _INTL("{1} cannot be polymorphed because of {2}'s {3}!",
+                        pbThis, immAlly.pbThis(true), immAlly.abilityName)
           end
         else
           case newStatus
@@ -155,6 +169,8 @@ class Battle::Battler
           when :BURN      then msg = _INTL("{1}'s {2} prevents burns!", pbThis, abilityName)
           when :PARALYSIS then msg = _INTL("{1}'s {2} prevents paralysis!", pbThis, abilityName)
           when :FROZEN    then msg = _INTL("{1}'s {2} prevents freezing!", pbThis, abilityName)
+          when :FROSTBITE then msg = _INTL("{1}'s {2} prevents frostbite!", pbThis, abilityName)
+          when :POLYMORPH then msg = _INTL("{1}'s {2} prevents polymorph!", pbThis, abilityName)
           end
         end
         @battle.pbDisplay(msg)
@@ -188,6 +204,8 @@ class Battle::Battler
       end
     when :BURN
       hasImmuneType |= pbHasType?(:FIRE)
+    when :FROSTBITE
+      hasImmuneType |= pbHasType?(:ICE)
     when :PARALYSIS
       hasImmuneType |= pbHasType?(:ELECTRIC) && Settings::MORE_TYPE_EFFECTS
     end
@@ -247,9 +265,14 @@ class Battle::Battler
         @battle.pbDisplay(_INTL("{1} is paralyzed! It may be unable to move!", pbThis))
       when :FROZEN
         @battle.pbDisplay(_INTL("{1} was frozen solid!", pbThis))
+      when :FROSTBITE
+        @battle.pbDisplay(_INTL("{1} was frostbitten!", pbThis))
+      when :POLYMORPH
+        @battle.pbDisplay(_INTL("{1} was polymorphed!", pbThis))
       end
     end
     PBDebug.log("[Status change] #{pbThis}'s sleep count is #{newStatusCount}") if newStatus == :SLEEP
+    PBDebug.log("[Status change] #{pbThis}'s polymorph count is #{newStatusCount}") if newStatus == :POLYMORPH
     # Form change check
     pbCheckFormOnStatusChange
     # Synchronize
@@ -271,6 +294,9 @@ class Battle::Battler
     #       moves, and it doesn't cancel any moves if self becomes frozen/
     #       disabled/anything else). This behaviour was tested in Gen 5.
     if @status == :SLEEP && @effects[PBEffects::Outrage] > 0
+      @effects[PBEffects::Outrage] = 0
+      @currentMove = nil
+    elsif @status == :POLYMORPH && @effects[PBEffects::Outrage] > 0
       @effects[PBEffects::Outrage] = 0
       @currentMove = nil
     end
@@ -369,6 +395,25 @@ class Battle::Battler
   end
 
   #=============================================================================
+  # Frostbite
+  #=============================================================================
+  def frostbitten?
+    return pbHasStatus?(:FROSTBITE)
+  end
+
+  def pbCanFrostbite?(user, showMessages, move = nil)
+    return pbCanInflictStatus?(:FROSTBITE, user, showMessages, move)
+  end
+
+  def pbCanFrostbiteSynchronize?(target)
+    return pbCanSynchronizeStatus?(:FROSTBITE, target)
+  end
+
+  def pbFrostbite(user = nil, msg = nil)
+    pbInflictStatus(:FROSTBITE, 0, msg, user)
+  end
+
+  #=============================================================================
   # Paralyze
   #=============================================================================
   def paralyzed?
@@ -403,6 +448,28 @@ class Battle::Battler
   end
 
   #=============================================================================
+  # Polymorph
+  #=============================================================================
+  POLYMORPH_WAKE_CHANCE = 33   # Percent chance to revert each turn
+
+  def polymorphed?
+    return pbHasStatus?(:POLYMORPH)
+  end
+
+  def pbCanPolymorph?(user, showMessages, move = nil, ignoreStatus = false)
+    return pbCanInflictStatus?(:POLYMORPH, user, showMessages, move, ignoreStatus)
+  end
+
+  def pbPolymorph(msg = nil)
+    pbInflictStatus(:POLYMORPH, pbPolymorphDuration, msg)
+  end
+
+  def pbPolymorphDuration(duration = -1)
+    duration = 1 + @battle.pbRandom(3) if duration <= 0
+    return duration
+  end
+
+  #=============================================================================
   # Generalised status displays
   #=============================================================================
   def pbContinueStatus
@@ -420,12 +487,17 @@ class Battle::Battler
       @battle.pbDisplay(_INTL("{1} was hurt by poison!", pbThis))
     when :BURN
       @battle.pbDisplay(_INTL("{1} was hurt by its burn!", pbThis))
+    when :FROSTBITE
+      @battle.pbDisplay(_INTL("{1} was hurt by frostbite!", pbThis))
     when :PARALYSIS
       @battle.pbDisplay(_INTL("{1} is paralyzed! It can't move!", pbThis))
     when :FROZEN
       @battle.pbDisplay(_INTL("{1} is frozen solid!", pbThis))
+    when :POLYMORPH
+      @battle.pbDisplay(_INTL("{1} is polymorphed and can't move!", pbThis))
     end
     PBDebug.log("[Status continues] #{pbThis}'s sleep count is #{@statusCount}") if self.status == :SLEEP
+    PBDebug.log("[Status continues] #{pbThis}'s polymorph count is #{@statusCount}") if self.status == :POLYMORPH
   end
 
   def pbCureStatus(showMessages = true)
@@ -436,8 +508,10 @@ class Battle::Battler
       when :SLEEP     then @battle.pbDisplay(_INTL("{1} woke up!", pbThis))
       when :POISON    then @battle.pbDisplay(_INTL("{1} was cured of its poisoning.", pbThis))
       when :BURN      then @battle.pbDisplay(_INTL("{1}'s burn was healed.", pbThis))
+      when :FROSTBITE then @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", pbThis))
       when :PARALYSIS then @battle.pbDisplay(_INTL("{1} was cured of paralysis.", pbThis))
       when :FROZEN    then @battle.pbDisplay(_INTL("{1} thawed out!", pbThis))
+      when :POLYMORPH then @battle.pbDisplay(_INTL("{1} reverted to normal!", pbThis))
       end
     end
     PBDebug.log("[Status change] #{pbThis}'s status was cured") if !showMessages

@@ -420,11 +420,11 @@ class PokemonPartyPanel < Sprite
     return if @pokemon.egg? || (@text && @text.length > 0)
     status = -1
     if @pokemon.fainted?
-      status = GameData::Status.count - 1
+      status = GameData::Status::FAINTED_ICON_POSITION
     elsif @pokemon.status != :NONE
       status = GameData::Status.get(@pokemon.status).icon_position
     elsif @pokemon.pokerusStage == 1
-      status = GameData::Status.count
+      status = GameData::Status::POKERUS_ICON_POSITION
     end
     return if status < 0
     statusrect = Rect.new(0, STATUS_ICON_HEIGHT * status, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT)

@@ -56,6 +56,8 @@ MenuHandlers.add(:battle_pokemon_debug_menu, :set_status, {
       msg = _INTL("Current status: {1}", GameData::Status.get(pkmn.status).name)
       if pkmn.status == :SLEEP
         msg += " " + _INTL("(turns: {1})", pkmn.statusCount)
+      elsif pkmn.status == :POLYMORPH
+        msg += " " + _INTL("(turns: {1})", pkmn.statusCount)
       elsif pkmn.status == :POISON && pkmn.statusCount > 0
         if battler
           msg += " " + _INTL("(toxic, count: {1})", battler.effects[PBEffects::Toxic])
@@ -81,6 +83,14 @@ MenuHandlers.add(:battle_pokemon_debug_menu, :set_status, {
           params.setDefaultValue((pkmn.status == :SLEEP) ? pkmn.statusCount : 3)
           params.setCancelValue(-1)
           count = pbMessageChooseNumber("\\ts[]" + _INTL("Set {1}'s sleep count (0-99).", pkmn_name), params)
+          next if count < 0
+          (battler || pkmn).statusCount = count
+        when :POLYMORPH
+          params = ChooseNumberParams.new
+          params.setRange(0, 99)
+          params.setDefaultValue((pkmn.status == :POLYMORPH) ? pkmn.statusCount : 2)
+          params.setCancelValue(-1)
+          count = pbMessageChooseNumber("\\ts[]" + _INTL("Set {1}'s polymorph count (0-99).", pkmn_name), params)
           next if count < 0
           (battler || pkmn).statusCount = count
         when :POISON

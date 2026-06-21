@@ -410,6 +410,14 @@ MapPosition = 0,12,11
 BattleBack = field
 Environment = Grass
 #-------------------------------
+[042]   # Northshire Vineyards
+Name = Northshire Vineyards
+Outdoor = true
+ShowArea = true
+MapPosition = 0,13,11
+BattleBack = field
+Environment = Grass
+#-------------------------------
 [033]   # Echo Ridge Mine
 Name = Echo Ridge Mine
 MapPosition = 0,12,11

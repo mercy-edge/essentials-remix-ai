@@ -282,6 +282,8 @@ module Battle::DebugMixin
     case battler.status
     when :SLEEP
       ret += " " + _INTL("({1} rounds left)", battler.statusCount)
+    when :POLYMORPH
+      ret += " " + _INTL("({1} rounds left)", battler.statusCount)
     when :POISON
       if battler.statusCount > 0
         ret += " " + _INTL("(toxic, {1}/16)", battler.effects[PBEffects::Toxic])
@@ -330,6 +332,8 @@ module Battle::DebugMixin
     ret += _INTL("Status: {1}", GameData::Status.get(pkmn.status).name)
     case pkmn.status
     when :SLEEP
+      ret += " " + _INTL("({1} rounds left)", pkmn.statusCount)
+    when :POLYMORPH
       ret += " " + _INTL("({1} rounds left)", pkmn.statusCount)
     when :POISON
       ret += " " + _INTL("(toxic)") if pkmn.statusCount > 0

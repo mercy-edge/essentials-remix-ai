@@ -1,11 +1,13 @@
 # NOTE: "Graphics/UI/statuses.png" also contains icons for being fainted and for
 #       having Pokérus, in that order, at the bottom of the graphic.
 #       "Graphics/UI/Battle/icon_statuses.png" also contains an icon for bad
-#       poisoning (toxic), at the bottom of the graphic.
-#       Both graphics automatically handle varying numbers of defined statuses,
-#       as long as their extra icons remain at the bottom of them.
+#       poisoning (toxic) at TOXIC_ICON_POSITION, before Frostbite and Polymorph.
 module GameData
   class Status
+    TOXIC_ICON_POSITION    = 5
+    FAINTED_ICON_POSITION  = 8
+    POKERUS_ICON_POSITION  = 9
+
     attr_reader :id
     attr_reader :real_name
     attr_reader :animation
@@ -73,4 +75,18 @@ GameData::Status.register({
   :name          => _INTL("Frozen"),
   :animation     => "Frozen",
   :icon_position => 4
+})
+
+GameData::Status.register({
+  :id            => :FROSTBITE,
+  :name          => _INTL("Frostbite"),
+  :animation     => "Frozen",
+  :icon_position => 6
+})
+
+GameData::Status.register({
+  :id            => :POLYMORPH,
+  :name          => _INTL("Polymorph"),
+  :animation     => "Sleep",
+  :icon_position => 7
 })

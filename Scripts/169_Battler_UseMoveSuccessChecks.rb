@@ -238,6 +238,24 @@ class Battle::Battler
           return false
         end
       end
+    when :POLYMORPH
+      woke = false
+      if @battle.pbRandom(100) < Battle::Battler::POLYMORPH_WAKE_CHANCE
+        pbCureStatus
+        woke = true
+      else
+        self.statusCount -= 1
+        if @statusCount <= 0
+          pbCureStatus
+          woke = true
+        end
+      end
+      unless woke
+        pbContinueStatus
+        PBDebug.log("[Move failed] #{pbThis} is polymorphed")
+        @lastMoveFailed = true
+        return false
+      end
     end
     # Obedience check
     return false if !pbObedienceCheck?(choice)

@@ -111,7 +111,11 @@ ItemHandlers::CanUseInBattle.add(:PARALYZEHEAL, proc { |item, pokemon, battler, 
 ItemHandlers::CanUseInBattle.copy(:PARALYZEHEAL, :PARLYZHEAL, :CHERIBERRY)
 
 ItemHandlers::CanUseInBattle.add(:ICEHEAL, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
-  next pbBattleItemCanCureStatus?(:FROZEN, pokemon, scene, showMessages)
+  if !pokemon.able? || ![:FROZEN, :FROSTBITE].include?(pokemon.status)
+    scene.pbDisplay(_INTL("It won't have any effect.")) if showMessages
+    next false
+  end
+  next true
 })
 
 ItemHandlers::CanUseInBattle.copy(:ICEHEAL, :ASPEARBERRY)
@@ -414,11 +418,16 @@ ItemHandlers::BattleUseOnPokemon.add(:PARALYZEHEAL, proc { |item, pokemon, battl
 ItemHandlers::BattleUseOnPokemon.copy(:PARALYZEHEAL, :PARLYZHEAL, :CHERIBERRY)
 
 ItemHandlers::BattleUseOnPokemon.add(:ICEHEAL, proc { |item, pokemon, battler, choices, scene|
+  old_status = pokemon.status
   pokemon.heal_status
   battler&.pbCureStatus(false)
   name = (battler) ? battler.pbThis : pokemon.name
   scene.pbRefresh
-  scene.pbDisplay(_INTL("{1} was thawed out.", name))
+  if old_status == :FROSTBITE
+    scene.pbDisplay(_INTL("{1} was cured of its frostbite.", name))
+  else
+    scene.pbDisplay(_INTL("{1} was thawed out.", name))
+  end
 })
 
 ItemHandlers::BattleUseOnPokemon.copy(:ICEHEAL, :ASPEARBERRY)

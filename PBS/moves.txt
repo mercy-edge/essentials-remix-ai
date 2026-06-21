@@ -9673,3 +9673,271 @@ Target = NearOther
 FunctionCode = CustomCounterspell
 Flags = CanProtect,CanMirrorMove
 Description = If the target was preparing a special move this turn, that move and all of its same-type moves become disabled.
+#-------------------------------
+[MOONFIRE]
+Name = Moonfire
+Type = FIRE
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 25
+Target = NearOther
+FunctionCode = CustomMoonfire
+Flags = CanProtect,CanMirrorMove
+Description = The user calls down moonlight on the target. This move never misses and may burn.
+#-------------------------------
+[REJUVINATION]
+Name = Rejuvenation
+Type = GRASS
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = HealTargetAquaRing
+Flags = CanProtect,CanMirrorMove
+Description = The user wraps the target in restorative roots. The target regains HP each turn.
+#-------------------------------
+[ENTANGLINGROOTS]
+Name = Entangling Roots
+Type = GRASS
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = BindTarget
+Flags = CanProtect,CanMirrorMove
+Description = The user entangles the target with roots, trapping it and causing residual damage.
+#-------------------------------
+[SERPANTSTING]
+Name = Serpent Sting
+Type = POISON
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = PoisonTargetLowerTargetSpeed1
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user strikes with a venomous sting that poisons and lowers Speed.
+#-------------------------------
+[ARCANESHOT]
+Name = Arcane Shot
+Type = PSYCHIC
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 25
+Target = NearOther
+FunctionCode = None
+Flags = CanProtect,CanMirrorMove
+Description = The user fires a bolt of arcane energy.
+#-------------------------------
+[CONCUSSIVESHOT]
+Name = Concussive Shot
+Type = NORMAL
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = CustomConcussiveShot
+Flags = CanProtect,CanMirrorMove
+Description = The user blasts the target with concussive force, slowing it and possibly causing flinching.
+#-------------------------------
+[FROSTBOLT]
+Name = Frostbolt
+Type = ICE
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 25
+Target = NearOther
+FunctionCode = LowerTargetSpAtk1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 20
+Description = The user fires freezing magic that lowers the target's Sp. Atk.
+#-------------------------------
+[FIREBLASTQUICK]
+Name = Fire Blast Quick
+Type = FIRE
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 25
+Target = NearOther
+FunctionCode = None
+Flags = CanProtect,CanMirrorMove
+Description = The user launches a quick burst of fire.
+#-------------------------------
+[ARCANEMISSLES]
+Name = Arcane Missiles
+Type = PSYCHIC
+Category = Special
+Power = 20
+Accuracy = 0
+TotalPP = 20
+Target = NearOther
+FunctionCode = HitThreeTimes
+Flags = CanProtect,CanMirrorMove
+Description = The user unleashes arcane missiles that hit three times and never miss.
+#-------------------------------
+[HOLYLIGHT]
+Name = Holy Light
+Type = FAIRY
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = HealTargetHalfOfTotalHP
+Flags = CanProtect,CanMirrorMove
+Description = A holy spark restores half of the target's max HP.
+#-------------------------------
+[HAMMEROFJUSTICE]
+Name = Hammer of Justice
+Type = FAIRY
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+Priority = 1
+FunctionCode = FlinchTarget
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 20
+Description = The user strikes first with righteous force and may make the target flinch.
+#-------------------------------
+[FADE]
+Name = Fade
+Type = DARK
+Category = Status
+Accuracy = 100
+TotalPP = 20
+Target = User
+FunctionCode = RaiseUserEvasion1
+Flags = Snatch
+Description = The user fades from sight, raising its evasiveness.
+#-------------------------------
+[MINDBLAST]
+Name = Mind Blast
+Type = PSYCHIC
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = LowerTargetAttack1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 20
+Description = The user detonates psychic force that may lower the target's Attack.
+#-------------------------------
+[HEALINGWAVE]
+Name = Healing Wave
+Type = FAIRY
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = HealTargetHalfOfTotalHP
+Flags = CanProtect,CanMirrorMove
+Description = A wave of life energy restores half of the target's max HP.
+#-------------------------------
+[EARTHSHOCK]
+Name = Earth Shock
+Type = GROUND
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = CustomEarthShock
+Flags = CanProtect,CanMirrorMove
+Description = The user slams the target with rocky force. If the target was preparing a status move, it may flinch.
+#-------------------------------
+[FLAMESHOCK]
+Name = Flame Shock
+Type = FIRE
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = BurnTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 20
+Description = The user shocks the target with flame and may burn it.
+#-------------------------------
+[IMMOLATE]
+Name = Immolate
+Type = FIRE
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = BurnTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 20
+Description = The user scorches the target and may burn it.
+#-------------------------------
+[CORRUPTION]
+Name = Corruption
+Type = DARK
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = CustomCorruption
+Flags = CanProtect,CanMirrorMove
+Description = Afflicts the target with lasting corruption that chips away each turn.
+#-------------------------------
+[DRAINSOUL]
+Name = Drain Soul
+Type = GHOST
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = CustomDrainSoul
+Flags = CanProtect,CanMirrorMove
+Description = The user attacks and absorbs half the damage dealt while locked into this move for 2-3 turns.
+#-------------------------------
+[CHARGESPELL]
+Name = Charge Spell
+Type = NORMAL
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+Priority = 1
+FunctionCode = FlinchTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 20
+Description = The user charges in immediately and may make the target flinch.
+#-------------------------------
+[REND]
+Name = Rend
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = CustomRend
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A vicious strike that leaves the user bleeding for a short time.
+#-------------------------------
+[HAMSTRING]
+Name = Hamstring
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = CustomHamstring
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user cuts the foe's mobility, but gets stuck on the field for a few turns.

@@ -199,13 +199,14 @@ class Game_Map
       elsif terrain.ice
         return false
       elsif self_event && self_event.x == x && self_event.y == y
-        # Can't walk onto ledges
+        # Can't walk onto ledges or fences (use jump logic instead)
         [2, 1, 0].each do |j|
           facing_tile_id = data[newx, newy, j]
           next if facing_tile_id == 0
           return false if facing_tile_id.nil?
           facing_terrain = GameData::TerrainTag.try_get(@terrain_tags[facing_tile_id])
           return false if facing_terrain.ledge
+          return false if facing_terrain.fence
           break if facing_terrain.id != :None && !facing_terrain.ignore_passability
         end
       end

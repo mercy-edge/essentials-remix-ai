@@ -365,11 +365,11 @@ class PokemonSummary_Scene
     # Show status/fainted/Pokérus infected icon
     status = -1
     if @pokemon.fainted?
-      status = GameData::Status.count - 1
+      status = GameData::Status::FAINTED_ICON_POSITION
     elsif @pokemon.status != :NONE
       status = GameData::Status.get(@pokemon.status).icon_position
     elsif @pokemon.pokerusStage == 1
-      status = GameData::Status.count
+      status = GameData::Status::POKERUS_ICON_POSITION
     end
     if status >= 0
       imagepos.push([_INTL("Graphics/UI/statuses"), 124, 100, 0, 16 * status, 44, 16])

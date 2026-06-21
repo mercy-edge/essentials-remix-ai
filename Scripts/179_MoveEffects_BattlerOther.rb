@@ -21,6 +21,28 @@ class Battle::Move::SleepTarget < Battle::Move
 end
 
 #===============================================================================
+# Polymorphs the target.
+#===============================================================================
+class Battle::Move::PolymorphTarget < Battle::Move
+  def canMagicCoat?; return true; end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    return false if damagingMove?
+    return !target.pbCanPolymorph?(user, show_message, self)
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    return if damagingMove?
+    target.pbPolymorph
+  end
+
+  def pbAdditionalEffect(user, target)
+    return if target.damageState.substitute
+    target.pbPolymorph if target.pbCanPolymorph?(user, false, self)
+  end
+end
+
+#===============================================================================
 # Puts the target to sleep. Fails if user is not Darkrai. (Dark Void (Gen 7+))
 #===============================================================================
 class Battle::Move::SleepTargetIfUserDarkrai < Battle::Move::SleepTarget
@@ -230,6 +252,28 @@ class Battle::Move::BurnTarget < Battle::Move
   def pbAdditionalEffect(user, target)
     return if target.damageState.substitute
     target.pbBurn(user) if target.pbCanBurn?(user, false, self)
+  end
+end
+
+#===============================================================================
+# Frostbites the target.
+#===============================================================================
+class Battle::Move::FrostbiteTarget < Battle::Move
+  def canMagicCoat?; return true; end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    return false if damagingMove?
+    return !target.pbCanFrostbite?(user, show_message, self)
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    return if damagingMove?
+    target.pbFrostbite(user)
+  end
+
+  def pbAdditionalEffect(user, target)
+    return if target.damageState.substitute
+    target.pbFrostbite(user) if target.pbCanFrostbite?(user, false, self)
   end
 end
 

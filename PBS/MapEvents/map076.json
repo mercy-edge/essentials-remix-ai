@@ -529,13 +529,13 @@
     },
     "250": {
       "id": 250,
-      "name": "Kobold Worker",
+      "name": "Worker",
       "x": 28,
       "y": 4,
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_YOUNGSTER",
+            "character_name": "trainer_KOBOLD",
             "character_hue": 0,
             "direction": 2,
             "pattern": 0
@@ -586,7 +586,7 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_YOUNGSTER",
+            "character_name": "trainer_KOBOLD",
             "character_hue": 0,
             "direction": 2,
             "pattern": 0
@@ -637,7 +637,7 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_YOUNGSTER",
+            "character_name": "trainer_KOBOLD",
             "character_hue": 0,
             "direction": 2,
             "pattern": 0
@@ -688,7 +688,7 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_YOUNGSTER",
+            "character_name": "trainer_KOBOLD",
             "character_hue": 0,
             "direction": 2,
             "pattern": 0
@@ -739,7 +739,7 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_YOUNGSTER",
+            "character_name": "trainer_KOBOLD",
             "character_hue": 0,
             "direction": 2,
             "pattern": 0

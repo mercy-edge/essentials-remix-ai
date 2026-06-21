@@ -35,13 +35,13 @@
     },
     "301": {
       "id": 301,
-      "name": "Kobold Laborer",
+      "name": "Laborer",
       "x": 6,
       "y": 9,
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_YOUNGSTER",
+            "character_name": "trainer_KOBOLD",
             "character_hue": 0,
             "direction": 2,
             "pattern": 0,
@@ -76,7 +76,7 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_YOUNGSTER",
+            "character_name": "trainer_KOBOLD",
             "character_hue": 0,
             "direction": 2,
             "pattern": 0,
@@ -111,7 +111,7 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_YOUNGSTER",
+            "character_name": "trainer_KOBOLD",
             "character_hue": 0,
             "direction": 2,
             "pattern": 0,

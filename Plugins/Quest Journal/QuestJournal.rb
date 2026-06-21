@@ -874,7 +874,7 @@ end
 #-------------------------------------------------------------------------------
 # Kobold scouts use Essentials AI skill 0 (same tier as wild Pokémon): no ScoreMoves /
 # PredictMoveFailure / PreferMultiTargetMoves  -  moves are chosen almost uniformly among valid picks.
-# Still a trainer battle (OW NPC); sprite/name stay tied to trainer_type (:YOUNGSTER).
+# Still a trainer battle (OW NPC); sprite/name stay tied to trainer_type (:KOBOLD).
 #-------------------------------------------------------------------------------
 class KoboldVerminTrainer < NPCTrainer
   def skill_level
@@ -941,7 +941,7 @@ def pbBattleEchoRidgeKoboldWorker
                    else         [:PIDGEY, rand(1..2)]
                    end
 
-  trainer = KoboldVerminTrainer.new(_INTL("Kobold Worker"), :YOUNGSTER, 0)
+  trainer = KoboldVerminTrainer.new(_INTL("Kobold Worker"), :KOBOLD, 0)
   trainer.party.push(Pokemon.new(species, level, trainer))
   won = TrainerBattle.start(trainer)
   pbReportEchoRidgeWorkerDefeat if won
@@ -955,7 +955,7 @@ end
 def pbBattleEchoRidgeMineLaborer
   pool = [:DIGLETT, :ZUBAT, :RATTATA, :SPINARAK]
   n = rand(2) + 1
-  trainer = KoboldVerminTrainer.new(_INTL("Kobold Laborer"), :YOUNGSTER, 0)
+  trainer = KoboldVerminTrainer.new(_INTL("Kobold Laborer"), :KOBOLD, 0)
   n.times do
     trainer.party.push(Pokemon.new(pool.sample, 3, trainer))
   end
@@ -968,7 +968,7 @@ end
 # Returns true if the player won.
 #-------------------------------------------------------------------------------
 def pbBattleKoboldVerminTrainer
-  trainer = KoboldVerminTrainer.new(_INTL("Kobold Vermin"), :YOUNGSTER, 0)
+  trainer = KoboldVerminTrainer.new(_INTL("Kobold Vermin"), :KOBOLD, 0)
   species = QuestJournal::KOBOLD_VERMIN_SPECIES_POOL.sample
   trainer.party.push(Pokemon.new(species, 1, trainer))
   won = TrainerBattle.start(trainer)

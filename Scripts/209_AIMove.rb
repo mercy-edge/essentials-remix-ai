@@ -332,6 +332,10 @@ class Battle::AI::AIMove
        @move.damageReducedByBurn? && !user.has_active_ability?(:GUTS)
       multipliers[:final_damage_multiplier] /= 2
     end
+    # Frostbite
+    if @ai.trainer.high_skill? && user.status == :FROSTBITE && specialMove?(calc_type)
+      multipliers[:final_damage_multiplier] /= 2
+    end
     # Aurora Veil, Reflect, Light Screen
     if @ai.trainer.medium_skill? && !@move.ignoresReflect? && !is_critical &&
        !user.has_active_ability?(:INFILTRATOR)

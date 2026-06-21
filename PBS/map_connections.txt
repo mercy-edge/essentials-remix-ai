@@ -38,3 +38,5 @@
 47,E,8,52,W,0
 # Route 2 (21) - Route 7 (47)
 21,E,77,47,W,0
+# Northshire Abbey (76) - Northshire Vineyards (42)
+76,E,0,42,W,0

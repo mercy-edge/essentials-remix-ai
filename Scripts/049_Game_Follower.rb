@@ -50,6 +50,11 @@ class Game_Follower < Game_Event
     delta_y = (direction == 2) ? 1 : (direction == 8) ? -1 : 0
     new_x = self.x + delta_x
     new_y = self.y + delta_y
+    if self.map.valid?(new_x, new_y) && self.map.terrain_tag(new_x, new_y).fence &&
+       location_fence_jump_passable?(new_x, new_y)
+      jump(delta_x, delta_y)
+      return
+    end
     # Move if new position is the player's, or the new position is passable,
     # or self's current position is not passable
     if ($game_player.x == new_x && $game_player.y == new_y) ||
@@ -184,6 +189,7 @@ class Game_Follower < Game_Event
       next if tile_data.ignore_passability
       next if tile_data.bridge && $PokemonGlobal.bridge == 0
       return false if tile_data.ledge
+      return false if tile_data.fence
       passage = this_map.passages[event.tile_id] || 0
       return false if passage & bit != 0
       passed_tile_checks = true if (tile_data.bridge && $PokemonGlobal.bridge > 0) ||
@@ -199,6 +205,7 @@ class Game_Follower < Game_Event
         next if tile_data.ignore_passability
         next if tile_data.bridge && $PokemonGlobal.bridge == 0
         return false if tile_data.ledge
+        return false if tile_data.fence
         passage = this_map.passages[tile_id] || 0
         return false if passage & bit != 0
         break if tile_data.bridge && $PokemonGlobal.bridge > 0
@@ -209,6 +216,22 @@ class Game_Follower < Game_Event
     this_map.events.each_value do |event|
       next if !event.at_coordinate?(x, y)
       return false if !event.through && event.character_name != ""
+    end
+    return true
+  end
+
+  def location_fence_jump_passable?(x, y)
+    return false if !this_map || !this_map.valid?(x, y)
+    return false if !this_map.terrain_tag(x, y).fence
+    [2, 1, 0].each do |i|
+      tile_id = this_map.data[x, y, i] || 0
+      next if tile_id == 0
+      tile_data = GameData::TerrainTag.try_get(this_map.terrain_tags[tile_id])
+      next if tile_data.ignore_passability
+      next if tile_data.bridge && $PokemonGlobal.bridge == 0
+      passage = this_map.passages[tile_id] || 0
+      return false if passage & 0x0f == 0x0f
+      return true if (this_map.priorities[tile_id] || -1) == 0
     end
     return true
   end

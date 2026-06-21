@@ -248,6 +248,34 @@ class Battle
       battler.pbFaint if battler.fainted?
       battler.droppedBelowHalfHP = false
     end
+    # Damage from frostbite
+    priority.each do |battler|
+      next if battler.status != :FROSTBITE || !battler.takesIndirectDamage?
+      battler.droppedBelowHalfHP = false
+      dmg = (Settings::MECHANICS_GENERATION >= 7) ? battler.totalhp / 16 : battler.totalhp / 8
+      battler.pbContinueStatus { battler.pbReduceHP(dmg, false) }
+      battler.pbItemHPHealCheck
+      battler.pbAbilitiesOnDamageTaken
+      battler.pbFaint if battler.fainted?
+      battler.droppedBelowHalfHP = false
+    end
+  end
+
+  #=============================================================================
+  # End Of Round healing from Polymorph
+  #=============================================================================
+  def pbEORPolymorphHealing(priority)
+    priority.each do |battler|
+      next if battler.fainted?
+      next if battler.status != :POLYMORPH
+      next if !battler.canHeal?
+      amt = battler.totalhp / 3
+      next if amt <= 0
+      anim_name = GameData::Status.get(:POLYMORPH).animation
+      pbCommonAnimation(anim_name, battler) if anim_name
+      battler.pbRecoverHP(amt)
+      pbDisplay(_INTL("{1} was healed by the arcane magic!", battler.pbThis))
+    end
   end
 
   #=============================================================================
@@ -666,6 +694,10 @@ class Battle
           pbDisplay(_INTL("{1} gathered all its energy to break through its paralysis so you wouldn't worry!", battler.pbThis))
         when :FROZEN
           pbDisplay(_INTL("{1} melted the ice with its fiery determination so you wouldn't worry!", battler.pbThis))
+        when :FROSTBITE
+          pbDisplay(_INTL("{1} shook off its frostbite so you wouldn't worry!", battler.pbThis))
+        when :POLYMORPH
+          pbDisplay(_INTL("{1} broke free of the polymorph so you wouldn't worry!", battler.pbThis))
         end
       end
     end
@@ -684,6 +716,8 @@ class Battle
     pbEORStatusProblemDamage(priority)
     # Damage from Nightmare and Curse
     pbEOREffectDamage(priority)
+    # Healing from Polymorph
+    pbEORPolymorphHealing(priority)
     # Trapping attacks (Bind/Clamp/Fire Spin/Magma Storm/Sand Tomb/Whirlpool/Wrap)
     priority.each { |battler| pbEORTrappingDamage(battler) }
     # Octolock

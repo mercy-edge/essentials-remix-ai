@@ -141,6 +141,10 @@ class Game_Player < Game_Character
   def move_generic(dir, turn_enabled = true)
     turn_generic(dir, true) if turn_enabled
     if !$game_temp.encounter_triggered
+      if pbTryJumpOntoFence(dir)
+        $game_temp.encounter_triggered = false
+        return
+      end
       if can_move_in_direction?(dir)
         x_offset = (dir == 4) ? -1 : (dir == 6) ? 1 : 0
         y_offset = (dir == 8) ? -1 : (dir == 2) ? 1 : 0
@@ -228,6 +232,26 @@ class Game_Player < Game_Character
     return $map_factory.getFacingTerrainTag(dir, self) if $map_factory
     facing = pbFacingTile(dir, self)
     return $game_map.terrain_tag(facing[1], facing[2])
+  end
+
+  # Jump one tile onto a fence when walking toward it from any side.
+  def pbCanJumpOntoFence?(dir)
+    return false if $PokemonGlobal.surfing || $PokemonGlobal.diving
+    return false if $PokemonGlobal.bicycle
+    x_plus = (dir == 4) ? -1 : (dir == 6) ? 1 : 0
+    y_plus = (dir == 8) ? -1 : (dir == 2) ? 1 : 0
+    can_jump = true
+    each_occupied_tile { |i, j| can_jump = false if !passable?(i + x_plus, j + y_plus, 0) }
+    return can_jump
+  end
+
+  def pbTryJumpOntoFence(dir)
+    return false if !pbFacingTerrainTag(dir).fence
+    return false if !pbCanJumpOntoFence?(dir)
+    return false if !jumpForward(1)
+    pbSEPlay("Player jump")
+    increase_steps
+    return true
   end
 
   # Passable Determinants

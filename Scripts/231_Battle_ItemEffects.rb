@@ -477,12 +477,19 @@ Battle::ItemEffects::OnStatLoss.add(:EJECTPACK,
 Battle::ItemEffects::StatusCure.add(:ASPEARBERRY,
   proc { |item, battler, battle, forced|
     next false if !forced && !battler.canConsumeBerry?
-    next false if battler.status != :FROZEN
+    next false if ![:FROZEN, :FROSTBITE].include?(battler.status)
     itemName = GameData::Item.get(item).name
     PBDebug.log("[Item triggered] #{battler.pbThis}'s #{itemName}") if forced
     battle.pbCommonAnimation("EatBerry", battler) if !forced
+    oldStatus = battler.status
     battler.pbCureStatus(forced)
-    battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, itemName)) if !forced
+    if !forced
+      if oldStatus == :FROSTBITE
+        battle.pbDisplay(_INTL("{1}'s {2} cured its frostbite!", battler.pbThis, itemName))
+      else
+        battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, itemName))
+      end
+    end
     next true
   }
 )

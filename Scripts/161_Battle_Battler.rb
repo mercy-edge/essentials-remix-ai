@@ -118,7 +118,7 @@ class Battle::Battler
     @effects[PBEffects::Toxic]  = 0 if value != :POISON || self.statusCount == 0
     @status = value
     @pokemon.status = value if @pokemon
-    self.statusCount = 0 if value != :POISON && value != :SLEEP
+    self.statusCount = 0 if value != :POISON && value != :SLEEP && value != :POLYMORPH
     @battle.scene.pbRefreshOne(@index)
   end
 

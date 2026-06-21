@@ -12,6 +12,9 @@ class Battle::Battler
     raise _INTL("HP less than 0") if @hp < 0
     raise _INTL("HP greater than total HP") if @hp > @totalhp
     @battle.scene.pbHPChanged(self, oldHP, anim) if anyAnim && amt > 0
+    if amt > 0 && @status == :POLYMORPH && !fainted?
+      pbCureStatus
+    end
     if amt > 0 && registerDamage
       @droppedBelowHalfHP = true if @hp < @totalhp / 2 && @hp + amt >= @totalhp / 2
       @tookDamageThisRound = true
