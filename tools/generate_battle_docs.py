@@ -461,7 +461,8 @@ def write_index_sheet(wb: Workbook, encounter_count: int, trainer_count: int):
         ),
         (
             "Regenerate",
-            "Run: python3 tools/generate_battle_docs.py — then re-import the .xlsx into Google Sheets.",
+            "python3 tools/sync_google_sheets.py  (live Google Sheet)\n"
+            "python3 tools/generate_battle_docs.py  (local .xlsx only)",
         ),
         ("", ""),
         ("Legend", ""),

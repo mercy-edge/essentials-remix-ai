@@ -1,0 +1,51 @@
+name: Sync battle docs to Google Sheets
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'PBS/encounters.txt'
+      - 'PBS/trainers.txt'
+      - 'PBS/map_metadata.txt'
+      - 'PBS/pokemon.txt'
+      - 'PBS/MapEvents/**'
+      - 'tools/sync_google_sheets.py'
+      - 'tools/generate_battle_docs.py'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r tools/requirements-docs.txt
+
+      - name: Sync Google Sheet
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_SHEETS_SHARE_EMAIL: ${{ secrets.GOOGLE_SHEETS_SHARE_EMAIL }}
+        run: python3 tools/sync_google_sheets.py --export
+
+      - name: Upload xlsx backup
+        uses: actions/upload-artifact@v4
+        with:
+          name: battle-docs-xlsx
+          path: docs/sheets/Essentials_Remix_AI_Battles.xlsx
+
+      - name: Commit spreadsheet config
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/sheets/google_sheet.json
+          git diff --staged --quiet || (git commit -m "Update Google Sheet config after sync" && git push)
