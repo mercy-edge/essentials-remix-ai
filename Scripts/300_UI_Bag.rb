@@ -184,7 +184,7 @@ class PokemonBag_Scene
     @sprites["overlay"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
     pbSetSystemFont(@sprites["overlay"].bitmap)
     @sprites["bagsprite"] = IconSprite.new(30, 20, @viewport)
-    @sprites["pocketicon"] = BitmapSprite.new(186, 32, @viewport)
+    @sprites["pocketicon"] = BitmapSprite.new(220, 32, @viewport)
     @sprites["pocketicon"].x = 0
     @sprites["pocketicon"].y = 224
     @sprites["leftarrow"] = AnimatedSprite.new("Graphics/UI/left_arrow", 8, 40, 28, 2, @viewport)

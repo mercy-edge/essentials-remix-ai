@@ -270,14 +270,15 @@ module Settings
       _INTL("Berries"),
       _INTL("Mail"),
       _INTL("Battle Items"),
-      _INTL("Key Items")
+      _INTL("Key Items"),
+      _INTL("Quest Items")
     ]
   end
   # The maximum number of slots per pocket (-1 means infinite number).
-  BAG_MAX_POCKET_SIZE  = [-1, -1, -1, -1, -1, -1, -1, -1]
+  BAG_MAX_POCKET_SIZE  = [-1, -1, -1, -1, -1, -1, -1, -1, -1]
   # Whether each pocket in turn auto-sorts itself by the order items are defined
   # in the PBS file items.txt.
-  BAG_POCKET_AUTO_SORT = [false, false, false, true, true, false, false, false]
+  BAG_POCKET_AUTO_SORT = [false, false, false, true, true, false, false, false, true]
   # The maximum number of items each slot in the Bag can hold.
   BAG_MAX_PER_SLOT     = 999
 
