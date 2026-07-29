@@ -5,7 +5,7 @@
   "force_import": true,
   "merge_events": false,
   "exported": true,
-  "exported_note": "Goldshire stub — no warps yet.",
+  "exported_note": "Goldshire stub + Flight Master.",
   "events": {
     "1": {
       "id": 1,
@@ -27,32 +27,10 @@
           "through": false,
           "always_on_top": false,
           "list": [
-            [
-              355,
-              0,
-              [
-                "pbMessage(_INTL("
-              ]
-            ],
-            [
-              655,
-              0,
-              [
-                "\"Welcome to Goldshire.\\nElwynn Forest's quiet heart.\""
-              ]
-            ],
-            [
-              655,
-              0,
-              [
-                "))"
-              ]
-            ],
-            [
-              0,
-              0,
-              []
-            ]
+            [355, 0, ["pbMessage(_INTL("]],
+            [655, 0, ["\"Welcome to Goldshire.\\nElwynn Forest's quiet heart.\""]],
+            [655, 0, ["))"]],
+            [0, 0, []]
           ]
         }
       ]
@@ -77,18 +55,34 @@
           "through": false,
           "always_on_top": false,
           "list": [
-            [
-              355,
-              0,
-              [
-                "ElwynnForestEvents.run(:goldshire_townsfolk)"
-              ]
-            ],
-            [
-              0,
-              0,
-              []
-            ]
+            [355, 0, ["ElwynnForestEvents.run(:goldshire_townsfolk)"]],
+            [0, 0, []]
+          ]
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Flight Master",
+      "x": 10,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 21",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [355, 0, ["FlightPaths.talk(:goldshire)"]],
+            [0, 0, []]
           ]
         }
       ]

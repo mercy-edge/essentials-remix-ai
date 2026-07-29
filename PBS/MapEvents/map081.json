@@ -5,7 +5,7 @@
   "force_import": true,
   "merge_events": false,
   "exported": true,
-  "exported_note": "Eastvale Logging Camp stub — no mine warp yet.",
+  "exported_note": "Eastvale Logging Camp stub + Flight Master.",
   "events": {
     "1": {
       "id": 1,
@@ -27,32 +27,36 @@
           "through": false,
           "always_on_top": false,
           "list": [
-            [
-              355,
-              0,
-              [
-                "pbMessage(_INTL("
-              ]
-            ],
-            [
-              655,
-              0,
-              [
-                "\"Eastvale Logging Camp.\""
-              ]
-            ],
-            [
-              655,
-              0,
-              [
-                "))"
-              ]
-            ],
-            [
-              0,
-              0,
-              []
-            ]
+            [355, 0, ["pbMessage(_INTL("]],
+            [655, 0, ["\"Eastvale Logging Camp.\""]],
+            [655, 0, ["))"]],
+            [0, 0, []]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Flight Master",
+      "x": 14,
+      "y": 8,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 21",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [355, 0, ["FlightPaths.talk(:eastvale)"]],
+            [0, 0, []]
           ]
         }
       ]
