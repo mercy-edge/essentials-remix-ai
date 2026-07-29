@@ -40,6 +40,16 @@ LoseText = Aww, I lost.
 Pokemon = RATTATA,11
 Pokemon = EKANS,11
 #-------------------------------
+[YOUNGSTER,Ben,2]
+LoseText = My reinforcements weren't enough!
+Pokemon = RATTATA,8
+Pokemon = SPEAROW,8
+Pokemon = SENTRET,8
+Pokemon = EKANS,8
+    Reinforcement = 3
+Pokemon = PIDGEY,9
+    Reinforcement = Fainted,2
+#-------------------------------
 [CAMPER,Jeff]
 LoseText = A very good battle, indeed!
 Pokemon = SPEAROW,16

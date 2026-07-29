@@ -139,6 +139,7 @@ module NorthshireAbbeyEvents
     when :inn_hearthstone then inn_hearthstone
     when :kobold_worker   then kobold_worker
     when :kobold_laborer  then kobold_laborer
+    when :reinforcement_test_trainer then reinforcement_test_trainer
     when :llane_beshere,
          :brother_sammuel,
          :jorik_kerridan,
@@ -160,6 +161,28 @@ module NorthshireAbbeyEvents
   # Echo Ridge Mine (map 033): challengeable kobold NPCs, Lv.3 teams of 1–2 Pokémon.
   def self.kobold_laborer
     pbBattleEchoRidgeMineLaborer
+  end
+
+  # Script: NorthshireAbbeyEvents.run(:reinforcement_test_trainer)
+  # Outdoor Northshire (map 076): 1v1 → 1v2 trainer battle with delayed partners.
+  def self.reinforcement_test_trainer
+    unless GameData::Trainer.exists?(:YOUNGSTER, "Ben", 2)
+      pbMessage(_INTL("Reinforcement test trainer is missing. Compile PBS/trainers.txt."))
+      return
+    end
+    pbMessage(_INTL(
+      "I'm Ben! I start with my main team of three, but Ekans joins after three turns " \
+      "and Pidgey shows up once two of my main Pokémon have fainted. Ready?"
+    ))
+    cmd = pbShowCommands(nil, [_INTL("Let's battle!"), _INTL("Not now.")], 2)
+    return unless cmd && cmd.zero?
+    setBattleRule("canLose")
+    won = TrainerBattle.start(:YOUNGSTER, "Ben", 2)
+    if won
+      pbMessage(_INTL("Whoa, you handled my reinforcements!"))
+    else
+      pbMessage(_INTL("My backup squad turned the fight around!"))
+    end
   end
 
   # Script: NorthshireAbbeyEvents.run(:inn_hearthstone)

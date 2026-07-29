@@ -2,6 +2,7 @@
   "format": "map_events_v1",
   "format_version": 1,
   "map_id": 76,
+  "force_import": true,
   "exported": true,
   "exported_note": "Generated from Data/Map076.rxdata. Edit events below; save; run game to merge.",
   "events": {
@@ -535,8 +536,8 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_KOBOLD",
-            "character_hue": 0,
+            "character_name": "NPC 18",
+            "character_hue": 250,
             "direction": 2,
             "pattern": 0
           },
@@ -586,8 +587,8 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_KOBOLD",
-            "character_hue": 0,
+            "character_name": "NPC 18",
+            "character_hue": 250,
             "direction": 2,
             "pattern": 0
           },
@@ -637,8 +638,8 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_KOBOLD",
-            "character_hue": 0,
+            "character_name": "NPC 18",
+            "character_hue": 250,
             "direction": 2,
             "pattern": 0
           },
@@ -688,8 +689,8 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_KOBOLD",
-            "character_hue": 0,
+            "character_name": "NPC 18",
+            "character_hue": 250,
             "direction": 2,
             "pattern": 0
           },
@@ -739,8 +740,8 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_KOBOLD",
-            "character_hue": 0,
+            "character_name": "NPC 18",
+            "character_hue": 250,
             "direction": 2,
             "pattern": 0
           },
@@ -770,6 +771,57 @@
               0,
               [
                 "NorthshireAbbeyEvents.run(:kobold_worker)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "256": {
+      "id": 256,
+      "name": "Reinforcement Test Trainer",
+      "x": 12,
+      "y": 18,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "trainer_YOUNGSTER",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:neutral"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:reinforcement_test_trainer)"
               ]
             ],
             [

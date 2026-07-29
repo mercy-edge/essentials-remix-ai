@@ -41,8 +41,8 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_KOBOLD",
-            "character_hue": 0,
+            "character_name": "NPC 18",
+            "character_hue": 250,
             "direction": 2,
             "pattern": 0,
             "character_index": 0
@@ -76,8 +76,8 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_KOBOLD",
-            "character_hue": 0,
+            "character_name": "NPC 18",
+            "character_hue": 250,
             "direction": 2,
             "pattern": 0,
             "character_index": 0
@@ -111,8 +111,8 @@
       "pages": [
         {
           "graphic": {
-            "character_name": "trainer_KOBOLD",
-            "character_hue": 0,
+            "character_name": "NPC 18",
+            "character_hue": 250,
             "direction": 2,
             "pattern": 0,
             "character_index": 0
