@@ -113,8 +113,33 @@ module ElwynnForestEvents
       pbMessage(_INTL("Welcome to the Lion's Pride Inn! Rest as long as you like."))
     when :kobold
       pbMessage(_INTL('You no take candle!'))
+    when :marshal_dughan
+      marshal_dughan
     else
       pbMessage(_INTL('ElwynnForestEvents: unknown action {1}.', sym))
+    end
+  end
+
+  def marshal_dughan
+    q = QuestJournal::ID_REPORT_TO_GOLDSHIRE
+    if pbQuestActive?(q)
+      if QuestJournal.turn_in_ready?(q)
+        pbMessage(_INTL(
+          "You have word from McBride? Northshire is a garden compared to Elwynn Forest, " \
+          "but I wonder what Marshal McBride has to report.\nHere, let me have his papers..."
+        ))
+        cmsg = QuestJournal.completion_text(q)
+        pbMessage(cmsg) if cmsg
+        pbQuestComplete(q)
+      else
+        pbMessage(_INTL("McBride said he'd send papers with you. Don't lose them on the road."))
+      end
+      return
+    end
+    if pbQuestDone?(q)
+      pbMessage(_INTL("Acting Deputy Status suits you. Elwynn won't protect itself."))
+    else
+      pbMessage(_INTL("If McBride sent you, finish his work in Northshire first."))
     end
   end
 
