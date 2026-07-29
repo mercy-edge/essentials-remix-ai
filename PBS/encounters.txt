@@ -324,3 +324,152 @@ Land,10
     15,CATERPIE,1,2
     15,PIDGEY,1,2
     15,SENTRET,1,2
+#-------------------------------
+[077] # Goldshire
+Land,10
+    25,POOCHYENA,2,4
+    25,RATTATA,2,4
+    15,PIDGEY,2,4
+    15,SENTRET,2,4
+    10,CATERPIE,2,3
+    10,HOUNDOUR,3,5
+#-------------------------------
+[079] # Brackwell Pumpkin Patch
+Land,10
+    30,RATTATA,2,4
+    20,POOCHYENA,2,4
+    20,PIDGEY,2,4
+    15,ODDISH,3,5
+    15,BELLSPROUT,3,5
+#-------------------------------
+[080] # Crystal Lake
+Land,12
+    25,PIDGEY,2,4
+    20,SENTRET,2,4
+    20,MAGIKARP,5,10
+    15,GOLDEEN,5,10
+    10,PSYDUCK,4,6
+    10,WOOPER,4,6
+#-------------------------------
+[081] # Eastvale Logging Camp
+Land,10
+    25,CATERPIE,2,4
+    25,WEEDLE,2,4
+    20,PIDGEY,2,4
+    15,SENTRET,2,4
+    15,HOOTHOOT,3,5
+#-------------------------------
+[082] # Fargodeep Mine
+Cave,8
+    30,ZUBAT,3,6
+    25,GEODUDE,3,6
+    20,DIGLETT,3,5
+    15,RATTATA,2,4
+    10,WHISMUR,4,6
+#-------------------------------
+[083] # Forest's Edge
+Land,10
+    25,POOCHYENA,2,4
+    25,RATTATA,2,4
+    20,PIDGEY,2,4
+    15,SENTRET,2,4
+    15,HOUNDOUR,3,5
+#-------------------------------
+[084] # Heroes' Vigil
+Land,15
+    30,PIDGEY,2,4
+    25,SENTRET,2,4
+    25,RATTATA,2,4
+    20,HOOTHOOT,3,5
+#-------------------------------
+[085] # Jasperlode Mine
+Cave,8
+    30,ZUBAT,4,7
+    25,GEODUDE,4,7
+    20,ONIX,5,8
+    15,DIGLETT,3,6
+    10,ARON,5,8
+#-------------------------------
+[086] # Jerod's Landing
+Land,12
+    25,PIDGEY,2,4
+    20,WINGULL,3,5
+    20,MAGIKARP,5,10
+    15,TENTACOOL,5,10
+    10,KRABBY,4,6
+    10,CORPHISH,4,6
+#-------------------------------
+[087] # The Maclure Vineyards
+Land,10
+    25,ODDISH,3,5
+    25,BELLSPROUT,3,5
+    20,PIDGEY,2,4
+    15,RATTATA,2,4
+    15,HOPPIP,3,5
+#-------------------------------
+[088] # Mirror Lake
+Land,12
+    25,PIDGEY,2,4
+    20,SENTRET,2,4
+    20,MAGIKARP,5,10
+    15,GOLDEEN,5,10
+    10,PSYDUCK,4,6
+    10,MARILL,4,6
+#-------------------------------
+[089] # Mirror Lake Orchard
+Land,10
+    30,CATERPIE,2,4
+    20,WEEDLE,2,4
+    20,PIDGEY,2,4
+    15,APPLIN,3,5
+    15,CHERUBI,3,5
+#-------------------------------
+[090] # Ridgepoint Tower
+Land,12
+    30,PIDGEY,3,5
+    25,SPEAROW,3,5
+    20,RATTATA,2,4
+    15,NATU,4,6
+    10,SWABLU,4,6
+#-------------------------------
+[091] # Stone Cairn Lake
+Land,12
+    25,PIDGEY,3,5
+    20,SENTRET,3,5
+    20,MAGIKARP,5,12
+    15,GOLDEEN,5,12
+    10,PSYDUCK,5,7
+    10,LOTAD,4,6
+#-------------------------------
+[092] # The Stonefield Farm
+Land,10
+    25,MAREEP,3,5
+    25,RATTATA,2,4
+    20,PIDGEY,2,4
+    15,SENTRET,2,4
+    15,MUDBRAY,4,6
+#-------------------------------
+[094] # Thunder Falls
+Land,10
+    25,ELECTRIKE,4,6
+    20,PIDGEY,3,5
+    20,MAGIKARP,5,12
+    15,GOLDEEN,5,12
+    10,PSYDUCK,4,6
+    10,CHINCHOU,5,8
+#-------------------------------
+[095] # Tower of Azora
+Land,12
+    25,ABRA,4,6
+    25,RATTATA,2,4
+    20,PIDGEY,3,5
+    15,NATU,4,6
+    15,SPOINK,4,6
+#-------------------------------
+[096] # Westbrook Garrison
+Land,12
+    25,POOCHYENA,3,5
+    25,RATTATA,2,4
+    20,PIDGEY,2,4
+    15,HOUNDOUR,4,6
+    15,GROWLITHE,4,6

@@ -423,3 +423,155 @@ Name = Echo Ridge Mine
 MapPosition = 0,12,11
 BattleBack = cave1
 Environment = Cave
+#-------------------------------
+[077]   # Goldshire
+Name = Goldshire
+Outdoor = true
+ShowArea = true
+MapPosition = 0,20,12
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[078]   # Lion's Pride Inn
+Name = Lion's Pride Inn
+MapPosition = 0,20,12
+BattleBack = indoor1
+#-------------------------------
+[079]   # Brackwell Pumpkin Patch
+Name = Brackwell Pumpkin Patch
+Outdoor = true
+ShowArea = true
+MapPosition = 0,21,14
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[080]   # Crystal Lake
+Name = Crystal Lake
+Outdoor = true
+ShowArea = true
+MapPosition = 0,20,13
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[081]   # Eastvale Logging Camp
+Name = Eastvale Logging Camp
+Outdoor = true
+ShowArea = true
+MapPosition = 0,22,12
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[082]   # Fargodeep Mine
+Name = Fargodeep Mine
+MapPosition = 0,19,12
+BattleBack = cave1
+Environment = Cave
+#-------------------------------
+[083]   # Forest's Edge
+Name = Forest's Edge
+Outdoor = true
+ShowArea = true
+MapPosition = 0,19,12
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[084]   # Heroes' Vigil
+Name = Heroes' Vigil
+Outdoor = true
+ShowArea = true
+MapPosition = 0,19,11
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[085]   # Jasperlode Mine
+Name = Jasperlode Mine
+MapPosition = 0,22,12
+BattleBack = cave1
+Environment = Cave
+#-------------------------------
+[086]   # Jerod's Landing
+Name = Jerod's Landing
+Outdoor = true
+ShowArea = true
+MapPosition = 0,18,13
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[087]   # The Maclure Vineyards
+Name = The Maclure Vineyards
+Outdoor = true
+ShowArea = true
+MapPosition = 0,19,14
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[088]   # Mirror Lake
+Name = Mirror Lake
+Outdoor = true
+ShowArea = true
+MapPosition = 0,20,11
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[089]   # Mirror Lake Orchard
+Name = Mirror Lake Orchard
+Outdoor = true
+ShowArea = true
+MapPosition = 0,20,10
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[090]   # Ridgepoint Tower
+Name = Ridgepoint Tower
+Outdoor = true
+ShowArea = true
+MapPosition = 0,22,11
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[091]   # Stone Cairn Lake
+Name = Stone Cairn Lake
+Outdoor = true
+ShowArea = true
+MapPosition = 0,23,12
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[092]   # The Stonefield Farm
+Name = The Stonefield Farm
+Outdoor = true
+ShowArea = true
+MapPosition = 0,20,14
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[093]   # Stormwind City
+Name = Stormwind City
+Outdoor = true
+ShowArea = true
+MapPosition = 0,17,13
+BattleBack = city
+#-------------------------------
+[094]   # Thunder Falls
+Name = Thunder Falls
+Outdoor = true
+ShowArea = true
+MapPosition = 0,23,11
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[095]   # Tower of Azora
+Name = Tower of Azora
+Outdoor = true
+ShowArea = true
+MapPosition = 0,21,12
+BattleBack = field
+Environment = Grass
+#-------------------------------
+[096]   # Westbrook Garrison
+Name = Westbrook Garrison
+Outdoor = true
+ShowArea = true
+MapPosition = 0,18,12
+BattleBack = field
+Environment = Grass

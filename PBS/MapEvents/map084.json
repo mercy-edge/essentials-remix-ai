@@ -1,0 +1,61 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 84,
+  "force_import": true,
+  "merge_events": false,
+  "exported": true,
+  "exported_note": "Heroes' Vigil",
+  "events": {
+    "1": {
+      "id": 1,
+      "name": "Memorial",
+      "x": 12,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 08",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": true,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbMessage(_INTL("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "\"Heroes' Vigil.\\nA quiet place for the fallen.\""
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "))"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 77,
+  "force_import": true,
+  "merge_events": false,
+  "exported": true,
+  "exported_note": "Goldshire stub — no warps yet.",
+  "events": {
+    "1": {
+      "id": 1,
+      "name": "Welcome Sign",
+      "x": 12,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 08",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": true,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbMessage(_INTL("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "\"Welcome to Goldshire.\\nElwynn Forest's quiet heart.\""
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "))"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Townsfolk",
+      "x": 14,
+      "y": 12,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 01",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "ElwynnForestEvents.run(:goldshire_townsfolk)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}
