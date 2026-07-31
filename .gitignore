@@ -2,6 +2,9 @@
 errorlog.txt
 Game.ini
 
+# Large downloaded resource archives (installed into Plugins/PBS/Graphics)
+_downloads/
+
 # OS / editor junk
 Thumbs.db
 Desktop.ini

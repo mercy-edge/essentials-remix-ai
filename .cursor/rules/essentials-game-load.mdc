@@ -11,8 +11,8 @@ This project runs on **Pokemon Essentials v21.1 / RGSS Ruby 1.8**. Before finish
 
 1. **Game can start** — changes must not prevent debug boot (no corrupt `Data/*.rxdata`, no broken plugins).
 2. **Plugin `meta.txt`** — never leave `Link =` blank. Omit `Link` entirely (see other plugins) or use a real URL.
-3. **Never write `Data/PkmnAnimations.rxdata` (or other rxdata) from external Ruby 3 tools** — use in-game `save_data` or the Silver Wind import plugin. External `Marshal.dump` corrupts files for RGSS.
-4. **`.anm` exports from `tools/` are not importable in-game** — they use Ruby 3 Marshal. Use `Plugins/SilverWindAnimImport` debug import or in-game animation editor export instead.
+3. **Never write `Data/PkmnAnimations.rxdata` (or other rxdata) from external Ruby 3 tools** — use in-game `save_data` or the battle animation editor. External `Marshal.dump` corrupts files for RGSS.
+4. **`.anm` exports from `tools/` are not importable in-game** — they use Ruby 3 Marshal. Use in-game animation editor export/import instead.
 5. **After adding/changing plugins**, run:
    ```bash
    ruby tools/validate_plugins.rb
@@ -21,7 +21,6 @@ This project runs on **Pokemon Essentials v21.1 / RGSS Ruby 1.8**. Before finish
 
 ## Safe patterns
 
-- Edit animation logic → update JSON → `ruby tools/json_to_anim_plugin.rb` → in-game **Debug → Import Silver Wind animation**
 - New plugin → copy `meta.txt` from `Plugins/TrainerReinforcements/meta.txt` (no Link field)
 - Restore corrupted rxdata: `git show HEAD:Data/PkmnAnimations.rxdata > Data/PkmnAnimations.rxdata`
 

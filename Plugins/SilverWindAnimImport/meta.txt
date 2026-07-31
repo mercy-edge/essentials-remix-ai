@@ -1,4 +1,0 @@
-Name       = Silver Wind animation import
-Version    = 1.0
-Essentials = 21.1
-Credits    = Cursor AI

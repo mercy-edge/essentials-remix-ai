@@ -2,12 +2,12 @@
 # Export a battle animation from PkmnAnimations.rxdata to Essentials .anm format.
 #
 # WARNING: .anm files from this tool are NOT importable in RGSS (Ruby 3 Marshal).
-# Use Plugins/SilverWindAnimImport debug menu import for applying changes.
+# Use the in-game battle animation editor export/import instead.
 #
 # Usage:
-#   ruby tools/export_animation.rb SILVERWIND
-#   ruby tools/export_animation.rb 243 output.anm
-#   ruby tools/export_animation.rb Move:SILVERWIND Animations/Move_SILVERWIND/Move_SILVERWIND.anm
+#   ruby tools/export_animation.rb TACKLE
+#   ruby tools/export_animation.rb 100 output.anm
+#   ruby tools/export_animation.rb Move:TACKLE tackle.anm
 
 require "fileutils"
 require "zlib"
@@ -79,7 +79,7 @@ def find_animation(data, query)
   nil
 end
 
-query = ARGV[0] || "SILVERWIND"
+query = ARGV[0] || "TACKLE"
 out_arg = ARGV[1]
 
 data = Marshal.load(File.binread(File.join(ROOT, "Data/PkmnAnimations.rxdata")))

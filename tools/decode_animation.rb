@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # Decodes a Pokemon Essentials battle animation from PkmnAnimations.rxdata to JSON.
-# Usage: ruby tools/decode_animation.rb SILVERWIND
-#        ruby tools/decode_animation.rb "Move:SILVERWIND"
+# Usage: ruby tools/decode_animation.rb TACKLE
+#        ruby tools/decode_animation.rb "Move:TACKLE"
 #        ruby tools/decode_animation.rb 250
 
 require "json"
@@ -131,7 +131,7 @@ def find_animation(data, query)
   nil
 end
 
-query = ARGV[0] || "SILVERWIND"
+query = ARGV[0] || "TACKLE"
 data = Marshal.load(File.binread(File.join(ROOT, "Data/PkmnAnimations.rxdata")))
 result = find_animation(data, query)
 if !result

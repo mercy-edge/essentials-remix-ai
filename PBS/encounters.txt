@@ -336,11 +336,12 @@ Land,10
 #-------------------------------
 [079] # Brackwell Pumpkin Patch
 Land,10
-    30,RATTATA,2,4
-    20,POOCHYENA,2,4
-    20,PIDGEY,2,4
-    15,ODDISH,3,5
-    15,BELLSPROUT,3,5
+    25,GASTLY,3,5
+    25,ROOKIDEE,3,5
+    25,PUMPKABOO,3,5
+    10,MISDREAVUS,4,6
+    10,MURKROW,4,6
+    5,DELIBIRD,5,7
 #-------------------------------
 [080] # Crystal Lake
 Land,12
