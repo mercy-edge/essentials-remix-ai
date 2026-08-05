@@ -1,4 +1,4 @@
-name: Sync available Pokémon sheet to Google Sheets
+name: Sync project docs to Google Sheets
 
 on:
   push:
@@ -8,8 +8,16 @@ on:
       - 'PBS/pokemon_forms.txt'
       - 'PBS/pokemon_base_Gen_9_Pack.txt'
       - 'PBS/pokemon_forms_Gen_9_Pack.txt'
-      - 'tools/sync_pokemon_google_sheets.py'
+      - 'PBS/encounters.txt'
+      - 'PBS/trainers.txt'
+      - 'PBS/trainer_types.txt'
+      - 'PBS/map_metadata.txt'
+      - 'PBS/MapEvents/**'
+      - 'tools/docs_lib.py'
+      - 'tools/generate_project_docs.py'
+      - 'tools/sync_project_google_sheets.py'
       - 'tools/generate_pokemon_docs.py'
+      - 'tools/sync_pokemon_google_sheets.py'
   workflow_dispatch:
 
 jobs:
@@ -29,21 +37,22 @@ jobs:
       - name: Install dependencies
         run: pip install -r tools/requirements-docs.txt
 
-      - name: Generate local docs
-        run: python3 tools/generate_pokemon_docs.py
+      - name: Generate local project docs
+        run: python3 tools/generate_project_docs.py
 
       - name: Sync Google Sheet
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           GOOGLE_SHEETS_SHARE_EMAIL: ${{ secrets.GOOGLE_SHEETS_SHARE_EMAIL }}
-        run: python3 tools/sync_pokemon_google_sheets.py --export
+        run: python3 tools/sync_project_google_sheets.py --export
         continue-on-error: true
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: available-pokemon-docs
+          name: project-docs
           path: |
+            docs/sheets/Essentials_Remix_AI_Project.xlsx
             docs/sheets/Essentials_Remix_AI_Pokemon.xlsx
             docs/sheets/Available_Pokemon.html
 
@@ -52,7 +61,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/sheets/Essentials_Remix_AI_Pokemon.xlsx \
-                  docs/sheets/Available_Pokemon.html \
-                  docs/sheets/pokemon_google_sheet.json
-          git diff --staged --quiet || (git commit -m "Update available Pokémon docs after sync" && git push)
+          git add docs/sheets/
+          git diff --staged --quiet || (git commit -m "Update project docs after sync" && git push)

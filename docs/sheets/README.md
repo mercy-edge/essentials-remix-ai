@@ -1,30 +1,62 @@
-# Documentation sheets
+# Project documentation sheets
 
-Run & Bun-style reference docs generated from PBS data.
+Run & Bun-style **whole-project** reference docs generated from PBS data.
 
-## Available Pokémon
+## Architecture
+
+```
+Available Pokémon  ← canonical sprite / type / BST catalog
+        ↑
+        │  Species ID lookup (xlsx icons / Sheets INDEX/MATCH)
+        │
+Wild Encounters · Trainer Battles · Trainer Party · Static Battles
+```
+
+Other tabs do **not** store their own sprite copies long-term — they reference
+the Available Pokémon sheet by `Species ID`. That way one catalog drives the
+entire project doc as encounters and trainers expand.
+
+## Outputs
 
 | File | Use |
 |------|-----|
-| `Available_Pokemon.html` | Offline browser view with **local sprites**, types, full base stats, and **BST**. Filter box included. Upload to Google Drive if you want a shareable link. |
-| `Essentials_Remix_AI_Pokemon.xlsx` | Spreadsheet for Google Sheets import (`File → Import → Upload`). Includes sprite thumbnails, types, stats, BST, By Type, and BST Tiers tabs. |
-| `pokemon_google_sheet.json` | Stores the live Google Sheet ID/URL after sync. |
+| `Essentials_Remix_AI_Project.xlsx` | Full project workbook |
+| `Essentials_Remix_AI_Pokemon.xlsx` | Alias of the same workbook (compat) |
+| `Available_Pokemon.html` | Offline filterable catalog with local sprites |
+| `project_google_sheet.json` | Live Google Sheet ID/URL after sync |
 
-### Regenerate locally
+### Tabs
+
+1. **Index** — hub overview  
+2. **Available Pokémon** — sprite, name, types, base stats, **BST**, Species ID  
+3. **By Type** / **BST Tiers** — catalog rollups  
+4. **Wild Encounters** — location tables with catalog sprite / type / BST  
+5. **Encounter Summary** — per-area checklist  
+6. **Trainer Battles** — lead sprite + party lines (types/BST from catalog)  
+7. **Trainer Party** — one row per party member (sprite via catalog)  
+8. **Static Battles** — scripted wild fights  
+
+## Regenerate
 
 ```bash
 pip install -r tools/requirements-docs.txt
+python3 tools/generate_project_docs.py
+# aliases still work:
 python3 tools/generate_pokemon_docs.py
 ```
 
-### Live Google Sheet sync
+## Live Google Sheet
 
 ```bash
-# One-time: enable Sheets + Drive APIs, download a service-account JSON key
-# Save as docs/sheets/google-service-account.json (gitignored)
-# Optional: export GOOGLE_SHEETS_SHARE_EMAIL=you@gmail.com
-
-python3 tools/sync_pokemon_google_sheets.py
+# docs/sheets/google-service-account.json  (gitignored)
+# export GOOGLE_SHEETS_SHARE_EMAIL=you@gmail.com
+python3 tools/sync_project_google_sheets.py
 ```
 
-The live sheet uses PokéAPI sprite URLs via `IMAGE()` so sprites show in Google Sheets. The HTML/xlsx backups use the game's own `Graphics/Pokemon` sprites.
+In the live sheet, encounter/trainer Sprite cells use:
+
+```
+=IFERROR(INDEX('Available Pokémon'!$A:$A, MATCH("<Species ID>",'Available Pokémon'!$R:$R,0)),"")
+```
+
+so they stay tied to the catalog as the project grows.
