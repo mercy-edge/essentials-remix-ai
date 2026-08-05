@@ -45,7 +45,12 @@ python3 tools/generate_project_docs.py
 python3 tools/generate_pokemon_docs.py
 ```
 
-## Live Google Sheet
+## Share without Google API credentials
+
+1. Open `Available_Pokemon.html` in a browser, or upload it to Google Drive  
+2. Upload `Essentials_Remix_AI_Project.xlsx` to Drive / Sheets (`File → Import`)
+
+Live auto-sync is optional. If you later add a service-account JSON + share email:
 
 ```bash
 # docs/sheets/google-service-account.json  (gitignored)
@@ -53,7 +58,7 @@ python3 tools/generate_pokemon_docs.py
 python3 tools/sync_project_google_sheets.py
 ```
 
-In the live sheet, encounter/trainer Sprite cells use:
+In a live sheet, encounter/trainer Sprite cells use:
 
 ```
 =IFERROR(INDEX('Available Pokémon'!$A:$A, MATCH("<Species ID>",'Available Pokémon'!$R:$R,0)),"")
