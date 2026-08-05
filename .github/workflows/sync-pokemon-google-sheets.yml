@@ -1,0 +1,58 @@
+name: Sync available Pokémon sheet to Google Sheets
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'PBS/pokemon.txt'
+      - 'PBS/pokemon_forms.txt'
+      - 'PBS/pokemon_base_Gen_9_Pack.txt'
+      - 'PBS/pokemon_forms_Gen_9_Pack.txt'
+      - 'tools/sync_pokemon_google_sheets.py'
+      - 'tools/generate_pokemon_docs.py'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r tools/requirements-docs.txt
+
+      - name: Generate local docs
+        run: python3 tools/generate_pokemon_docs.py
+
+      - name: Sync Google Sheet
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_SHEETS_SHARE_EMAIL: ${{ secrets.GOOGLE_SHEETS_SHARE_EMAIL }}
+        run: python3 tools/sync_pokemon_google_sheets.py --export
+        continue-on-error: true
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: available-pokemon-docs
+          path: |
+            docs/sheets/Essentials_Remix_AI_Pokemon.xlsx
+            docs/sheets/Available_Pokemon.html
+
+      - name: Commit generated docs + sheet config
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/sheets/Essentials_Remix_AI_Pokemon.xlsx \
+                  docs/sheets/Available_Pokemon.html \
+                  docs/sheets/pokemon_google_sheet.json
+          git diff --staged --quiet || (git commit -m "Update available Pokémon docs after sync" && git push)
