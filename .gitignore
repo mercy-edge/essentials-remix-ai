@@ -10,3 +10,10 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 .vscode/
+
+# Secrets / API keys (never commit)
+.secrets/
+
+# Python
+**/__pycache__/
+*.pyc

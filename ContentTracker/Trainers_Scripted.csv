@@ -1,0 +1,4 @@
+DisplayName,TrainerType,Script,Function,PartySummary,Level,Notes,TypicalMapIDs,Status
+Kobold Vermin,KOBOLD,pbBattleKoboldVerminTrainer,Quest Journal,Random Lv.1 from vermin pool,1,Counts toward Kobold Camp Cleanup (need 4),076,""
+Kobold Worker,KOBOLD,pbBattleEchoRidgeKoboldWorker,Quest Journal,1 mon: Spinarak/Poochyena/Rattata/Pidgey Lv.1–2,1–2,Counts toward Investigate Echo Ridge (need 5),032,""
+Kobold Laborer,KOBOLD,pbBattleEchoRidgeMineLaborer,Quest Journal,1–2 mons from Diglett/Zubat/Rattata/Spinarak,3,Echo Ridge Mine interior; not quest counter,033,""

@@ -317,6 +317,17 @@ Land,21
     10,SANDSHREW_1,11,14
     10,VULPIX_1,11,14
 #-------------------------------
+[042] # Northshire Vineyards
+Land,10
+    34,SMOLIV,1,2
+    33,GRUBBIN,1,2
+    33,HOPPIP,1,2
+OldRod
+    35,GOLDEEN,1,3
+    30,FEEBAS,1,3
+    30,FINNEON,1,3
+    5,CORPHISH,2,4
+#-------------------------------
 [076] # Northshire Abbey
 Land,10
     30,POOCHYENA,1,2
@@ -337,8 +348,8 @@ Land,10
 [079] # Brackwell Pumpkin Patch
 Land,10
     25,GASTLY,3,5
-    25,ROOKIDEE,3,5
     25,PUMPKABOO,3,5
+    25,ROOKIDEE,3,5
     10,MISDREAVUS,4,6
     10,MURKROW,4,6
     5,DELIBIRD,5,7
@@ -346,19 +357,19 @@ Land,10
 [080] # Crystal Lake
 Land,12
     25,PIDGEY,2,4
-    20,SENTRET,2,4
     20,MAGIKARP,5,10
+    20,SENTRET,2,4
     15,GOLDEEN,5,10
     10,PSYDUCK,4,6
     10,WOOPER,4,6
 #-------------------------------
 [081] # Eastvale Logging Camp
 Land,10
-    25,CATERPIE,2,4
-    25,WEEDLE,2,4
-    20,PIDGEY,2,4
-    15,SENTRET,2,4
+    25,BONSLY,2,4
+    25,FOMANTIS,2,4
+    20,ZUBAT,2,4
     15,HOOTHOOT,3,5
+    15,STUFFUL,2,4
 #-------------------------------
 [082] # Fargodeep Mine
 Cave,8
@@ -373,14 +384,14 @@ Land,10
     25,POOCHYENA,2,4
     25,RATTATA,2,4
     20,PIDGEY,2,4
-    15,SENTRET,2,4
     15,HOUNDOUR,3,5
+    15,SENTRET,2,4
 #-------------------------------
 [084] # Heroes' Vigil
 Land,15
     30,PIDGEY,2,4
-    25,SENTRET,2,4
     25,RATTATA,2,4
+    25,SENTRET,2,4
     20,HOOTHOOT,3,5
 #-------------------------------
 [085] # Jasperlode Mine
@@ -394,34 +405,34 @@ Cave,8
 [086] # Jerod's Landing
 Land,12
     25,PIDGEY,2,4
-    20,WINGULL,3,5
     20,MAGIKARP,5,10
+    20,WINGULL,3,5
     15,TENTACOOL,5,10
-    10,KRABBY,4,6
     10,CORPHISH,4,6
+    10,KRABBY,4,6
 #-------------------------------
 [087] # The Maclure Vineyards
 Land,10
-    25,ODDISH,3,5
     25,BELLSPROUT,3,5
+    25,ODDISH,3,5
     20,PIDGEY,2,4
-    15,RATTATA,2,4
     15,HOPPIP,3,5
+    15,RATTATA,2,4
 #-------------------------------
 [088] # Mirror Lake
 Land,12
     25,PIDGEY,2,4
-    20,SENTRET,2,4
     20,MAGIKARP,5,10
+    20,SENTRET,2,4
     15,GOLDEEN,5,10
-    10,PSYDUCK,4,6
     10,MARILL,4,6
+    10,PSYDUCK,4,6
 #-------------------------------
 [089] # Mirror Lake Orchard
 Land,10
     30,CATERPIE,2,4
-    20,WEEDLE,2,4
     20,PIDGEY,2,4
+    20,WEEDLE,2,4
     15,APPLIN,3,5
     15,CHERUBI,3,5
 #-------------------------------
@@ -436,28 +447,28 @@ Land,12
 [091] # Stone Cairn Lake
 Land,12
     25,PIDGEY,3,5
-    20,SENTRET,3,5
     20,MAGIKARP,5,12
+    20,SENTRET,3,5
     15,GOLDEEN,5,12
-    10,PSYDUCK,5,7
     10,LOTAD,4,6
+    10,PSYDUCK,5,7
 #-------------------------------
 [092] # The Stonefield Farm
 Land,10
     25,MAREEP,3,5
     25,RATTATA,2,4
     20,PIDGEY,2,4
-    15,SENTRET,2,4
     15,MUDBRAY,4,6
+    15,SENTRET,2,4
 #-------------------------------
 [094] # Thunder Falls
 Land,10
     25,ELECTRIKE,4,6
-    20,PIDGEY,3,5
     20,MAGIKARP,5,12
+    20,PIDGEY,3,5
     15,GOLDEEN,5,12
-    10,PSYDUCK,4,6
     10,CHINCHOU,5,8
+    10,PSYDUCK,4,6
 #-------------------------------
 [095] # Tower of Azora
 Land,12
@@ -472,5 +483,5 @@ Land,12
     25,POOCHYENA,3,5
     25,RATTATA,2,4
     20,PIDGEY,2,4
-    15,HOUNDOUR,4,6
     15,GROWLITHE,4,6
+    15,HOUNDOUR,4,6
