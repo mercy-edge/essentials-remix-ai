@@ -27,7 +27,9 @@ SHOWDOWN_BASE = "https://play.pokemonshowdown.com/sprites/gen5"
 # Essentials internal id → Showdown base slug overrides
 SPECIES_SLUG_OVERRIDES = {
     "NIDORANF": "nidoranf",
+    "NIDORANFE": "nidoranf",
     "NIDORANM": "nidoranm",
+    "NIDORANMA": "nidoranm",
     "FARFETCHD": "farfetchd",
     "SIRFETCHD": "sirfetchd",
     "MRMIME": "mrmime",
@@ -220,8 +222,9 @@ def title_type(t: str) -> str:
 
 
 def species_slug(species_id: str) -> str:
-    if species_id in SPECIES_SLUG_OVERRIDES:
-        return SPECIES_SLUG_OVERRIDES[species_id]
+    key = re.sub(r"[^A-Z0-9]", "", species_id.upper())
+    if key in SPECIES_SLUG_OVERRIDES:
+        return SPECIES_SLUG_OVERRIDES[key]
     return re.sub(r"[^a-z0-9]", "", species_id.lower())
 
 
@@ -333,7 +336,7 @@ def parse_pbs_species_files(paths):
             line = raw.strip()
             if not line or line.startswith("#"):
                 continue
-            m = re.match(r"^\[([A-Z0-9_]+)\]$", line)
+            m = re.match(r"^\[([A-Za-z0-9_]+)\]$", line)
             if m:
                 flush()
                 current_id = m.group(1)
@@ -368,7 +371,7 @@ def parse_pbs_forms(paths):
             line = raw.strip()
             if not line or line.startswith("#"):
                 continue
-            m = re.match(r"^\[([A-Z0-9_]+),(\d+)\]$", line)
+            m = re.match(r"^\[([A-Za-z0-9_]+),(\d+)\]$", line)
             if m:
                 flush()
                 current_key = (m.group(1), int(m.group(2)))
@@ -432,7 +435,7 @@ def build_rows():
 
     rows = []
     headers = [
-        "Sprite", "Dex#", "Species ID", "Form", "Name", "Form Name",
+        "Sprite", "Dex#", "Species ID", "BST", "Available to catch?", "Name", "Form Name",
         "Type 1", "Type 2", "HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed", "BST",
         "Showdown ID", "Sprite URL",
     ]
@@ -455,12 +458,12 @@ def build_rows():
             hp, atk, defense, spa, spd, spe, bst = stats_from(data)
             sd_id = showdown_id(sid, form_name if fnum else "")
             url = f"{SHOWDOWN_BASE}/{sd_id}.png"
-            # Row number in sheet = header(1) + current data index; filled after list built
             rows.append([
                 None,  # Sprite formula filled below
                 dex,
                 sid,
-                fnum,
+                bst,
+                "1",
                 display,
                 disp_form if fnum else "-",
                 t1,
@@ -476,10 +479,10 @@ def build_rows():
                 url,
             ])
 
-    # Sprite column references URL column Q so locale comma/semicolon issues are avoided
+    # Sprite column references URL column R (same row)
     for i in range(1, len(rows)):
         row_num = i + 1  # 1-based sheet row
-        rows[i][0] = f"=IMAGE(Q{row_num})"
+        rows[i][0] = f"=IMAGE(R{row_num})"
     return rows
 
 
@@ -494,7 +497,35 @@ def write_csv(rows):
     return path
 
 
-def upload(rows, spreadsheet: str):
+def apply_catch_flags(rows: list[list], flags: dict[str, str]):
+    if not flags:
+        return
+    for i in range(1, len(rows)):
+        name = str(rows[i][5]).strip()
+        if name in flags:
+            rows[i][4] = flags[name]
+
+
+def pull_catch_flags(svc, sid: str) -> dict[str, str]:
+    """Preserve Available to catch? keyed by Name (column F)."""
+    try:
+        data = (
+            svc.spreadsheets()
+            .values()
+            .get(spreadsheetId=sid, range="'Sprite List'!E2:F")
+            .execute()
+            .get("values", [])
+        )
+    except Exception:
+        return {}
+    flags = {}
+    for row in data:
+        if len(row) >= 2 and str(row[1]).strip():
+            flags[str(row[1]).strip()] = str(row[0]).strip() if str(row[0]).strip() else "1"
+    return flags
+
+
+def upload(rows, spreadsheet: str, *, push_data: bool):
     # Lazy import bridge helpers
     sys.path.insert(0, str(ROOT / "tools"))
     from sheets_bridge import get_sheets_service, spreadsheet_id
@@ -530,7 +561,12 @@ def upload(rows, spreadsheet: str):
         sheet_id = resp["replies"][0]["addSheet"]["properties"]["sheetId"]
     else:
         sheet_id = existing[tab]
-        svc.spreadsheets().values().clear(spreadsheetId=sid, range=f"'{tab}'").execute()
+
+    flags = pull_catch_flags(svc, sid) if push_data and tab in existing else {}
+
+    if tab in existing:
+        if push_data:
+            svc.spreadsheets().values().clear(spreadsheetId=sid, range=f"'{tab}'").execute()
         svc.spreadsheets().batchUpdate(
             spreadsheetId=sid,
             body={
@@ -550,6 +586,30 @@ def upload(rows, spreadsheet: str):
                 ]
             },
         ).execute()
+    elif tab not in existing:
+        pass  # sheet_id already set from addSheet above
+
+    if not push_data:
+        svc.spreadsheets().batchUpdate(
+            spreadsheetId=sid,
+            body={
+                "requests": [{
+                    "updateSheetProperties": {
+                        "properties": {
+                            "sheetId": sheet_id,
+                            "gridProperties": {"frozenRowCount": 1},
+                        },
+                        "fields": "gridProperties.frozenRowCount",
+                    }
+                }]
+            },
+        ).execute()
+        print(f"formatted '{tab}' (data untouched)")
+        return
+
+    apply_catch_flags(rows, flags)
+    if flags:
+        print(f"  preserved Available to catch? for {len(flags)} names")
 
     # Convert all cells to strings for API; formulas start with =
     values = [[("" if c is None else c) for c in row] for row in rows]
@@ -624,7 +684,7 @@ def upload(rows, spreadsheet: str):
                     "sheetId": sheet_id,
                     "dimension": "COLUMNS",
                     "startIndex": 1,
-                    "endIndex": 15,
+                    "endIndex": 18,
                 }
             }
         },
@@ -635,21 +695,33 @@ def upload(rows, spreadsheet: str):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--upload", action="store_true")
+    ap.add_argument(
+        "--push",
+        action="store_true",
+        help="Rebuild Sprite List from PBS (preserves Available to catch? by Name)",
+    )
+    ap.add_argument(
+        "--format-only",
+        action="store_true",
+        help="Apply formatting only; do not change cell data",
+    )
     ap.add_argument("--spreadsheet", default="")
     args = ap.parse_args()
 
     rows = build_rows()
     write_csv(rows)
 
-    if args.upload:
+    if args.push or args.format_only:
         url = args.spreadsheet.strip()
         if not url and SHEET_URL_FILE.is_file():
             url = SHEET_URL_FILE.read_text(encoding="utf-8").strip()
         if not url:
             sys.exit("No spreadsheet URL. Pass --spreadsheet or save ContentTracker/spreadsheet_url.txt")
-        print(f"uploading to {url}")
-        upload(rows, url)
+        if args.push:
+            print(f"pushing Sprite List to {url}")
+        else:
+            print(f"formatting Sprite List on {url}")
+        upload(rows, url, push_data=args.push)
 
 
 if __name__ == "__main__":

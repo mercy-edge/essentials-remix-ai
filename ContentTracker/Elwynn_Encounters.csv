@@ -1,78 +1,27 @@
-Elwynn Forest — Wild Encounters,,,,,,,,,,,,,,,,,,,,,,
-Method,Rarity,Northshire Abbey,Northshire Vineyards,Echo Ridge Mine,Forest's Edge,Goldshire,Brackwell Pumpkin Patch,The Stonefield Farm,The Maclure Vineyards,Eastvale Logging Camp,Jerod's Landing,Crystal Lake,Mirror Lake,Mirror Lake Orchard,Stone Cairn Lake,Thunder Falls,Fargodeep Mine,Jasperlode Mine,Heroes' Vigil,Ridgepoint Tower,Tower of Azora,Westbrook Garrison
-Land,Common,"Poochyena 1–2
-Rattata 1–2","Smoliv 1–2
-Grubbin 1–2
-Hoppip 1–2","Diglett 2
-Rattata 2
-Spinarak 2
-Zubat 2","Poochyena 2–4
-Rattata 2–4","Poochyena 2–4
-Rattata 2–4","Gastly 3–5
-Pumpkaboo 3–5
-Rookidee 3–5","Mareep 3–5
-Rattata 2–4","Bellsprout 3–5
-Oddish 3–5","Bonsly 2–4
-Fomantis 2–4",Pidgey 2–4,Pidgey 2–4,Pidgey 2–4,Caterpie 2–4,Pidgey 3–5,Electrike 4–6,"Zubat 3–6
-Geodude 3–6","Zubat 4–7
-Geodude 4–7","Pidgey 2–4
-Rattata 2–4
-Sentret 2–4","Pidgey 3–5
-Spearow 3–5","Abra 4–6
-Rattata 2–4","Poochyena 3–5
-Rattata 2–4"
-,Uncommon,"Caterpie 1–2
-Pidgey 1–2
-Sentret 1–2",—,—,"Pidgey 2–4
-Houndour 3–5
-Sentret 2–4","Pidgey 2–4
-Sentret 2–4
-Caterpie 2–3
-Houndour 3–5","Misdreavus 4–6
-Murkrow 4–6
-Delibird 5–7","Pidgey 2–4
-Mudbray 4–6
-Sentret 2–4","Pidgey 2–4
-Hoppip 3–5
-Rattata 2–4","Zubat 2–4
-Hoothoot 3–5
-Stufful 2–4","Magikarp 5–10
-Wingull 3–5
-Tentacool 5–10
-Corphish 4–6
-Krabby 4–6","Magikarp 5–10
-Sentret 2–4
-Goldeen 5–10
-Psyduck 4–6
-Wooper 4–6","Magikarp 5–10
-Sentret 2–4
-Goldeen 5–10
-Marill 4–6
-Psyduck 4–6","Pidgey 2–4
-Weedle 2–4
-Applin 3–5
-Cherubi 3–5","Magikarp 5–12
-Sentret 3–5
-Goldeen 5–12
-Lotad 4–6
-Psyduck 5–7","Magikarp 5–12
-Pidgey 3–5
-Goldeen 5–12
-Chinchou 5–8
-Psyduck 4–6","Diglett 3–5
-Rattata 2–4
-Whismur 4–6","Onix 5–8
-Diglett 3–6
-Aron 5–8",Hoothoot 3–5,"Rattata 2–4
-Natu 4–6
-Swablu 4–6","Pidgey 3–5
-Natu 4–6
-Spoink 4–6","Pidgey 2–4
-Growlithe 4–6
-Houndour 4–6"
-,Rare,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—
-Old Rod,Common,—,"Goldeen 1–3
-Feebas 1–3
-Finneon 1–3",—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—
-,Uncommon,—,Corphish 2–4,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—
-,Rare,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—,—
+Elwynn Forest — Wild Encounters,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Map,Northshire Abbey,,Northshire Vineyards,,Echo Ridge Mine,,Forest's Edge,,Goldshire,,Brackwell Pumpkin Patch,,The Stonefield Farm,,The Maclure Vineyards,,Eastvale Logging Camp,,Jerod's Landing,,Crystal Lake,,Mirror Lake,,Mirror Lake Orchard,,Stone Cairn Lake,,Thunder Falls,,Fargodeep Mine,,Jasperlode Mine,,Heroes' Vigil,,Ridgepoint Tower,,Tower of Azora,,Westbrook Garrison,
+,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv,Pokémon,Lv
+Land,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Common,Poochyena,'1-2,Smoliv,'1-2,Diglett,'2,Poochyena,'2-4,Poochyena,'2-4,Gastly,'3-5,Mareep,'3-5,Bellsprout,'3-5,Bonsly,'2-4,Pidgey,'2-4,Pidgey,'2-4,Pidgey,'2-4,Caterpie,'2-4,Pidgey,'3-5,Electrike,'4-6,Zubat,'3-6,Zubat,'4-7,Pidgey,'2-4,Pidgey,'3-5,Abra,'4-6,Poochyena,'3-5
+Common,Rattata,'1-2,Grubbin,'1-2,Rattata,'2,Rattata,'2-4,Rattata,'2-4,Pumpkaboo,'3-5,Rattata,'2-4,Oddish,'3-5,Fomantis,'2-4,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,Geodude,'3-6,Geodude,'4-7,Rattata,'2-4,Spearow,'3-5,Rattata,'2-4,Rattata,'2-4
+Common,-----,0,Hoppip,'1-2,Spinarak,'2,-----,0,-----,0,Rookidee,'3-5,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,Sentret,'2-4,-----,0,-----,0,-----,0
+Common,-----,0,-----,0,Zubat,'2,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Common,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Uncommon,Caterpie,'1-2,-----,0,-----,0,Pidgey,'2-4,Pidgey,'2-4,Misdreavus,'4-6,Pidgey,'2-4,Pidgey,'2-4,Zubat,'2-4,Magikarp,'5-10,Magikarp,'5-10,Magikarp,'5-10,Pidgey,'2-4,Magikarp,'5-12,Magikarp,'5-12,Diglett,'3-5,Onix,'5-8,Hoothoot,'3-5,Rattata,'2-4,Pidgey,'3-5,Pidgey,'2-4
+Uncommon,Pidgey,'1-2,-----,0,-----,0,Houndour,'3-5,Sentret,'2-4,Murkrow,'4-6,Mudbray,'4-6,Hoppip,'3-5,Hoothoot,'3-5,Wingull,'3-5,Sentret,'2-4,Sentret,'2-4,Weedle,'2-4,Sentret,'3-5,Pidgey,'3-5,Rattata,'2-4,Diglett,'3-6,-----,0,Natu,'4-6,Natu,'4-6,Growlithe,'4-6
+Uncommon,Sentret,'1-2,-----,0,-----,0,Sentret,'2-4,Caterpie,'2-3,Delibird,'5-7,Sentret,'2-4,Rattata,'2-4,Stufful,'2-4,Tentacool,'5-10,Goldeen,'5-10,Goldeen,'5-10,Applin,'3-5,Goldeen,'5-12,Goldeen,'5-12,Whismur,'4-6,Aron,'5-8,-----,0,Swablu,'4-6,Spoink,'4-6,Houndour,'4-6
+Uncommon,-----,0,-----,0,-----,0,-----,0,Houndour,'3-5,-----,0,-----,0,-----,0,-----,0,Corphish,'4-6,Psyduck,'4-6,Marill,'4-6,Cherubi,'3-5,Lotad,'4-6,Chinchou,'5-8,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Rare,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Rare,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Old Rod,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Common,-----,0,Goldeen,'1-3,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Common,-----,0,Feebas,'1-3,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Common,-----,0,Finneon,'1-3,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Common,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Common,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Uncommon,-----,0,Corphish,'2-4,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Uncommon,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Uncommon,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Uncommon,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Rare,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0
+Rare,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0,-----,0

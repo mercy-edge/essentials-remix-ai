@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Pull Elwynn Encounters from Google Sheets and write into PBS/encounters.txt.
+Pull Elwynn Encounters (romhack vertical layout) from Google Sheets → PBS/encounters.txt.
 
-Preserves non-Elwynn sections. Rebuilds Elwynn map blocks from the sheet.
-Uses Rate % when present; otherwise maps rarity → default chances and normalizes.
+Layout: row of map names (2 cols each: name | level), Land/Old Rod sections,
+Common x5, Uncommon x4, Rare x2 per section.
 
 Usage:
-  python tools/import_elwynn_encounters.py           # dry-run diff
-  python tools/import_elwynn_encounters.py --apply   # write PBS
+  python tools/import_elwynn_encounters.py
+  python tools/import_elwynn_encounters.py --apply
 """
 
 from __future__ import annotations
@@ -19,12 +19,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PBS_ENC = ROOT / "PBS" / "encounters.txt"
-sys.path.insert(0, str(ROOT / "tools"))
-
-from export_elwynn_encounters import ELWYNN_MAP_ORDER, parse_encounters  # noqa: E402
-from sheets_bridge import get_sheets_service, spreadsheet_id  # noqa: E402
-
 SHEET_URL_FILE = ROOT / "ContentTracker" / "spreadsheet_url.txt"
+
+sys.path.insert(0, str(ROOT / "tools"))
+from export_elwynn_encounters import parse_encounters  # noqa: E402
+from romhack_sheet_common import EMPTY_LEVEL, EMPTY_NAME, RARITY_SLOTS  # noqa: E402
+from sheets_bridge import get_sheets_service, spreadsheet_id  # noqa: E402
 
 NAME_TO_MAP = {
     "Northshire Abbey": 76,
@@ -53,34 +53,25 @@ NAME_TO_MAP = {
 DETAIL_TO_TYPE = {
     "Land": "Land",
     "Cave": "Cave",
-    "Rock Smash": "RockSmash",
     "Old Rod": "OldRod",
-    # Good Rod / Super Rod / Surf not used in this project yet — ignored on import if present
 }
 
 RARITY_DEFAULT = {"Common": 30, "Uncommon": 15, "Rare": 4}
-
-# Default density from existing PBS when rewriting a type block
 DEFAULT_DENSITY = {
     "Land": "10",
     "Cave": "8",
     "OldRod": "",
-    "GoodRod": "",
-    "SuperRod": "",
-    "Water": "2",
-    "RockSmash": "50",
 }
+
+CAVE_MAPS = {33, 82, 85}
 
 
 def species_id(name: str) -> str:
-    """Display name → PBS SPECIES id (best effort)."""
     n = name.strip()
-    # common display fixes
     specials = {
         "Nidoran♀": "NIDORANF",
         "Nidoran♂": "NIDORANM",
         "Farfetch'd": "FARFETCHD",
-        "Sirfetch'd": "SIRFETCHD",
         "Mr. Mime": "MRMIME",
         "Mime Jr.": "MIMEJR",
         "Mr. Rime": "MRRIME",
@@ -88,81 +79,35 @@ def species_id(name: str) -> str:
         "Ho-Oh": "HOOH",
         "Porygon-Z": "PORYGONZ",
         "Porygon2": "PORYGON2",
-        "Flabébé": "FLABEBE",
-        "Jangmo-o": "JANGMOO",
-        "Hakamo-o": "HAKAMOO",
-        "Kommo-o": "KOMMOO",
     }
     if n in specials:
         return specials[n]
-    # "Shellos East" style not used; "Geodude 1" → GEODUDE_1
-    m = re.match(r"^([A-Za-z]+)(?:\s+(\d+))?$", n)
-    if m and m.group(2):
-        return f"{m.group(1).upper()}_{m.group(2)}"
+    m = re.match(r"^(.+?)\s+\((.+)\)$", n)
+    if m:
+        base = re.sub(r"[^A-Za-z0-9]", "", m.group(1)).upper()
+        form = re.sub(r"[^A-Za-z0-9]", "", m.group(2)).upper()
+        return f"{base}_{form}"
     return re.sub(r"[^A-Za-z0-9]", "", n).upper()
 
 
 def parse_levels(text: str):
-    t = str(text).strip().replace("–", "-").replace("—", "-").replace(" ", "")
-    if not t:
+    t = str(text).strip().lstrip("'").replace("–", "-").replace("—", "-").replace(" ", "")
+    if not t or t == EMPTY_LEVEL:
+        return 1, 1
+    # Reject Excel date serials if Sheets still coerced a value
+    if t.isdigit() and int(t) > 1000:
         return 1, 1
     if "-" in t:
         a, b = t.split("-", 1)
         return int(a), int(b)
-    v = int(t)
-    return v, v
+    return int(t), int(t)
 
 
-# Maps that use Cave encounter type in PBS (walking still shown as Land on the sheet)
-CAVE_MAPS = {33, 82, 85}
-
-
-def parse_cell_mons(cell: str, rarity: str):
-    """Parse 'Poochyena 1–2' / multiline cells into entry fragments."""
-    cell = (cell or "").strip()
-    if not cell or cell in ("—", "-", "–"):
-        return []
-    out = []
-    for line in re.split(r"[\n\r]+", cell):
-        line = line.strip()
-        if not line or line in ("—", "-", "–"):
-            continue
-        # "Name 1-2" or "Name 1–2" or "Name 5"
-        m = re.match(r"^(.+?)\s+(\d+)(?:\s*[–\-]\s*(\d+))?$", line)
-        if not m:
-            # name only — default levels
-            out.append(
-                {
-                    "display": line,
-                    "species": species_id(line),
-                    "min": 1,
-                    "max": 1,
-                    "chance": RARITY_DEFAULT[rarity],
-                    "rarity": rarity,
-                }
-            )
-            continue
-        name = m.group(1).strip()
-        mn = int(m.group(2))
-        mx = int(m.group(3) or m.group(2))
-        out.append(
-            {
-                "display": name,
-                "species": species_id(name),
-                "min": mn,
-                "max": mx,
-                "chance": RARITY_DEFAULT[rarity],
-                "rarity": rarity,
-            }
-        )
-    return out
+def is_empty_name(name: str) -> bool:
+    return name.strip() in ("", EMPTY_NAME, "—", "-", "–", "------", "\\-----")
 
 
 def pull_sheet_zones(spreadsheet: str):
-    """
-    Horizontal layout:
-      Method | Rarity | MapA | MapB | ...
-    """
     svc, _, _ = get_sheets_service()
     sid = spreadsheet_id(spreadsheet)
     rows = (
@@ -173,22 +118,19 @@ def pull_sheet_zones(spreadsheet: str):
         .get("values", [])
     )
 
-    # Find header row with Method | Rarity | maps...
-    header_idx = None
-    map_names = []
-    for i, row in enumerate(rows):
-        cells = [str(c).strip() for c in row]
-        if len(cells) >= 3 and cells[0] == "Method" and cells[1] == "Rarity":
-            header_idx = i
-            map_names = cells[2:]
-            break
-    if header_idx is None:
-        sys.exit("Could not find horizontal header row (Method | Rarity | ...)")
+    if len(rows) < 4:
+        sys.exit("Sheet too short — expected title, map header, subheader, and data rows")
+
+    header = rows[1]
+    map_columns = []
+    for ci in range(1, len(header), 2):
+        name = str(header[ci]).strip() if ci < len(header) else ""
+        if not name or name.lower() == "map":
+            continue
+        map_columns.append((ci, name))
 
     zones = {}
-    for name in map_names:
-        if not name:
-            continue
+    for ci, name in map_columns:
         zones[name] = {
             "map_id": NAME_TO_MAP.get(name),
             "name": name,
@@ -196,59 +138,56 @@ def pull_sheet_zones(spreadsheet: str):
         }
 
     current_method = "Land"
-    for row in rows[header_idx + 1 :]:
+    current_rarity = None
+    data_rows_left = 0
+
+    for row in rows[3:]:
         cells = [str(c).strip() if c is not None else "" for c in row]
-        while len(cells) < 2 + len(map_names):
-            cells.append("")
-        method, rarity = cells[0], cells[1]
-        if method:
-            current_method = method
-        if rarity not in ("Common", "Uncommon", "Rare"):
+        label = cells[0] if cells else ""
+
+        if label == "Land":
+            current_method = "Land"
+            current_rarity = None
+            data_rows_left = 0
+            continue
+        if label == "Old Rod":
+            current_method = "Old Rod"
+            current_rarity = None
+            data_rows_left = 0
+            continue
+        if label in RARITY_SLOTS:
+            current_rarity = label
+            data_rows_left = RARITY_SLOTS[label]
             continue
 
-        # Map sheet method → PBS detail
-        if current_method in ("Land", "Cave"):
-            base_detail = "Land"
-        elif current_method in ("Old Rod", "Fishing"):
-            base_detail = "Old Rod"
-        else:
-            continue
-
-        for mi, name in enumerate(map_names):
-            if not name or name not in zones:
-                continue
-            cell = cells[2 + mi] if 2 + mi < len(cells) else ""
-            for frag in parse_cell_mons(cell, rarity):
-                detail = base_detail
+        if current_rarity and data_rows_left > 0:
+            for ci, name in map_columns:
+                if name not in zones:
+                    continue
+                pname = cells[ci] if ci < len(cells) else ""
+                plvl = cells[ci + 1] if ci + 1 < len(cells) else ""
+                if is_empty_name(pname):
+                    continue
+                mn, mx = parse_levels(plvl)
+                detail = current_method if current_method != "Land" else "Land"
                 mid = zones[name]["map_id"]
                 if detail == "Land" and mid in CAVE_MAPS:
                     detail = "Cave"
-                zones[name]["entries"].append(
-                    {
-                        "detail": detail,
-                        "rarity": rarity,
-                        "species": frag["species"],
-                        "display": frag["display"],
-                        "min": frag["min"],
-                        "max": frag["max"],
-                        "chance": frag["chance"],
-                    }
-                )
+                zones[name]["entries"].append({
+                    "detail": detail,
+                    "rarity": current_rarity,
+                    "species": species_id(pname),
+                    "display": pname,
+                    "min": mn,
+                    "max": mx,
+                    "chance": RARITY_DEFAULT[current_rarity],
+                })
+            data_rows_left -= 1
 
-    # Drop maps with no map id
-    for name, z in list(zones.items()):
-        if z["map_id"] is None:
-            print(f"WARN: unknown map column {name!r}")
     return zones
 
 
-def existing_density(pbs_maps, map_id, enc_type):
-    # sniff density from current PBS slots grouping — re-parse file text
-    return DEFAULT_DENSITY.get(enc_type, "10")
-
-
 def sniff_densities_from_file():
-    """map_id -> {enc_type: density_str}"""
     text = PBS_ENC.read_text(encoding="utf-8")
     dens = {}
     map_id = None
@@ -265,8 +204,6 @@ def sniff_densities_from_file():
 
 
 def format_map_block(map_id, name, entries, densities):
-    """Build encounters.txt section for one map."""
-    # group by enc type preserving sheet order
     groups = []
     order = []
     for e in entries:
@@ -284,10 +221,7 @@ def format_map_block(map_id, name, entries, densities):
         dens = densities.get(map_id, {}).get(et)
         if dens is None:
             dens = DEFAULT_DENSITY.get(et, "10")
-        if dens != "":
-            lines.append(f"{et},{dens}")
-        else:
-            lines.append(et)
+        lines.append(f"{et},{dens}" if dens != "" else et)
         for e in lst:
             if e["min"] == e["max"]:
                 lines.append(f"    {e['chance']},{e['species']},{e['min']}")
@@ -297,27 +231,25 @@ def format_map_block(map_id, name, entries, densities):
 
 
 def replace_map_section(text: str, map_id: int, new_block: str) -> str:
-    """Replace one [NNN] section in-place; append if missing."""
     pattern = re.compile(
         rf"(?ms)^#-------------------------------\r?\n\[{map_id:03d}\][^\n]*\n.*?(?=^#-------------------------------\r?\n\[|\Z)"
     )
     block = new_block if new_block.endswith("\n") else new_block + "\n"
     if pattern.search(text):
         return pattern.sub(block, text, count=1)
-    # append before final newline
     return text.rstrip() + "\n" + block
 
 
 def rebuild_encounters_txt(zones, apply: bool):
     densities = sniff_densities_from_file()
     original = PBS_ENC.read_text(encoding="utf-8")
-
     new_blocks = {}
     zone_by_id = {}
+
     for zname, z in zones.items():
         mid = z["map_id"]
         if mid is None:
-            print(f"WARN: skip zone without map id: {zname}")
+            print(f"WARN: unknown map column {zname!r}")
             continue
         if not z["entries"]:
             continue
@@ -328,6 +260,7 @@ def rebuild_encounters_txt(zones, apply: bool):
     print("Changes:")
     any_diff = False
     content_diffs = []
+
     for mid in sorted(new_blocks.keys()):
         z = zone_by_id[mid]
         old_slots = old_maps.get(mid, {}).get("slots", [])
@@ -344,11 +277,8 @@ def rebuild_encounters_txt(zones, apply: bool):
         old_n = [(t, s, c, mn, mx) for t, s, c, mn, mx in old_slots]
         if old_n != new_slots:
             any_diff = True
-            # species-set change vs order-only
-            old_set = {(t, s, c, mn, mx) for t, s, c, mn, mx in old_n}
-            new_set = set(new_slots)
-            kind = "reorder" if old_set == new_set else "content"
-            content_diffs.append((mid, z["name"], kind, old_n, new_slots))
+            kind = "reorder" if set(old_n) == set(new_slots) else "content"
+            content_diffs.append((mid, z["name"], kind))
             print(f"\n[{mid:03d}] {z['name']} ({kind})")
             print("  OLD:", old_n)
             print("  NEW:", new_slots)
@@ -362,9 +292,6 @@ def rebuild_encounters_txt(zones, apply: bool):
             text = replace_map_section(text, mid, new_blocks[mid])
         PBS_ENC.write_text(text, encoding="utf-8")
         print(f"\nWrote {PBS_ENC}")
-        for mid, name, kind, _, _ in content_diffs:
-            if kind == "content":
-                print(f"  content update: [{mid:03d}] {name}")
     elif apply and not any_diff:
         print("\nNothing to apply.")
     else:
