@@ -5213,6 +5213,48 @@ FieldUse = Direct
 Flags = KeyItem
 Description = Warm to the touch. Use it anywhere in the overworld to return to your chosen home spot. You black out toward this location as well.
 #-------------------------------
+[REDBURLAPBANDANA]
+Name = Red Burlap Bandana
+NamePlural = Red Burlap Bandanas
+Pocket = 9
+Price = 0
+Flags = KeyItem
+ShowQuantity = true
+Description = A rough red bandana worn by Defias thugs around Northshire. Deputy Willem wants these as proof.
+#-------------------------------
+[GARRICKSHEAD]
+Name = Garrick's Bounty Proof
+NamePlural = Garrick's Bounty Proofs
+Pocket = 9
+Price = 0
+Flags = KeyItem
+Description = Proof that Garrick Padfoot has been defeated. Turn it in to Deputy Willem for the bounty.
+#-------------------------------
+[MCBRIDEDOCUMENTS]
+Name = McBride's Documents
+NamePlural = McBride's Documents
+Pocket = 9
+Price = 0
+Flags = KeyItem
+Description = Sealed papers from Marshal McBride for Marshal Dughan in Goldshire.
+#-------------------------------
+[MILLYSHARVEST]
+Name = Milly's Harvest
+NamePlural = Milly's Harvest Crates
+Pocket = 9
+Price = 0
+Flags = KeyItem
+ShowQuantity = true
+Description = A crate of grapes recovered from the Northshire Vineyards. Return these to Milly Osworth.
+#-------------------------------
+[GRAPEMANIFEST]
+Name = Grape Manifest
+NamePlural = Grape Manifests
+Pocket = 9
+Price = 0
+Flags = KeyItem
+Description = A shipping manifest for Milly's saved grape harvest. Deliver it to Brother Neals in the abbey.
+#-------------------------------
 [COINCASE]
 Name = Coin Case
 NamePlural = Coin Cases
