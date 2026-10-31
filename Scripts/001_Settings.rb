@@ -135,9 +135,10 @@ module Settings
   SHINY_POKEMON_CHANCE                = (MECHANICS_GENERATION >= 6) ? 16 : 8
   # Whether super shininess is enabled (uses a different shiny animation).
   SUPER_SHINY                         = (MECHANICS_GENERATION >= 8)
-  # Whether Pokémon with the "Legendary", "Mythical" or "Ultra Beast" flags will
-  # have at least 3 perfect IVs.
-  LEGENDARIES_HAVE_SOME_PERFECT_IVS   = (MECHANICS_GENERATION >= 6)
+  # Wild Pokémon, including those with the "Legendary", "Mythical" or
+  # "Ultra Beast" flags, are given 0 IVs in every stat (see
+  # pbApplyWildPokemonIVs). This used to grant 3 perfect IVs in Gen 6+.
+  LEGENDARIES_HAVE_SOME_PERFECT_IVS   = false
   # The odds of a wild Pokémon/bred egg having Pokérus (out of 65536).
   POKERUS_CHANCE                      = 3
   # Whether IVs and EVs are treated as 0 when calculating a Pokémon's stats.
