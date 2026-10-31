@@ -26,7 +26,8 @@ module Wild2v3Battle
   # (held items, shiny rolls, Pokérus, lead-ability effects, etc.).
   # Options hash keys:
   #   :form, :moves, :ability, :ability_index, :item, :gender, :nature,
-  #   :shiny, :super_shiny, :name, :iv, :ev, :happiness, :poke_ball
+  #   :shiny, :super_shiny, :name, :ev, :happiness, :poke_ball
+  # IVs are always 0. A passed :iv is ignored.
   def create_event_pokemon(species, level, options = {})
     species_id = GameData::Species.get(species).species
     pkmn = Pokemon.new(species_id, level, $player, false)
@@ -45,16 +46,14 @@ module Wild2v3Battle
     pkmn.shiny = options[:shiny] ? true : false if !options[:shiny].nil?
     pkmn.super_shiny = options[:super_shiny] ? true : false if !options[:super_shiny].nil?
     pkmn.nature = options[:nature] if options[:nature]
-    if options[:iv]
-      GameData::Stat.each_main { |s| pkmn.iv[s.id] = options[:iv][s.id] if options[:iv][s.id] }
-    end
     if options[:ev]
       GameData::Stat.each_main { |s| pkmn.ev[s.id] = options[:ev][s.id] if options[:ev][s.id] }
     end
     pkmn.happiness = options[:happiness] if options[:happiness]
     pkmn.name = options[:name] if options[:name] && !options[:name].empty?
     pkmn.poke_ball = options[:poke_ball] if options[:poke_ball]
-    pkmn.calc_stats
+    # After EVs/nature so calc_stats inside this call sees them. :iv is ignored.
+    pbApplyWildPokemonIVs(pkmn)
     return pkmn
   end
 

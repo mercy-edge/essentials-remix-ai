@@ -299,71 +299,17 @@ MenuHandlers.add(:battle_pokemon_debug_menu, :set_exp, {
 })
 
 MenuHandlers.add(:battle_pokemon_debug_menu, :hidden_values, {
-  "name"   => _INTL("EV/IV..."),
+  "name"   => _INTL("IV..."),
   "parent" => :level_stats,
   "usage"  => :both,
   "effect" => proc { |pkmn, battler, battle|
     cmd = 0
     loop do
       cmd = pbMessage("\\ts[]" + _INTL("Choose hidden values to edit."),
-                      [_INTL("Set EVs"), _INTL("Set IVs")], -1, nil, cmd)
+                      [_INTL("Set IVs")], -1, nil, cmd)
       break if cmd < 0
       case cmd
-      when 0   # Set EVs
-        cmd2 = 0
-        loop do
-          total_evs = 0
-          ev_commands = []
-          ev_id = []
-          GameData::Stat.each_main do |s|
-            ev_commands.push(s.name + " (#{pkmn.ev[s.id]})")
-            ev_id.push(s.id)
-            total_evs += pkmn.ev[s.id]
-          end
-          ev_commands.push(_INTL("Randomise all"))
-          ev_commands.push(_INTL("Max randomise all"))
-          cmd2 = pbMessage("\\ts[]" + _INTL("Change which EV?\nTotal: {1}/{2} ({3}%)",
-                                            total_evs, Pokemon::EV_LIMIT, 100 * total_evs / Pokemon::EV_LIMIT),
-                           ev_commands, -1, nil, cmd2)
-          break if cmd2 < 0
-          if cmd2 < ev_id.length
-            params = ChooseNumberParams.new
-            upperLimit = 0
-            GameData::Stat.each_main { |s| upperLimit += pkmn.ev[s.id] if s.id != ev_id[cmd2] }
-            upperLimit = Pokemon::EV_LIMIT - upperLimit
-            upperLimit = [upperLimit, Pokemon::EV_STAT_LIMIT].min
-            thisValue = [pkmn.ev[ev_id[cmd2]], upperLimit].min
-            params.setRange(0, upperLimit)
-            params.setDefaultValue(thisValue)
-            params.setCancelValue(thisValue)
-            f = pbMessageChooseNumber("\\ts[]" + _INTL("Set the EV for {1} (max. {2}).",
-                                                       GameData::Stat.get(ev_id[cmd2]).name, upperLimit), params)
-            if f != pkmn.ev[ev_id[cmd2]]
-              pkmn.ev[ev_id[cmd2]] = f
-              pkmn.calc_stats
-              battler&.pbUpdate
-            end
-          else   # (Max) Randomise all
-            evTotalTarget = Pokemon::EV_LIMIT
-            if cmd2 == ev_commands.length - 2   # Randomize all (not max)
-              evTotalTarget = rand(Pokemon::EV_LIMIT)
-            end
-            GameData::Stat.each_main { |s| pkmn.ev[s.id] = 0 }
-            while evTotalTarget > 0
-              r = rand(ev_id.length)
-              next if pkmn.ev[ev_id[r]] >= Pokemon::EV_STAT_LIMIT
-              addVal = 1 + rand(Pokemon::EV_STAT_LIMIT / 4)
-              addVal = addVal.clamp(0, evTotalTarget)
-              addVal = addVal.clamp(0, Pokemon::EV_STAT_LIMIT - pkmn.ev[ev_id[r]])
-              next if addVal == 0
-              pkmn.ev[ev_id[r]] += addVal
-              evTotalTarget -= addVal
-            end
-            pkmn.calc_stats
-            battler&.pbUpdate
-          end
-        end
-      when 1   # Set IVs
+      when 0   # Set IVs
         cmd2 = 0
         loop do
           hiddenpower = pbHiddenPower(pkmn)

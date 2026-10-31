@@ -109,7 +109,7 @@ class PokemonSummary_Scene
   RED_TEXT_SHADOW   = Color.new(224, 152, 144)
   BLACK_TEXT_BASE   = Color.new(64, 64, 64)
   BLACK_TEXT_SHADOW = Color.new(176, 176, 176)
-  STAT_VIEW_MODES   = [:stats, :ivs, :evs]
+  STAT_VIEW_MODES   = [:stats, :ivs]
 
   def pbRankedMoveDescriptionForSummary(move)
     return move.description if !move
@@ -201,7 +201,6 @@ class PokemonSummary_Scene
   def pbStatViewModeLabel
     case @statViewMode
     when :ivs then return _INTL("View: IVs")
-    when :evs then return _INTL("View: EVs")
     else           return _INTL("View: Stats")
     end
   end
@@ -210,8 +209,6 @@ class PokemonSummary_Scene
     case @statViewMode
     when :ivs
       return @pokemon.iv[stat].to_s
-    when :evs
-      return @pokemon.ev[stat].to_s
     else
       return case stat
              when :HP then sprintf("%d/%d", @pokemon.hp, @pokemon.totalhp)

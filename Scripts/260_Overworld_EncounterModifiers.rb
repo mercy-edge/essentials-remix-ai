@@ -5,42 +5,22 @@
 # want it to apply to!
 #===============================================================================
 
+# Sets every main-stat IV, then recalculates stats so the Pokémon's actual
+# HP/Attack/Defense/etc. match those IVs.
+def pbSetAllIVs(pkmn, iv)
+  GameData::Stat.each_main { |s| pkmn.iv[s.id] = iv }
+  pkmn.calc_stats
+end
+
+# Every wild Pokémon has 0 IVs in every stat. No exceptions.
+def pbApplyWildPokemonIVs(pkmn)
+  pbSetAllIVs(pkmn, 0)
+end
+
 # Make all wild Pokémon shiny while a certain Switch is ON (see Settings).
 EventHandlers.add(:on_wild_pokemon_created, :make_shiny_switch,
   proc { |pkmn|
     pkmn.shiny = true if $game_switches[Settings::SHINY_WILD_POKEMON_SWITCH]
-  }
-)
-
-# In the Safari Zone and Bug-Catching Contests, wild Pokémon reroll their IVs up
-# to 4 times if they don't have a perfect IV.
-EventHandlers.add(:on_wild_pokemon_created, :reroll_ivs_in_safari_and_bug_contest,
-  proc { |pkmn|
-    next if !pbInSafari? && !pbInBugContest?
-    rerolled = false
-    4.times do
-      break if pkmn.iv.any? { |_stat, val| val == Pokemon::IV_STAT_LIMIT }
-      rerolled = true
-      GameData::Stat.each_main do |s|
-        pkmn.iv[s.id] = rand(Pokemon::IV_STAT_LIMIT + 1)
-      end
-    end
-    pkmn.calc_stats if rerolled
-  }
-)
-
-# In Gen 6 and later, Legendary/Mythical/Ultra Beast Pokémon are guaranteed to
-# have at least 3 perfect IVs.
-EventHandlers.add(:on_wild_pokemon_created, :some_perfect_ivs_for_legendaries,
-  proc { |pkmn|
-    next if !Settings::LEGENDARIES_HAVE_SOME_PERFECT_IVS
-    data = pkmn.species_data
-    next if !data.has_flag?("Legendary") && !data.has_flag?("Mythical") && !data.has_flag?("UltraBeast")
-    stats = []
-    GameData::Stat.each_main { |s| stats.push(s.id) }
-    perfect_stats = stats.sample(3)
-    perfect_stats.each { |s| pkmn.iv[s] = Pokemon::IV_STAT_LIMIT }
-    pkmn.calc_stats
   }
 )
 
@@ -56,6 +36,16 @@ EventHandlers.add(:on_wild_pokemon_created, :level_depends_on_party,
     pkmn.level = new_level
     pkmn.calc_stats
     pkmn.reset_moves
+  }
+)
+
+# Wild Pokémon always have 0 IVs, including Safari Zone, Bug Contest, and
+# Legendary/Mythical/Ultra Beast encounters (those used to reroll or force
+# perfect IVs). pbGenerateWildPokemon applies this again after every handler
+# so a later modifier cannot put a non-zero IV back.
+EventHandlers.add(:on_wild_pokemon_created, :zero_wild_ivs,
+  proc { |pkmn|
+    pbApplyWildPokemonIVs(pkmn)
   }
 )
 
