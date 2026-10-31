@@ -141,9 +141,16 @@ module Settings
   LEGENDARIES_HAVE_SOME_PERFECT_IVS   = false
   # The odds of a wild Pokémon/bred egg having Pokérus (out of 65536).
   POKERUS_CHANCE                      = 3
-  # Whether IVs and EVs are treated as 0 when calculating a Pokémon's stats.
-  # IVs and EVs still exist, and are used by Hidden Power and some cosmetic
-  # things as normal.
+  # IV power anchors: [level, iv, extra effective levels].
+  # A stat with that IV is calculated as if the Pokémon's level were higher by
+  # that many levels and its IV were 0. IV 0 adds nothing. The bonus scales
+  # linearly with IV. Change these to retune the curve in Pokemon#iv_level_bonus.
+  #   level 1, IV 5   -> like level 3 at IV 0
+  #   level 20, IV 31 -> like level 24 at IV 0
+  IV_POWER_ANCHOR_LOW                 = [1, 5, 2]
+  IV_POWER_ANCHOR_HIGH                = [20, 31, 4]
+  # If true, stat calculation ignores IVs as well (EVs are always ignored).
+  # IVs still exist and are still used by Hidden Power.
   DISABLE_IVS_AND_EVS                 = false
   # Whether the Move Relearner can also teach egg moves that the Pokémon knew
   # when it hatched and moves that the Pokémon was once taught by a TR. Moves

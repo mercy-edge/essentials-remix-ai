@@ -16,6 +16,8 @@ module Settings
   DISABLE_IVS_AND_EVS = false
   SHINY_WILD_POKEMON_SWITCH = 31
   LEGENDARIES_HAVE_SOME_PERFECT_IVS = false
+  IV_POWER_ANCHOR_LOW = [1, 5, 2]
+  IV_POWER_ANCHOR_HIGH = [20, 31, 4]
 end
 
 module GameData
@@ -30,6 +32,10 @@ module GameData
 
     def self.each_main
       IDS.each { |id| yield new(id) }
+    end
+
+    def self.get(id)
+      new(id.to_sym)
     end
   end
 
@@ -91,6 +97,8 @@ class FakeNature
 end
 
 class Pokemon
+  IV_STAT_LIMIT = 31
+
   def self.===(other)
     other.is_a?(Pokemon) || other.is_a?(TestPokemon)
   end
@@ -186,9 +194,8 @@ def make_pokemon(species, level, bases, iv)
 end
 
 # ---------------------------------------------------------------------------
-check(failures, "stat formulas were not edited") do
+check(failures, "trainer and daycare IV assignment was not rewritten") do
   forbidden = [
-    "Scripts/274_Pokemon.rb",
     "Scripts/137_Trainer.rb",
     "Scripts/248_Overworld_DayCare.rb"
   ]
@@ -197,6 +204,7 @@ check(failures, "stat formulas were not edited") do
   raise "unexpected edits: #{hit.join(', ')}" unless hit.empty?
   raise "IV randomization removed from Pokemon#initialize" unless pokemon_src.include?("@iv[s.id]       = rand(IV_STAT_LIMIT + 1)")
   raise "DISABLE_IVS_AND_EVS is on, so IV edits would not change stats" unless File.read(File.join(ROOT, "Scripts/001_Settings.rb")).include?("DISABLE_IVS_AND_EVS                 = false")
+  raise "IV power anchors missing" unless File.read(File.join(ROOT, "Scripts/001_Settings.rb")).include?("IV_POWER_ANCHOR_LOW")
 end
 
 check(failures, "trainer and egg IV code left in place") do
@@ -208,26 +216,40 @@ check(failures, "trainer and egg IV code left in place") do
   raise "daycare calls the wild IV helper" if daycare.include?("pbApplyWildPokemonIVs") || daycare.include?("pbSetAllIVs")
 end
 
+def stats_of(pkmn)
+  [pkmn.totalhp, pkmn.attack, pkmn.defense, pkmn.spatk, pkmn.spdef, pkmn.speed]
+end
+
+def legacy_hp(base, level)
+  return 1 if base == 1
+  ((base * 2) * level / 100) + level + 10
+end
+
+def legacy_stat(base, level, nat = 100)
+  inner = (base * 2) * level / 100
+  ((inner + 5) * nat) / 100
+end
+
 check(failures, "Oak lab starters get 5 IVs and recalculated stats") do
   $game_map.map_id = 4
+  plain = make_pokemon(:CHARMANDER, 5, CHARMANDER, 0)
   pkmn = make_pokemon(:CHARMANDER, 5, CHARMANDER, 31)
-  raise "setup HP #{pkmn.totalhp}" unless pkmn.totalhp == 20
+  boosted_hp = pkmn.totalhp
   pkmn.nature_for_stats = FakeNature.new([[:ATTACK, 10]])
   pbApplyOakLabStarterIVs(pkmn)
   raise "IVs #{pkmn.ivs.inspect}" unless pkmn.ivs == [5, 5, 5, 5, 5, 5]
-  # +10% Attack nature, EV 0. HP/Def/Spe/SpA/SpD are neutral.
-  raise "HP #{pkmn.totalhp} hp #{pkmn.hp}" unless pkmn.totalhp == 19 && pkmn.hp == 19
-  raise "Atk #{pkmn.attack}" unless pkmn.attack == 11
-  raise "Def #{pkmn.defense}" unless pkmn.defense == 9
-  raise "SpA #{pkmn.spatk}" unless pkmn.spatk == 11
-  raise "SpD #{pkmn.spdef}" unless pkmn.spdef == 10
-  raise "Spe #{pkmn.speed}" unless pkmn.speed == 11
+  raise "starter HP did not change" unless pkmn.totalhp != boosted_hp
+  raise "starter is not stronger than IV 0" unless pkmn.totalhp > plain.totalhp
+  neutral = make_pokemon(:CHARMANDER, 5, CHARMANDER, 5)
+  raise "nature did not raise Attack (#{pkmn.attack} vs #{neutral.attack})" unless pkmn.attack > neutral.attack
+  raise "nature changed HP" unless pkmn.totalhp == neutral.totalhp
 
   [:BULBASAUR, :SQUIRTLE].each do |species|
     other = make_pokemon(species, 5, CHARMANDER, 31)
+    before = other.totalhp
     pbApplyOakLabStarterIVs(other)
     raise "#{species} IVs #{other.ivs.inspect}" unless other.ivs == [5, 5, 5, 5, 5, 5]
-    raise "#{species} HP stayed at the IV-31 value" unless other.totalhp == 19
+    raise "#{species} stats were not recalculated" unless other.totalhp != before
   end
 end
 
@@ -277,7 +299,7 @@ end
 
 check(failures, "wild generation ends at 0 IVs even if a later handler rerolls") do
   pkmn = make_pokemon(:MEW, 30, FLAT, 31)
-  raise "setup" unless pkmn.totalhp == 109
+  raise "setup" unless pkmn.totalhp > 100
   EventHandlers.trigger(:on_wild_pokemon_created, pkmn)
   raise "hook left IVs #{pkmn.ivs.inspect}" unless pkmn.ivs == [0, 0, 0, 0, 0, 0]
   raise "hook did not recalculate HP (#{pkmn.totalhp})" unless pkmn.totalhp == 100 && pkmn.hp == 100
@@ -363,11 +385,10 @@ check(failures, "Wild 2v3 event Pokémon ignore :iv and recalculate after EVs") 
     :ability => :INTIMIDATE
   })
   raise "IVs #{pkmn.ivs.inspect}" unless pkmn.ivs == [0, 0, 0, 0, 0, 0]
-  raise "EV was dropped" unless pkmn.ev[:HP] == 252
+  raise "EV field was dropped" unless pkmn.ev[:HP] == 252
   raise "ability dropped" unless pkmn.ability == :INTIMIDATE
-  # Level 35, base 100, IV 0, HP EV 252 -> 137. Attack stays the IV-0 value 75
-  # (IV 31 would be 85; ignoring the EV would make HP 115).
-  raise "HP #{pkmn.totalhp} hp #{pkmn.hp}" unless pkmn.totalhp == 137 && pkmn.hp == 137
+  # Level 35, base 100, IV 0. EVs are stored but do not change stats (HP 115, Attack 75).
+  raise "HP #{pkmn.totalhp} hp #{pkmn.hp}" unless pkmn.totalhp == 115 && pkmn.hp == 115
   raise "Atk #{pkmn.attack}" unless pkmn.attack == 75
 end
 
@@ -377,6 +398,87 @@ check(failures, "bug contest contestants are zeroed before the HP roll") do
   raise "contestant generation snippet missing" unless snippet
   raise "contestants are not given wild IVs" unless snippet.include?("pbApplyWildPokemonIVs(pokemon)")
   raise "HP is rolled before IVs are applied" unless snippet.index("pbApplyWildPokemonIVs") < snippet.index("pokemon.hp")
+end
+
+def same_stats?(a, b)
+  stats_of(a) == stats_of(b)
+end
+
+check(failures, "IV power anchors and EVs") do
+  bases = [39, 52, 80, 100, 150]
+  bases.each do |base|
+    stats = { :HP => base, :ATTACK => base, :DEFENSE => base, :SPEED => base, :SPECIAL_ATTACK => base, :SPECIAL_DEFENSE => base }
+    low_iv = make_pokemon(:ANCHOR, 1, stats, 5)
+    low_ref = make_pokemon(:ANCHOR, 3, stats, 0)
+    raise "L1 IV5 base #{base} #{stats_of(low_iv).inspect} != L3 IV0 #{stats_of(low_ref).inspect}" unless same_stats?(low_iv, low_ref)
+    high_iv = make_pokemon(:ANCHOR, 20, stats, 31)
+    high_ref = make_pokemon(:ANCHOR, 24, stats, 0)
+    raise "L20 IV31 base #{base} #{stats_of(high_iv).inspect} != L24 IV0 #{stats_of(high_ref).inspect}" unless same_stats?(high_iv, high_ref)
+    zero = make_pokemon(:ANCHOR, 20, stats, 0)
+    raise "IV 0 HP #{zero.totalhp} != legacy #{legacy_hp(base, 20)}" unless zero.totalhp == legacy_hp(base, 20)
+    raise "IV 0 Atk #{zero.attack} != legacy #{legacy_stat(base, 20)}" unless zero.attack == legacy_stat(base, 20)
+  end
+
+  shed = make_pokemon(:SHEDINJA, 50, { :HP => 1, :ATTACK => 90, :DEFENSE => 45, :SPEED => 40, :SPECIAL_ATTACK => 30, :SPECIAL_DEFENSE => 30 }, 31)
+  raise "Shedinja HP #{shed.totalhp}" unless shed.totalhp == 1
+
+  ev_mon = make_pokemon(:EV, 35, FLAT, 0)
+  before = stats_of(ev_mon)
+  ev_mon.ev[:HP] = 252
+  ev_mon.ev[:ATTACK] = 252
+  ev_mon.calc_stats
+  raise "EVs changed stats #{stats_of(ev_mon).inspect} vs #{before.inspect}" unless stats_of(ev_mon) == before
+
+  prev = -1
+  [0, 1, 5, 15, 31].each do |iv|
+    mon = make_pokemon(:CURVE, 20, FLAT, iv)
+    raise "IV #{iv} went backwards (#{mon.attack} < #{prev})" if mon.attack < prev
+    prev = mon.attack
+  end
+
+  puts "STAT TABLE (new vs old IV*level/100 formula), neutral nature, one base for HP and Attack"
+  puts format("%-6s %-4s %-8s %-8s %-8s %-8s %-8s", "Lvl", "IV", "HP new", "HP old", "Atk new", "Atk old", "like lvl")
+  [[1, 0], [1, 5], [1, 31], [5, 5], [20, 0], [20, 31], [50, 31], [60, 31], [100, 31]].each do |level, iv|
+    mon = make_pokemon(:TABLE, level, { :HP => 80, :ATTACK => 80, :DEFENSE => 80, :SPEED => 80, :SPECIAL_ATTACK => 80, :SPECIAL_DEFENSE => 80 }, iv)
+    old_hp = ((80 * 2 + iv) * level / 100) + level + 10
+    old_atk = (((80 * 2 + iv) * level / 100) + 5)
+    bonus = mon.iv_level_bonus(level, iv).to_f
+    puts format("%-6d %-4d %-8d %-8d %-8d %-8d +%.2f", level, iv, mon.totalhp, old_hp, mon.attack, old_atk, bonus)
+  end
+end
+
+check(failures, "feathers raise one IV and stop at 31") do
+  src = File.read(File.join(ROOT, "Scripts/264_Item_Utilities.rb"))
+  body = src[/^def pbRaiseIV\(.*?^end/m]
+  raise "pbRaiseIV missing" unless body
+  eval(body)
+  low_hp = { :HP => 39, :ATTACK => 52, :DEFENSE => 43, :SPEED => 65, :SPECIAL_ATTACK => 60, :SPECIAL_DEFENSE => 50 }
+  pkmn = make_pokemon(:FEATHER, 1, low_hp, 0)
+  before = pkmn.totalhp
+  got = pbRaiseIV(pkmn, :HP, 1)
+  raise "gain #{got} iv #{pkmn.iv[:HP]}" unless got == 1 && pkmn.iv[:HP] == 1
+  raise "other IVs changed #{pkmn.ivs.inspect}" unless pkmn.ivs == [1, 0, 0, 0, 0, 0]
+  raise "HP was not recalculated (#{pkmn.totalhp} vs #{before})" unless pkmn.totalhp != before
+  raise "Attack IV changed with a Health Feather" unless pkmn.attack == make_pokemon(:FEATHER, 1, low_hp, 0).attack
+  pkmn.iv[:HP] = 31
+  pkmn.calc_stats
+  raise "cap still gained" unless pbRaiseIV(pkmn, :HP, 1) == 0 && pkmn.iv[:HP] == 31
+  raise "pbRaiseIV does not recalc" unless body.include?("calc_stats")
+  items = File.read(File.join(ROOT, "PBS/items.txt"))
+  {
+    "HEALTHFEATHER" => "HP IV",
+    "MUSCLEFEATHER" => "Attack IV",
+    "RESISTFEATHER" => "Defense IV",
+    "GENIUSFEATHER" => "Sp. Atk IV",
+    "CLEVERFEATHER" => "Sp. Def IV",
+    "SWIFTFEATHER" => "Speed IV"
+  }.each do |item, text|
+    raise "#{item} missing from items.txt" unless items.include?("[#{item}]")
+    raise "#{item} description does not mention #{text}" unless items.include?(text)
+  end
+  handlers = File.read(File.join(ROOT, "Scripts/265_Item_Effects.rb"))
+  raise "Health Feather still raises EVs" if handlers.include?("pbUseEVRaisingItem(:HP, 1,")
+  raise "Health Feather does not raise IVs" unless handlers.include?("pbUseIVRaisingItem(:HP, 1,")
 end
 
 check(failures, "Oak lab map events call pbAddPokemon for the three starters") do

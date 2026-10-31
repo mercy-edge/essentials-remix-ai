@@ -44,14 +44,8 @@ ItemHandlers::UseOnPokemon.copy(:CARBOS, :SWIFTMOCHI)
 # Fresh-Start Mochi
 #===============================================================================
 ItemHandlers::UseOnPokemon.add(:FRESHSTARTMOCHI, proc { |item, qty, pkmn, scene|
-  next false if pkmn.ev.values.none? { |ev| ev > 0 }
-  GameData::Stat.each_main { |s| pkmn.ev[s.id] = 0 }
-  pkmn.changeHappiness("vitamin")
-  pkmn.calc_stats
-  pbSEPlay("Use item in party")
-  scene.pbRefresh
-  scene.pbDisplay(_INTL("{1}'s base points were all reset to zero!", pkmn.name))
-  next true
+  scene.pbDisplay(_INTL("It won't have any effect."))
+  next false
 })
 
 #===============================================================================

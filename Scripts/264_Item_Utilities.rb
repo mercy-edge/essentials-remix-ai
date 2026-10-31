@@ -385,32 +385,14 @@ end
 #===============================================================================
 # Change EVs
 #===============================================================================
-def pbJustRaiseEffortValues(pkmn, stat, evGain)
-  stat = GameData::Stat.get(stat).id
-  evTotal = 0
-  GameData::Stat.each_main { |s| evTotal += pkmn.ev[s.id] }
-  evGain = evGain.clamp(0, Pokemon::EV_STAT_LIMIT - pkmn.ev[stat])
-  evGain = evGain.clamp(0, Pokemon::EV_LIMIT - evTotal)
-  if evGain > 0
-    pkmn.ev[stat] += evGain
-    pkmn.calc_stats
-  end
-  return evGain
+def pbJustRaiseEffortValues(_pkmn, _stat, _evGain)
+  # EVs no longer affect stats. Vitamins and any other caller get 0, so the
+  # item reports that it won't have any effect.
+  return 0
 end
 
-def pbRaiseEffortValues(pkmn, stat, evGain = 10, no_ev_cap = false)
-  stat = GameData::Stat.get(stat).id
-  return 0 if !no_ev_cap && pkmn.ev[stat] >= 100
-  evTotal = 0
-  GameData::Stat.each_main { |s| evTotal += pkmn.ev[s.id] }
-  evGain = evGain.clamp(0, Pokemon::EV_STAT_LIMIT - pkmn.ev[stat])
-  evGain = evGain.clamp(0, 100 - pkmn.ev[stat]) if !no_ev_cap
-  evGain = evGain.clamp(0, Pokemon::EV_LIMIT - evTotal)
-  if evGain > 0
-    pkmn.ev[stat] += evGain
-    pkmn.calc_stats
-  end
-  return evGain
+def pbRaiseEffortValues(_pkmn, _stat, _evGain = 10, _no_ev_cap = false)
+  return 0
 end
 
 def pbMaxUsesOfEVRaisingItem(stat, amt_per_use, pkmn, no_ev_cap = false)
@@ -442,44 +424,72 @@ def pbUseEVRaisingItem(stat, amt_per_use, qty, pkmn, happiness_type, scene, no_e
   return true
 end
 
-def pbMaxUsesOfEVLoweringBerry(stat, pkmn)
-  ret = (pkmn.ev[stat].to_f / 10).ceil
+def pbMaxUsesOfEVLoweringBerry(_stat, pkmn)
   happiness = pkmn.happiness
+  return 1 if happiness >= 255
   uses = 0
-  if happiness < 255
-    bonus_per_use = 0
-    bonus_per_use += 1 if pkmn.obtain_map == $game_map.map_id
-    bonus_per_use += 1 if pkmn.poke_ball == :LUXURYBALL
-    has_soothe_bell = pkmn.hasItem?(:SOOTHEBELL)
-    loop do
-      uses += 1
-      gain = [10, 5, 2][happiness / 100]
-      gain += bonus_per_use
-      gain = (gain * 1.5).floor if has_soothe_bell
-      happiness += gain
-      break if happiness >= 255
-    end
+  bonus_per_use = 0
+  bonus_per_use += 1 if pkmn.obtain_map == $game_map.map_id
+  bonus_per_use += 1 if pkmn.poke_ball == :LUXURYBALL
+  has_soothe_bell = pkmn.hasItem?(:SOOTHEBELL)
+  loop do
+    uses += 1
+    gain = [10, 5, 2][happiness / 100]
+    gain += bonus_per_use
+    gain = (gain * 1.5).floor if has_soothe_bell
+    happiness += gain
+    break if happiness >= 255
   end
-  return [ret, uses].max
+  return [uses, 1].max
 end
 
-def pbRaiseHappinessAndLowerEV(pkmn, scene, stat, qty, messages)
-  h = pkmn.happiness < 255
-  e = pkmn.ev[stat] > 0
-  if !h && !e
+# Pomeg-type berries used to lower EVs. They now only raise friendship.
+def pbRaiseHappinessAndLowerEV(pkmn, scene, _stat, qty, _messages)
+  if pkmn.happiness >= 255
     scene.pbDisplay(_INTL("It won't have any effect."))
     return false
   end
-  if h
-    qty.times { |i| pkmn.changeHappiness("evberry") }
-  end
-  if e
-    pkmn.ev[stat] -= 10 * qty
-    pkmn.ev[stat] = 0 if pkmn.ev[stat] < 0
-    pkmn.calc_stats
-  end
+  qty.times { |_i| pkmn.changeHappiness("evberry") }
   scene.pbRefresh
-  scene.pbDisplay(messages[2 - (h ? 0 : 2) - (e ? 0 : 1)])
+  scene.pbDisplay(_INTL("{1} became more friendly.", pkmn.name))
+  return true
+end
+
+def pbRaiseIV(pkmn, stat, amount = 1)
+  stat = GameData::Stat.get(stat).id
+  return 0 if pkmn.iv[stat] >= Pokemon::IV_STAT_LIMIT
+  gain = amount.clamp(0, Pokemon::IV_STAT_LIMIT - pkmn.iv[stat])
+  return 0 if gain <= 0
+  pkmn.iv[stat] += gain
+  pkmn.calc_stats
+  return gain
+end
+
+def pbMaxUsesOfIVRaisingItem(stat, amt_per_use, pkmn)
+  stat = GameData::Stat.get(stat).id
+  room = Pokemon::IV_STAT_LIMIT - pkmn.iv[stat]
+  return 0 if room <= 0
+  return [(room.to_f / amt_per_use).ceil, 1].max
+end
+
+def pbUseIVRaisingItem(stat, amt_per_use, qty, pkmn, scene)
+  ret = true
+  qty.times do |i|
+    if pbRaiseIV(pkmn, stat, amt_per_use) > 0
+      pkmn.changeHappiness("wing")
+    else
+      ret = false if i == 0
+      break
+    end
+  end
+  if !ret
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    return false
+  end
+  pbSEPlay("Use item in party")
+  scene.pbRefresh
+  stat_name = GameData::Stat.get(stat).name
+  scene.pbDisplay(_INTL("{1}'s {2} IV increased.", pkmn.name, stat_name))
   return true
 end
 

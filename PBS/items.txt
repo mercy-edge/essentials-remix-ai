@@ -3364,7 +3364,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base HP of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [PROTEIN]
 Name = Protein
@@ -3375,7 +3375,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Attack stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [IRON]
 Name = Iron
@@ -3386,7 +3386,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Defense stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [CALCIUM]
 Name = Calcium
@@ -3397,7 +3397,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Sp. Atk (Special Attack) stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [ZINC]
 Name = Zinc
@@ -3408,7 +3408,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Sp. Def (Special Defense) stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [CARBOS]
 Name = Carbos
@@ -3419,7 +3419,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Speed stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [HEALTHFEATHER]
 Name = Health Feather
@@ -3428,7 +3428,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base HP of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's HP IV by 1.
 #-------------------------------
 [MUSCLEFEATHER]
 Name = Muscle Feather
@@ -3437,7 +3437,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Attack stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Attack IV by 1.
 #-------------------------------
 [RESISTFEATHER]
 Name = Resist Feather
@@ -3446,7 +3446,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Defense stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Defense IV by 1.
 #-------------------------------
 [GENIUSFEATHER]
 Name = Genius Feather
@@ -3455,7 +3455,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Sp. Atk stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Sp. Atk IV by 1.
 #-------------------------------
 [CLEVERFEATHER]
 Name = Clever Feather
@@ -3464,7 +3464,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Sp. Def stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Sp. Def IV by 1.
 #-------------------------------
 [SWIFTFEATHER]
 Name = Swift Feather
@@ -3473,7 +3473,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Speed stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Speed IV by 1.
 #-------------------------------
 [LONELYMINT]
 Name = Lonely Mint
