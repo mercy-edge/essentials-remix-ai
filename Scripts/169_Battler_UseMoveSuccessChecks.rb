@@ -228,15 +228,15 @@ class Battle::Battler
         end
       end
     when :FROZEN
-      if !move.thawsUser?
-        if @battle.pbRandom(100) < 20
-          pbCureStatus
-        else
-          pbContinueStatus
-          PBDebug.log("[Move failed] #{pbThis} is frozen")
-          @lastMoveFailed = true
-          return false
-        end
+      # Ice Block. No random thaw, and thawing moves cannot be used.
+      self.statusCount -= 1
+      if @statusCount <= 0
+        pbCureStatus
+      else
+        pbContinueStatus
+        PBDebug.log("[Move failed] #{pbThis} is encased in ice")
+        @lastMoveFailed = true
+        return false
       end
     when :POLYMORPH
       woke = false
@@ -331,6 +331,12 @@ class Battle::Battler
     target.damageState.typeMod = typeMod
     # Two-turn attacks can't fail here in the charging turn
     return true if user.effects[PBEffects::TwoTurnAttack]
+    # Ice Block: the target is immune to every move while encased in ice.
+    if target.status == :FROZEN && user.index != target.index
+      PBDebug.log("[Target immune] #{target.pbThis} is encased in ice")
+      @battle.pbDisplay(_INTL("{1} is encased in ice!", target.pbThis)) if show_message
+      return false
+    end
     # Move-specific failures
     if move.pbFailsAgainstTarget?(user, target, show_message)
       PBDebug.log(sprintf("[Move failed] In function code %s's def pbFailsAgainstTarget?", move.function_code))

@@ -305,29 +305,30 @@ class Battle::Move::BurnFlinchTarget < Battle::Move
 end
 
 #===============================================================================
-# Freezes the target.
+# Frostbites the target. Class name kept so existing PBS FreezeTarget moves
+# inflict frostbite without a FunctionCode edit. (Ice Beam, Ice Punch, Powder Snow)
 #===============================================================================
 class Battle::Move::FreezeTarget < Battle::Move
   def canMagicCoat?; return true; end
 
   def pbFailsAgainstTarget?(user, target, show_message)
     return false if damagingMove?
-    return !target.pbCanFreeze?(user, show_message, self)
+    return !target.pbCanFrostbite?(user, show_message, self)
   end
 
   def pbEffectAgainstTarget(user, target)
     return if damagingMove?
-    target.pbFreeze
+    target.pbFrostbite(user)
   end
 
   def pbAdditionalEffect(user, target)
     return if target.damageState.substitute
-    target.pbFreeze if target.pbCanFreeze?(user, false, self)
+    target.pbFrostbite(user) if target.pbCanFrostbite?(user, false, self)
   end
 end
 
 #===============================================================================
-# Freezes the target. Effectiveness against Water-type is 2x. (Freeze-Dry)
+# Frostbites the target. Effectiveness against Water-type is 2x. (Freeze-Dry)
 #===============================================================================
 class Battle::Move::FreezeTargetSuperEffectiveAgainstWater < Battle::Move::FreezeTarget
   def pbCalcTypeModSingle(moveType, defType, user, target)
@@ -337,7 +338,7 @@ class Battle::Move::FreezeTargetSuperEffectiveAgainstWater < Battle::Move::Freez
 end
 
 #===============================================================================
-# Freezes the target. Accuracy perfect in snow. (Blizzard)
+# Frostbites the target. Accuracy perfect in snow. (Whiteout, stock Blizzard)
 #===============================================================================
 class Battle::Move::FreezeTargetAlwaysHitsInHail < Battle::Move::FreezeTarget
   def pbBaseAccuracy(user, target)
@@ -347,7 +348,7 @@ class Battle::Move::FreezeTargetAlwaysHitsInHail < Battle::Move::FreezeTarget
 end
 
 #===============================================================================
-# Freezes the target. May cause the target to flinch. (Ice Fang)
+# Frostbites the target. May cause the target to flinch. (Ice Fang)
 #===============================================================================
 class Battle::Move::FreezeFlinchTarget < Battle::Move
   def flinchingMove?; return true; end
@@ -356,22 +357,22 @@ class Battle::Move::FreezeFlinchTarget < Battle::Move
     return if target.damageState.substitute
     chance = pbAdditionalEffectChance(user, target, 10)
     return if chance == 0
-    if target.pbCanFreeze?(user, false, self) && @battle.pbRandom(100) < chance
-      target.pbFreeze
+    if target.pbCanFrostbite?(user, false, self) && @battle.pbRandom(100) < chance
+      target.pbFrostbite(user)
     end
     target.pbFlinch(user) if @battle.pbRandom(100) < chance
   end
 end
 
 #===============================================================================
-# Burns, freezes or paralyzes the target. (Tri Attack)
+# Burns, frostbites or paralyzes the target. (Tri Attack)
 #===============================================================================
 class Battle::Move::ParalyzeBurnOrFreezeTarget < Battle::Move
   def pbAdditionalEffect(user, target)
     return if target.damageState.substitute
     case @battle.pbRandom(3)
     when 0 then target.pbBurn(user) if target.pbCanBurn?(user, false, self)
-    when 1 then target.pbFreeze if target.pbCanFreeze?(user, false, self)
+    when 1 then target.pbFrostbite(user) if target.pbCanFrostbite?(user, false, self)
     when 2 then target.pbParalyze(user) if target.pbCanParalyze?(user, false, self)
     end
   end
@@ -412,9 +413,12 @@ class Battle::Move::GiveUserStatusToTarget < Battle::Move
     when :PARALYSIS
       target.pbParalyze(user)
       msg = _INTL("{1} was cured of paralysis.", user.pbThis)
+    when :FROSTBITE
+      target.pbFrostbite(user)
+      msg = _INTL("{1}'s frostbite was healed.", user.pbThis)
     when :FROZEN
       target.pbFreeze
-      msg = _INTL("{1} was thawed out.", user.pbThis)
+      msg = _INTL("{1} broke out of the ice!", user.pbThis)
     end
     if msg != ""
       user.pbCureStatus(false)
@@ -500,7 +504,9 @@ class Battle::Move::CureUserPartyStatus < Battle::Move
     when :PARALYSIS
       @battle.pbDisplay(_INTL("{1} was cured of paralysis.", curedName))
     when :FROZEN
-      @battle.pbDisplay(_INTL("{1} was thawed out.", curedName))
+      @battle.pbDisplay(_INTL("{1} broke out of the ice!", curedName))
+    when :FROSTBITE
+      @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", curedName))
     end
   end
 

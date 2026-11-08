@@ -354,7 +354,7 @@ class Battle::Move
     return ret if [0, 100].include?(ret)
     if @battle.pbWeather == :Hail &&
        (@function_code.include?("FrostbiteTarget") ||
-       (Settings::FREEZE_EFFECTS_CAUSE_FROSTBITE && @function_code.include?("FreezeTarget")))
+        @function_code.include?("FreezeTarget"))
       ret *= 2
     end
     return [ret, 100].min
@@ -422,10 +422,7 @@ class Battle::Move
         multipliers[:defense_multiplier] /= 1.5
       end
     end
-    # Frostbite
-    if user.status == :FROSTBITE && specialMove?
-      multipliers[:final_damage_multiplier] /= 2
-    end
+    # Frostbite's Special Attack penalty is applied once in the base damage calc.
     # Drowsy
     if target.status == :DROWSY
       multipliers[:final_damage_multiplier] *= 4 / 3.0

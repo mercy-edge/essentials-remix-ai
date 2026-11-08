@@ -38,6 +38,11 @@ class Battle
   def pbCanSwitchOut?(idxBattler, partyScene = nil)
     battler = @battlers[idxBattler]
     return true if battler.fainted?
+    # Ice Block prevents switching, including Shed Shell and similar effects.
+    if battler.status == :FROZEN
+      partyScene&.pbDisplay(_INTL("{1} is encased in ice and can't be switched out!", battler.pbThis))
+      return false
+    end
     # Ability/item effects that allow switching no matter what
     if battler.abilityActive? && Battle::AbilityEffects.triggerCertainSwitching(battler.ability, battler, self)
       return true

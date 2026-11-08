@@ -251,7 +251,7 @@ class Battle::Move::EffectDependsOnEnvironment < Battle::Move
       when :Rock, :Sand
         @secretPower = 8    # Mud-Slap, lower Acc by 1
       when :Snow, :Ice
-        @secretPower = 9    # Ice Shard, freeze
+        @secretPower = 9    # Ice Shard, frostbite
       when :Volcano
         @secretPower = 10   # Incinerate, burn
       when :Graveyard
@@ -284,7 +284,7 @@ class Battle::Move::EffectDependsOnEnvironment < Battle::Move
     when 0, 1
       target.pbParalyze(user) if target.pbCanParalyze?(user, false, self)
     when 9
-      target.pbFreeze if target.pbCanFreeze?(user, false, self)
+      target.pbFrostbite(user) if target.pbCanFrostbite?(user, false, self)
     when 5
       if target.pbCanLowerStatStage?(:ATTACK, user, self)
         target.pbLowerStatStage(:ATTACK, 1, user)

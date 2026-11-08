@@ -3049,7 +3049,7 @@ Price = 200
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine. It defrosts a Pokémon that has been frozen solid.
+Description = A spray-type medicine. It heals a Pokémon that is frostbitten.
 #-------------------------------
 [FULLHEAL]
 Name = Full Heal
@@ -4137,7 +4137,7 @@ Price = 20
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_ICE_80
-Description = It may be used or held by a Pokémon to defrost it.
+Description = It may be used or held by a Pokémon to cure frostbite.
 #-------------------------------
 [LEPPABERRY]
 Name = Leppa Berry
@@ -6804,7 +6804,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = FIREBALL
-Description = The user hurls a fireball at the target. It may lower the target's Attack and Sp. Atk.
+Description = 1.5× damage if the target is burned, and may burn (10%).
 #-------------------------------
 [TM118]
 Name = TM118
@@ -7002,7 +7002,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = ICEBEAM
-Description = The target is struck with an icy-cold beam of energy. It may also freeze the target solid.
+Description = The target is struck with an icy-cold beam of energy. It may also leave the target frostbitten.
 #-------------------------------
 [TM136]
 Name = TM136
@@ -7035,7 +7035,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = BLIZZARD
-Description = A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.
+Description = A howling blizzard is summoned to strike the opposing team. It may also leave them frostbitten.
 #-------------------------------
 [TM139]
 Name = TM139
@@ -7442,7 +7442,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = ICEPUNCH
-Description = The target is punched with an icy fist. It may also leave the target frozen.
+Description = The target is punched with an icy fist. It may also leave the target frostbitten.
 #-------------------------------
 [TM176]
 Name = TM176
@@ -8047,7 +8047,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = ICEFANG
-Description = The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen.
+Description = The user bites with cold-infused fangs. It may also make the target flinch or leave it frostbitten.
 #-------------------------------
 [TM231]
 Name = TM231
@@ -8213,7 +8213,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = FROSTBOLT
-Description = The user fires freezing magic that lowers the target's Sp. Atk.
+Description = A frost bolt strikes the target. This may also lower the target's Speed.
 #-------------------------------
 [TM246]
 Name = TM246
@@ -8478,3 +8478,113 @@ FieldUse = TR
 Flags = Fling_10
 Move = SUNDERARMOR
 Description = Sunders the target for 3 turns. While Sundered, its Defense and Special Defense are treated as -1 when it takes damage, even if those stats are boosted.
+#-------------------------------
+[TM270]
+Name = TM270
+NamePlural = TM270s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = ICEBLOCK
+Description = The user encases itself in ice and becomes Frozen. While Frozen it cannot attack or switch, is immune to all moves, and slowly regains HP each turn.
+#-------------------------------
+[TM271]
+Name = TM271
+NamePlural = TM271s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = FROSTNOVA
+Description = A burst of frost deals minor damage to opposing Pokémon and prevents them from switching out.
+#-------------------------------
+[TM272]
+Name = TM272
+NamePlural = TM272s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = CONEOFCOLD
+Description = The user exhales a cone of freezing air. This may frostbite opposing Pokémon.
+#-------------------------------
+[TM273]
+Name = TM273
+NamePlural = TM273s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = BLIZZARDSPELL
+Description = The user channels a blizzard that pelts opposing Pokémon with ice for 2 to 3 turns. Afterward, the user's Special Attack falls by 1 stage.
+#-------------------------------
+[TM274]
+Name = TM274
+NamePlural = TM274s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = POLYMORPH
+Description = The user transforms the target, inflicting the Polymorph status. A polymorphed Pokémon cannot move.
+#-------------------------------
+[TM275]
+Name = TM275
+NamePlural = TM275s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = ARCANEEXPLOSION
+Description = An explosion of arcane energy hits opposing Pokémon. Deals 1.5× damage if the target is disabled.
+#-------------------------------
+[TM276]
+Name = TM276
+NamePlural = TM276s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = EVOCATION
+Description = The user restores half the PP of its other moves and one third of its maximum HP.
+#-------------------------------
+[TM277]
+Name = TM277
+NamePlural = TM277s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = SCORCH
+Description = A searing flame with a high critical-hit ratio.
+#-------------------------------
+[TM278]
+Name = TM278
+NamePlural = TM278s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = PYROBLAST
+Description = A huge blast of fire. Power doubles if the user was hit this turn.
+#-------------------------------
+[TM279]
+Name = TM279
+NamePlural = TM279s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = BLASTWAVE
+Description = A wave of fire hits opposing Pokémon. This may also make them flinch.

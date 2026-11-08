@@ -122,7 +122,8 @@ class Battle::Move
   def targetsPosition?;     return false; end   # For Future Sight/Doom Desire
   def cannotRedirect?;      return false; end   # For Snipe Shot
   def worksWithNoTargets?;  return false; end   # For Explosion
-  def damageReducedByBurn?; return true;  end   # For Facade
+  def damageReducedByBurn?;      return true;  end   # For Facade
+  def damageReducedByFrostbite?; return true;  end   # For Facade
   def triggersHyperMode?;   return false; end
   def canSnatch?;           return false; end
   def canMagicCoat?;        return false; end

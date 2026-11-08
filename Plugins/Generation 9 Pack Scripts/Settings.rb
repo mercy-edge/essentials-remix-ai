@@ -75,7 +75,7 @@ module Settings
   # When true, makes status, abilities, and moves function like in Pokemon Champions.
   #-----------------------------------------------------------------------------
   # Updated Effects:
-  # -Freeze last up to 3 turns and 25% chance getting thaws.
+  # -Ice Block lasts 2 or 3 failed actions, then thaws. It does not randomly thaw.
   # -12.5% Fully Paralysis chances.
   # -Sleep last up to 2 turn, 1/3 chance to wake up at the 2nd turn.
   # -Healer ability 50% chance cures allies status condition
