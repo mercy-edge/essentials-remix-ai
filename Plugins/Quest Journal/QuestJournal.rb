@@ -33,6 +33,15 @@ module QuestJournal
   ID_HALLOWED_LETTER     = 7   # Priest → Priestess Anetta
   ID_GLYPHIC_LETTER      = 8   # Mage → Khelden Bremen
   ID_TAINTED_LETTER      = 9   # Warlock → Drusilla La Salle
+  # Marshal chain continuation after Investigate Echo Ridge.
+  ID_SKIRMISH_ECHO_RIDGE = 10
+  ID_REPORT_TO_GOLDSHIRE = 11
+  # Defias branch (Deputy Willem) after A Threat Within.
+  ID_BROTHERHOOD_OF_THIEVES = 12
+  ID_BOUNTY_GARRICK        = 13
+  ID_MILLY_OSWORTH         = 14
+  ID_MILLYS_HARVEST        = 15
+  ID_GRAPE_MANIFEST        = 16
 
   LETTER_QUEST_IDS = [
     ID_SIMPLE_LETTER, ID_CONSECRATED_LETTER, ID_ENCRYPTED_LETTER,
@@ -40,6 +49,9 @@ module QuestJournal
   ].freeze
 
   KOBOLD_TRAINERS_REQUIRED = 4
+  SKIRMISH_LABORERS_REQUIRED = 8
+  BROTHERHOOD_BANDANAS_REQUIRED = 8
+  MILLY_HARVEST_REQUIRED = 8
   # Lowest kobold scout NPC: one Lv.1 Pokémon chosen at battle start from this pool.
   KOBOLD_VERMIN_SPECIES_POOL = [
     :RATTATA,
@@ -47,6 +59,12 @@ module QuestJournal
     :NIDORANmA,
     :NIDORANfE,
     :CATERPIE
+  ].freeze
+  DEFIAS_THUG_SPECIES_POOL = [
+    :RATTATA,
+    :HOUNDOUR,
+    :POOCHYENA,
+    :ZUBAT
   ].freeze
 
   # ----- Overhead markers: checklist for EVERY NEW QUEST ---------------------------------
@@ -207,6 +225,283 @@ module QuestJournal
       turnin_npc_handlers: [:marshal_mcbride],
       turn_in_ready?: proc {
         QuestJournal.echo_ridge_workers_defeated >= QuestJournal::ECHO_RIDGE_WORKERS_REQUIRED
+      }
+    },
+    ID_SKIRMISH_ECHO_RIDGE => {
+      name:        proc { _INTL("Skirmish at Echo Ridge") },
+      objective:   proc {
+        pbQuestEnsureGlobals
+        n = $PokemonGlobal.quest_counters[QuestJournal::ID_SKIRMISH_ECHO_RIDGE].to_i
+        cap = QuestJournal::SKIRMISH_LABORERS_REQUIRED
+        _INTL("Defeat {1} / {2} kobold laborers in Echo Ridge Mine.", [n, cap].min, cap)
+      },
+      description: proc {
+        _INTL(
+          "Your previous investigations are proof that the Echo Ridge Mine needs purging. " \
+          "Return to the mine and help clear it of kobolds.\n" \
+          "Waste no time. The longer the kobolds are left unmolested in the mine, " \
+          "the deeper a foothold they gain in Northshire. Defeat at least {1} laborers, then report back.",
+          QuestJournal::SKIRMISH_LABORERS_REQUIRED
+        )
+      },
+      giver:       proc { _INTL("Marshal McBride") },
+      turnin:      proc { _INTL("Marshal McBride") },
+      marshal_offer: proc {
+        _INTL(
+          "Echo Ridge still crawls with laborers. Go back into the mine, put down at least {1}, " \
+          "and report when the shafts are quieter.",
+          QuestJournal::SKIRMISH_LABORERS_REQUIRED
+        )
+      },
+      progress_talk: proc {
+        _INTL("I know it's bloody work, but it's vital to the safety of Northshire. Are you ready to report?")
+      },
+      completion: proc {
+        _INTL(
+          "Once again, you have earned my respect, and the gratitude of the Stormwind Army. " \
+          "There may yet be kobolds in the mine, but I will marshal others against them. " \
+          "We have further tasks for you."
+        )
+      },
+      completion_party_exp: 100,
+      completion_money: 55,
+      completion_items: [[:POKEBALL, 5]],
+      offer_npc_handlers:  [:marshal_mcbride],
+      turnin_npc_handlers: [:marshal_mcbride],
+      turn_in_ready?: proc {
+        QuestJournal.skirmish_laborers_defeated >= QuestJournal::SKIRMISH_LABORERS_REQUIRED
+      }
+    },
+    ID_REPORT_TO_GOLDSHIRE => {
+      name:        proc { _INTL("Report to Goldshire") },
+      objective:   proc { _INTL("Deliver Marshal McBride's Documents to Marshal Dughan in Goldshire.") },
+      description: proc {
+        _INTL(
+          "You have proven your interest in the security of Northshire. " \
+          "You are now tasked with the protection of the surrounding Elwynn Forest.\n" \
+          "If you accept this duty, take these papers to Marshal Dughan in Goldshire. " \
+          "Goldshire lies along the southern road, past the border gates."
+        )
+      },
+      giver:       proc { _INTL("Marshal McBride") },
+      turnin:      proc { _INTL("Marshal Dughan") },
+      marshal_offer: proc {
+        _INTL(
+          "Carry my documents to Marshal Dughan in Goldshire. He'll put you to work protecting Elwynn."
+        )
+      },
+      progress_talk: proc {
+        _INTL("Dughan is waiting in Goldshire. Don't lose those documents.")
+      },
+      completion: proc {
+        _INTL(
+          "Well, it says here that you've been awarded Acting Deputy Status with the Stormwind Marshals. " \
+          "Congratulations.\n" \
+          "And good luck - keeping Elwynn safe is no picnic... what with most of the army busy " \
+          "doing who knows what for who knows which noble!"
+        )
+      },
+      completion_party_exp: 80,
+      completion_money: 50,
+      offer_npc_handlers:  [:marshal_mcbride],
+      turnin_npc_handlers: [:marshal_dughan],
+      turn_in_ready?: proc {
+        $bag && $bag.quantity(:MCBRIDEDOCUMENTS) >= 1
+      },
+      on_accept: proc {
+        QuestJournal.give_quest_item(:MCBRIDEDOCUMENTS, 1)
+      },
+      on_complete: proc {
+        QuestJournal.take_quest_item(:MCBRIDEDOCUMENTS, 99)
+      }
+    },
+    ID_BROTHERHOOD_OF_THIEVES => {
+      name:        proc { _INTL("Brotherhood of Thieves") },
+      objective:   proc {
+        n = ($bag ? $bag.quantity(:REDBURLAPBANDANA) : 0)
+        cap = QuestJournal::BROTHERHOOD_BANDANAS_REQUIRED
+        _INTL("Collect {1} / {2} Red Burlap Bandanas from Defias thugs.", [n, cap].min, cap)
+      },
+      description: proc {
+        _INTL(
+          "Recently, a new group of thieves has been hanging around Northshire. " \
+          "They call themselves the Defias Brotherhood, and have been seen across the river to the east.\n" \
+          "I don't know what they're up to, but I'm sure it's not good! " \
+          "Bring me {1} of the bandanas they wear, and I'll reward you.",
+          QuestJournal::BROTHERHOOD_BANDANAS_REQUIRED
+        )
+      },
+      giver:       proc { _INTL("Deputy Willem") },
+      turnin:      proc { _INTL("Deputy Willem") },
+      marshal_offer: proc {
+        _INTL(
+          "Defias thugs haunt the east bank. Bring me {1} Red Burlap Bandanas from their lot.",
+          QuestJournal::BROTHERHOOD_BANDANAS_REQUIRED
+        )
+      },
+      progress_talk: proc {
+        _INTL("Have you gathered those bandanas for me yet?")
+      },
+      completion: proc {
+        _INTL("Back with some bandanas, I see. The Stormwind Army appreciates your help.")
+      },
+      completion_party_exp: 90,
+      completion_money: 45,
+      completion_items: [[:POTION, 3]],
+      offer_npc_handlers:  [:deputy_willem],
+      turnin_npc_handlers: [:deputy_willem],
+      turn_in_ready?: proc {
+        $bag && $bag.quantity(:REDBURLAPBANDANA) >= QuestJournal::BROTHERHOOD_BANDANAS_REQUIRED
+      },
+      on_complete: proc {
+        QuestJournal.take_quest_item(:REDBURLAPBANDANA, QuestJournal::BROTHERHOOD_BANDANAS_REQUIRED)
+      }
+    },
+    ID_BOUNTY_GARRICK => {
+      name:        proc { _INTL("Bounty on Garrick Padfoot") },
+      objective:   proc { _INTL("Defeat Garrick Padfoot and bring proof to Deputy Willem.") },
+      description: proc {
+        _INTL(
+          "Garrick Padfoot - a cutthroat who's plagued our farmers and merchants for weeks - " \
+          "was seen at a shack near the vineyards, east of the Abbey and across the bridge.\n" \
+          "Bring me proof you've put him down, and earn his bounty! " \
+          "But be wary - Garrick has gathered thugs around him."
+        )
+      },
+      giver:       proc { _INTL("Deputy Willem") },
+      turnin:      proc { _INTL("Deputy Willem") },
+      marshal_offer: proc {
+        _INTL("Garrick Padfoot's bounty is yours if you can reach his shack and end him.")
+      },
+      progress_talk: proc {
+        _INTL("Did you find Garrick's shack? Are we finally free of that villain?")
+      },
+      completion: proc {
+        _INTL("Hah - you caught him! You've done Elwynn a great service, and earned a nice bounty!")
+      },
+      completion_party_exp: 110,
+      completion_money: 75,
+      completion_items: [[:SUPERPOTION, 2]],
+      offer_npc_handlers:  [:deputy_willem],
+      turnin_npc_handlers: [:deputy_willem],
+      turn_in_ready?: proc {
+        $bag && $bag.quantity(:GARRICKSHEAD) >= 1
+      },
+      on_complete: proc {
+        QuestJournal.take_quest_item(:GARRICKSHEAD, 99)
+      }
+    },
+    ID_MILLY_OSWORTH => {
+      name:        proc { _INTL("Milly Osworth") },
+      objective:   proc { _INTL("Speak with Milly Osworth near the stables behind Northshire Abbey.") },
+      description: proc {
+        _INTL(
+          "You've shown yourself dependable - and not afraid to get your hands dirty.\n" \
+          "I have a friend, Milly Osworth, who's in some trouble. " \
+          "She's over with her wagon on the other side of the abbey, near the stable. " \
+          "I'm sure she could use a pair of hands like yours."
+        )
+      },
+      giver:       proc { _INTL("Deputy Willem") },
+      turnin:      proc { _INTL("Milly Osworth") },
+      marshal_offer: proc {
+        _INTL("Milly Osworth needs help by the stables. Go see her when you can.")
+      },
+      completion: proc {
+        _INTL(
+          "Oh, Deputy Willem told you to speak with me? He's a brave man and always willing to help, " \
+          "but his duties keep him stuck at Northshire Abbey and I'm afraid the problem I have today is beyond him.\n" \
+          "Perhaps you can help me?"
+        )
+      },
+      completion_party_exp: 40,
+      offer_npc_handlers:  [:deputy_willem],
+      turnin_npc_handlers: [:milly_osworth],
+      turn_in_ready?: proc { true }
+    },
+    ID_MILLYS_HARVEST => {
+      name:        proc { _INTL("Milly's Harvest") },
+      objective:   proc {
+        n = ($bag ? $bag.quantity(:MILLYSHARVEST) : 0)
+        cap = QuestJournal::MILLY_HARVEST_REQUIRED
+        _INTL("Collect {1} / {2} crates of Milly's Harvest from the vineyards.", [n, cap].min, cap)
+      },
+      description: proc {
+        _INTL(
+          "A gang of brigands, the Defias, moved into the Northshire Vineyards while I was harvesting! " \
+          "I reported it to the guards, but I'm afraid for my crop of grapes.\n" \
+          "I gathered most of my grapes into crates, but I left them in the vineyards to the southeast. " \
+          "Bring me {1} of those crates! Save my harvest!",
+          QuestJournal::MILLY_HARVEST_REQUIRED
+        )
+      },
+      giver:       proc { _INTL("Milly Osworth") },
+      turnin:      proc { _INTL("Milly Osworth") },
+      marshal_offer: proc {
+        _INTL(
+          "Please - recover {1} harvest crates from the vineyards before the Defias ruin everything!",
+          QuestJournal::MILLY_HARVEST_REQUIRED
+        )
+      },
+      progress_talk: proc {
+        _INTL("Do you have my harvest?")
+      },
+      completion: proc {
+        _INTL(
+          "Oh thank you! You saved my harvest! And I hope you showed a few of those Defias " \
+          "that they can't cause trouble around here.\n" \
+          "Take this Grape Manifest to Brother Neals in the abbey bell tower - he'll be delighted."
+        )
+      },
+      completion_party_exp: 85,
+      completion_money: 40,
+      offer_npc_handlers:  [:milly_osworth],
+      turnin_npc_handlers: [:milly_osworth],
+      turn_in_ready?: proc {
+        $bag && $bag.quantity(:MILLYSHARVEST) >= QuestJournal::MILLY_HARVEST_REQUIRED
+      },
+      on_complete: proc {
+        QuestJournal.take_quest_item(:MILLYSHARVEST, QuestJournal::MILLY_HARVEST_REQUIRED)
+        QuestJournal.give_quest_item(:GRAPEMANIFEST, 1)
+      }
+    },
+    ID_GRAPE_MANIFEST => {
+      name:        proc { _INTL("Grape Manifest") },
+      objective:   proc { _INTL("Deliver the Grape Manifest to Brother Neals in Northshire Abbey.") },
+      description: proc {
+        _INTL(
+          "Now that my crop is saved, take this Grape Manifest to Brother Neals. " \
+          "He manages the store of food and drink in Northshire, and I'm sure he'll be delighted " \
+          "to hear that he has fresh grapes.\n" \
+          "You'll find Brother Neals in the abbey, in the bell tower... where he likes to taste his wine."
+        )
+      },
+      giver:       proc { _INTL("Milly Osworth") },
+      turnin:      proc { _INTL("Brother Neals") },
+      marshal_offer: proc {
+        _INTL("Please take the Grape Manifest to Brother Neals in the abbey.")
+      },
+      progress_talk: proc {
+        _INTL("Brother Neals is in the abbey - don't keep him waiting on those grapes.")
+      },
+      completion: proc {
+        _INTL(
+          "Let's see here...\n" \
+          "Oh my! Milly's grapes have been saved! When she told me that brigands overran her vineyards " \
+          "I nearly despaired, but my faith in the Light did not waver!\n" \
+          "And through your bravery, we now have grapes for more wine! May the Light bless you."
+        )
+      },
+      completion_party_exp: 90,
+      completion_money: 50,
+      completion_items: [[:POTION, 5]],
+      offer_npc_handlers:  [:milly_osworth],
+      turnin_npc_handlers: [:brother_neals],
+      turn_in_ready?: proc {
+        $bag && $bag.quantity(:GRAPEMANIFEST) >= 1
+      },
+      on_complete: proc {
+        QuestJournal.take_quest_item(:GRAPEMANIFEST, 99)
       }
     },
     ID_SIMPLE_LETTER => {
@@ -402,9 +697,24 @@ module QuestJournal
   def self.marshal_hub_pickup_quest_ids
     out = []
     out.push(ID_INVESTIGATE_ECHO_RIDGE) if offer_available?(ID_INVESTIGATE_ECHO_RIDGE)
+    out.push(ID_SKIRMISH_ECHO_RIDGE) if offer_available?(ID_SKIRMISH_ECHO_RIDGE)
+    out.push(ID_REPORT_TO_GOLDSHIRE) if offer_available?(ID_REPORT_TO_GOLDSHIRE)
     lq = letter_quest_id_for_current_player
     out.push(lq) if lq && offer_available?(lq)
     out
+  end
+
+  # Deputy Willem Defias hub pickups.
+  def self.deputy_hub_pickup_quest_ids
+    out = []
+    out.push(ID_BROTHERHOOD_OF_THIEVES) if offer_available?(ID_BROTHERHOOD_OF_THIEVES)
+    out.push(ID_BOUNTY_GARRICK) if offer_available?(ID_BOUNTY_GARRICK)
+    out.push(ID_MILLY_OSWORTH) if offer_available?(ID_MILLY_OSWORTH)
+    out
+  end
+
+  def self.deputy_hub_has_pending_pickups?
+    deputy_hub_pickup_quest_ids.any?
   end
 
   def self.marshal_hub_has_pending_pickups?
@@ -453,6 +763,29 @@ module QuestJournal
     $PokemonGlobal.quest_counters[ID_INVESTIGATE_ECHO_RIDGE].to_i
   end
 
+  def self.skirmish_laborers_defeated
+    pbQuestEnsureGlobals
+    $PokemonGlobal.quest_counters ||= {}
+    $PokemonGlobal.quest_counters[ID_SKIRMISH_ECHO_RIDGE].to_i
+  end
+
+  def self.give_quest_item(item_id, qty = 1)
+    return false if !$bag || qty < 1
+    item = GameData::Item.try_get(item_id)
+    return false unless item
+    $bag.add(item, qty)
+  end
+
+  def self.take_quest_item(item_id, qty = 1)
+    return false if !$bag || qty < 1
+    item = GameData::Item.try_get(item_id)
+    return false unless item
+    have = $bag.quantity(item)
+    return false if have < 1
+    $bag.remove(item, [qty, have].min)
+    true
+  end
+
   # True when this quest can still be picked up (map ! icon on giver NPCs).
   # New quests: add a `when YOUR_ID` branch if pickup is gated; else the default is false.
   def self.offer_available?(quest_id)
@@ -465,6 +798,18 @@ module QuestJournal
       pbQuestDone?(ID_MARSHAL_MEET)
     when ID_INVESTIGATE_ECHO_RIDGE
       pbQuestDone?(ID_KOBOLD_CLEANUP)
+    when ID_SKIRMISH_ECHO_RIDGE
+      pbQuestDone?(ID_INVESTIGATE_ECHO_RIDGE)
+    when ID_REPORT_TO_GOLDSHIRE
+      pbQuestDone?(ID_SKIRMISH_ECHO_RIDGE)
+    when ID_BROTHERHOOD_OF_THIEVES
+      pbQuestDone?(ID_MARSHAL_MEET)
+    when ID_BOUNTY_GARRICK, ID_MILLY_OSWORTH
+      pbQuestDone?(ID_BROTHERHOOD_OF_THIEVES)
+    when ID_MILLYS_HARVEST
+      pbQuestDone?(ID_MILLY_OSWORTH)
+    when ID_GRAPE_MANIFEST
+      pbQuestDone?(ID_MILLYS_HARVEST)
     when ID_SIMPLE_LETTER, ID_CONSECRATED_LETTER, ID_ENCRYPTED_LETTER,
          ID_HALLOWED_LETTER, ID_GLYPHIC_LETTER, ID_TAINTED_LETTER
       pbQuestDone?(ID_KOBOLD_CLEANUP) && letter_quest_id_for_current_player == quest_id
@@ -489,9 +834,10 @@ module QuestJournal
     false
   end
 
-  # Symbols used in RPG Maker Script: NorthshireAbbeyEvents.run(:deputy_willem).
+  # Symbols used in RPG Maker Script: NorthshireAbbeyEvents.run(:deputy_willem)
+  # or ElwynnForestEvents.run(:marshal_dughan).
   # Matches after merging consecutive Script commands (355 / 655), same as the Interpreter.
-  NPC_RUN_SCRIPT_PATTERN = /NorthshireAbbeyEvents\.run\s*\(\s*:(\w+)/
+  NPC_RUN_SCRIPT_PATTERN = /(?:NorthshireAbbeyEvents|ElwynnForestEvents)\.run\s*\(\s*:(\w+)/
 
   EVENT_SCRIPT_COMMAND_CODES = [355, 655].freeze
 
@@ -862,6 +1208,9 @@ module QuestJournal
   def self.apply_completion_rewards(quest_id)
     return if !$player
 
+    hook = DEFINITIONS[quest_id] && DEFINITIONS[quest_id][:on_complete]
+    hook.call if hook.respond_to?(:call)
+
     lines = completion_reward_summary_lines(quest_id)
     pbShowQuestRewardsPopup(lines) if lines.any?
 
@@ -950,8 +1299,23 @@ end
 
 #-------------------------------------------------------------------------------
 # Echo Ridge Mine interior (map 033): kobold laborers — 1–2 Pokémon at level 3.
+# Counts for Skirmish at Echo Ridge when that quest is active.
 # Script: NorthshireAbbeyEvents.run(:kobold_laborer)
 #-------------------------------------------------------------------------------
+def pbReportSkirmishLaborerDefeat
+  pbQuestEnsureGlobals
+  qid = QuestJournal::ID_SKIRMISH_ECHO_RIDGE
+  return if !pbQuestActive?(qid)
+  $PokemonGlobal.quest_counters ||= {}
+  prev = $PokemonGlobal.quest_counters[qid].to_i
+  cap  = QuestJournal::SKIRMISH_LABORERS_REQUIRED
+  $PokemonGlobal.quest_counters[qid] = [prev + 1, cap].min
+  n = $PokemonGlobal.quest_counters[qid]
+  if n >= cap
+    pbMessage(_INTL("You've cleared enough kobold laborers. Report to Marshal McBride."))
+  end
+end
+
 def pbBattleEchoRidgeMineLaborer
   pool = [:DIGLETT, :ZUBAT, :RATTATA, :SPINARAK]
   n = rand(2) + 1
@@ -959,7 +1323,107 @@ def pbBattleEchoRidgeMineLaborer
   n.times do
     trainer.party.push(Pokemon.new(pool.sample, 3, trainer))
   end
-  TrainerBattle.start(trainer)
+  won = TrainerBattle.start(trainer)
+  pbReportSkirmishLaborerDefeat if won
+  won
+end
+
+#-------------------------------------------------------------------------------
+# Defias thug (map 076 east): drops a Red Burlap Bandana while Brotherhood is active.
+# Script: NorthshireAbbeyEvents.run(:defias_thug)
+#-------------------------------------------------------------------------------
+def pbBattleDefiasThug
+  qid = QuestJournal::ID_BROTHERHOOD_OF_THIEVES
+  unless pbQuestActive?(qid) || pbQuestDone?(qid)
+    pbMessage(_INTL("The Defias thug eyes you warily, then slips away."))
+    return false
+  end
+
+  species = QuestJournal::DEFIAS_THUG_SPECIES_POOL.sample
+  trainer = KoboldVerminTrainer.new(_INTL("Defias Thug"), :DEFIAS_M, 0)
+  trainer.party.push(Pokemon.new(species, rand(2..3), trainer))
+  won = TrainerBattle.start(trainer)
+  if won && pbQuestActive?(qid)
+    if QuestJournal.give_quest_item(:REDBURLAPBANDANA, 1)
+      pbMessage(_INTL("You recovered a Red Burlap Bandana."))
+      have = $bag.quantity(:REDBURLAPBANDANA)
+      cap = QuestJournal::BROTHERHOOD_BANDANAS_REQUIRED
+      if have >= cap
+        pbMessage(_INTL("That's enough bandanas. Report to Deputy Willem."))
+      end
+    end
+  end
+  won
+end
+
+#-------------------------------------------------------------------------------
+# Garrick Padfoot bounty target. Script: NorthshireAbbeyEvents.run(:garrick_padfoot)
+#-------------------------------------------------------------------------------
+def pbBattleGarrickPadfoot
+  qid = QuestJournal::ID_BOUNTY_GARRICK
+  unless pbQuestActive?(qid)
+    if pbQuestDone?(qid)
+      pbMessage(_INTL("Garrick's shack is quiet now."))
+    else
+      pbMessage(_INTL("A mean-looking cutthroat watches from the shack. Best speak with Deputy Willem first."))
+    end
+    return false
+  end
+  if $bag && $bag.quantity(:GARRICKSHEAD) >= 1
+    pbMessage(_INTL("You already have proof of Garrick's defeat. Take it to Deputy Willem."))
+    return false
+  end
+
+  trainer = KoboldVerminTrainer.new(_INTL("Garrick Padfoot"), :DEFIAS_M, 0)
+  trainer.party.push(Pokemon.new(:HOUNDOUR, 5, trainer))
+  trainer.party.push(Pokemon.new(:RATTATA, 4, trainer))
+  won = TrainerBattle.start(trainer)
+  if won
+    if QuestJournal.give_quest_item(:GARRICKSHEAD, 1)
+      pbMessage(_INTL("You claim Garrick Padfoot's bounty proof."))
+    end
+    if pbMapInterpreterRunning?
+      ev = pbMapInterpreter.get_self
+      if ev.respond_to?(:id) && ev.id && $game_map
+        $game_self_switches[[$game_map.map_id, ev.id, "A"]] = true
+        $game_map.need_refresh = true
+      end
+    end
+  end
+  won
+end
+
+#-------------------------------------------------------------------------------
+# Vineyard harvest crate. Script: NorthshireAbbeyEvents.run(:harvest_crate)
+#-------------------------------------------------------------------------------
+def pbCollectMillyHarvestCrate
+  qid = QuestJournal::ID_MILLYS_HARVEST
+  unless pbQuestActive?(qid)
+    pbMessage(_INTL("A crate of grapes sits among the vines."))
+    return false
+  end
+  have = $bag ? $bag.quantity(:MILLYSHARVEST) : 0
+  cap = QuestJournal::MILLY_HARVEST_REQUIRED
+  if have >= cap
+    pbMessage(_INTL("You already have enough of Milly's harvest."))
+    return false
+  end
+  unless QuestJournal.give_quest_item(:MILLYSHARVEST, 1)
+    pbMessage(_INTL("Your Bag is full."))
+    return false
+  end
+  pbMessage(_INTL("You recovered a crate of Milly's Harvest."))
+  if $bag.quantity(:MILLYSHARVEST) >= cap
+    pbMessage(_INTL("That's the last crate. Return to Milly Osworth."))
+  end
+  if pbMapInterpreterRunning?
+    ev = pbMapInterpreter.get_self
+    if ev.respond_to?(:id) && ev.id && $game_map
+      $game_self_switches[[$game_map.map_id, ev.id, "A"]] = true
+      $game_map.need_refresh = true
+    end
+  end
+  true
 end
 
 #-------------------------------------------------------------------------------
@@ -1039,6 +1503,12 @@ def pbQuestAccept(id)
     $PokemonGlobal.quest_counters[QuestJournal::ID_KOBOLD_CLEANUP] = 0
   elsif id == QuestJournal::ID_INVESTIGATE_ECHO_RIDGE
     $PokemonGlobal.quest_counters[QuestJournal::ID_INVESTIGATE_ECHO_RIDGE] = 0
+  elsif id == QuestJournal::ID_SKIRMISH_ECHO_RIDGE
+    $PokemonGlobal.quest_counters[QuestJournal::ID_SKIRMISH_ECHO_RIDGE] = 0
+  end
+  ent = QuestJournal::DEFINITIONS[id]
+  if ent && ent[:on_accept].respond_to?(:call)
+    ent[:on_accept].call
   end
   true
 end

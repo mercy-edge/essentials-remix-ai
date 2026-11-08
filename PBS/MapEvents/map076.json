@@ -870,7 +870,910 @@
           "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkRjoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
         }
       ]
+    },
+    "260": {
+      "id": 260,
+      "name": "Defias Thug",
+      "x": 18,
+      "y": 18,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 12",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:hostile"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:defias_thug)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 3,
+            "frequency": 3
+          }
+        }
+      ]
+    },
+    "261": {
+      "id": 261,
+      "name": "Defias Thug",
+      "x": 20,
+      "y": 20,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 12",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:hostile"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:defias_thug)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 3,
+            "frequency": 3
+          }
+        }
+      ]
+    },
+    "262": {
+      "id": 262,
+      "name": "Defias Thug",
+      "x": 22,
+      "y": 17,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 12",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:hostile"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:defias_thug)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 3,
+            "frequency": 3
+          }
+        }
+      ]
+    },
+    "263": {
+      "id": 263,
+      "name": "Defias Thug",
+      "x": 19,
+      "y": 22,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 12",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:hostile"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:defias_thug)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 3,
+            "frequency": 3
+          }
+        }
+      ]
+    },
+    "264": {
+      "id": 264,
+      "name": "Defias Thug",
+      "x": 21,
+      "y": 19,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 12",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:hostile"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:defias_thug)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 3,
+            "frequency": 3
+          }
+        }
+      ]
+    },
+    "266": {
+      "id": 266,
+      "name": "Garrick Padfoot",
+      "x": 24,
+      "y": 21,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 14",
+            "character_hue": 40,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:5"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:hostile"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:garrick_padfoot)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        },
+        {
+          "graphic": {
+            "character_name": "NPC 10",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "pbMessage(_INTL("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "\"Garrick won't trouble Northshire again.\""
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "))"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "267": {
+      "id": 267,
+      "name": "Milly Osworth",
+      "x": 11,
+      "y": 17,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 03",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:friendly"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:milly_osworth)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        }
+      ]
+    },
+    "268": {
+      "id": 268,
+      "name": "Harvest Crate",
+      "x": 16,
+      "y": 21,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:harvest_crate)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": true,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "269": {
+      "id": 269,
+      "name": "Harvest Crate",
+      "x": 17,
+      "y": 22,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:harvest_crate)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": true,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "270": {
+      "id": 270,
+      "name": "Harvest Crate",
+      "x": 18,
+      "y": 23,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:harvest_crate)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": true,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "271": {
+      "id": 271,
+      "name": "Harvest Crate",
+      "x": 19,
+      "y": 21,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:harvest_crate)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": true,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "272": {
+      "id": 272,
+      "name": "Harvest Crate",
+      "x": 20,
+      "y": 23,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:harvest_crate)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": true,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "273": {
+      "id": 273,
+      "name": "Harvest Crate",
+      "x": 21,
+      "y": 22,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:harvest_crate)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": true,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "274": {
+      "id": 274,
+      "name": "Harvest Crate",
+      "x": 22,
+      "y": 20,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:harvest_crate)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": true,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
+    },
+    "275": {
+      "id": 275,
+      "name": "Harvest Crate",
+      "x": 23,
+      "y": 22,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "Object ball",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:harvest_crate)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        },
+        {
+          "graphic": {
+            "character_name": "",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": false,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": true,
+          "always_on_top": false,
+          "list": [
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "condition_b64": "BAhvOiBSUEc6OkV2ZW50OjpQYWdlOjpDb25kaXRpb24OOhNAc3dpdGNoMl92YWxpZEY6FEBzZWxmX3N3aXRjaF9jaEkiBkEGOgZFVDoQQHN3aXRjaDFfaWRpBjoTQHN3aXRjaDFfdmFsaWRGOhRAdmFyaWFibGVfdmFsdWVpADoXQHNlbGZfc3dpdGNoX3ZhbGlkVDoRQHZhcmlhYmxlX2lkaQY6FEB2YXJpYWJsZV92YWxpZEY6EEBzd2l0Y2gyX2lkaQY="
+        }
+      ]
     }
   }
 }
-

@@ -139,6 +139,11 @@ module NorthshireAbbeyEvents
     when :inn_hearthstone then inn_hearthstone
     when :kobold_worker   then kobold_worker
     when :kobold_laborer  then kobold_laborer
+    when :defias_thug     then defias_thug
+    when :garrick_padfoot then garrick_padfoot
+    when :harvest_crate   then harvest_crate
+    when :milly_osworth   then milly_osworth
+    when :brother_neals   then brother_neals
     when :reinforcement_test_trainer then reinforcement_test_trainer
     when :llane_beshere,
          :brother_sammuel,
@@ -161,6 +166,18 @@ module NorthshireAbbeyEvents
   # Echo Ridge Mine (map 033): challengeable kobold NPCs, Lv.3 teams of 1–2 Pokémon.
   def self.kobold_laborer
     pbBattleEchoRidgeMineLaborer
+  end
+
+  def self.defias_thug
+    pbBattleDefiasThug
+  end
+
+  def self.garrick_padfoot
+    pbBattleGarrickPadfoot
+  end
+
+  def self.harvest_crate
+    pbCollectMillyHarvestCrate
   end
 
   # Script: NorthshireAbbeyEvents.run(:reinforcement_test_trainer)
@@ -203,30 +220,118 @@ module NorthshireAbbeyEvents
   # Script: NorthshireAbbeyEvents.run(:deputy_willem)
   def self.deputy_willem
     qid = QuestJournal::ID_MARSHAL_MEET
+    q_bro = QuestJournal::ID_BROTHERHOOD_OF_THIEVES
+    q_gar = QuestJournal::ID_BOUNTY_GARRICK
     cname = pbGetPlayerClassDisplayName
-    if pbQuestDone?(qid)
-      pbMessage(_INTL("Thanks again for seeing Marshal McBride, {1}. Stormwind remembers.", cname))
-      return
-    end
+
     if pbQuestActive?(qid)
       pbMessage(_INTL("{1}, Marshal McBride is still expecting you. Don't keep him waiting.", cname))
       return
     end
 
-    dbg = pbQuestDebugOfferChoice(qid)
-    return if dbg == :cancel
-    pbBeginQuestOfferIntro(qid, dbg)
-    if dbg == :auto_accept
-      pbQuestAccept(qid)
-      pbMessage(_INTL("It's in your quest log. Good hunting."))
+    if !pbQuestDone?(qid) && QuestJournal.offer_available?(qid)
+      dbg = pbQuestDebugOfferChoice(qid)
+      return if dbg == :cancel
+      pbBeginQuestOfferIntro(qid, dbg)
+      if dbg == :auto_accept
+        pbQuestAccept(qid)
+        pbMessage(_INTL("It's in your quest log. Good hunting."))
+        return
+      end
+      dtext = QuestJournal.description_text(qid)
+      pbMessage(dtext) if dtext
+      cmd = pbShowCommands(nil, [_INTL("I'll go see him."), _INTL("Maybe later.")], 2)
+      if cmd == 0 && pbQuestAccept(qid)
+        pbMessage(_INTL("It's in your quest log. Good hunting."))
+      end
       return
     end
 
-    dtext = QuestJournal.description_text(qid)
-    pbMessage(dtext) if dtext
-    cmd = pbShowCommands(nil, [_INTL("I'll go see him."), _INTL("Maybe later.")], 2)
-    if cmd == 0 && pbQuestAccept(qid)
-      pbMessage(_INTL("It's in your quest log. Good hunting."))
+    # Active Defias turn-ins
+    if pbQuestActive?(q_bro)
+      if QuestJournal.turn_in_ready?(q_bro)
+        cmsg = QuestJournal.completion_text(q_bro)
+        pbMessage(cmsg) if cmsg
+        pbQuestComplete(q_bro)
+        deputy_post_brotherhood_hub
+        return
+      end
+      pt = QuestJournal.progress_talk_text(q_bro)
+      pbMessage(pt) if pt
+      return
+    end
+
+    if pbQuestActive?(q_gar)
+      if QuestJournal.turn_in_ready?(q_gar)
+        cmsg = QuestJournal.completion_text(q_gar)
+        pbMessage(cmsg) if cmsg
+        pbQuestComplete(q_gar)
+        return
+      end
+      pt = QuestJournal.progress_talk_text(q_gar)
+      pbMessage(pt) if pt
+      return
+    end
+
+    return if deputy_try_offer_brotherhood
+
+    if QuestJournal.deputy_hub_has_pending_pickups?
+      pbMessage(_INTL("There's more work against the Defias if you're willing, {1}.", cname))
+      deputy_hub_loop
+      return
+    end
+
+    if pbQuestDone?(q_bro)
+      pbMessage(_INTL("Thanks again for helping with the Defias, {1}. Stormwind remembers.", cname))
+    elsif pbQuestDone?(qid)
+      pbMessage(_INTL("Thanks again for seeing Marshal McBride, {1}. Stormwind remembers.", cname))
+    else
+      pbMessage(_INTL("If you're looking for work, speak with me once you've reported to the Marshal."))
+    end
+  end
+
+  def self.deputy_try_offer_brotherhood
+    q_bro = QuestJournal::ID_BROTHERHOOD_OF_THIEVES
+    return false unless QuestJournal.offer_available?(q_bro)
+
+    dbg = pbQuestDebugOfferChoice(q_bro)
+    return false if dbg == :cancel
+    pbBeginQuestOfferIntro(q_bro, dbg)
+    if dbg == :auto_accept
+      if pbQuestAccept(q_bro)
+        pbMessage(_INTL("It's in your quest log. Bring me those bandanas."))
+      end
+      return true
+    end
+    offer = QuestJournal.marshal_offer_text(q_bro)
+    offer ||= QuestJournal.description_text(q_bro)
+    pbMessage(offer) if offer
+    cmd = pbShowCommands(nil, [_INTL("I'll handle it."), _INTL("Not right now.")], 2)
+    if cmd == 0 && pbQuestAccept(q_bro)
+      pbMessage(_INTL("It's in your quest log. Bring me those bandanas."))
+    end
+    true
+  end
+
+  def self.deputy_post_brotherhood_hub
+    pbMessage(_INTL(
+      "With the Defias marked, I've got more for you - Milly needs hands by the stables, " \
+      "and there's a bounty on Garrick Padfoot."
+    ))
+    deputy_hub_loop
+  end
+
+  def self.deputy_hub_loop
+    loop do
+      ids = QuestJournal.deputy_hub_pickup_quest_ids
+      return if ids.empty?
+
+      pick = pbQuestOfferChooseQuestId(ids)
+      return if pick.nil?
+
+      pbQuestOfferSingleQuestFromNpc(pick,
+                                     accept_label: _INTL("I'll handle it."),
+                                     decline_label: _INTL("Another task first."))
     end
   end
 
@@ -235,6 +340,8 @@ module NorthshireAbbeyEvents
     q1 = QuestJournal::ID_MARSHAL_MEET
     q2 = QuestJournal::ID_KOBOLD_CLEANUP
     q_echo = QuestJournal::ID_INVESTIGATE_ECHO_RIDGE
+    q_skirmish = QuestJournal::ID_SKIRMISH_ECHO_RIDGE
+    q_gold = QuestJournal::ID_REPORT_TO_GOLDSHIRE
 
     if pbQuestActive?(q1)
       cmsg = QuestJournal.completion_text(q1)
@@ -263,6 +370,7 @@ module NorthshireAbbeyEvents
         cmsg_e = QuestJournal.completion_text(q_echo)
         pbMessage(cmsg_e) if cmsg_e
         pbQuestComplete(q_echo)
+        marshal_try_offer_skirmish
       else
         pt_e = QuestJournal.progress_talk_text(q_echo)
         pbMessage(pt_e) if pt_e
@@ -270,15 +378,38 @@ module NorthshireAbbeyEvents
       return
     end
 
+    if pbQuestActive?(q_skirmish)
+      if QuestJournal.turn_in_ready?(q_skirmish)
+        cmsg_s = QuestJournal.completion_text(q_skirmish)
+        pbMessage(cmsg_s) if cmsg_s
+        pbQuestComplete(q_skirmish)
+        marshal_try_offer_report_goldshire
+      else
+        pt_s = QuestJournal.progress_talk_text(q_skirmish)
+        pbMessage(pt_s) if pt_s
+      end
+      return
+    end
+
+    if pbQuestActive?(q_gold)
+      pt_g = QuestJournal.progress_talk_text(q_gold)
+      pbMessage(pt_g) if pt_g
+      return
+    end
+
     return if marshal_try_offer_kobold_quest
+    return if marshal_try_offer_skirmish
+    return if marshal_try_offer_report_goldshire
 
     if QuestJournal.marshal_hub_has_pending_pickups?
-      pbMessage(_INTL("There's still work - the ridge, or sealed orders from the Abbey. What do you need?"))
+      pbMessage(_INTL("There's still work - the ridge, Goldshire orders, or sealed letters. What do you need?"))
       marshal_post_kobold_hub_loop
       return
     end
 
-    if pbQuestDone?(q2)
+    if pbQuestDone?(q_gold)
+      pbMessage(_INTL("Dughan has your orders now. Elwynn needs you, {1}.", pbGetPlayerClassDisplayName))
+    elsif pbQuestDone?(q2)
       pbMessage(_INTL("Stormwind appreciates your vigilance, {1}. Keep your guard up.", pbGetPlayerClassDisplayName))
     elsif !pbQuestDone?(q1)
       pbMessage(_INTL("If you're looking for work, Deputy Willem assigns bounties at the abbey."))
@@ -312,6 +443,161 @@ module NorthshireAbbeyEvents
       pbQuestOfferSingleQuestFromNpc(pick,
                                      accept_label: _INTL("I'll handle it."),
                                      decline_label: _INTL("Another task first."))
+    end
+  end
+
+  def self.marshal_try_offer_skirmish
+    q = QuestJournal::ID_SKIRMISH_ECHO_RIDGE
+    return false unless QuestJournal.offer_available?(q)
+
+    dbg = pbQuestDebugOfferChoice(q)
+    return false if dbg == :cancel
+    pbBeginQuestOfferIntro(q, dbg)
+    if dbg == :auto_accept
+      if pbQuestAccept(q)
+        pbMessage(_INTL("It's in your quest log. Clear those laborers."))
+      end
+      return true
+    end
+    offer = QuestJournal.marshal_offer_text(q)
+    pbMessage(offer) if offer
+    cmd = pbShowCommands(nil, [_INTL("I'll handle it."), _INTL("Not right now.")], 2)
+    if cmd == 0 && pbQuestAccept(q)
+      pbMessage(_INTL("It's in your quest log. Clear those laborers."))
+    end
+    true
+  end
+
+  def self.marshal_try_offer_report_goldshire
+    q = QuestJournal::ID_REPORT_TO_GOLDSHIRE
+    return false unless QuestJournal.offer_available?(q)
+
+    dbg = pbQuestDebugOfferChoice(q)
+    return false if dbg == :cancel
+    pbBeginQuestOfferIntro(q, dbg)
+    if dbg == :auto_accept
+      if pbQuestAccept(q)
+        pbMessage(_INTL("Take my documents to Marshal Dughan in Goldshire."))
+      end
+      return true
+    end
+    offer = QuestJournal.marshal_offer_text(q)
+    pbMessage(offer) if offer
+    cmd = pbShowCommands(nil, [_INTL("I'll deliver them."), _INTL("Not right now.")], 2)
+    if cmd == 0 && pbQuestAccept(q)
+      pbMessage(_INTL("Take my documents to Marshal Dughan in Goldshire."))
+    end
+    true
+  end
+
+  # Script: NorthshireAbbeyEvents.run(:milly_osworth)
+  def self.milly_osworth
+    q_meet = QuestJournal::ID_MILLY_OSWORTH
+    q_harv = QuestJournal::ID_MILLYS_HARVEST
+    q_grape = QuestJournal::ID_GRAPE_MANIFEST
+
+    if pbQuestActive?(q_meet)
+      cmsg = QuestJournal.completion_text(q_meet)
+      pbMessage(cmsg) if cmsg
+      pbQuestComplete(q_meet)
+      milly_try_offer_harvest
+      return
+    end
+
+    if pbQuestActive?(q_harv)
+      if QuestJournal.turn_in_ready?(q_harv)
+        cmsg = QuestJournal.completion_text(q_harv)
+        pbMessage(cmsg) if cmsg
+        pbQuestComplete(q_harv)
+        milly_try_offer_grape_manifest
+      else
+        pt = QuestJournal.progress_talk_text(q_harv)
+        pbMessage(pt) if pt
+      end
+      return
+    end
+
+    if pbQuestActive?(q_grape)
+      pt = QuestJournal.progress_talk_text(q_grape)
+      pbMessage(pt) if pt
+      return
+    end
+
+    return if milly_try_offer_harvest
+    return if milly_try_offer_grape_manifest
+
+    if pbQuestDone?(q_grape)
+      pbMessage(_INTL("Thank you again for saving my harvest!"))
+    elsif pbQuestDone?(q_meet)
+      pbMessage(_INTL("Those Defias won't leave my vines alone for long..."))
+    else
+      pbMessage(_INTL("If Deputy Willem sent you, he'll have a word first."))
+    end
+  end
+
+  def self.milly_try_offer_harvest
+    q = QuestJournal::ID_MILLYS_HARVEST
+    return false unless QuestJournal.offer_available?(q)
+
+    dbg = pbQuestDebugOfferChoice(q)
+    return false if dbg == :cancel
+    pbBeginQuestOfferIntro(q, dbg)
+    if dbg == :auto_accept
+      if pbQuestAccept(q)
+        pbMessage(_INTL("Please - those crates are all I have left!"))
+      end
+      return true
+    end
+    offer = QuestJournal.marshal_offer_text(q)
+    offer ||= QuestJournal.description_text(q)
+    pbMessage(offer) if offer
+    cmd = pbShowCommands(nil, [_INTL("I'll get them."), _INTL("Not right now.")], 2)
+    if cmd == 0 && pbQuestAccept(q)
+      pbMessage(_INTL("Please - those crates are all I have left!"))
+    end
+    true
+  end
+
+  def self.milly_try_offer_grape_manifest
+    q = QuestJournal::ID_GRAPE_MANIFEST
+    return false unless QuestJournal.offer_available?(q)
+
+    dbg = pbQuestDebugOfferChoice(q)
+    return false if dbg == :cancel
+    pbBeginQuestOfferIntro(q, dbg)
+    if dbg == :auto_accept
+      if pbQuestAccept(q)
+        pbMessage(_INTL("Brother Neals is in the abbey bell tower."))
+      end
+      return true
+    end
+    offer = QuestJournal.marshal_offer_text(q)
+    offer ||= QuestJournal.description_text(q)
+    pbMessage(offer) if offer
+    cmd = pbShowCommands(nil, [_INTL("I'll take it."), _INTL("Not right now.")], 2)
+    if cmd == 0 && pbQuestAccept(q)
+      pbMessage(_INTL("Brother Neals is in the abbey bell tower."))
+    end
+    true
+  end
+
+  # Script: NorthshireAbbeyEvents.run(:brother_neals)
+  def self.brother_neals
+    q = QuestJournal::ID_GRAPE_MANIFEST
+    if pbQuestActive?(q)
+      if QuestJournal.turn_in_ready?(q)
+        cmsg = QuestJournal.completion_text(q)
+        pbMessage(cmsg) if cmsg
+        pbQuestComplete(q)
+      else
+        pbMessage(_INTL("You look to be in fine spirits! Come! Have a seat, and have a drink!"))
+      end
+      return
+    end
+    if pbQuestDone?(q)
+      pbMessage(_INTL("May the Light keep Northshire's cellars full."))
+    else
+      pbMessage(_INTL("You look to be in fine spirits! Come! Have a seat, and have a drink!"))
     end
   end
 
