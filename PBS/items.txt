@@ -3049,7 +3049,7 @@ Price = 200
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine. It defrosts a Pokémon that has been frozen solid.
+Description = A spray-type medicine. It heals a Pokémon that is frostbitten.
 #-------------------------------
 [FULLHEAL]
 Name = Full Heal
@@ -3364,7 +3364,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base HP of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [PROTEIN]
 Name = Protein
@@ -3375,7 +3375,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Attack stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [IRON]
 Name = Iron
@@ -3386,7 +3386,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Defense stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [CALCIUM]
 Name = Calcium
@@ -3397,7 +3397,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Sp. Atk (Special Attack) stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [ZINC]
 Name = Zinc
@@ -3408,7 +3408,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Sp. Def (Special Defense) stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [CARBOS]
 Name = Carbos
@@ -3419,7 +3419,7 @@ Pocket = 2
 Price = 10000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Speed stat of a single Pokémon.
+Description = A nutritious drink for Pokémon. It no longer has any effect.
 #-------------------------------
 [HEALTHFEATHER]
 Name = Health Feather
@@ -3428,7 +3428,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base HP of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's HP IV by 1.
 #-------------------------------
 [MUSCLEFEATHER]
 Name = Muscle Feather
@@ -3437,7 +3437,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Attack stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Attack IV by 1.
 #-------------------------------
 [RESISTFEATHER]
 Name = Resist Feather
@@ -3446,7 +3446,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Defense stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Defense IV by 1.
 #-------------------------------
 [GENIUSFEATHER]
 Name = Genius Feather
@@ -3455,7 +3455,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Sp. Atk stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Sp. Atk IV by 1.
 #-------------------------------
 [CLEVERFEATHER]
 Name = Clever Feather
@@ -3464,7 +3464,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Sp. Def stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Sp. Def IV by 1.
 #-------------------------------
 [SWIFTFEATHER]
 Name = Swift Feather
@@ -3473,7 +3473,7 @@ Pocket = 2
 Price = 300
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Speed stat of a single Pokémon.
+Description = An item for use on a Pokémon. It raises that Pokémon's Speed IV by 1.
 #-------------------------------
 [LONELYMINT]
 Name = Lonely Mint
@@ -4137,7 +4137,7 @@ Price = 20
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_ICE_80
-Description = It may be used or held by a Pokémon to defrost it.
+Description = It may be used or held by a Pokémon to cure frostbite.
 #-------------------------------
 [LEPPABERRY]
 Name = Leppa Berry
@@ -5212,6 +5212,48 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Warm to the touch. Use it anywhere in the overworld to return to your chosen home spot. You black out toward this location as well.
+#-------------------------------
+[REDBURLAPBANDANA]
+Name = Red Burlap Bandana
+NamePlural = Red Burlap Bandanas
+Pocket = 9
+Price = 0
+Flags = KeyItem
+ShowQuantity = true
+Description = A rough red bandana worn by Defias thugs around Northshire. Deputy Willem wants these as proof.
+#-------------------------------
+[GARRICKSHEAD]
+Name = Garrick's Bounty Proof
+NamePlural = Garrick's Bounty Proofs
+Pocket = 9
+Price = 0
+Flags = KeyItem
+Description = Proof that Garrick Padfoot has been defeated. Turn it in to Deputy Willem for the bounty.
+#-------------------------------
+[MCBRIDEDOCUMENTS]
+Name = McBride's Documents
+NamePlural = McBride's Documents
+Pocket = 9
+Price = 0
+Flags = KeyItem
+Description = Sealed papers from Marshal McBride for Marshal Dughan in Goldshire.
+#-------------------------------
+[MILLYSHARVEST]
+Name = Milly's Harvest
+NamePlural = Milly's Harvest Crates
+Pocket = 9
+Price = 0
+Flags = KeyItem
+ShowQuantity = true
+Description = A crate of grapes recovered from the Northshire Vineyards. Return these to Milly Osworth.
+#-------------------------------
+[GRAPEMANIFEST]
+Name = Grape Manifest
+NamePlural = Grape Manifests
+Pocket = 9
+Price = 0
+Flags = KeyItem
+Description = A shipping manifest for Milly's saved grape harvest. Deliver it to Brother Neals in the abbey.
 #-------------------------------
 [COINCASE]
 Name = Coin Case
@@ -6762,7 +6804,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = FIREBALL
-Description = The user hurls a fireball at the target. It may lower the target's Attack and Sp. Atk.
+Description = 1.5× damage if the target is burned, and may burn (10%).
 #-------------------------------
 [TM118]
 Name = TM118
@@ -6960,7 +7002,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = ICEBEAM
-Description = The target is struck with an icy-cold beam of energy. It may also freeze the target solid.
+Description = The target is struck with an icy-cold beam of energy. It may also leave the target frostbitten.
 #-------------------------------
 [TM136]
 Name = TM136
@@ -6993,7 +7035,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = BLIZZARD
-Description = A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.
+Description = A howling blizzard is summoned to strike the opposing team. It may also leave them frostbitten.
 #-------------------------------
 [TM139]
 Name = TM139
@@ -7400,7 +7442,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = ICEPUNCH
-Description = The target is punched with an icy fist. It may also leave the target frozen.
+Description = The target is punched with an icy fist. It may also leave the target frostbitten.
 #-------------------------------
 [TM176]
 Name = TM176
@@ -8005,7 +8047,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = ICEFANG
-Description = The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen.
+Description = The user bites with cold-infused fangs. It may also make the target flinch or leave it frostbitten.
 #-------------------------------
 [TM231]
 Name = TM231
@@ -8171,7 +8213,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = FROSTBOLT
-Description = The user fires freezing magic that lowers the target's Sp. Atk.
+Description = A frost bolt strikes the target. This may also lower the target's Speed.
 #-------------------------------
 [TM246]
 Name = TM246
@@ -8314,7 +8356,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = CHARGESPELL
-Description = The user charges in immediately and may make the target flinch.
+Description = The user charges in immediately and makes the target flinch. It only works the first turn the user is in battle.
 #-------------------------------
 [TM259]
 Name = TM259
@@ -8325,7 +8367,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = REND
-Description = A vicious strike that leaves the user bleeding for a short time.
+Description = A vicious strike that leaves the target bleeding for a short time.
 #-------------------------------
 [TM260]
 Name = TM260
@@ -8348,3 +8390,201 @@ FieldUse = TR
 Flags = Fling_10
 Move = COUNTERSPELL
 Description = If the target was preparing a special move this turn, that move and all of its same-type moves become disabled.
+#-------------------------------
+[TM262]
+Name = TM262
+NamePlural = TM262s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = MORTALSTRIKE
+Description = A vicious strike that also prevents the target from restoring HP for a few turns.
+#-------------------------------
+[TM263]
+Name = TM263
+NamePlural = TM263s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = CLEAVE
+Description = The user cleaves through with a wide swing, hitting both opposing Pokémon.
+#-------------------------------
+[TM264]
+Name = TM264
+NamePlural = TM264s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = THUNDERCLAPSPELL
+Description = The user slams the ground with a thunderous clap. This always lowers either the Attack or the Speed of opposing Pokémon at random.
+#-------------------------------
+[TM265]
+Name = TM265
+NamePlural = TM265s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = EXECUTE
+Description = If the target's HP is at or below half, this attack hits with double the power.
+#-------------------------------
+[TM266]
+Name = TM266
+NamePlural = TM266s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = OVERPOWER
+Description = The user lashes out with a punishing blow. This move's power is doubled if a status or attacking move that could have targeted the user has missed since the user last used a move.
+#-------------------------------
+[TM267]
+Name = TM267
+NamePlural = TM267s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = BLOODTHIRST
+Description = The user drains the target's vitality. The user's HP is restored by half the damage taken by the target. This move does not make contact.
+#-------------------------------
+[TM268]
+Name = TM268
+NamePlural = TM268s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = WHIRLWINDSPELL
+Description = The user spins with fighting spirit and strikes all opposing Pokémon.
+#-------------------------------
+[TM269]
+Name = TM269
+NamePlural = TM269s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = SUNDERARMOR
+Description = Sunders the target for 3 turns. While Sundered, its Defense and Special Defense are treated as -1 when it takes damage, even if those stats are boosted.
+#-------------------------------
+[TM270]
+Name = TM270
+NamePlural = TM270s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = ICEBLOCK
+Description = The user encases itself in ice and becomes Frozen. While Frozen it cannot attack or switch, is immune to all moves, and slowly regains HP each turn.
+#-------------------------------
+[TM271]
+Name = TM271
+NamePlural = TM271s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = FROSTNOVA
+Description = A burst of frost deals minor damage to opposing Pokémon and prevents them from switching out.
+#-------------------------------
+[TM272]
+Name = TM272
+NamePlural = TM272s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = CONEOFCOLD
+Description = The user exhales a cone of freezing air. This may frostbite opposing Pokémon.
+#-------------------------------
+[TM273]
+Name = TM273
+NamePlural = TM273s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = BLIZZARDSPELL
+Description = The user channels a blizzard that pelts opposing Pokémon with ice for 2 to 3 turns. Afterward, the user's Special Attack falls by 1 stage.
+#-------------------------------
+[TM274]
+Name = TM274
+NamePlural = TM274s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = POLYMORPH
+Description = The user transforms the target, inflicting the Polymorph status. A polymorphed Pokémon cannot move.
+#-------------------------------
+[TM275]
+Name = TM275
+NamePlural = TM275s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = ARCANEEXPLOSION
+Description = An explosion of arcane energy hits opposing Pokémon. Deals 1.5× damage if the target is disabled.
+#-------------------------------
+[TM276]
+Name = TM276
+NamePlural = TM276s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = EVOCATION
+Description = The user restores half the PP of its other moves and one third of its maximum HP.
+#-------------------------------
+[TM277]
+Name = TM277
+NamePlural = TM277s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = SCORCH
+Description = A searing flame with a high critical-hit ratio.
+#-------------------------------
+[TM278]
+Name = TM278
+NamePlural = TM278s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = PYROBLAST
+Description = A huge blast of fire. Power doubles if the user was hit this turn.
+#-------------------------------
+[TM279]
+Name = TM279
+NamePlural = TM279s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = BLASTWAVE
+Description = A wave of fire hits opposing Pokémon. This may also make them flinch.

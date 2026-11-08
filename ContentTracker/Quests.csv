@@ -1,0 +1,10 @@
+QuestID,Constant,Name,Objective,Giver,TurnIn,Prerequisites,CounterTarget,Exp,Money,Items,OfferHandler,TurnInHandler,Maps,Status,Notes
+1,ID_MARSHAL_MEET,A Threat Within,Speak with Marshal McBride.,Deputy Willem,Marshal McBride,— (starter),"",50,"","",deputy_willem,marshal_mcbride,076 Northshire Abbey,"",""
+2,ID_KOBOLD_CLEANUP,Kobold Camp Cleanup,Defeat 4 kobold trainers (counter).,Marshal McBride,Marshal McBride,Complete: A Threat Within,4,50,25,POKEBALL x5,marshal_mcbride,marshal_mcbride,076 Northshire Abbey / outskirts,"",""
+3,ID_INVESTIGATE_ECHO_RIDGE,Investigate Echo Ridge,Defeat 5 kobold workers near Echo Ridge Mine.,Marshal McBride,Marshal McBride,Complete: Kobold Camp Cleanup,5,75,40,"",marshal_mcbride,marshal_mcbride,032/033 Echo Ridge,"",""
+4,ID_SIMPLE_LETTER,Simple Letter,Read letter; speak to Llane Beshere (Warrior).,Marshal McBride,Llane Beshere,Kobold Cleanup + Warrior class,"",65,"","",marshal_mcbride,llane_beshere,076 Northshire Abbey,"",""
+5,ID_CONSECRATED_LETTER,Consecrated Letter,Read letter; speak to Brother Sammuel (Paladin).,Marshal McBride,Brother Sammuel,Kobold Cleanup + Paladin class,"",65,"","",marshal_mcbride,brother_sammuel,076 Northshire Abbey,"",""
+6,ID_ENCRYPTED_LETTER,Encrypted Letter,Read letter; speak to Jorik Kerridan (Rogue).,Marshal McBride,Jorik Kerridan,Kobold Cleanup + Rogue class,"",65,"","",marshal_mcbride,jorik_kerridan,076 stables,"",""
+7,ID_HALLOWED_LETTER,Hallowed Letter,Read letter; speak to Priestess Anetta (Priest).,Marshal McBride,Priestess Anetta,Kobold Cleanup + Priest class,"",65,"","",marshal_mcbride,priestess_anetta,076 Northshire Abbey,"",""
+8,ID_GLYPHIC_LETTER,Glyphic Letter,Read letter; speak to Khelden Bremen (Mage).,Marshal McBride,Khelden Bremen,Kobold Cleanup + Mage class,"",65,"","",marshal_mcbride,khelden_bremen,076 abbey library,"",""
+9,ID_TAINTED_LETTER,Tainted Letter,Read letter; speak to Drusilla La Salle (Warlock).,Marshal McBride,Drusilla La Salle,Kobold Cleanup + Warlock class,"",65,"","",marshal_mcbride,drusilla_la_salle,076 beside abbey,"",""

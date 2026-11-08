@@ -197,16 +197,9 @@ class Pokemon
     pbMessage(_INTL("{1} can now be purified!", self.name)) if self.heart_gauge == 0
   end
 
-  def add_evs(added_evs)
-    total = 0
-    @ev.each_value { |e| total += e }
-    GameData::Stat.each_main do |s|
-      addition = added_evs[s.id].clamp(0, Pokemon::EV_STAT_LIMIT - @ev[s.id])
-      addition = addition.clamp(0, Pokemon::EV_LIMIT - total)
-      next if addition == 0
-      @ev[s.id] += addition
-      total += addition
-    end
+  def add_evs(_added_evs)
+    # EVs are retired. Shadow Pokémon keep saved_ev so old saves still load.
+    return
   end
 
   alias __shadow_clone clone unless method_defined?(:__shadow_clone)

@@ -279,6 +279,23 @@ class Battle
   end
 
   #=============================================================================
+  # End Of Round healing from Ice Block
+  # Recovers 1/16 of max HP (minimum 1). pbRecoverHP raises a 0 amount to 1
+  # when the battler is not already at full HP.
+  #=============================================================================
+  def pbEORIceBlockHealing(priority)
+    priority.each do |battler|
+      next if battler.fainted?
+      next if battler.status != :FROZEN
+      next if !battler.canHeal?
+      amt = battler.totalhp / 16
+      healed = battler.pbRecoverHP(amt)
+      next if healed <= 0
+      pbDisplay(_INTL("{1} regained HP while encased in ice!", battler.pbThis))
+    end
+  end
+
+  #=============================================================================
   # End Of Round deal damage from effects (except by trapping)
   #=============================================================================
   def pbEOREffectDamage(priority)
@@ -407,6 +424,10 @@ class Battle
     # Heal Block
     pbEORCountDownBattlerEffect(priority, PBEffects::HealBlock) do |battler|
       pbDisplay(_INTL("{1}'s Heal Block wore off!", battler.pbThis))
+    end
+    # Sunder Armor
+    pbEORCountDownBattlerEffect(priority, PBEffects::Sundered) do |battler|
+      pbDisplay(_INTL("{1}'s armor is no longer sundered!", battler.pbThis))
     end
     # Embargo
     pbEORCountDownBattlerEffect(priority, PBEffects::Embargo) do |battler|
@@ -693,7 +714,7 @@ class Battle
         when :PARALYSIS
           pbDisplay(_INTL("{1} gathered all its energy to break through its paralysis so you wouldn't worry!", battler.pbThis))
         when :FROZEN
-          pbDisplay(_INTL("{1} melted the ice with its fiery determination so you wouldn't worry!", battler.pbThis))
+          pbDisplay(_INTL("{1} broke out of the ice so you wouldn't worry!", battler.pbThis))
         when :FROSTBITE
           pbDisplay(_INTL("{1} shook off its frostbite so you wouldn't worry!", battler.pbThis))
         when :POLYMORPH
@@ -718,6 +739,8 @@ class Battle
     pbEOREffectDamage(priority)
     # Healing from Polymorph
     pbEORPolymorphHealing(priority)
+    # Healing from Ice Block
+    pbEORIceBlockHealing(priority)
     # Trapping attacks (Bind/Clamp/Fire Spin/Magma Storm/Sand Tomb/Whirlpool/Wrap)
     priority.each { |battler| pbEORTrappingDamage(battler) }
     # Octolock

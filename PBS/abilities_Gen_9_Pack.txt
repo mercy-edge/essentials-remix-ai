@@ -1,0 +1,29 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[EMBODYASPECT_1]
+Name = Embody Aspect
+Description = The user's shining mask raises its Sp. Def stat.
+#-------------------------------
+[EMBODYASPECT_2]
+Name = Embody Aspect
+Description = The user's shining mask raises its Attack stat.
+#-------------------------------
+[EMBODYASPECT_3]
+Name = Embody Aspect
+Description = The user's shining mask raises its Defense stat.
+#-------------------------------
+[PIERCINGDRILL]
+Name = Piercing Drill
+Description = Contact moves deals a quarter of damage against protections.
+#-------------------------------
+[SPICYSPRAY]
+Name = Spicy Spray
+Description = Burns the attacker when hit by a damaging move.
+#-------------------------------
+[FIREMANE]
+Name = Fire Mane
+Description = Powers up Fire-type moves.
+#-------------------------------
+[EELEVATE]
+Name = Eelevate
+Description = Immune to Ground-type moves. Boosts best stat when it deals a KO.

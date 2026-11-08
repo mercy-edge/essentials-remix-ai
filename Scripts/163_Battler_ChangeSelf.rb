@@ -173,8 +173,8 @@ class Battle::Battler
 
   def pbCheckFormOnStatusChange
     return if fainted? || @effects[PBEffects::Transform]
-    # Shaymin - reverts if frozen
-    if isSpecies?(:SHAYMIN) && frozen?
+    # Shaymin - reverts if frostbitten (the old freeze interaction)
+    if isSpecies?(:SHAYMIN) && frostbitten?
       pbChangeForm(0, _INTL("{1} transformed!", pbThis))
     end
   end

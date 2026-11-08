@@ -34,7 +34,7 @@ class Battle::Battler
         when :POISON    then msg = _INTL("{1} is already poisoned!", pbThis)
         when :BURN      then msg = _INTL("{1} already has a burn!", pbThis)
         when :PARALYSIS then msg = _INTL("{1} is already paralyzed!", pbThis)
-        when :FROZEN    then msg = _INTL("{1} is already frozen solid!", pbThis)
+        when :FROZEN    then msg = _INTL("{1} is already encased in ice!", pbThis)
         when :FROSTBITE then msg = _INTL("{1} is already frostbitten!", pbThis)
         when :POLYMORPH then msg = _INTL("{1} is already polymorphed!", pbThis)
         end
@@ -53,11 +53,9 @@ class Battle::Battler
       @battle.pbDisplay(_INTL("It doesn't affect {1}...", pbThis(true))) if showMessages
       return false
     end
-    # Weather immunity
-    if newStatus == :FROZEN && [:Sun, :HarshSun].include?(effectiveWeather)
-      @battle.pbDisplay(_INTL("It doesn't affect {1}...", pbThis(true))) if showMessages
-      return false
-    end
+    # Harsh sunlight used to block the old freeze. Frostbite still checks that
+    # in the Generation 9 status code. Ice Block (:FROZEN) is self-applied and
+    # is not stopped by sunlight.
     # Terrains immunity
     if affectedByTerrain?
       case @battle.field.terrain
@@ -96,7 +94,8 @@ class Battle::Battler
     when :PARALYSIS
       hasImmuneType |= pbHasType?(:ELECTRIC) && Settings::MORE_TYPE_EFFECTS
     when :FROZEN
-      hasImmuneType |= pbHasType?(:ICE)
+      # Ice Block is applied by the user to itself, including Ice-type users.
+      hasImmuneType |= pbHasType?(:ICE) && !self_inflicted
     when :FROSTBITE
       hasImmuneType |= pbHasType?(:ICE)
     when :POLYMORPH
@@ -134,7 +133,7 @@ class Battle::Battler
           when :POISON    then msg = _INTL("{1} cannot be poisoned!", pbThis)
           when :BURN      then msg = _INTL("{1} cannot be burned!", pbThis)
           when :PARALYSIS then msg = _INTL("{1} cannot be paralyzed!", pbThis)
-          when :FROZEN    then msg = _INTL("{1} cannot be frozen solid!", pbThis)
+          when :FROZEN    then msg = _INTL("{1} cannot be encased in ice!", pbThis)
           when :FROSTBITE then msg = _INTL("{1} cannot be frostbitten!", pbThis)
           when :POLYMORPH then msg = _INTL("{1} cannot be polymorphed!", pbThis)
           end
@@ -153,7 +152,7 @@ class Battle::Battler
             msg = _INTL("{1} cannot be paralyzed because of {2}'s {3}!",
                         pbThis, immAlly.pbThis(true), immAlly.abilityName)
           when :FROZEN
-            msg = _INTL("{1} cannot be frozen solid because of {2}'s {3}!",
+            msg = _INTL("{1} cannot be encased in ice because of {2}'s {3}!",
                         pbThis, immAlly.pbThis(true), immAlly.abilityName)
           when :FROSTBITE
             msg = _INTL("{1} cannot be frostbitten because of {2}'s {3}!",
@@ -168,7 +167,7 @@ class Battle::Battler
           when :POISON    then msg = _INTL("{1}'s {2} prevents poisoning!", pbThis, abilityName)
           when :BURN      then msg = _INTL("{1}'s {2} prevents burns!", pbThis, abilityName)
           when :PARALYSIS then msg = _INTL("{1}'s {2} prevents paralysis!", pbThis, abilityName)
-          when :FROZEN    then msg = _INTL("{1}'s {2} prevents freezing!", pbThis, abilityName)
+          when :FROZEN    then msg = _INTL("{1}'s {2} prevents Ice Block!", pbThis, abilityName)
           when :FROSTBITE then msg = _INTL("{1}'s {2} prevents frostbite!", pbThis, abilityName)
           when :POLYMORPH then msg = _INTL("{1}'s {2} prevents polymorph!", pbThis, abilityName)
           end
@@ -264,7 +263,7 @@ class Battle::Battler
       when :PARALYSIS
         @battle.pbDisplay(_INTL("{1} is paralyzed! It may be unable to move!", pbThis))
       when :FROZEN
-        @battle.pbDisplay(_INTL("{1} was frozen solid!", pbThis))
+        @battle.pbDisplay(_INTL("{1} became encased in ice!", pbThis))
       when :FROSTBITE
         @battle.pbDisplay(_INTL("{1} was frostbitten!", pbThis))
       when :POLYMORPH
@@ -273,6 +272,7 @@ class Battle::Battler
     end
     PBDebug.log("[Status change] #{pbThis}'s sleep count is #{newStatusCount}") if newStatus == :SLEEP
     PBDebug.log("[Status change] #{pbThis}'s polymorph count is #{newStatusCount}") if newStatus == :POLYMORPH
+    PBDebug.log("[Status change] #{pbThis}'s Ice Block count is #{newStatusCount}") if newStatus == :FROZEN
     # Form change check
     pbCheckFormOnStatusChange
     # Synchronize
@@ -433,7 +433,14 @@ class Battle::Battler
   end
 
   #=============================================================================
-  # Freeze
+  # Freeze (Ice Block)
+  #-----------------------------------------------------------------------------
+  # :FROZEN is no longer the old "frozen solid, may thaw" status. That effect
+  # is frostbite. :FROZEN is the Ice Block condition: the battler cannot act or
+  # switch, incoming moves fail, and it regains HP each round.
+  # statusCount works like sleep. 3 or 4 means the battler fails to act for 2
+  # or 3 attempts, then thaws on the check that reaches 0 and may act that turn.
+  # There is no random thaw chance.
   #=============================================================================
   def frozen?
     return pbHasStatus?(:FROZEN)
@@ -443,8 +450,12 @@ class Battle::Battler
     return pbCanInflictStatus?(:FROZEN, user, showMessages, move)
   end
 
+  def pbIceBlockDuration
+    return 3 + @battle.pbRandom(2)
+  end
+
   def pbFreeze(msg = nil)
-    pbInflictStatus(:FROZEN, 0, msg)
+    pbInflictStatus(:FROZEN, pbIceBlockDuration, msg)
   end
 
   #=============================================================================
@@ -492,7 +503,7 @@ class Battle::Battler
     when :PARALYSIS
       @battle.pbDisplay(_INTL("{1} is paralyzed! It can't move!", pbThis))
     when :FROZEN
-      @battle.pbDisplay(_INTL("{1} is frozen solid!", pbThis))
+      @battle.pbDisplay(_INTL("{1} is encased in ice and can't move!", pbThis))
     when :POLYMORPH
       @battle.pbDisplay(_INTL("{1} is polymorphed and can't move!", pbThis))
     end
@@ -510,7 +521,7 @@ class Battle::Battler
       when :BURN      then @battle.pbDisplay(_INTL("{1}'s burn was healed.", pbThis))
       when :FROSTBITE then @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", pbThis))
       when :PARALYSIS then @battle.pbDisplay(_INTL("{1} was cured of paralysis.", pbThis))
-      when :FROZEN    then @battle.pbDisplay(_INTL("{1} thawed out!", pbThis))
+      when :FROZEN    then @battle.pbDisplay(_INTL("{1} broke out of the ice!", pbThis))
       when :POLYMORPH then @battle.pbDisplay(_INTL("{1} reverted to normal!", pbThis))
       end
     end

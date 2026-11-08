@@ -437,6 +437,10 @@ class WildBattle
       end
     end
     raise _INTL("Species {1} was given but not a level.", species_id) if species_id
+    # Covers scripted foes passed in as Pokemon objects (they skip
+    # pbGenerateWildPokemon) as well as species/level pairs. Roamers, Safari,
+    # Bug Contest, and Wild 2v3 all enter battle through here.
+    ret.each { |pkmn| pbApplyWildPokemonIVs(pkmn) }
     return ret
   end
 end

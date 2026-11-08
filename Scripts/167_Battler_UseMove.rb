@@ -79,9 +79,16 @@ class Battle::Battler
   # Beam's effect is NOT cancelled.
   def pbCancelMoves(full_cancel = false)
     # Outragers get confused anyway if they are disrupted during their final
-    # turn of using the move
-    if @effects[PBEffects::Outrage] == 1 && pbCanConfuseSelf?(false) && !full_cancel
-      pbConfuse(_INTL("{1} became confused due to fatigue!", pbThis))
+    # turn of using the move. Mage Blizzard lowers Special Attack instead.
+    if @effects[PBEffects::Outrage] == 1 && !full_cancel
+      if @currentMove && GameData::Move.exists?(@currentMove) &&
+         GameData::Move.get(@currentMove).function_code == "CustomBlizzard"
+        if pbCanLowerStatStage?(:SPECIAL_ATTACK, self)
+          pbLowerStatStage(:SPECIAL_ATTACK, 1, self)
+        end
+      elsif pbCanConfuseSelf?(false)
+        pbConfuse(_INTL("{1} became confused due to fatigue!", pbThis))
+      end
     end
     # Cancel usage of most multi-turn moves
     @effects[PBEffects::TwoTurnAttack] = nil
@@ -95,6 +102,10 @@ class Battle::Battler
   end
 
   def pbEndTurn(_choice)
+    if @overpower_consumed_window
+      @effects[PBEffects::OverpowerDodged] = false
+      @overpower_consumed_window = false
+    end
     @lastRoundMoved = @battle.turnCount   # Done something this round
     if !@effects[PBEffects::ChoiceBand] &&
        (hasActiveItem?([:CHOICEBAND, :CHOICESPECS, :CHOICESCARF]) ||
@@ -205,6 +216,8 @@ class Battle::Battler
       pbEndTurn(choice)
       return
     end
+    # Close Overpower's dodge window at the end of this move, after power is calculated.
+    @overpower_consumed_window = true
     # Stance Change
     if isSpecies?(:AEGISLASH) && self.ability == :STANCECHANGE
       if move.damagingMove?
@@ -302,10 +315,10 @@ class Battle::Battler
     # Perform set-up actions and display messages
     # Messages include Magnitude's number and Pledge moves' "it's a combo!"
     move.pbOnStartUse(user, targets)
-    # Self-thawing due to the move
-    if user.status == :FROZEN && move.thawsUser?
+    # Self-thawing due to the move. Cures frostbite, not Ice Block.
+    if user.status == :FROSTBITE && move.thawsUser?
       user.pbCureStatus(false)
-      @battle.pbDisplay(_INTL("{1} melted the ice!", user.pbThis))
+      @battle.pbDisplay(_INTL("{1} warmed up!", user.pbThis))
     end
     # Powder
     if user.effects[PBEffects::Powder] && move.calcType == :FIRE

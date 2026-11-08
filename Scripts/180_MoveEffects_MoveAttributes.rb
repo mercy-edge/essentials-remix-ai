@@ -91,7 +91,9 @@ class Battle::Move::OHKO < Battle::Move::FixedDamageMove
 
   def pbAccuracyCheck(user, target)
     acc = @accuracy + user.level - target.level
-    return @battle.pbRandom(100) < acc
+    hit = @battle.pbRandom(100) < acc
+    pbMarkOverpowerDodge(target) if !hit
+    return hit
   end
 
   def pbFixedDamage(user, target)
@@ -121,7 +123,9 @@ class Battle::Move::OHKOIce < Battle::Move::OHKO
   def pbAccuracyCheck(user, target)
     acc = @accuracy + user.level - target.level
     acc -= 10 if !user.pbHasType?(:ICE)
-    return @battle.pbRandom(100) < acc
+    hit = @battle.pbRandom(100) < acc
+    pbMarkOverpowerDodge(target) if !hit
+    return hit
   end
 end
 
@@ -406,14 +410,17 @@ class Battle::Move::DoublePowerIfTargetHPLessThanHalf < Battle::Move
 end
 
 #===============================================================================
-# Power is doubled if the user is burned, poisoned or paralyzed. (Facade)
-# Burn's halving of Attack is negated (new mechanics).
+# Power is doubled if the user is burned, poisoned, paralyzed, or frostbitten.
+# (Facade). Burn's Attack drop and frostbite's Special Attack drop are negated.
 #===============================================================================
 class Battle::Move::DoublePowerIfUserPoisonedBurnedParalyzed < Battle::Move
-  def damageReducedByBurn?; return Settings::MECHANICS_GENERATION <= 5; end
+  def damageReducedByBurn?;      return Settings::MECHANICS_GENERATION <= 5; end
+  def damageReducedByFrostbite?; return false; end
 
   def pbBaseDamage(baseDmg, user, target)
-    baseDmg *= 2 if user.poisoned? || user.burned? || user.paralyzed?
+    if user.poisoned? || user.burned? || user.paralyzed? || user.frostbitten?
+      baseDmg *= 2
+    end
     return baseDmg
   end
 end

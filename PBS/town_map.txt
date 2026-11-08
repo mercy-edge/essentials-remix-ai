@@ -29,6 +29,7 @@ Point = 12,12,Safari Zone
 Point = 13,13,Route 8,Diving area
 Point = 12,11,Northshire Abbey
 Point = 12,10,Echo Ridge Mine
+Point = 13,11,Northshire Vineyards
 Point = 18,17,Berth Island,,,,,51
 Point = 22,16,Faraday Island,,,,,52
 #-------------------------------

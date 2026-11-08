@@ -477,18 +477,13 @@ Battle::ItemEffects::OnStatLoss.add(:EJECTPACK,
 Battle::ItemEffects::StatusCure.add(:ASPEARBERRY,
   proc { |item, battler, battle, forced|
     next false if !forced && !battler.canConsumeBerry?
-    next false if ![:FROZEN, :FROSTBITE].include?(battler.status)
+    next false if battler.status != :FROSTBITE
     itemName = GameData::Item.get(item).name
     PBDebug.log("[Item triggered] #{battler.pbThis}'s #{itemName}") if forced
     battle.pbCommonAnimation("EatBerry", battler) if !forced
-    oldStatus = battler.status
     battler.pbCureStatus(forced)
     if !forced
-      if oldStatus == :FROSTBITE
-        battle.pbDisplay(_INTL("{1}'s {2} cured its frostbite!", battler.pbThis, itemName))
-      else
-        battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, itemName))
-      end
+      battle.pbDisplay(_INTL("{1}'s {2} cured its frostbite!", battler.pbThis, itemName))
     end
     next true
   }
@@ -545,7 +540,9 @@ Battle::ItemEffects::StatusCure.add(:LUMBERRY,
       when :PARALYSIS
         battle.pbDisplay(_INTL("{1}'s {2} cured its paralysis!", battler.pbThis, itemName))
       when :FROZEN
-        battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, itemName))
+        battle.pbDisplay(_INTL("{1}'s {2} broke it out of the ice!", battler.pbThis, itemName))
+      when :FROSTBITE
+        battle.pbDisplay(_INTL("{1}'s {2} healed its frostbite!", battler.pbThis, itemName))
       end
       if oldConfusion
         battle.pbDisplay(_INTL("{1}'s {2} snapped it out of its confusion!", battler.pbThis, itemName))

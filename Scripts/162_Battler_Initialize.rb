@@ -167,6 +167,8 @@ class Battle::Battler
     @effects[PBEffects::HadStatLoweredThisBattle] = false
     @effects[PBEffects::RendBleed]           = 0
     @effects[PBEffects::HamstringLock]       = 0
+    @effects[PBEffects::OverpowerDodged]     = false
+    @effects[PBEffects::Sundered]            = 0
     @effects[PBEffects::BeakBlast]           = false
     @effects[PBEffects::Bide]                = 0
     @effects[PBEffects::BideDamage]          = 0

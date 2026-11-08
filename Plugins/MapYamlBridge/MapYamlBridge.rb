@@ -28,18 +28,25 @@ unless File.file?(_pj)
 end
 load _pj
 
-JSON_IMPL = begin
+def map_yaml_bridge_stdlib?(name)
+  $LOAD_PATH.any? { |dir| File.file?(File.join(dir, "#{name}.rb")) }
+end
+
+JSON_IMPL = if map_yaml_bridge_stdlib?('json')
   require 'json'
   :stdlib
-rescue LoadError
+else
   :pure
 end
 
-begin
-  require 'yaml'
-  YAML_AVAILABLE = true
-rescue LoadError
-  YAML_AVAILABLE = false
+YAML_AVAILABLE = false
+if map_yaml_bridge_stdlib?('yaml')
+  begin
+    require 'yaml'
+    YAML_AVAILABLE = true
+  rescue LoadError
+    YAML_AVAILABLE = false
+  end
 end
 
 module MapYamlBridge

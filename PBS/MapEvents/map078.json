@@ -1,0 +1,47 @@
+{
+  "format": "map_events_v1",
+  "format_version": 1,
+  "map_id": 78,
+  "force_import": true,
+  "merge_events": false,
+  "exported": true,
+  "exported_note": "Lion's Pride Inn stub — MapInfos nested under Goldshire; no door warp yet.",
+  "events": {
+    "1": {
+      "id": 1,
+      "name": "Innkeeper",
+      "x": 8,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 02",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              355,
+              0,
+              [
+                "ElwynnForestEvents.run(:innkeeper)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

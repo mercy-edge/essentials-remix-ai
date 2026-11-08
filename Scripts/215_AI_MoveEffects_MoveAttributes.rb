@@ -275,6 +275,24 @@ Battle::AI::Handlers::MoveBasePower.copy("DoublePowerIfTargetHPLessThanHalf",
 #===============================================================================
 Battle::AI::Handlers::MoveBasePower.copy("DoublePowerIfTargetHPLessThanHalf",
                                          "DoublePowerIfTargetAsleepCureTarget")
+Battle::AI::Handlers::MoveBasePower.copy("DoublePowerIfTargetHPLessThanHalf",
+                                         "CustomOverpower")
+Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("CustomSunderArmor",
+  proc { |score, move, user, target, ai, battle|
+    next Battle::AI::MOVE_USELESS_SCORE if target.effects[PBEffects::Sundered].to_i >= 3
+    score += 20
+    next score
+  }
+)
+Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("CustomThunderClap",
+  proc { |score, move, user, target, ai, battle|
+    if target.battler.pbCanLowerStatStage?(:ATTACK, user.battler, move.move) ||
+       target.battler.pbCanLowerStatStage?(:SPEED, user.battler, move.move)
+      score += 10
+    end
+    next score
+  }
+)
 Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("DoublePowerIfTargetAsleepCureTarget",
   proc { |score, move, user, target, ai, battle|
     if target.status == :SLEEP && target.statusCount > 1   # Will cure status

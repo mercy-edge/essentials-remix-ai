@@ -458,7 +458,7 @@ Battle::AbilityEffects::StatusImmunity.add(:LIMBER,
 
 Battle::AbilityEffects::StatusImmunity.add(:MAGMAARMOR,
   proc { |ability, battler, status|
-    next true if status == :FROZEN
+    next true if status == :FROSTBITE
   }
 )
 
@@ -597,11 +597,11 @@ Battle::AbilityEffects::StatusCure.add(:LIMBER,
 
 Battle::AbilityEffects::StatusCure.add(:MAGMAARMOR,
   proc { |ability, battler|
-    next if battler.status != :FROZEN
+    next if battler.status != :FROSTBITE
     battler.battle.pbShowAbilitySplash(battler)
     battler.pbCureStatus(Battle::Scene::USE_ABILITY_SPLASH)
     if !Battle::Scene::USE_ABILITY_SPLASH
-      battler.battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, battler.abilityName))
+      battler.battle.pbDisplay(_INTL("{1}'s {2} healed its frostbite!", battler.pbThis, battler.abilityName))
     end
     battler.battle.pbHideAbilitySplash(battler)
   }
@@ -1843,8 +1843,10 @@ Battle::AbilityEffects::OnBeingHit.add(:ILLUSION,
   proc { |ability, user, target, move, battle|
     # NOTE: This intentionally doesn't show the ability splash.
     next if !target.effects[PBEffects::Illusion]
+    battle.pbCommonAnimation("Illusion", target)
     target.effects[PBEffects::Illusion] = nil
     battle.scene.pbChangePokemon(target, target.pokemon)
+    battle.pbCommonAnimation("Fade in", target)
     battle.pbDisplay(_INTL("{1}'s illusion wore off!", target.pbThis))
     battle.pbSetSeen(target)
   }
@@ -2352,7 +2354,7 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:HEALER,
         when :PARALYSIS
           battle.pbDisplay(_INTL("{1}'s {2} cured its partner's paralysis!", battler.pbThis, battler.abilityName))
         when :FROZEN
-          battle.pbDisplay(_INTL("{1}'s {2} defrosted its partner!", battler.pbThis, battler.abilityName))
+          battle.pbDisplay(_INTL("{1}'s {2} broke its partner out of the ice!", battler.pbThis, battler.abilityName))
         end
       end
       battle.pbHideAbilitySplash(battler)
@@ -2378,7 +2380,7 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:HYDRATION,
       when :PARALYSIS
         battle.pbDisplay(_INTL("{1}'s {2} cured its paralysis!", battler.pbThis, battler.abilityName))
       when :FROZEN
-        battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, battler.abilityName))
+        battle.pbDisplay(_INTL("{1}'s {2} broke it out of the ice!", battler.pbThis, battler.abilityName))
       end
     end
     battle.pbHideAbilitySplash(battler)
@@ -2403,7 +2405,7 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:SHEDSKIN,
       when :PARALYSIS
         battle.pbDisplay(_INTL("{1}'s {2} cured its paralysis!", battler.pbThis, battler.abilityName))
       when :FROZEN
-        battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, battler.abilityName))
+        battle.pbDisplay(_INTL("{1}'s {2} broke it out of the ice!", battler.pbThis, battler.abilityName))
       end
     end
     battle.pbHideAbilitySplash(battler)
@@ -3089,7 +3091,7 @@ Battle::AbilityEffects::OnSwitchOut.add(:LIMBER,
 
 Battle::AbilityEffects::OnSwitchOut.add(:MAGMAARMOR,
   proc { |ability, battler, endOfBattle|
-    next if battler.status != :FROZEN
+    next if battler.status != :FROSTBITE
     PBDebug.log("[Ability triggered] #{battler.pbThis}'s #{battler.abilityName}")
     battler.status = :NONE
   }

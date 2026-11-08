@@ -59,6 +59,7 @@ class Battle::Battler
     alias __clauses__pbCanSleep? pbCanSleep?
     alias __clauses__pbCanSleepYawn? pbCanSleepYawn?
     alias __clauses__pbCanFreeze? pbCanFreeze?
+    alias __clauses__pbCanFrostbite? pbCanFrostbite?
     alias __clauses__pbUseMove pbUseMove
     @__clauses__aliased = true
   end
@@ -88,6 +89,13 @@ class Battle::Battler
       return false
     end
     return __clauses__pbCanFreeze?(*arg)
+  end
+
+  def pbCanFrostbite?(*arg)
+    if @battle.rules["freezeclause"] && pbHasStatusPokemon?(:FROSTBITE)
+      return false
+    end
+    return __clauses__pbCanFrostbite?(*arg)
   end
 
   def pbHasStatusPokemon?(status)

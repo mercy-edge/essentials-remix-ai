@@ -1,0 +1,6 @@
+Status,Meaning,ColorHint
+Todo,Not designed or not placed yet,Gray
+Draft,In progress in editor,Yellow
+Playtest,Needs in-game verification,Orange
+Done,Finished / shipping,Green
+Cut,Removed or deprecated,Red

@@ -118,10 +118,30 @@ class Battle::Move
     if Settings::AFFECTION_EFFECTS && @battle.internalBattle &&
        target.pbOwnedByPlayer? && target.affection_level == 5 && !target.mega?
       return true if r < threshold - 10
-      target.damageState.affection_missed = true if r < threshold
-      return false
+      if r < threshold
+        target.damageState.affection_missed = true
+        pbMarkOverpowerDodge(target)
+        return false
+      end
     end
-    return r < threshold
+    hit = r < threshold
+    pbMarkOverpowerDodge(target) if !hit
+    return hit
+  end
+
+  # A status or damaging move failed its accuracy/evasion check against target.
+  def pbMarkOverpowerDodge(target)
+    return if !target || target.fainted?
+    return if !statusMove? && !damagingMove?
+    target.effects[PBEffects::OverpowerDodged] = true
+  end
+
+  # Sundered battlers take damage as if Def/SpDef stages were at most -1.
+  # Worse stages stay worse. This is not a real stat-stage change.
+  def pbSunderedDefenseStage(def_stage)
+    cap = Battle::Battler::STAT_STAGE_MAXIMUM - 1
+    return def_stage if def_stage <= cap
+    return cap
   end
 
   def pbCalcAccuracyModifiers(user, target, modifiers)
@@ -266,7 +286,10 @@ class Battle::Move
     end
     # Calculate target's defense stat
     defense, defStage = pbGetDefenseStats(user, target)
-    if !user.hasActiveAbility?(:UNAWARE)
+    sundered = target.effects[PBEffects::Sundered].to_i > 0
+    defStage = pbSunderedDefenseStage(defStage) if sundered
+    # Sunder is not a real stage, so Unaware does not ignore it.
+    if sundered || !user.hasActiveAbility?(:UNAWARE)
       defStage = max_stage if target.damageState.critical && defStage > max_stage
       defense = (defense.to_f * stageMul[defStage] / stageDiv[defStage]).floor
     end
@@ -475,8 +498,8 @@ class Battle::Move
        !user.hasActiveAbility?(:GUTS)
       multipliers[:final_damage_multiplier] /= 2
     end
-    # Frostbite
-    if user.status == :FROSTBITE && specialMove?
+    # Frostbite. Facade negates the Special Attack penalty, same as burn.
+    if user.status == :FROSTBITE && specialMove? && damageReducedByFrostbite?
       multipliers[:final_damage_multiplier] /= 2
     end
     # Aurora Veil, Reflect, Light Screen
