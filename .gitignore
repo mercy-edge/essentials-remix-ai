@@ -9,6 +9,9 @@ _downloads/
 google-service-account.json
 docs/sheets/google-service-account.json
 
+# Local project docs (sheets, style notes) — not part of the game repo
+docs/
+
 # OS / editor junk
 __pycache__/
 *.pyc
