@@ -11,7 +11,8 @@
 #   • turnin_npc_handlers — NPC turns in an active quest:
 #           question_complete / quest_waiting (see marker_graphics_kind).
 #
-# Matching an event: Script call NorthshireAbbeyEvents.run(:deputy_willem).
+# Matching an event: Script call NorthshireAbbeyEvents.run(:deputy_willem)
+# or ElwynnForestEvents.run(:marshal_dughan).
 # Works as one Script row or split across several Script rows (RM merges 355/655 like Interpreter).
 # The scanner concatenates those rows before matching marker rules from DEFINITIONS.
 #

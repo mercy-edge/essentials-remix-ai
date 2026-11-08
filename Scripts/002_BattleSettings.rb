@@ -110,8 +110,8 @@ module Settings
   # Whether the Exp gained from beating a Pokémon is multiplied by 1.5 if that
   # Pokémon is owned by another trainer.
   MORE_EXP_FROM_TRAINER_POKEMON = (MECHANICS_GENERATION <= 6)
-  # Whether a Pokémon holding a Power item gains 8 (true) or 4 (false) EVs in
-  # the relevant stat.
+  # Unused. Battle EV gain is disabled; Power items no longer add EVs.
+  # Kept so older scripts that read this constant still load.
   MORE_EVS_FROM_POWER_ITEMS     = (MECHANICS_GENERATION >= 7)
   # Whether Pokémon gain Exp for capturing a Pokémon.
   GAIN_EXP_FOR_CAPTURE          = (MECHANICS_GENERATION >= 6)

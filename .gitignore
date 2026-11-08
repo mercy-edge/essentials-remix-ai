@@ -5,7 +5,13 @@ Game.ini
 # Large downloaded resource archives (installed into Plugins/PBS/Graphics)
 _downloads/
 
+# Google service account credentials (never commit)
+google-service-account.json
+docs/sheets/google-service-account.json
+
 # OS / editor junk
+__pycache__/
+*.pyc
 Thumbs.db
 Desktop.ini
 .DS_Store

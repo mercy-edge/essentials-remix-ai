@@ -64,6 +64,7 @@ module NpcHoverTooltip
     return :neutral if n =~ /counter\s*\(\d+\)/i
     # Talk-to-fight kobolds (Echo Ridge / Northshire) — not aggressive until engaged
     return :neutral if n =~ /\bKobold\s+(Worker|Vermin|Laborer)\b/i
+    return :hostile if n =~ /\bDefias\b/i || n =~ /\bGarrick\s+Padfoot\b/i
 
     :friendly
   end

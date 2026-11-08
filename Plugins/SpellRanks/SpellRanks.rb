@@ -2,8 +2,8 @@
 # Spell Ranks (global, per-save)
 #-------------------------------------------------------------------------------
 # Lets player-owned moves scale by purchased "rank". Example:
-# - HEROICSTRIKE rank 1 => 40 power
-# - HEROICSTRIKE rank 2 => 50 power
+# - HEROICSTRIKE rank 1 => 60 power
+# - HEROICSTRIKE rank 2 => 70 power
 #
 # NPC/event usage example:
 #   pbOfferSpellRankUpgrade(
@@ -27,8 +27,8 @@ module SpellRanks
   # Values: { rank_number => base_power_at_that_rank }
   MOVE_RANK_POWERS = {
     :HEROICSTRIKE => {
-      1 => 40,
-      2 => 50
+      1 => 60,
+      2 => 70
     }
   }
 end

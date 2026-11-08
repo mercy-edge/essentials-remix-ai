@@ -27,10 +27,32 @@
           "through": false,
           "always_on_top": false,
           "list": [
-            [355, 0, ["pbMessage(_INTL("]],
-            [655, 0, ["\"Welcome to Goldshire.\\nElwynn Forest's quiet heart.\""]],
-            [655, 0, ["))"]],
-            [0, 0, []]
+            [
+              355,
+              0,
+              [
+                "pbMessage(_INTL("
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "\"Welcome to Goldshire.\\nElwynn Forest's quiet heart.\""
+              ]
+            ],
+            [
+              655,
+              0,
+              [
+                "))"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
           ]
         }
       ]
@@ -55,8 +77,18 @@
           "through": false,
           "always_on_top": false,
           "list": [
-            [355, 0, ["ElwynnForestEvents.run(:goldshire_townsfolk)"]],
-            [0, 0, []]
+            [
+              355,
+              0,
+              [
+                "ElwynnForestEvents.run(:goldshire_townsfolk)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
           ]
         }
       ]
@@ -81,8 +113,62 @@
           "through": false,
           "always_on_top": false,
           "list": [
-            [355, 0, ["FlightPaths.talk(:goldshire)"]],
-            [0, 0, []]
+            [
+              355,
+              0,
+              [
+                "FlightPaths.talk(:goldshire)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ]
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Marshal Dughan questturnin(11)",
+      "x": 13,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 19",
+            "character_hue": 0,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:friendly"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "ElwynnForestEvents.run(:marshal_dughan)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
           ]
         }
       ]

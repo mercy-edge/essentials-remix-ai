@@ -29,16 +29,16 @@ class Battle
           expShare.push(i)
         end
       end
-      # Calculate EV and Exp gains for the participants
+      # Calculate Exp gains for the participants. pbGainEVsOne is a no-op.
       if numPartic > 0 || expShare.length > 0 || expAll
-        # Gain EVs and Exp for participants
+        # Gain Exp for participants
         eachInTeam(0, 0) do |pkmn, i|
           next if !pkmn.able?
           next unless b.participants.include?(i) || expShare.include?(i)
           pbGainEVsOne(i, b)
           pbGainExpOne(i, b, numPartic, expShare, expAll, !pkmn.shadowPokemon?)
         end
-        # Gain EVs and Exp for all other Pokémon because of Exp All
+        # Gain Exp for all other Pokémon because of Exp All
         if expAll
           showMessage = true
           eachInTeam(0, 0) do |pkmn, i|
@@ -56,37 +56,10 @@ class Battle
     end
   end
 
-  def pbGainEVsOne(idxParty, defeatedBattler)
-    pkmn = pbParty(0)[idxParty]   # The Pokémon gaining EVs from defeatedBattler
-    evYield = defeatedBattler.pokemon.evYield
-    # Num of effort points pkmn already has
-    evTotal = 0
-    GameData::Stat.each_main { |s| evTotal += pkmn.ev[s.id] }
-    # Modify EV yield based on pkmn's held item
-    if !Battle::ItemEffects.triggerEVGainModifier(pkmn.item, pkmn, evYield)
-      Battle::ItemEffects.triggerEVGainModifier(@initialItems[0][idxParty], pkmn, evYield)
-    end
-    # Double EV gain because of Pokérus
-    if pkmn.pokerusStage >= 1   # Infected or cured
-      evYield.each_key { |stat| evYield[stat] *= 2 }
-    end
-    # Gain EVs for each stat in turn
-    if pkmn.shadowPokemon? && pkmn.heartStage <= 3 && pkmn.saved_ev
-      pkmn.saved_ev.each_value { |e| evTotal += e }
-      GameData::Stat.each_main do |s|
-        evGain = evYield[s.id].clamp(0, Pokemon::EV_STAT_LIMIT - pkmn.ev[s.id] - pkmn.saved_ev[s.id])
-        evGain = evGain.clamp(0, Pokemon::EV_LIMIT - evTotal)
-        pkmn.saved_ev[s.id] += evGain
-        evTotal += evGain
-      end
-    else
-      GameData::Stat.each_main do |s|
-        evGain = evYield[s.id].clamp(0, Pokemon::EV_STAT_LIMIT - pkmn.ev[s.id])
-        evGain = evGain.clamp(0, Pokemon::EV_LIMIT - evTotal)
-        pkmn.ev[s.id] += evGain
-        evTotal += evGain
-      end
-    end
+  def pbGainEVsOne(_idxParty, _defeatedBattler)
+    # EVs are retired. Effort yields, Macho Brace, Power items and Pokérus no
+    # longer change stats. Pokémon still have an ev Hash so old saves load.
+    return
   end
 
   def pbGainExpOne(idxParty, defeatedBattler, numPartic, expShare, expAll, showMessages = true)
@@ -94,7 +67,7 @@ class Battle
     growth_rate = pkmn.growth_rate
     # Don't bother calculating if gainer is already at max Exp
     if pkmn.exp >= growth_rate.maximum_exp
-      pkmn.calc_stats   # To ensure new EVs still have an effect
+      pkmn.calc_stats
       return
     end
     isPartic    = defeatedBattler.participants.include?(idxParty)

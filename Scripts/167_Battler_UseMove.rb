@@ -102,6 +102,10 @@ class Battle::Battler
   end
 
   def pbEndTurn(_choice)
+    if @overpower_consumed_window
+      @effects[PBEffects::OverpowerDodged] = false
+      @overpower_consumed_window = false
+    end
     @lastRoundMoved = @battle.turnCount   # Done something this round
     if !@effects[PBEffects::ChoiceBand] &&
        (hasActiveItem?([:CHOICEBAND, :CHOICESPECS, :CHOICESCARF]) ||
@@ -212,6 +216,8 @@ class Battle::Battler
       pbEndTurn(choice)
       return
     end
+    # Close Overpower's dodge window at the end of this move, after power is calculated.
+    @overpower_consumed_window = true
     # Stance Change
     if isSpecies?(:AEGISLASH) && self.ability == :STANCECHANGE
       if move.damagingMove?

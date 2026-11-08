@@ -27,8 +27,18 @@
           "through": false,
           "always_on_top": false,
           "list": [
-            [355, 0, ["pbDoorWarpTo(76, 25, 2, facing: 2)"]],
-            [0, 0, []]
+            [
+              355,
+              0,
+              [
+                "pbDoorWarpTo(76, 25, 2, facing: 2)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
           ]
         }
       ]
@@ -60,10 +70,32 @@
             "frequency": 3
           },
           "list": [
-            [108, 0, ["NPC_LEVEL:3"]],
-            [108, 0, ["NPC_RELATION:neutral"]],
-            [355, 0, ["NorthshireAbbeyEvents.run(:kobold_laborer)"]],
-            [0, 0, []]
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:neutral"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:kobold_laborer)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
           ]
         }
       ]
@@ -95,10 +127,32 @@
             "frequency": 3
           },
           "list": [
-            [108, 0, ["NPC_LEVEL:3"]],
-            [108, 0, ["NPC_RELATION:neutral"]],
-            [355, 0, ["NorthshireAbbeyEvents.run(:kobold_laborer)"]],
-            [0, 0, []]
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:neutral"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:kobold_laborer)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
           ]
         }
       ]
@@ -130,11 +184,318 @@
             "frequency": 3
           },
           "list": [
-            [108, 0, ["NPC_LEVEL:3"]],
-            [108, 0, ["NPC_RELATION:neutral"]],
-            [355, 0, ["NorthshireAbbeyEvents.run(:kobold_laborer)"]],
-            [0, 0, []]
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:neutral"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:kobold_laborer)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
           ]
+        }
+      ]
+    },
+    "304": {
+      "id": 304,
+      "name": "Kobold Laborer",
+      "x": 8,
+      "y": 10,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 250,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:neutral"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:kobold_laborer)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 2,
+            "frequency": 3
+          }
+        }
+      ]
+    },
+    "305": {
+      "id": 305,
+      "name": "Kobold Laborer",
+      "x": 12,
+      "y": 11,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 250,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:neutral"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:kobold_laborer)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 2,
+            "frequency": 3
+          }
+        }
+      ]
+    },
+    "306": {
+      "id": 306,
+      "name": "Kobold Laborer",
+      "x": 15,
+      "y": 9,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 250,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:neutral"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:kobold_laborer)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 2,
+            "frequency": 3
+          }
+        }
+      ]
+    },
+    "307": {
+      "id": 307,
+      "name": "Kobold Laborer",
+      "x": 7,
+      "y": 7,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 250,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:neutral"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:kobold_laborer)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 2,
+            "frequency": 3
+          }
+        }
+      ]
+    },
+    "308": {
+      "id": 308,
+      "name": "Kobold Laborer",
+      "x": 11,
+      "y": 12,
+      "pages": [
+        {
+          "graphic": {
+            "character_name": "NPC 18",
+            "character_hue": 250,
+            "direction": 2,
+            "pattern": 0,
+            "character_index": 0
+          },
+          "trigger": 0,
+          "walk_anime": true,
+          "step_anime": false,
+          "direction_fix": false,
+          "through": false,
+          "always_on_top": false,
+          "list": [
+            [
+              108,
+              0,
+              [
+                "NPC_LEVEL:3"
+              ]
+            ],
+            [
+              108,
+              0,
+              [
+                "NPC_RELATION:neutral"
+              ]
+            ],
+            [
+              355,
+              0,
+              [
+                "NorthshireAbbeyEvents.run(:kobold_laborer)"
+              ]
+            ],
+            [
+              0,
+              0,
+              []
+            ]
+          ],
+          "wander": {
+            "range_x": 2,
+            "range_y": 2,
+            "speed": 2,
+            "frequency": 3
+          }
         }
       ]
     }

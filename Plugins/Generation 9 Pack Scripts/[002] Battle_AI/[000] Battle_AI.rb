@@ -321,7 +321,9 @@ class Battle::AI::AIMove
     end
     ##### Calculate target's defense stat #####
     defense, def_stage = @move.pbGetDefenseStats(user.battler, target.battler)
-    if !user.has_active_ability?(:UNAWARE) || @ai.battle.moldBreaker
+    sundered = target_battler.effects[PBEffects::Sundered].to_i > 0
+    def_stage = @move.pbSunderedDefenseStage(def_stage) if sundered
+    if sundered || !user.has_active_ability?(:UNAWARE) || @ai.battle.moldBreaker
       def_stage = max_stage if is_critical && def_stage > max_stage
       defense = (defense.to_f * stage_mul[def_stage] / stage_div[def_stage]).floor
     end
