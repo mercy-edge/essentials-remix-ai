@@ -19,7 +19,7 @@ class Battle::Move::GiveUserStatusToTarget < Battle::Move
         user.pbCureStatus(false)
         @battle.pbDisplay(_INTL("{1} became alert again.", user.pbThis))
       when :FROSTBITE
-        target.pbFreeze
+        target.pbFrostbite(user)
         user.pbCureStatus(false)
         @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", user.pbThis))
       end
@@ -54,7 +54,7 @@ class Battle::Move::CureUserPartyStatus < Battle::Move
     when :PARALYSIS
       @battle.pbDisplay(_INTL("{1} was cured of paralysis.", curedName))
     when :FROZEN
-      @battle.pbDisplay(_INTL("{1} was thawed out.", curedName))
+      @battle.pbDisplay(_INTL("{1} broke out of the ice!", curedName))
     when :DROWSY
       @battle.pbDisplay(_INTL("{1} became alert again.", curedName))
     when :FROSTBITE
@@ -87,7 +87,7 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHPCureStatus < Battle::Move
       when :PARALYSIS
         @battle.pbDisplay(_INTL("{1} was cured of paralysis.", target.pbThis))
       when :FROZEN
-        @battle.pbDisplay(_INTL("{1} was thawed out.", target.pbThis))
+        @battle.pbDisplay(_INTL("{1} broke out of the ice!", target.pbThis))
       when :DROWSY
         @battle.pbDisplay(_INTL("{1} became alert again.", target.pbThis))
       when :FROSTBITE

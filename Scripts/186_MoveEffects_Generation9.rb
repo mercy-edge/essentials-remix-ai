@@ -627,6 +627,108 @@ class Battle::Move::CustomHamstring < Battle::Move
   end
 end
 
+#===============================================================================
+# Mage moves.
+#===============================================================================
+class Battle::Move::CustomFireball < Battle::Move
+  def pbBaseDamageMultiplier(damageMult, user, target)
+    if target.burned? &&
+       (target.effects[PBEffects::Substitute] == 0 || ignoresSubstitute?(user))
+      damageMult *= 1.5
+    end
+    return damageMult
+  end
+
+  def pbAdditionalEffect(user, target)
+    return if target.damageState.substitute
+    target.pbBurn(user) if target.pbCanBurn?(user, false, self)
+  end
+end
+
+class Battle::Move::CustomIceBlock < Battle::Move
+  def pbMoveFailed?(user, targets)
+    return !user.pbCanFreeze?(user, true, self)
+  end
+
+  def pbEffectGeneral(user)
+    user.pbFreeze(_INTL("{1} encased itself in ice!", user.pbThis))
+  end
+end
+
+class Battle::Move::CustomFrostNova < Battle::Move::TrapTargetInBattle
+end
+
+# Outrage-style lock that hits every near foe. When the lock ends, the user's
+# Special Attack falls by 1 stage instead of the user becoming confused.
+class Battle::Move::CustomBlizzard < Battle::Move
+  def pbEndOfMoveUsageEffect(user, targets, numHits, switchedBattlers)
+    return if user.fainted?
+    affected = targets.any? { |b| b && !b.damageState.unaffected }
+    if affected && user.effects[PBEffects::Outrage] == 0
+      user.effects[PBEffects::Outrage] = 2 + @battle.pbRandom(2)
+      user.currentMove = @id
+    end
+    return if user.effects[PBEffects::Outrage] <= 0
+    user.effects[PBEffects::Outrage] -= 1
+    return if user.effects[PBEffects::Outrage] > 0
+    @battle.pbDisplay(_INTL("{1} is worn out from the blizzard!", user.pbThis))
+    if user.pbCanLowerStatStage?(:SPECIAL_ATTACK, user, self)
+      user.pbLowerStatStage(:SPECIAL_ATTACK, 1, user)
+    end
+  end
+end
+
+class Battle::Move::CustomArcaneExplosion < Battle::Move
+  def pbBaseDamageMultiplier(damageMult, user, target)
+    if target.effects[PBEffects::Disable] > 0 &&
+       (target.effects[PBEffects::Substitute] == 0 || ignoresSubstitute?(user))
+      damageMult *= 1.5
+    end
+    return damageMult
+  end
+end
+
+class Battle::Move::CustomEvocation < Battle::Move
+  def pbOtherMovesNeedPP?(user)
+    user.eachMove do |m|
+      next if !m || m.id == :EVOCATION
+      return true if m.pp < m.total_pp
+    end
+    return false
+  end
+
+  def pbMoveFailed?(user, targets)
+    if user.hp >= user.totalhp && !pbOtherMovesNeedPP?(user)
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    healed = false
+    if user.hp < user.totalhp && user.canHeal?
+      amt = user.totalhp / 3
+      amt = 1 if amt < 1
+      healed = user.pbRecoverHP(amt) > 0
+      @battle.pbDisplay(_INTL("{1}'s HP was restored.", user.pbThis)) if healed
+    end
+    restored = false
+    user.eachMove do |m|
+      next if !m || m.id == :EVOCATION
+      next if m.pp >= m.total_pp
+      gain = m.total_pp / 2
+      next if gain <= 0
+      user.pbSetPP(m, [m.pp + gain, m.total_pp].min)
+      restored = true
+    end
+    @battle.pbDisplay(_INTL("{1} restored PP to its other moves!", user.pbThis)) if restored
+    if !healed && !restored
+      @battle.pbDisplay(_INTL("But it failed!"))
+    end
+  end
+end
+
 class Battle::Move::CustomCounterspell < Battle::Move
   def pbFailsAgainstTarget?(user, target, show_message)
     choice = @battle.choices[target.index]

@@ -174,17 +174,8 @@ class Battle
   #-----------------------------------------------------------------------------
   alias paldea_pbEORStatusProblemDamage pbEORStatusProblemDamage
   def pbEORStatusProblemDamage(priority)
+    # Base end-of-round code already deals frostbite's 1/16 damage.
     paldea_pbEORStatusProblemDamage(priority)
-    priority.each do |battler|
-      next if battler.status != :FROSTBITE || !battler.takesIndirectDamage?
-      battler.droppedBelowHalfHP = false
-      dmg = battler.totalhp / 16
-      battler.pbContinueStatus { battler.pbReduceHP(dmg, false) }
-      battler.pbItemHPHealCheck
-      battler.pbAbilitiesOnDamageTaken
-      battler.pbFaint if battler.fainted?
-      battler.droppedBelowHalfHP = false
-    end
   end
 end
 
@@ -211,8 +202,7 @@ class Battle::Battler
   # Freeze
   #-----------------------------------------------------------------------------
   def pbFreeze(msg = nil)
-    duration = Settings::CHAMPIONS_MECHANICS ? 3 : 0
-    pbInflictStatus(:FROZEN, duration, msg)
+    pbInflictStatus(:FROZEN, pbIceBlockDuration, msg)
   end
 
   #-----------------------------------------------------------------------------
@@ -246,6 +236,9 @@ class Battle::Battler
   end
 
   def pbCanFrostbite?(user, showMessages, move = nil)
+    if @battle.rules["freezeclause"] && pbHasStatusPokemon?(:FROSTBITE)
+      return false
+    end
     return pbCanInflictStatus?(:FROSTBITE, user, showMessages, move)
   end
 
@@ -491,7 +484,10 @@ class Battle::Battler
     when :PARALYSIS
       @battle.pbDisplay(_INTL("{1} is paralyzed! It can't move!", pbThis))
     when :FROZEN
-      @battle.pbDisplay(_INTL("{1} is frozen solid!", pbThis))
+      @battle.pbDisplay(_INTL("{1} is encased in ice and can't move!", pbThis))
+    when :POLYMORPH
+      @battle.pbDisplay(_INTL("{1} is polymorphed and can't move!", pbThis))
+      PBDebug.log("[Status continues] #{pbThis}'s polymorph count is #{@statusCount}")
     when :DROWSY
       @battle.pbDisplay(_INTL("{1} is too drowsy to move!", pbThis))
 	  PBDebug.log("[Status continues] #{pbThis}'s drowsy count is #{@statusCount}")
@@ -549,18 +545,15 @@ class Battle::Battler
           end
         end
       when :FROZEN
+        # Ice Block. Counted down like sleep. No random thaw.
         self.statusCount -= 1
         if @statusCount <= 0
           pbCureStatus
-        elsif !move.thawsUser?
-          if @battle.pbRandom(100) < 25
-            pbCureStatus
-          else
-            pbContinueStatus
-            PBDebug.log("[Move failed] #{pbThis} is frozen")
-            @lastMoveFailed = true
-            return false
-          end
+        else
+          pbContinueStatus
+          PBDebug.log("[Move failed] #{pbThis} is encased in ice")
+          @lastMoveFailed = true
+          return false
         end
       end
     end
@@ -622,10 +615,7 @@ class Battle::Battler
   #-----------------------------------------------------------------------------
   alias paldea_pbCheckFormOnStatusChange pbCheckFormOnStatusChange
   def pbCheckFormOnStatusChange
-    return if fainted? || @effects[PBEffects::Transform]
-    if isSpecies?(:SHAYMIN) && frostbite?
-      pbChangeForm(0, _INTL("{1} transformed!", pbThis))
-    end
+    # Base battler code reverts Shaymin on frostbite. Do not transform twice.
     paldea_pbCheckFormOnStatusChange
   end
   

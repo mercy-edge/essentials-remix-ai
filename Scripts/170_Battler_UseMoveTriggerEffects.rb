@@ -93,9 +93,10 @@ class Battle::Battler
     if move.damagingMove?
       targets.each do |b|
         next if b.damageState.unaffected || b.damageState.substitute
-        next if b.status != :FROZEN
+        next if b.status != :FROSTBITE
         # NOTE: Non-Fire-type moves that thaw the user will also thaw the
-        #       target (in Gen 6+).
+        #       target (in Gen 6+). This now cures frostbite, which replaced
+        #       the old freeze. Ice Block (:FROZEN) is not thawed by attacks.
         if move.calcType == :FIRE || (Settings::MECHANICS_GENERATION >= 6 && move.thawsUser?)
           b.pbCureStatus
         end

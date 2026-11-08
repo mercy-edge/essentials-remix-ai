@@ -361,7 +361,7 @@ Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("BurnFlinchTarget",
 #===============================================================================
 Battle::AI::Handlers::MoveFailureAgainstTargetCheck.add("FreezeTarget",
   proc { |move, user, target, ai, battle|
-    next move.statusMove? && !target.battler.pbCanFreeze?(user.battler, false, move.move)
+    next move.statusMove? && !target.battler.pbCanFrostbite?(user.battler, false, move.move)
   }
 )
 Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("FreezeTarget",
@@ -372,7 +372,7 @@ Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("FreezeTarget",
     next useless_score if target.faster_than?(user) &&
                           target.has_active_ability?(:HYDRATION) &&
                           [:Rain, :HeavyRain].include?(target.battler.effectiveWeather)
-    if target.battler.pbCanFreeze?(user.battler, false, move.move)
+    if target.battler.pbCanFrostbite?(user.battler, false, move.move)
       add_effect = move.get_score_change_for_additional_effect(user, target)
       next useless_score if add_effect == -999   # Additional effect will be negated
       score += add_effect
@@ -478,7 +478,8 @@ Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("GiveUserStatusToTarget",
       :PARALYSIS => "ParalyzeTarget",
       :POISON    => "PoisonTarget",
       :BURN      => "BurnTarget",
-      :FROZEN    => "FreezeTarget"
+      :FROZEN    => "FreezeTarget",
+      :FROSTBITE => "FrostbiteTarget"
     }[user.status]
     if function_code
       new_score = Battle::AI::Handlers.apply_move_effect_against_target_score(function_code,

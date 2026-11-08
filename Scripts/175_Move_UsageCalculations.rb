@@ -475,8 +475,8 @@ class Battle::Move
        !user.hasActiveAbility?(:GUTS)
       multipliers[:final_damage_multiplier] /= 2
     end
-    # Frostbite
-    if user.status == :FROSTBITE && specialMove?
+    # Frostbite. Facade negates the Special Attack penalty, same as burn.
+    if user.status == :FROSTBITE && specialMove? && damageReducedByFrostbite?
       multipliers[:final_damage_multiplier] /= 2
     end
     # Aurora Veil, Reflect, Light Screen

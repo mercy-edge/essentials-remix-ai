@@ -242,7 +242,7 @@ Battle::AI::Handlers::ShouldSwitch.add(:cure_status_problem_by_switching_out,
       :IMMUNITY    => :POISON,
       :INSOMNIA    => :SLEEP,
       :LIMBER      => :PARALYSIS,
-      :MAGMAARMOR  => :FROZEN,
+      :MAGMAARMOR  => :FROSTBITE,
       :VITALSPIRIT => :SLEEP,
       :WATERBUBBLE => :BURN,
       :WATERVEIL   => :BURN

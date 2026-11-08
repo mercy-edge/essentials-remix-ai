@@ -33,17 +33,13 @@ ItemHandlers::UseOnPokemon.copy(:AWAKENING, :CHESTOBERRY, :BLUEFLUTE, :POKEFLUTE
 # Adds Frostbite as a status that may be healed.
 #-------------------------------------------------------------------------------
 ItemHandlers::UseOnPokemon.add(:ICEHEAL, proc { |item, qty, pkmn, scene|
-  if pkmn.fainted? || ![:FROZEN, :FROSTBITE].include?(pkmn.status)
+  if pkmn.fainted? || pkmn.status != :FROSTBITE
     scene.pbDisplay(_INTL("It won't have any effect."))
     next false
   end
-  case pkmn.status
-  when :FROZEN    then msg = _INTL("{1} was thawed out.", pkmn.name)
-  when :FROSTBITE then msg = _INTL("{1}'s frostbite was healed.", pkmn.name)
-  end
   pkmn.heal_status
   scene.pbRefresh
-  scene.pbDisplay(msg)
+  scene.pbDisplay(_INTL("{1}'s frostbite was healed.", pkmn.name))
   next true
 })
 
@@ -186,22 +182,17 @@ ItemHandlers::UseInBattle.add(:POKEFLUTE, proc { |item, battler, battle|
 # Adds Frostbite as a status that may be healed.
 #-------------------------------------------------------------------------------
 ItemHandlers::CanUseInBattle.add(:ICEHEAL, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
-  next pbBattleItemCanCureStatus?(:FROZEN, pokemon, scene, showMessages) ||
-       pbBattleItemCanCureStatus?(:FROSTBITE, pokemon, scene, showMessages)
+  next pbBattleItemCanCureStatus?(:FROSTBITE, pokemon, scene, showMessages)
 })
 
 ItemHandlers::CanUseInBattle.copy(:ICEHEAL, :ASPEARBERRY)
 
 ItemHandlers::BattleUseOnPokemon.add(:ICEHEAL, proc { |item, pokemon, battler, choices, scene|
-  oldStatus = pokemon.status
   pokemon.heal_status
   battler&.pbCureStatus(false)
   name = (battler) ? battler.pbThis : pokemon.name
   scene.pbRefresh
-  case oldStatus
-  when :FROZEN    then scene.pbDisplay(_INTL("{1} was thawed out.", name))
-  when :FROSTBITE then scene.pbDisplay(_INTL("{1}'s frostbite was healed.", name))
-  end
+  scene.pbDisplay(_INTL("{1}'s frostbite was healed.", name))
 })
 
 ItemHandlers::BattleUseOnPokemon.copy(:ICEHEAL, :ASPEARBERRY)
@@ -244,7 +235,7 @@ Battle::ItemEffects::StatusCure.add(:LUMBERRY,
       when :PARALYSIS
         battle.pbDisplay(_INTL("{1}'s {2} cured its paralysis!", battler.pbThis, itemName))
       when :FROZEN
-        battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, itemName))
+        battle.pbDisplay(_INTL("{1}'s {2} broke it out of the ice!", battler.pbThis, itemName))
       when :DROWSY
         battle.pbDisplay(_INTL("{1}'s {2} made it alert again!", battler.pbThis, itemName))
       when :FROSTBITE
@@ -288,14 +279,11 @@ Battle::ItemEffects::StatusCure.add(:CHESTOBERRY,
 Battle::ItemEffects::StatusCure.add(:ASPEARBERRY,
   proc { |item, battler, battle, forced|
     next false if !forced && !battler.canConsumeBerry?
-    next false if ![:FROZEN, :FROSTBITE].include?(battler.status)
+    next false if battler.status != :FROSTBITE
     itemName = GameData::Item.get(item).name
     PBDebug.log("[Item triggered] #{battler.pbThis}'s #{itemName}") if forced
     battle.pbCommonAnimation("EatBerry", battler) if !forced
-    case battler.status
-    when :FROZEN    then msg = _INTL("{1}'s {2} defrosted it!", battler.pbThis, itemName)
-    when :FROSTBITE then msg = _INTL("{1}'s {2} healed its frostbite!", battler.pbThis, itemName)
-    end
+    msg = _INTL("{1}'s {2} healed its frostbite!", battler.pbThis, itemName)
     battler.pbCureStatus(forced)
     battle.pbDisplay(msg) if !forced
     next true

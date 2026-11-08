@@ -31,7 +31,7 @@ Battle::AI::Handlers::GeneralMoveScore.add(:shadow_moves,
 #===============================================================================
 Battle::AI::Handlers::GeneralMoveScore.add(:thawing_move_when_frozen,
   proc { |score, move, user, ai, battle|
-    if ai.trainer.medium_skill? && user.status == :FROZEN
+    if ai.trainer.medium_skill? && user.status == :FROSTBITE
       old_score = score
       if move.move.thawsUser?
         score += 20
@@ -350,7 +350,7 @@ Battle::AI::Handlers::GeneralMoveAgainstTargetScore.add(:external_flinching_effe
 #===============================================================================
 Battle::AI::Handlers::GeneralMoveAgainstTargetScore.add(:thawing_move_against_frozen_target,
   proc { |score, move, user, target, ai, battle|
-    if ai.trainer.medium_skill? && target.status == :FROZEN
+    if ai.trainer.medium_skill? && target.status == :FROSTBITE
       if move.rough_type == :FIRE || (Settings::MECHANICS_GENERATION >= 6 && move.move.thawsUser?)
         old_score = score
         score -= 20

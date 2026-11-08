@@ -264,7 +264,7 @@ class Battle::AI::AIBattler
     when :ASPEARBERRY, :CHESTOBERRY
       # Status cure
       cured_status = {
-        :ASPEARBERRY => [:FROZEN, :FROSTBITE],
+        :ASPEARBERRY => [:FROSTBITE],
         :CHESTOBERRY => [:SLEEP, :DROWSY]
       }[item]
       ret += (cured_status && cured_status.include?(status)) ? 6 : -6
@@ -662,7 +662,7 @@ Battle::AI::Handlers::ShouldSwitch.add(:cure_status_problem_by_switching_out,
       :IMMUNITY    => [:POISON],
       :INSOMNIA    => [:SLEEP],
       :LIMBER      => [:PARALYSIS],
-      :MAGMAARMOR  => [:FROZEN, :FROSTBITE],
+      :MAGMAARMOR  => [:FROSTBITE],
       :VITALSPIRIT => [:SLEEP, :DROWSY],
       :WATERBUBBLE => [:BURN],
       :WATERVEIL   => [:BURN]
@@ -746,7 +746,7 @@ Battle::AI::Handlers::ShouldSwitch.add(:zero_to_hero_ability,
 #===============================================================================
 Battle::AI::Handlers::GeneralMoveScore.add(:thawing_move_when_frozen,
   proc { |score, move, user, ai, battle|
-    if ai.trainer.medium_skill? && [:FROZEN, :FROSTBITE].include?(user.status)
+    if ai.trainer.medium_skill? && user.status == :FROSTBITE
       old_score = score
       if move.move.thawsUser?
         score += 20
@@ -786,7 +786,7 @@ Battle::AI::Handlers::GeneralMoveScore.add(:electrocuting_move_when_drowsy,
 #===============================================================================
 Battle::AI::Handlers::GeneralMoveAgainstTargetScore.add(:thawing_move_against_frozen_target,
   proc { |score, move, user, target, ai, battle|
-    if ai.trainer.medium_skill? && [:FROZEN, :FROSTBITE].include?(user.status)
+    if ai.trainer.medium_skill? && target.status == :FROSTBITE
       if move.rough_type == :FIRE || (Settings::MECHANICS_GENERATION >= 6 && move.move.thawsUser?)
         old_score = score
         score -= 20

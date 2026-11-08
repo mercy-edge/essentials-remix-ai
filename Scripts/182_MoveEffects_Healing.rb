@@ -273,7 +273,9 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHPCureStatus < Battle::Move
       when :PARALYSIS
         @battle.pbDisplay(_INTL("{1} was cured of paralysis.", target.pbThis))
       when :FROZEN
-        @battle.pbDisplay(_INTL("{1} was thawed out.", target.pbThis))
+        @battle.pbDisplay(_INTL("{1} broke out of the ice!", target.pbThis))
+      when :FROSTBITE
+        @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", target.pbThis))
       end
     end
   end

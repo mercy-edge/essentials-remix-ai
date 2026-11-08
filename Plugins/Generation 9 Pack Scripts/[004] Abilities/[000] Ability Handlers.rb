@@ -95,15 +95,11 @@ Battle::AbilityEffects::OnSwitchOut.copy(:INSOMNIA, :VITALSPIRIT)
 #-------------------------------------------------------------------------------
 Battle::AbilityEffects::StatusCure.add(:MAGMAARMOR,
   proc { |ability, battler|
-    next if ![:FROZEN, :FROSTBITE].include?(battler.status)
+    next if battler.status != :FROSTBITE
     battler.battle.pbShowAbilitySplash(battler)
     battler.pbCureStatus(Battle::Scene::USE_ABILITY_SPLASH)
     if !Battle::Scene::USE_ABILITY_SPLASH
-      case battler.status
-      when :FROZEN    then msg = _INTL("{1}'s {2} defrosted it!", battler.pbThis, battler.abilityName)
-      when :FROSTBITE then msg = _INTL("{1}'s {2} healed its frostbite!", battler.pbThis, battler.abilityName)
-      end
-      battler.battle.pbDisplay(msg)
+      battler.battle.pbDisplay(_INTL("{1}'s {2} healed its frostbite!", battler.pbThis, battler.abilityName))
     end
     battler.battle.pbHideAbilitySplash(battler)
   }
@@ -111,7 +107,7 @@ Battle::AbilityEffects::StatusCure.add(:MAGMAARMOR,
 
 Battle::AbilityEffects::OnSwitchOut.add(:MAGMAARMOR,
   proc { |ability, battler, endOfBattle|
-    next if ![:FROZEN, :FROSTBITE].include?(battler.status)
+    next if battler.status != :FROSTBITE
     PBDebug.log("[Ability triggered] #{battler.pbThis}'s #{battler.abilityName}")
     battler.status = :NONE
   }
@@ -141,7 +137,7 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:HEALER,
         when :PARALYSIS
           battle.pbDisplay(_INTL("{1}'s {2} cured its partner's paralysis!", battler.pbThis, battler.abilityName))
         when :FROZEN
-          battle.pbDisplay(_INTL("{1}'s {2} defrosted its partner!", battler.pbThis, battler.abilityName))
+          battle.pbDisplay(_INTL("{1}'s {2} broke its partner out of the ice!", battler.pbThis, battler.abilityName))
         when :DROWSY
           battle.pbDisplay(_INTL("{1}'s {2} made its partner alert again!", battler.pbThis, battler.abilityName))
         when :FROSTBITE
@@ -176,7 +172,7 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:HYDRATION,
       when :PARALYSIS
         battle.pbDisplay(_INTL("{1}'s {2} cured its paralysis!", battler.pbThis, battler.abilityName))
       when :FROZEN
-        battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, battler.abilityName))
+        battle.pbDisplay(_INTL("{1}'s {2} broke it out of the ice!", battler.pbThis, battler.abilityName))
       when :DROWSY
         battle.pbDisplay(_INTL("{1}'s {2} made it alert again!", battler.pbThis, battler.abilityName))
       when :FROSTBITE
@@ -210,7 +206,7 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:SHEDSKIN,
       when :PARALYSIS
         battle.pbDisplay(_INTL("{1}'s {2} cured its paralysis!", battler.pbThis, battler.abilityName))
       when :FROZEN
-        battle.pbDisplay(_INTL("{1}'s {2} defrosted it!", battler.pbThis, battler.abilityName))
+        battle.pbDisplay(_INTL("{1}'s {2} broke it out of the ice!", battler.pbThis, battler.abilityName))
       when :DROWSY
         battle.pbDisplay(_INTL("{1}'s {2} made it alert again!", battler.pbThis, battler.abilityName))
       when :FROSTBITE
@@ -273,13 +269,13 @@ Battle::AbilityEffects::OnStatusInflicted.add(:SYNCHRONIZE,
         battler.battle.pbHideAbilitySplash(battler)
       end
     when :FROSTBITE
-      if user.pbCanSynchronizeStatus?(:FROZEN, battler)
+      if user.pbCanFrostbiteSynchronize?(battler)
         battler.battle.pbShowAbilitySplash(battler)
         msg = nil
         if !Battle::Scene::USE_ABILITY_SPLASH
           msg = _INTL("{1}'s {2} caused {3} to become frostbitten!", battler.pbThis, battler.abilityName, user.pbThis(true))
         end
-        user.pbFreeze(nil, msg)
+        user.pbFrostbite(nil, msg)
         battler.battle.pbHideAbilitySplash(battler)
       end
     end

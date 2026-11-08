@@ -29,7 +29,7 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:HEALER,
         when :PARALYSIS
           battle.pbDisplay(_INTL("{1}'s {2} cured its partner's paralysis!", battler.pbThis, battler.abilityName))
         when :FROZEN
-          battle.pbDisplay(_INTL("{1}'s {2} defrosted its partner!", battler.pbThis, battler.abilityName))
+          battle.pbDisplay(_INTL("{1}'s {2} broke its partner out of the ice!", battler.pbThis, battler.abilityName))
         end
       end
       battle.pbHideAbilitySplash(battler)

@@ -4344,7 +4344,7 @@ Flags = CanProtect,CanMirrorMove,CannotMetronome
 Description = The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pokémon.
 #-------------------------------
 [BLIZZARD]
-Name = Blizzard
+Name = Whiteout
 Type = ICE
 Category = Special
 Power = 110
@@ -4354,7 +4354,7 @@ Target = AllNearFoes
 FunctionCode = FreezeTargetAlwaysHitsInHail
 Flags = CanProtect,CanMirrorMove
 EffectChance = 10
-Description = A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.
+Description = A howling blizzard is summoned to strike the opposing team. It may also leave them frostbitten.
 #-------------------------------
 [ICEHAMMER]
 Name = Ice Hammer
@@ -4379,7 +4379,7 @@ Target = NearOther
 FunctionCode = FreezeTarget
 Flags = CanProtect,CanMirrorMove
 EffectChance = 10
-Description = The target is struck with an icy-cold beam of energy. It may also freeze the target solid.
+Description = The target is struck with an icy-cold beam of energy. It may also leave the target frostbitten.
 #-------------------------------
 [ICICLECRASH]
 Name = Icicle Crash
@@ -4405,7 +4405,7 @@ Target = NearOther
 FunctionCode = FreezeTarget
 Flags = Contact,CanProtect,CanMirrorMove,Punching
 EffectChance = 10
-Description = The target is punched with an icy fist. It may also leave the target frozen.
+Description = The target is punched with an icy fist. It may also leave the target frostbitten.
 #-------------------------------
 [FREEZEDRY]
 Name = Freeze-Dry
@@ -4418,7 +4418,7 @@ Target = NearOther
 FunctionCode = FreezeTargetSuperEffectiveAgainstWater
 Flags = CanProtect,CanMirrorMove
 EffectChance = 10
-Description = The user rapidly cools the target. This may freeze the target. Is super-effective on Water types.
+Description = The user rapidly cools the target. This may frostbite the target. Is super-effective on Water types.
 #-------------------------------
 [AURORABEAM]
 Name = Aurora Beam
@@ -4457,7 +4457,7 @@ Target = NearOther
 FunctionCode = FreezeFlinchTarget
 Flags = Contact,CanProtect,CanMirrorMove,Biting
 EffectChance = 101
-Description = The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen.
+Description = The user bites with cold-infused fangs. It may also make the target flinch or leave it frostbitten.
 #-------------------------------
 [AVALANCHE]
 Name = Avalanche
@@ -4521,7 +4521,7 @@ Target = AllNearFoes
 FunctionCode = FreezeTarget
 Flags = CanProtect,CanMirrorMove
 EffectChance = 10
-Description = The user attacks with a chilling gust of powdery snow. It may also freeze the targets.
+Description = The user attacks with a chilling gust of powdery snow. It may also frostbite the targets.
 #-------------------------------
 [ICEBALL]
 Name = Ice Ball
@@ -4950,7 +4950,7 @@ Target = NearOther
 FunctionCode = ParalyzeBurnOrFreezeTarget
 Flags = CanProtect,CanMirrorMove
 EffectChance = 20
-Description = The user strikes with a simultaneous three-beam attack. May also paralyze, burn, or freeze the target.
+Description = The user strikes with a simultaneous three-beam attack. May also paralyze, burn, or frostbite the target.
 #-------------------------------
 [CRUSHCLAW]
 Name = Crush Claw
@@ -7084,7 +7084,7 @@ Target = NearOther
 FunctionCode = FreezeTarget
 Flags = CanProtect,CanMirrorMove,CannotMetronome
 EffectChance = 10
-Description = The user shoots its psychic power from its eyes to attack. This may also leave the target frozen.
+Description = The user shoots its psychic power from its eyes to attack. This may also leave the target frostbitten.
 #-------------------------------
 [PSYCHIC]
 Name = Psychic
@@ -9552,14 +9552,14 @@ Description = The user revs with wicked force into the target. May put the targe
 Name = Fireball
 Type = FIRE
 Category = Special
-Power = 40
+Power = 60
 Accuracy = 100
-TotalPP = 25
+TotalPP = 15
 Target = NearOther
-FunctionCode = LowerTargetAtkSpAtk1
+FunctionCode = CustomFireball
 Flags = CanProtect,CanMirrorMove
-EffectChance = 20
-Description = The user hurls a fireball at the target. It may lower the target's Attack and Sp. Atk.
+EffectChance = 10
+Description = 1.5× damage if the target is burned, and may burn (10%).
 #-------------------------------
 [HEROICSTRIKE]
 Name = Heroic Strike
@@ -9754,19 +9754,20 @@ Power = 40
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
-FunctionCode = LowerTargetSpAtk1
+FunctionCode = LowerTargetSpeed1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 20
-Description = The user fires freezing magic that lowers the target's Sp. Atk.
+Description = A frost bolt strikes the target. This may also lower the target's Speed.
 #-------------------------------
 [FIREBLASTQUICK]
-Name = Fire Blast Quick
+Name = Fire Blast
 Type = FIRE
 Category = Special
 Power = 40
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
+Priority = 1
 FunctionCode = None
 Flags = CanProtect,CanMirrorMove
 Description = The user launches a quick burst of fire.
@@ -9941,3 +9942,85 @@ Target = NearOther
 FunctionCode = CustomHamstring
 Flags = Contact,CanProtect,CanMirrorMove
 Description = The user cuts the foe's mobility, but gets stuck on the field for a few turns.
+#-------------------------------
+[ICEBLOCK]
+Name = Ice Block
+Type = ICE
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = User
+Priority = 4
+FunctionCode = CustomIceBlock
+Description = The user encases itself in ice and becomes Frozen. While Frozen it cannot attack or switch, is immune to all moves, and slowly regains HP each turn.
+#-------------------------------
+[FROSTNOVA]
+Name = Frost Nova
+Type = ICE
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 15
+Target = AllNearFoes
+FunctionCode = CustomFrostNova
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = A burst of frost deals minor damage to opposing Pokémon and prevents them from switching out.
+#-------------------------------
+[CONEOFCOLD]
+Name = Cone of Cold
+Type = ICE
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 15
+Target = AllNearFoes
+FunctionCode = FrostbiteTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The user exhales a cone of freezing air. This may frostbite opposing Pokémon.
+#-------------------------------
+[BLIZZARDSPELL]
+Name = Blizzard
+Type = ICE
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = CustomBlizzard
+Flags = CanProtect,CanMirrorMove
+Description = The user channels a blizzard that pelts opposing Pokémon with ice for 2 to 3 turns. Afterward, the user's Special Attack falls by 1 stage.
+#-------------------------------
+[POLYMORPH]
+Name = Polymorph
+Type = PSYCHIC
+Category = Status
+Accuracy = 75
+TotalPP = 10
+Target = NearOther
+FunctionCode = PolymorphTarget
+Flags = CanProtect,CanMirrorMove
+Description = The user transforms the target, inflicting the Polymorph status. A polymorphed Pokémon cannot move.
+#-------------------------------
+[ARCANEEXPLOSION]
+Name = Arcane Explosion
+Type = PSYCHIC
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = CustomArcaneExplosion
+Flags = CanProtect,CanMirrorMove
+Description = An explosion of arcane energy hits opposing Pokémon. Deals 1.5× damage if the target is disabled.
+#-------------------------------
+[EVOCATION]
+Name = Evocation
+Type = PSYCHIC
+Category = Status
+Accuracy = 0
+TotalPP = 1
+Target = User
+FunctionCode = CustomEvocation
+Description = The user restores half the PP of its other moves and one third of its maximum HP.
