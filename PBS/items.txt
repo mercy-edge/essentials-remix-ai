@@ -8349,9 +8349,9 @@ Flags = Fling_10
 Move = COUNTERSPELL
 Description = If the target was preparing a special move this turn, that move and all of its same-type moves become disabled.
 #-------------------------------
-[TM262]
-Name = TM262
-NamePlural = TM262s
+[TM270]
+Name = TM270
+NamePlural = TM270s
 Pocket = 4
 Price = 3000
 BPPrice = 32
@@ -8360,9 +8360,9 @@ Flags = Fling_10
 Move = ICEBLOCK
 Description = The user encases itself in ice and becomes Frozen. While Frozen it cannot attack or switch, is immune to all moves, and slowly regains HP each turn.
 #-------------------------------
-[TM263]
-Name = TM263
-NamePlural = TM263s
+[TM271]
+Name = TM271
+NamePlural = TM271s
 Pocket = 4
 Price = 3000
 BPPrice = 32
@@ -8371,9 +8371,9 @@ Flags = Fling_10
 Move = FROSTNOVA
 Description = A burst of frost deals minor damage to opposing Pokémon and prevents them from switching out.
 #-------------------------------
-[TM264]
-Name = TM264
-NamePlural = TM264s
+[TM272]
+Name = TM272
+NamePlural = TM272s
 Pocket = 4
 Price = 3000
 BPPrice = 32
@@ -8382,9 +8382,9 @@ Flags = Fling_10
 Move = CONEOFCOLD
 Description = The user exhales a cone of freezing air. This may frostbite opposing Pokémon.
 #-------------------------------
-[TM265]
-Name = TM265
-NamePlural = TM265s
+[TM273]
+Name = TM273
+NamePlural = TM273s
 Pocket = 4
 Price = 3000
 BPPrice = 32
@@ -8393,9 +8393,9 @@ Flags = Fling_10
 Move = BLIZZARDSPELL
 Description = The user channels a blizzard that pelts opposing Pokémon with ice for 2 to 3 turns. Afterward, the user's Special Attack falls by 1 stage.
 #-------------------------------
-[TM266]
-Name = TM266
-NamePlural = TM266s
+[TM274]
+Name = TM274
+NamePlural = TM274s
 Pocket = 4
 Price = 3000
 BPPrice = 32
@@ -8404,9 +8404,9 @@ Flags = Fling_10
 Move = POLYMORPH
 Description = The user transforms the target, inflicting the Polymorph status. A polymorphed Pokémon cannot move.
 #-------------------------------
-[TM267]
-Name = TM267
-NamePlural = TM267s
+[TM275]
+Name = TM275
+NamePlural = TM275s
 Pocket = 4
 Price = 3000
 BPPrice = 32
@@ -8415,9 +8415,9 @@ Flags = Fling_10
 Move = ARCANEEXPLOSION
 Description = An explosion of arcane energy hits opposing Pokémon. Deals 1.5× damage if the target is disabled.
 #-------------------------------
-[TM268]
-Name = TM268
-NamePlural = TM268s
+[TM276]
+Name = TM276
+NamePlural = TM276s
 Pocket = 4
 Price = 3000
 BPPrice = 32
