@@ -616,7 +616,37 @@ end
 
 class Battle::Move::CustomRend < Battle::Move
   def pbEffectWhenDealingDamage(user, target)
-    user.effects[PBEffects::RendBleed] = 3
+    return if target.fainted? || target.damageState.substitute
+    target.effects[PBEffects::RendBleed] = 3
+    @battle.pbDisplay(_INTL("{1} was left bleeding!", target.pbThis))
+  end
+end
+
+class Battle::Move::CustomThunderClap < Battle::Move
+  def pbAdditionalEffect(user, target)
+    return if target.damageState.substitute
+    stats = [:ATTACK, :SPEED]
+    stats.reverse! if @battle.pbRandom(2) == 1
+    stats.each do |stat|
+      next if !target.pbCanLowerStatStage?(stat, user, self)
+      target.pbLowerStatStage(stat, 1, user)
+      break
+    end
+  end
+end
+
+class Battle::Move::CustomOverpower < Battle::Move
+  def pbBaseDamage(baseDmg, user, target)
+    baseDmg = super
+    baseDmg *= 2 if user.effects[PBEffects::OverpowerDodged]
+    return baseDmg
+  end
+end
+
+class Battle::Move::CustomSunderArmor < Battle::Move
+  def pbEffectAgainstTarget(user, target)
+    target.effects[PBEffects::Sundered] = 3
+    @battle.pbDisplay(_INTL("{1}'s armor was sundered!", target.pbThis))
   end
 end
 

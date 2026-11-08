@@ -8314,7 +8314,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = CHARGESPELL
-Description = The user charges in immediately and may make the target flinch.
+Description = The user charges in immediately and makes the target flinch. It only works the first turn the user is in battle.
 #-------------------------------
 [TM259]
 Name = TM259
@@ -8325,7 +8325,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = REND
-Description = A vicious strike that leaves the user bleeding for a short time.
+Description = A vicious strike that leaves the target bleeding for a short time.
 #-------------------------------
 [TM260]
 Name = TM260
@@ -8348,3 +8348,91 @@ FieldUse = TR
 Flags = Fling_10
 Move = COUNTERSPELL
 Description = If the target was preparing a special move this turn, that move and all of its same-type moves become disabled.
+#-------------------------------
+[TM262]
+Name = TM262
+NamePlural = TM262s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = MORTALSTRIKE
+Description = A vicious strike that also prevents the target from restoring HP for a few turns.
+#-------------------------------
+[TM263]
+Name = TM263
+NamePlural = TM263s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = CLEAVE
+Description = The user cleaves through with a wide swing, hitting both opposing Pokémon.
+#-------------------------------
+[TM264]
+Name = TM264
+NamePlural = TM264s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = THUNDERCLAPSPELL
+Description = The user slams the ground with a thunderous clap. This always lowers either the Attack or the Speed of opposing Pokémon at random.
+#-------------------------------
+[TM265]
+Name = TM265
+NamePlural = TM265s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = EXECUTE
+Description = If the target's HP is at or below half, this attack hits with double the power.
+#-------------------------------
+[TM266]
+Name = TM266
+NamePlural = TM266s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = OVERPOWER
+Description = The user lashes out with a punishing blow. This move's power is doubled if a status or attacking move that could have targeted the user has missed since the user last used a move.
+#-------------------------------
+[TM267]
+Name = TM267
+NamePlural = TM267s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = BLOODTHIRST
+Description = The user drains the target's vitality. The user's HP is restored by half the damage taken by the target. This move does not make contact.
+#-------------------------------
+[TM268]
+Name = TM268
+NamePlural = TM268s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = WHIRLWINDSPELL
+Description = The user spins with fighting spirit and strikes all opposing Pokémon.
+#-------------------------------
+[TM269]
+Name = TM269
+NamePlural = TM269s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = SUNDERARMOR
+Description = Sunders the target for 3 turns. While Sundered, its Defense and Special Defense are treated as -1 when it takes damage, even if those stats are boosted.
