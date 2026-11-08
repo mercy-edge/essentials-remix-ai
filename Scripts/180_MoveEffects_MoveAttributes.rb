@@ -91,7 +91,9 @@ class Battle::Move::OHKO < Battle::Move::FixedDamageMove
 
   def pbAccuracyCheck(user, target)
     acc = @accuracy + user.level - target.level
-    return @battle.pbRandom(100) < acc
+    hit = @battle.pbRandom(100) < acc
+    pbMarkOverpowerDodge(target) if !hit
+    return hit
   end
 
   def pbFixedDamage(user, target)
@@ -121,7 +123,9 @@ class Battle::Move::OHKOIce < Battle::Move::OHKO
   def pbAccuracyCheck(user, target)
     acc = @accuracy + user.level - target.level
     acc -= 10 if !user.pbHasType?(:ICE)
-    return @battle.pbRandom(100) < acc
+    hit = @battle.pbRandom(100) < acc
+    pbMarkOverpowerDodge(target) if !hit
+    return hit
   end
 end
 

@@ -6614,7 +6614,7 @@ FunctionCode = TransformUserIntoTarget
 Description = The user transforms into a copy of the target right down to having the same move set.
 #-------------------------------
 [WHIRLWIND]
-Name = Whirlwind
+Name = Blow Away
 Type = NORMAL
 Category = Status
 Accuracy = 0
@@ -9450,7 +9450,7 @@ Flags = CanProtect,CanMirrorMove
 Description = Hits opposing Pokémon. Stellar-form nuances not modeled.
 #-------------------------------
 [THUNDERCLAP]
-Name = Thunderclap
+Name = Bolt Rush
 Type = ELECTRIC
 Category = Special
 Power = 70
@@ -9565,7 +9565,7 @@ Description = The user hurls a fireball at the target. It may lower the target's
 Name = Heroic Strike
 Type = FIGHTING
 Category = Physical
-Power = 40
+Power = 60
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
@@ -9905,18 +9905,18 @@ Flags = CanProtect,CanMirrorMove
 Description = The user attacks and absorbs half the damage dealt while locked into this move for 2-3 turns.
 #-------------------------------
 [CHARGESPELL]
-Name = Charge Spell
-Type = NORMAL
-Category = Special
+Name = Charge
+Type = STEEL
+Category = Physical
 Power = 40
 Accuracy = 100
-TotalPP = 20
+TotalPP = 10
 Target = NearOther
-Priority = 1
-FunctionCode = FlinchTarget
-Flags = CanProtect,CanMirrorMove
-EffectChance = 20
-Description = The user charges in immediately and may make the target flinch.
+Priority = 3
+FunctionCode = FlinchTargetFailsIfNotUserFirstTurn
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user charges in immediately and makes the target flinch. It only works the first turn the user is in battle.
 #-------------------------------
 [REND]
 Name = Rend
@@ -9928,16 +9928,113 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = CustomRend
 Flags = Contact,CanProtect,CanMirrorMove
-Description = A vicious strike that leaves the user bleeding for a short time.
+Description = A vicious strike that leaves the target bleeding for a short time.
 #-------------------------------
 [HAMSTRING]
 Name = Hamstring
 Type = NORMAL
 Category = Physical
-Power = 40
+Power = 50
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = CustomHamstring
 Flags = Contact,CanProtect,CanMirrorMove
 Description = The user cuts the foe's mobility, but gets stuck on the field for a few turns.
+#-------------------------------
+[MORTALSTRIKE]
+Name = Mortal Strike
+Type = FIGHTING
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Gen9PsychicNoise
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = A vicious strike that also prevents the target from restoring HP for a few turns.
+#-------------------------------
+[CLEAVE]
+Name = Cleave
+Type = STEEL
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 15
+Target = AllNearFoes
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user cleaves through with a wide swing, hitting both opposing Pokémon.
+#-------------------------------
+[THUNDERCLAPSPELL]
+Name = Thunder Clap
+Type = GROUND
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 20
+Target = AllNearFoes
+FunctionCode = CustomThunderClap
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user slams the ground with a thunderous clap. This always lowers either the Attack or the Speed of opposing Pokémon at random.
+#-------------------------------
+[EXECUTE]
+Name = Execute
+Type = DARK
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = DoublePowerIfTargetHPLessThanHalf
+Flags = Contact,CanProtect,CanMirrorMove
+Description = If the target's HP is at or below half, this attack hits with double the power.
+#-------------------------------
+[OVERPOWER]
+Name = Overpower
+Type = FIGHTING
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = CustomOverpower
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user lashes out with a punishing blow. This move's power is doubled if a status or attacking move that could have targeted the user has missed since the user last used a move.
+#-------------------------------
+[BLOODTHIRST]
+Name = Bloodthirst
+Type = DARK
+Category = Special
+Power = 75
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = HealUserByHalfOfDamageDone
+Flags = CanProtect,CanMirrorMove
+Description = The user drains the target's vitality. The user's HP is restored by half the damage taken by the target. This move does not make contact.
+#-------------------------------
+[WHIRLWINDSPELL]
+Name = Whirlwind
+Type = FIGHTING
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = None
+Flags = CanProtect,CanMirrorMove
+Description = The user spins with fighting spirit and strikes all opposing Pokémon.
+#-------------------------------
+[SUNDERARMOR]
+Name = Sunder Armor
+Type = STEEL
+Category = Status
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = CustomSunderArmor
+Flags = Contact,CanProtect,CanMirrorMove
+Description = Sunders the target for 3 turns. While Sundered, its Defense and Special Defense are treated as -1 when it takes damage, even if those stats are boosted.

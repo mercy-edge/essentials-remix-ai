@@ -408,6 +408,10 @@ class Battle
     pbEORCountDownBattlerEffect(priority, PBEffects::HealBlock) do |battler|
       pbDisplay(_INTL("{1}'s Heal Block wore off!", battler.pbThis))
     end
+    # Sunder Armor
+    pbEORCountDownBattlerEffect(priority, PBEffects::Sundered) do |battler|
+      pbDisplay(_INTL("{1}'s armor is no longer sundered!", battler.pbThis))
+    end
     # Embargo
     pbEORCountDownBattlerEffect(priority, PBEffects::Embargo) do |battler|
       pbDisplay(_INTL("{1} can use items again!", battler.pbThis))
