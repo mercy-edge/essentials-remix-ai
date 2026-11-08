@@ -45,6 +45,17 @@ end
 #===============================================================================
 # Giving Pokémon to the player (will send to storage if party is full)
 #===============================================================================
+
+# Oak's lab (Map 4) Poké Balls call pbAddPokemon(:BULBASAUR, 5),
+# pbAddPokemon(:CHARMANDER, 5) or pbAddPokemon(:SQUIRTLE, 5).
+# Those three starters always have 5 IVs. Other gifts are unchanged.
+def pbApplyOakLabStarterIVs(pkmn)
+  return if !$game_map || $game_map.map_id != 4
+  return if !pkmn || pkmn.egg? || pkmn.level != 5
+  return if ![:BULBASAUR, :CHARMANDER, :SQUIRTLE].include?(pkmn.species)
+  pbSetAllIVs(pkmn, 5)
+end
+
 def pbAddPokemon(pkmn, level = 1, see_form = true)
   return false if !pkmn
   if pbBoxesFull?
@@ -53,6 +64,7 @@ def pbAddPokemon(pkmn, level = 1, see_form = true)
     return false
   end
   pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
+  pbApplyOakLabStarterIVs(pkmn)
   species_name = pkmn.speciesName
   pbMessage(_INTL("{1} obtained {2}!", $player.name, species_name) + "\\me[Pkmn get]\\wtnp[80]")
   was_owned = $player.owned?(pkmn.species)

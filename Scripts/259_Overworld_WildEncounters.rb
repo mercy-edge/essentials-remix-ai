@@ -445,6 +445,9 @@ def pbGenerateWildPokemon(species, level, isRoamer = false)
   # Trigger events that may alter the generated Pokémon further
   genwildpoke.form_simple = genwildpoke.form if MultipleForms.hasFunction?(genwildpoke.species, "getForm")
   EventHandlers.trigger(:on_wild_pokemon_created, genwildpoke)
+  # Last word on IVs. A handler registered after :zero_wild_ivs must not leave
+  # a non-zero spread. Stats are recalculated inside this call.
+  pbApplyWildPokemonIVs(genwildpoke)
   return genwildpoke
 end
 

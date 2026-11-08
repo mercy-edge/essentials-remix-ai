@@ -1082,17 +1082,58 @@ class Pokemon
     return ret
   end
 
+  # Thousandths of a level. 3000 means "calculate this stat as level 3".
+  EFF_LEVEL_SCALE = 1000
+
+  # IVs are RPG-style power scaling, not the old "each point adds about
+  # Level/100" nudge. A stat is calculated as if this Pokémon were a higher
+  # level with an IV of 0. IV 0 adds nothing. The bonus grows linearly with IV.
+  #
+  # The level curve is perfect(level) = EARLY / level + PER_LEVEL * level,
+  # fitted so Settings::IV_POWER_ANCHOR_LOW and IV_POWER_ANCHOR_HIGH land
+  # exactly when scaled from IV_STAT_LIMIT down to that anchor's IV:
+  #   level 1 with IV 5  behaves like level 3 with IV 0
+  #   level 20 with IV 31 behaves like level 24 with IV 0
+  # Edit those anchors to retune. Feather items are meant to climb this curve
+  # one IV at a time. EVs are not part of the formula; the ev argument is
+  # accepted so existing callers keep working.
+  def iv_level_bonus(level, iv)
+    return 0 if !level || level <= 0 || !iv || iv <= 0
+    return 0 if Settings::DISABLE_IVS_AND_EVS
+    low_l, low_iv, low_extra = Settings::IV_POWER_ANCHOR_LOW
+    high_l, high_iv, high_extra = Settings::IV_POWER_ANCHOR_HIGH
+    return 0 if low_iv <= 0 || high_iv <= 0 || low_l <= 0 || high_l <= 0
+    return 0 if low_l == high_l
+    perfect_low = Rational(low_extra * IV_STAT_LIMIT, low_iv)
+    perfect_high = Rational(high_extra * IV_STAT_LIMIT, high_iv)
+    denom = low_l * low_l - high_l * high_l
+    per = Rational(perfect_low * low_l - perfect_high * high_l, denom)
+    early = perfect_low * low_l - per * low_l * low_l
+    perfect = early / level + per * level
+    perfect = 0 if perfect < 0
+    return perfect * iv / IV_STAT_LIMIT
+  end
+
+  def effective_level_scaled(level, iv)
+    bonus = iv_level_bonus(level, iv)
+    return level * EFF_LEVEL_SCALE + (bonus * EFF_LEVEL_SCALE).round
+  end
+
   # @return [Integer] the maximum HP of this Pokémon
-  def calcHP(base, level, iv, ev)
-    return 1 if base == 1   # For Shedinja
-    iv = ev = 0 if Settings::DISABLE_IVS_AND_EVS
-    return (((base * 2) + iv + (ev / 4)) * level / 100).floor + level + 10
+  # @param ev [Integer] ignored. Kept for callers that still pass an EV.
+  def calcHP(base, level, iv, _ev = nil)
+    return 1 if base == 1   # Shedinja
+    eff = effective_level_scaled(level, iv)
+    inner = (base * 2 * eff) / (100 * EFF_LEVEL_SCALE)
+    return (inner * EFF_LEVEL_SCALE + eff + 10 * EFF_LEVEL_SCALE) / EFF_LEVEL_SCALE
   end
 
   # @return [Integer] the specified stat of this Pokémon (not used for total HP)
-  def calcStat(base, level, iv, ev, nat)
-    iv = ev = 0 if Settings::DISABLE_IVS_AND_EVS
-    return (((((base * 2) + iv + (ev / 4)) * level / 100).floor + 5) * nat / 100).floor
+  # @param ev [Integer] ignored. Kept for callers that still pass an EV.
+  def calcStat(base, level, iv, _ev, nat)
+    eff = effective_level_scaled(level, iv)
+    inner = (base * 2 * eff) / (100 * EFF_LEVEL_SCALE)
+    return ((inner + 5) * nat) / 100
   end
 
   # Recalculates this Pokémon's stats.

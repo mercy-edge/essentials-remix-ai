@@ -121,6 +121,9 @@ class BugContestState
       enc = $PokemonEncounters.choose_wild_pokemon_for_map(enc_data[0], enc_data[1])
       raise _INTL("No encounters for map {1} somehow, so can't judge contest.", enc_data[0]) if !enc
       pokemon = Pokemon.new(enc[0], enc[1])
+      # Contestants are stand-ins for wild catches. Give them 0 IVs too, or the
+      # IV score (up to 600) would beat the player's 0-IV catch every time.
+      pbApplyWildPokemonIVs(pokemon)
       pokemon.hp = rand(1...pokemon.totalhp)
       score = pbBugContestScore(pokemon)
       judgearray.push([cont, pokemon.species, score])

@@ -716,48 +716,48 @@ ItemHandlers::UseOnPokemon.add(:PPMAX, proc { |item, qty, pkmn, scene|
   next true
 })
 
-ItemHandlers::UseOnPokemonMaximum.add(:HPUP, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:HP, 10, pkmn, Settings::NO_VITAMIN_EV_CAP)
+ItemHandlers::UseOnPokemonMaximum.add(:HPUP, proc { |_item, _pkmn|
+  next 0
 })
 
 ItemHandlers::UseOnPokemon.add(:HPUP, proc { |item, qty, pkmn, scene|
   next pbUseEVRaisingItem(:HP, 10, qty, pkmn, "vitamin", scene, Settings::NO_VITAMIN_EV_CAP)
 })
 
-ItemHandlers::UseOnPokemonMaximum.add(:PROTEIN, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:ATTACK, 10, pkmn, Settings::NO_VITAMIN_EV_CAP)
+ItemHandlers::UseOnPokemonMaximum.add(:PROTEIN, proc { |_item, _pkmn|
+  next 0
 })
 
 ItemHandlers::UseOnPokemon.add(:PROTEIN, proc { |item, qty, pkmn, scene|
   next pbUseEVRaisingItem(:ATTACK, 10, qty, pkmn, "vitamin", scene, Settings::NO_VITAMIN_EV_CAP)
 })
 
-ItemHandlers::UseOnPokemonMaximum.add(:IRON, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:DEFENSE, 10, pkmn, Settings::NO_VITAMIN_EV_CAP)
+ItemHandlers::UseOnPokemonMaximum.add(:IRON, proc { |_item, _pkmn|
+  next 0
 })
 
 ItemHandlers::UseOnPokemon.add(:IRON, proc { |item, qty, pkmn, scene|
   next pbUseEVRaisingItem(:DEFENSE, 10, qty, pkmn, "vitamin", scene, Settings::NO_VITAMIN_EV_CAP)
 })
 
-ItemHandlers::UseOnPokemonMaximum.add(:CALCIUM, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:SPECIAL_ATTACK, 10, pkmn, Settings::NO_VITAMIN_EV_CAP)
+ItemHandlers::UseOnPokemonMaximum.add(:CALCIUM, proc { |_item, _pkmn|
+  next 0
 })
 
 ItemHandlers::UseOnPokemon.add(:CALCIUM, proc { |item, qty, pkmn, scene|
   next pbUseEVRaisingItem(:SPECIAL_ATTACK, 10, qty, pkmn, "vitamin", scene, Settings::NO_VITAMIN_EV_CAP)
 })
 
-ItemHandlers::UseOnPokemonMaximum.add(:ZINC, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:SPECIAL_DEFENSE, 10, pkmn, Settings::NO_VITAMIN_EV_CAP)
+ItemHandlers::UseOnPokemonMaximum.add(:ZINC, proc { |_item, _pkmn|
+  next 0
 })
 
 ItemHandlers::UseOnPokemon.add(:ZINC, proc { |item, qty, pkmn, scene|
   next pbUseEVRaisingItem(:SPECIAL_DEFENSE, 10, qty, pkmn, "vitamin", scene, Settings::NO_VITAMIN_EV_CAP)
 })
 
-ItemHandlers::UseOnPokemonMaximum.add(:CARBOS, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:SPEED, 10, pkmn, Settings::NO_VITAMIN_EV_CAP)
+ItemHandlers::UseOnPokemonMaximum.add(:CARBOS, proc { |_item, _pkmn|
+  next 0
 })
 
 ItemHandlers::UseOnPokemon.add(:CARBOS, proc { |item, qty, pkmn, scene|
@@ -765,73 +765,73 @@ ItemHandlers::UseOnPokemon.add(:CARBOS, proc { |item, qty, pkmn, scene|
 })
 
 ItemHandlers::UseOnPokemonMaximum.add(:HEALTHFEATHER, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:HP, 1, pkmn, true)
+  next pbMaxUsesOfIVRaisingItem(:HP, 1, pkmn)
 })
 
 ItemHandlers::UseOnPokemonMaximum.copy(:HEALTHFEATHER, :HEALTHWING)
 
 ItemHandlers::UseOnPokemon.add(:HEALTHFEATHER, proc { |item, qty, pkmn, scene|
-  next pbUseEVRaisingItem(:HP, 1, qty, pkmn, "wing", scene, true)
+  next pbUseIVRaisingItem(:HP, 1, qty, pkmn, scene)
 })
 
 ItemHandlers::UseOnPokemon.copy(:HEALTHFEATHER, :HEALTHWING)
 
 ItemHandlers::UseOnPokemonMaximum.add(:MUSCLEFEATHER, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:ATTACK, 1, pkmn, true)
+  next pbMaxUsesOfIVRaisingItem(:ATTACK, 1, pkmn)
 })
 
 ItemHandlers::UseOnPokemonMaximum.copy(:MUSCLEFEATHER, :MUSCLEWING)
 
 ItemHandlers::UseOnPokemon.add(:MUSCLEFEATHER, proc { |item, qty, pkmn, scene|
-  next pbUseEVRaisingItem(:ATTACK, 1, qty, pkmn, "wing", scene, true)
+  next pbUseIVRaisingItem(:ATTACK, 1, qty, pkmn, scene)
 })
 
 ItemHandlers::UseOnPokemon.copy(:MUSCLEFEATHER, :MUSCLEWING)
 
 ItemHandlers::UseOnPokemonMaximum.add(:RESISTFEATHER, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:DEFENSE, 1, pkmn, true)
+  next pbMaxUsesOfIVRaisingItem(:DEFENSE, 1, pkmn)
 })
 
 ItemHandlers::UseOnPokemonMaximum.copy(:RESISTFEATHER, :RESISTWING)
 
 ItemHandlers::UseOnPokemon.add(:RESISTFEATHER, proc { |item, qty, pkmn, scene|
-  next pbUseEVRaisingItem(:DEFENSE, 1, qty, pkmn, "wing", scene, true)
+  next pbUseIVRaisingItem(:DEFENSE, 1, qty, pkmn, scene)
 })
 
 ItemHandlers::UseOnPokemon.copy(:RESISTFEATHER, :RESISTWING)
 
 ItemHandlers::UseOnPokemonMaximum.add(:GENIUSFEATHER, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:SPECIAL_ATTACK, 1, pkmn, true)
+  next pbMaxUsesOfIVRaisingItem(:SPECIAL_ATTACK, 1, pkmn)
 })
 
 ItemHandlers::UseOnPokemonMaximum.copy(:GENIUSFEATHER, :GENIUSWING)
 
 ItemHandlers::UseOnPokemon.add(:GENIUSFEATHER, proc { |item, qty, pkmn, scene|
-  next pbUseEVRaisingItem(:SPECIAL_ATTACK, 1, qty, pkmn, "wing", scene, true)
+  next pbUseIVRaisingItem(:SPECIAL_ATTACK, 1, qty, pkmn, scene)
 })
 
 ItemHandlers::UseOnPokemon.copy(:GENIUSFEATHER, :GENIUSWING)
 
 ItemHandlers::UseOnPokemonMaximum.add(:CLEVERFEATHER, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:SPECIAL_DEFENSE, 1, pkmn, true)
+  next pbMaxUsesOfIVRaisingItem(:SPECIAL_DEFENSE, 1, pkmn)
 })
 
 ItemHandlers::UseOnPokemonMaximum.copy(:CLEVERFEATHER, :CLEVERWING)
 
 ItemHandlers::UseOnPokemon.add(:CLEVERFEATHER, proc { |item, qty, pkmn, scene|
-  next pbUseEVRaisingItem(:SPECIAL_DEFENSE, 1, qty, pkmn, "wing", scene, true)
+  next pbUseIVRaisingItem(:SPECIAL_DEFENSE, 1, qty, pkmn, scene)
 })
 
 ItemHandlers::UseOnPokemon.copy(:CLEVERFEATHER, :CLEVERWING)
 
 ItemHandlers::UseOnPokemonMaximum.add(:SWIFTFEATHER, proc { |item, pkmn|
-  next pbMaxUsesOfEVRaisingItem(:SPEED, 1, pkmn, true)
+  next pbMaxUsesOfIVRaisingItem(:SPEED, 1, pkmn)
 })
 
 ItemHandlers::UseOnPokemonMaximum.copy(:SWIFTFEATHER, :SWIFTWING)
 
 ItemHandlers::UseOnPokemon.add(:SWIFTFEATHER, proc { |item, qty, pkmn, scene|
-  next pbUseEVRaisingItem(:SPEED, 1, qty, pkmn, "wing", scene, true)
+  next pbUseIVRaisingItem(:SPEED, 1, qty, pkmn, scene)
 })
 
 ItemHandlers::UseOnPokemon.copy(:SWIFTFEATHER, :SWIFTWING)
