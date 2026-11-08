@@ -8425,3 +8425,36 @@ FieldUse = TR
 Flags = Fling_10
 Move = EVOCATION
 Description = The user restores half the PP of its other moves and one third of its maximum HP.
+#-------------------------------
+[TM277]
+Name = TM277
+NamePlural = TM277s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = SCORCH
+Description = A searing flame with a high critical-hit ratio.
+#-------------------------------
+[TM278]
+Name = TM278
+NamePlural = TM278s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = PYROBLAST
+Description = A huge blast of fire. Power doubles if the user was hit this turn.
+#-------------------------------
+[TM279]
+Name = TM279
+NamePlural = TM279s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = BLASTWAVE
+Description = A wave of fire hits opposing Pokémon. This may also make them flinch.

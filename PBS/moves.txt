@@ -10024,3 +10024,41 @@ TotalPP = 1
 Target = User
 FunctionCode = CustomEvocation
 Description = The user restores half the PP of its other moves and one third of its maximum HP.
+#-------------------------------
+[SCORCH]
+Name = Scorch
+Type = FIRE
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = None
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = A searing flame with a high critical-hit ratio.
+#-------------------------------
+[PYROBLAST]
+Name = Pyroblast
+Type = FIRE
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+Priority = -1
+FunctionCode = DoublePowerIfUserLostHPThisTurn
+Flags = CanProtect,CanMirrorMove
+Description = A huge blast of fire. Power doubles if the user was hit this turn.
+#-------------------------------
+[BLASTWAVE]
+Name = Blast Wave
+Type = FIRE
+Category = Special
+Power = 75
+Accuracy = 90
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = FlinchTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = A wave of fire hits opposing Pokémon. This may also make them flinch.
