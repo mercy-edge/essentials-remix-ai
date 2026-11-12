@@ -368,7 +368,7 @@ Battle::AI::Handlers::MoveEffectScore.add("AddSpikesToFoeSide",
       next if !pkmn || !pkmn.able? || inBattleIndices.include?(idxParty)
       if ai.trainer.medium_skill?
         next if pkmn.hasItem?(:HEAVYDUTYBOOTS)
-        next if ai.pokemon_airborne?(pkmn)
+        next if ai.pokemon_airborne?(pkmn, user.idxOpposingSide)
         next if pkmn.hasAbility?(:MAGICGUARD)
       end
       foe_reserves.push(pkmn)   # pkmn will be affected by Spikes
@@ -396,7 +396,7 @@ Battle::AI::Handlers::MoveEffectScore.add("AddToxicSpikesToFoeSide",
       next if !pkmn || !pkmn.able? || inBattleIndices.include?(idxParty)
       if ai.trainer.medium_skill?
         next if pkmn.hasItem?(:HEAVYDUTYBOOTS)
-        next if ai.pokemon_airborne?(pkmn)
+        next if ai.pokemon_airborne?(pkmn, user.idxOpposingSide)
         next if !ai.pokemon_can_be_poisoned?(pkmn)
       end
       foe_reserves.push(pkmn)   # pkmn will be affected by Toxic Spikes
@@ -450,7 +450,7 @@ Battle::AI::Handlers::MoveEffectScore.add("AddStickyWebToFoeSide",
       next if !pkmn || !pkmn.able? || inBattleIndices.include?(idxParty)
       if ai.trainer.medium_skill?
         next if pkmn.hasItem?(:HEAVYDUTYBOOTS)
-        next if ai.pokemon_airborne?(pkmn)
+        next if ai.pokemon_airborne?(pkmn, user.idxOpposingSide)
       end
       foe_reserves.push(pkmn)   # pkmn will be affected by Sticky Web
     end

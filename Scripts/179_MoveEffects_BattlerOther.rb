@@ -1375,9 +1375,22 @@ class Battle::Move::StartGravity < Battle::Move
         b.effects[PBEffects::SkyDrop]     = -1
         showMessage = true
       end
+      if b.pbOwnSide.effects[PBEffects::Levitate] > 0
+        b.pbOwnSide.effects[PBEffects::Levitate] = 0
+        showMessage = true
+      end
       if showMessage
         @battle.pbDisplay(_INTL("{1} couldn't stay airborne because of gravity!", b.pbThis))
       end
+    end
+    # Catch a side whose battlers are all fainted. Active battlers already
+    # cleared their side above, so this does not repeat that message.
+    2.times do |side|
+      next if @battle.sides[side].effects[PBEffects::Levitate] <= 0
+      @battle.sides[side].effects[PBEffects::Levitate] = 0
+      next if !@battle.battlers[side]
+      @battle.pbDisplay(_INTL("{1} could no longer levitate because of gravity!",
+                              @battle.battlers[side].pbTeam))
     end
   end
 end

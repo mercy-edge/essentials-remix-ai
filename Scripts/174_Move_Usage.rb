@@ -193,6 +193,15 @@ class Battle::Move
     end
     # Disguise/Ice Face takes the damage
     return if target.damageState.disguise || target.damageState.iceFace
+    # Power Word: Shield absorbs direct hit damage. Leftover damage lands.
+    # Residual damage does not come through here, same as Substitute.
+    shield = target.effects[PBEffects::PowerWordShield]
+    if shield && shield > 0 && damage > 0
+      absorbed = (damage > shield) ? shield : damage
+      target.effects[PBEffects::PowerWordShield] = shield - absorbed
+      damage -= absorbed
+      target.damageState.shieldAbsorbed = absorbed
+    end
     # Target takes the damage
     if damage >= target.hp
       damage = target.hp
@@ -296,6 +305,13 @@ class Battle::Move
     return if target.damageState.disguise || target.damageState.iceFace
     if target.damageState.substitute
       @battle.pbDisplay(_INTL("The substitute took damage for {1}!", target.pbThis(true)))
+    end
+    if target.damageState.shieldAbsorbed > 0
+      @battle.pbDisplay(_INTL("{1}'s shield absorbed the damage!", target.pbThis))
+      if target.effects[PBEffects::PowerWordShield] <= 0
+        target.effects[PBEffects::PowerWordShield] = 0
+        @battle.pbDisplay(_INTL("{1}'s Power Word: Shield broke!", target.pbThis))
+      end
     end
     if target.damageState.critical
       if $game_temp.party_critical_hits_dealt &&

@@ -175,6 +175,15 @@ class Battle
       battler.pbRecoverHP(hpGain)
       pbDisplay(_INTL("Aqua Ring restored {1}'s HP!", battler.pbThis(true)))
     end
+    # Renew. Same 1/16 heal as Aqua Ring, including Big Root, with its own flag.
+    priority.each do |battler|
+      next if !battler.effects[PBEffects::Renew]
+      next if !battler.canHeal?
+      hpGain = battler.totalhp / 16
+      hpGain = (hpGain * 1.3).floor if battler.hasActiveItem?(:BIGROOT)
+      battler.pbRecoverHP(hpGain)
+      pbDisplay(_INTL("The healing light restored {1}'s HP!", battler.pbThis(true)))
+    end
     # Ingrain
     priority.each do |battler|
       next if !battler.effects[PBEffects::Ingrain]
@@ -298,6 +307,27 @@ class Battle
   #=============================================================================
   # End Of Round deal damage from effects (except by trapping)
   #=============================================================================
+  # Timed residual used by Holy Fire and Shadow Word: Pain. 1/8 max HP, no
+  # Water/Steel bonus and no trapping. Magic Guard skips the damage; the
+  # counter still ticks so the residual cannot last forever.
+  def pbEORPriestResidual(priority, effect, effect_name)
+    priority.each do |battler|
+      next if battler.fainted? || battler.effects[effect] <= 0
+      if battler.takesIndirectDamage?
+        amt = [battler.totalhp / 8, 1].max
+        battler.pbTakeEffectDamage(amt) do |_hp_lost|
+          pbDisplay(_INTL("{1} is hurt by {2}!", battler.pbThis, effect_name))
+        end
+      end
+      next if battler.fainted?
+      battler.effects[effect] -= 1
+      if battler.effects[effect] <= 0
+        battler.effects[effect] = 0
+        pbDisplay(_INTL("{1}'s {2} faded!", battler.pbThis, effect_name))
+      end
+    end
+  end
+
   def pbEOREffectDamage(priority)
     # Damage from sleep (Nightmare)
     priority.each do |battler|
@@ -331,6 +361,9 @@ class Battle
       end
       battler.effects[PBEffects::RendBleed] -= 1
     end
+    # Holy Fire and Shadow Word: Pain. Salt Cure's 1/8 tick, no type bonus, no trap.
+    pbEORPriestResidual(priority, PBEffects::HolyFire, _INTL("holy fire"))
+    pbEORPriestResidual(priority, PBEffects::ShadowWordPain, _INTL("Shadow Word: Pain"))
     # Syrup Bomb (Speed drops at end of each turn while syrup remains)
     priority.each do |battler|
       next if battler.fainted? || battler.effects[PBEffects::SyrupBomb] <= 0
@@ -429,6 +462,15 @@ class Battle
     pbEORCountDownBattlerEffect(priority, PBEffects::Sundered) do |battler|
       pbDisplay(_INTL("{1}'s armor is no longer sundered!", battler.pbThis))
     end
+    # Fear. While the counter is above 0 the battler cannot move or switch.
+    pbEORCountDownBattlerEffect(priority, PBEffects::Fear) do |battler|
+      pbDisplay(_INTL("{1} is no longer afraid!", battler.pbThis))
+    end
+    # Vampiric Embrace mark. The applier leaving already cleared this.
+    pbEORCountDownBattlerEffect(priority, PBEffects::VampiricEmbrace) do |battler|
+      battler.effects[PBEffects::VampiricEmbraceUser] = -1
+      pbDisplay(_INTL("The shadow mark on {1} faded!", battler.pbThis))
+    end
     # Embargo
     pbEORCountDownBattlerEffect(priority, PBEffects::Embargo) do |battler|
       pbDisplay(_INTL("{1} can use items again!", battler.pbThis))
@@ -488,6 +530,9 @@ class Battle
     # Tailwind
     pbEORCountDownSideEffect(side, PBEffects::Tailwind,
                              _INTL("{1}'s Tailwind petered out!", @battlers[side].pbTeam))
+    # Priest Levitate. Same 5-turn countdown as Reflect / Tailwind.
+    pbEORCountDownSideEffect(side, PBEffects::Levitate,
+                             _INTL("{1} is no longer levitating!", @battlers[side].pbTeam))
     # Lucky Chant
     pbEORCountDownSideEffect(side, PBEffects::LuckyChant,
                              _INTL("{1}'s Lucky Chant wore off!", @battlers[side].pbTeam))

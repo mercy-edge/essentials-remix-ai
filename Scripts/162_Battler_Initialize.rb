@@ -91,6 +91,10 @@ class Battle::Battler
   end
 
   def pbInitEffects(batonPass)
+    # Mind Flay and Vampiric Embrace point at this battler. Drop those marks
+    # before the indexes below are cleared, including on Baton Pass.
+    pbClearMindFlayChannel if @effects
+    pbClearVampiricEmbraceAppliedBySelf if @effects
     if batonPass
       # These effects are passed on if Baton Pass is used, but they need to be
       # reapplied
@@ -169,6 +173,19 @@ class Battle::Battler
     @effects[PBEffects::HamstringLock]       = 0
     @effects[PBEffects::OverpowerDodged]     = false
     @effects[PBEffects::Sundered]            = 0
+    @effects[PBEffects::Fear]                = 0
+    # Renew is not passed by Baton Pass. It ends when this battler leaves.
+    @effects[PBEffects::Renew]               = false
+    @effects[PBEffects::PowerWordShield]     = 0
+    # Shadowform must not be Baton Passed. The replacement keeps its own types.
+    @effects[PBEffects::Shadowform]          = false
+    @effects[PBEffects::HolyFire]            = 0
+    @effects[PBEffects::ShadowWordPain]      = 0
+    @effects[PBEffects::MindFlayLock]        = 0
+    @effects[PBEffects::MindFlayTarget]      = -1
+    @effects[PBEffects::MindFlayedBy]        = -1
+    @effects[PBEffects::VampiricEmbrace]     = 0
+    @effects[PBEffects::VampiricEmbraceUser] = -1
     @effects[PBEffects::BeakBlast]           = false
     @effects[PBEffects::Bide]                = 0
     @effects[PBEffects::BideDamage]          = 0

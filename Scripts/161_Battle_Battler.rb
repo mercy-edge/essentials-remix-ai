@@ -307,6 +307,8 @@ class Battle::Battler
   # Returns the active types of this Pokémon. The array should not include the
   # same type more than once, and should not include any invalid types.
   def pbTypes(withExtraType = false)
+    # Shadowform is pure Ghost until this battler leaves, whatever @types says.
+    return [:GHOST] if @effects[PBEffects::Shadowform]
     ret = @types.uniq
     # Burn Up erases the Fire-type.
     ret.delete(:FIRE) if @effects[PBEffects::BurnUp]
@@ -495,6 +497,8 @@ class Battle::Battler
   end
 
   def canChangeType?
+    # Shadowform keeps this battler Ghost; Soak and Protean cannot overwrite it.
+    return false if @effects[PBEffects::Shadowform]
     return ![:MULTITYPE, :RKSSYSTEM].include?(@ability_id)
   end
 
@@ -503,6 +507,8 @@ class Battle::Battler
     return false if @effects[PBEffects::Ingrain]
     return false if @effects[PBEffects::SmackDown]
     return false if @battle.field.effects[PBEffects::Gravity] > 0
+    # Priest Levitate lifts the whole side, including Pokémon that switch in.
+    return true if pbOwnSide.effects[PBEffects::Levitate] > 0
     return true if pbHasType?(:FLYING)
     return true if hasActiveAbility?(:LEVITATE) && !@battle.moldBreaker
     return true if hasActiveItem?(:AIRBALLOON)
@@ -611,6 +617,7 @@ class Battle::Battler
   end
 
   def trappedInBattle?
+    return true if @effects[PBEffects::Fear] > 0
     return true if @effects[PBEffects::Trapping] > 0
     return true if @effects[PBEffects::HamstringLock] > 0
     return true if @effects[PBEffects::MeanLook] >= 0
@@ -627,11 +634,65 @@ class Battle::Battler
     return @lastRoundMoved && @lastRoundMoved == @battle.turnCount
   end
 
+  # Drops the Mind Flay damage cut on the battler this channel was hitting.
+  def pbClearMindFlayChannel
+    return if !@effects
+    idx = @effects[PBEffects::MindFlayTarget]
+    @effects[PBEffects::MindFlayTarget] = -1
+    # Index 0 is a real battler. Only nil and negatives mean "no target".
+    return if !idx.is_a?(Numeric) || idx < 0
+    return if !@battle || !@battle.battlers
+    target = @battle.battlers[idx]
+    return if !target || !target.effects
+    if target.effects[PBEffects::MindFlayedBy] == @index
+      target.effects[PBEffects::MindFlayedBy] = -1
+    end
+  end
+
+  # The mark ends early when the Pokémon that applied it leaves the field.
+  def pbClearVampiricEmbraceAppliedBySelf
+    return if !@battle || !@battle.battlers
+    @battle.battlers.each do |b|
+      next if !b || !b.effects
+      next if b.effects[PBEffects::VampiricEmbraceUser] != @index
+      b.effects[PBEffects::VampiricEmbrace] = 0
+      b.effects[PBEffects::VampiricEmbraceUser] = -1
+    end
+  end
+
+  def pbApplyMindFlayMark(target)
+    return if !target
+    @effects[PBEffects::MindFlayTarget] = target.index
+    target.effects[PBEffects::MindFlayedBy] = @index
+  end
+
+  # Ghost-type damage against a marked target heals the applier and its adjacent ally.
+  def pbVampiricEmbraceHeal(target, move)
+    return if !target || target.damageState.substitute || target.damageState.hpLost <= 0
+    return if target.effects[PBEffects::VampiricEmbrace] <= 0
+    return if target.effects[PBEffects::VampiricEmbraceUser] != @index
+    return if !move || move.calcType != :GHOST
+    heal = (target.damageState.hpLost * VAMPIRIC_EMBRACE_HEAL_FRACTION).round
+    return if heal <= 0
+    recipients = []
+    recipients.push(self) if !fainted?
+    allAllies.each do |ally|
+      next if !@battle.nearBattlers?(@index, ally.index)
+      recipients.push(ally)
+    end
+    recipients.each do |b|
+      next if b.fainted? || !b.canHeal?
+      b.pbRecoverHP(heal)
+      @battle.pbDisplay(_INTL("{1}'s HP was restored by the shadow mark!", b.pbThis))
+    end
+  end
+
   def usingMultiTurnAttack?
     return true if @effects[PBEffects::TwoTurnAttack]
     return true if @effects[PBEffects::HyperBeam] > 0
     return true if @effects[PBEffects::Rollout] > 0
     return true if @effects[PBEffects::Outrage] > 0
+    return true if @effects[PBEffects::MindFlayLock] > 0
     return true if @effects[PBEffects::Uproar] > 0
     return true if @effects[PBEffects::Bide] > 0
     return false
