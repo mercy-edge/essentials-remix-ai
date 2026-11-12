@@ -85,9 +85,13 @@ class Battle::AI
     return true
   end
 
-  def pokemon_airborne?(pkmn)
+  def pokemon_airborne?(pkmn, side = nil)
     return false if pkmn.hasItem?(:IRONBALL)
     return false if @battle.field.effects[PBEffects::Gravity] > 0
+    # Priest Levitate makes every Pokémon on that side airborne, including reserves.
+    if side && @battle.sides[side].effects[PBEffects::Levitate] > 0
+      return true
+    end
     return true if pkmn.hasType?(:FLYING)
     return true if pkmn.hasAbility?(:LEVITATE)
     return true if pkmn.hasItem?(:AIRBALLOON)

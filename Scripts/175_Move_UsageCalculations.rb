@@ -46,6 +46,11 @@ class Battle::Move
       if target.effects[PBEffects::MiracleEye] && defType == :DARK
         ret = Effectiveness::NORMAL_EFFECTIVE_MULTIPLIER
       end
+      # Shadowform: the user's Ghost moves hit Normal for neutral damage.
+      # Other Ghost matchups are unchanged. This is on the user, not the target.
+      if user && user.effects[PBEffects::Shadowform] && moveType == :GHOST && defType == :NORMAL
+        ret = Effectiveness::NORMAL_EFFECTIVE_MULTIPLIER
+      end
     elsif Effectiveness.super_effective_type?(moveType, defType)
       # Delta Stream's weather
       if target.effectiveWeather == :StrongWinds && defType == :FLYING
@@ -501,6 +506,17 @@ class Battle::Move
     # Frostbite. Facade negates the Special Attack penalty, same as burn.
     if user.status == :FROSTBITE && specialMove? && damageReducedByFrostbite?
       multipliers[:final_damage_multiplier] /= 2
+    end
+    # Mind Flay halves the damage of the marked battler's physical and special
+    # attacks while that channel is still going. Fixed-damage moves are left alone.
+    if !self.is_a?(Battle::Move::Confusion) && (physicalMove? || specialMove?) &&
+       user.effects[PBEffects::MindFlayedBy] >= 0
+      source = @battle.battlers[user.effects[PBEffects::MindFlayedBy]]
+      if source && !source.fainted? && source.effects[PBEffects::MindFlayLock] > 0
+        multipliers[:final_damage_multiplier] /= 2
+      else
+        user.effects[PBEffects::MindFlayedBy] = -1
+      end
     end
     # Aurora Veil, Reflect, Light Screen
     if !ignoresReflect? && !target.damageState.critical &&

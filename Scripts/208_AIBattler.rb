@@ -320,6 +320,7 @@ class Battle::AI::AIBattler
     return false if self.effects[PBEffects::HyperBeam] > 0
     return false if status == :SLEEP && statusCount > 1
     return false if status == :FROZEN   # Only 20% chance of unthawing; assune it won't
+    return false if self.effects[PBEffects::Fear] > 0
     return false if self.effects[PBEffects::Truant] && has_active_ability?(:TRUANT)
     return false if self.effects[PBEffects::Flinch]
     # NOTE: Confusion/infatuation/paralysis have higher chances of allowing the
@@ -340,6 +341,8 @@ class Battle::AI::AIBattler
   #       false if any certain switching OR certain trapping applies.
   def can_become_trapped?
     return false if fainted?
+    # Fear blocks switching even for Ghost-types and Shed Shell.
+    return false if battler.effects[PBEffects::Fear] > 0
     # Ability/item effects that allow switching no matter what
     if ability_active? && Battle::AbilityEffects.triggerCertainSwitching(ability, battler, @ai.battle)
       return false
@@ -580,6 +583,10 @@ class Battle::AI::AIBattler
       end
       # Miracle Eye
       if self.effects[PBEffects::MiracleEye] && defend_type == :DARK
+        ret = Effectiveness::NORMAL_EFFECTIVE_MULTIPLIER
+      end
+      # Shadowform lets the attacker's Ghost moves hit Normal.
+      if user && user.effects[PBEffects::Shadowform] && type == :GHOST && defend_type == :NORMAL
         ret = Effectiveness::NORMAL_EFFECTIVE_MULTIPLIER
       end
     elsif Effectiveness.super_effective_type?(type, defend_type)

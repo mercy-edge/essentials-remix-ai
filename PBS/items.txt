@@ -8279,7 +8279,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = MINDBLAST
-Description = The user detonates psychic force that may lower the target's Attack.
+Description = The user blasts the target with shadowy force. This may also make the target flinch.
 #-------------------------------
 [TM252]
 Name = TM252
@@ -8588,3 +8588,168 @@ FieldUse = TR
 Flags = Fling_10
 Move = BLASTWAVE
 Description = A wave of fire hits opposing Pokémon. This may also make them flinch.
+#-------------------------------
+[TM280]
+Name = TM280
+NamePlural = TM280s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = HOLYFIRE
+Description = A bolt of holy fire damages the target and leaves a lingering light that hurts them for several turns.
+#-------------------------------
+[TM281]
+Name = TM281
+NamePlural = TM281s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = HOLYNOVA
+Description = A burst of holy light hits opposing Pokémon and restores a little HP to the user and its ally.
+#-------------------------------
+[TM282]
+Name = TM282
+NamePlural = TM282s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = RENEW
+Description = Surrounds the user or an ally with a healing light that restores a little HP every turn.
+#-------------------------------
+[TM283]
+Name = TM283
+NamePlural = TM283s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = PRAYEROFHEALING
+Description = A prayer restores 1/4 of the HP of the user and its allies.
+#-------------------------------
+[TM284]
+Name = TM284
+NamePlural = TM284s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = RESURRECTION
+Description = The user prays to revive a fainted party Pokémon and restore half of its HP.
+#-------------------------------
+[TM285]
+Name = TM285
+NamePlural = TM285s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = DISPELMAGIC
+Description = A dispelling prayer clears the target's stat changes.
+#-------------------------------
+[TM286]
+Name = TM286
+NamePlural = TM286s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = POWERWORDSHIELD
+Description = A divine shield absorbs some of the damage the user takes.
+#-------------------------------
+[TM287]
+Name = TM287
+NamePlural = TM287s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = SHADOWWORDPAIN
+Description = A word of pain haunts the target, hurting it a little at the end of each turn.
+#-------------------------------
+[TM288]
+Name = TM288
+NamePlural = TM288s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = MINDFLAY
+Description = The user channels shadowy torment for 2-3 turns, dealing damage each turn. The target's attacks deal half damage while the channel lasts. This attack never misses.
+#-------------------------------
+[TM289]
+Name = TM289
+NamePlural = TM289s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = PSYCHICSCREAM
+Description = A terrifying scream fears all nearby foes for 1-2 turns. Feared foes cannot move or switch, but may break free when hit.
+#-------------------------------
+[TM290]
+Name = TM290
+NamePlural = TM290s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = SILENCE
+Description = The user silences the target, preventing it from using the move it last used.
+#-------------------------------
+[TM291]
+Name = TM291
+NamePlural = TM291s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = MANABURN
+Description = The user burns the target's energy. It also reduces the PP of the move the target last used.
+#-------------------------------
+[TM292]
+Name = TM292
+NamePlural = TM292s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = SHADOWFORM
+Description = The user assumes Shadowform and becomes a Ghost-type. Ghost-type moves can hit Normal-types. Fairy-type moves can't be used. The effect lasts until the user switches out.
+#-------------------------------
+[TM293]
+Name = TM293
+NamePlural = TM293s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = LEVITATE
+Description = Lifts the user's side off the ground for 5 turns. Ground moves miss, and Spikes, Toxic Spikes, and Sticky Web don't affect switch-ins.
+#-------------------------------
+[TM294]
+Name = TM294
+NamePlural = TM294s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = VAMPIRICEMBRACE
+Description = Marks the target with shadow for 5 turns. The user's Ghost-type moves against it heal the user and its ally.

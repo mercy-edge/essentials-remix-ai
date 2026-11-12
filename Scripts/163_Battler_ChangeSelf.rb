@@ -15,6 +15,14 @@ class Battle::Battler
     if amt > 0 && @status == :POLYMORPH && !fainted?
       pbCureStatus
     end
+    # Fear is volatile and stacks with status. Each time this battler actually
+    # loses HP, it may break free. Substitute and Power Word: Shield absorb
+    # damage before this method, so those hits do not roll.
+    if amt > 0 && !fainted? && @effects[PBEffects::Fear] > 0 &&
+       @battle.pbRandom(100) < FEAR_BREAK_ON_DAMAGE_CHANCE
+      @effects[PBEffects::Fear] = 0
+      @battle.pbDisplay(_INTL("{1} broke free of its fear!", pbThis))
+    end
     if amt > 0 && registerDamage
       @droppedBelowHalfHP = true if @hp < @totalhp / 2 && @hp + amt >= @totalhp / 2
       @tookDamageThisRound = true
@@ -130,6 +138,13 @@ class Battle::Battler
   # Change type
   #=============================================================================
   def pbChangeTypes(newType)
+    if @effects[PBEffects::Shadowform]
+      @types = [:GHOST]
+      @effects[PBEffects::ExtraType] = nil
+      @effects[PBEffects::BurnUp] = false
+      @effects[PBEffects::Roost] = false
+      return
+    end
     if newType.is_a?(Battle::Battler)
       newTypes = newType.pbTypes
       newTypes.push(:NORMAL) if newTypes.length == 0
@@ -147,6 +162,13 @@ class Battle::Battler
   end
 
   def pbResetTypes
+    if @effects[PBEffects::Shadowform]
+      @types = [:GHOST]
+      @effects[PBEffects::ExtraType] = nil
+      @effects[PBEffects::BurnUp] = false
+      @effects[PBEffects::Roost] = false
+      return
+    end
     @types = @pokemon.types
     @effects[PBEffects::ExtraType] = nil
     @effects[PBEffects::BurnUp] = false

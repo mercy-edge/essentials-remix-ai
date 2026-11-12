@@ -791,6 +791,205 @@ class Battle::Move::CustomCounterspell < Battle::Move
   end
 end
 
+#===============================================================================
+# Priest moves.
+#===============================================================================
+# Damaging hit, then a few turns of 1/8 max HP residual. Not a burn, and not
+# Salt Cure's Water/Steel bonus or trap. The residual always applies on a hit.
+class Battle::Move::CustomHolyFire < Battle::Move
+  DOT_TURNS = 3
+
+  def pbEffectWhenDealingDamage(user, target)
+    return if target.fainted? || target.damageState.substitute
+    target.effects[PBEffects::HolyFire] = DOT_TURNS
+    @battle.pbDisplay(_INTL("{1} was scorched by holy fire!", target.pbThis))
+  end
+end
+
+# Spread damage like Dazzling Gleam, then heal the user and its adjacent ally
+# for 1/8 of each one's max HP. The heal runs once even if every target
+# misses or is immune. pbEndOfMoveUsageEffect still runs in that case.
+class Battle::Move::CustomHolyNova < Battle::Move
+  def pbEndOfMoveUsageEffect(user, _targets, _numHits, _switchedBattlers)
+    return if user.fainted?
+    recipients = [user]
+    user.allAllies.each do |ally|
+      next if !@battle.nearBattlers?(user.index, ally.index)
+      recipients.push(ally)
+    end
+    recipients.each do |b|
+      next if b.fainted? || !b.canHeal?
+      b.pbRecoverHP(b.totalhp / 8)
+      @battle.pbDisplay(_INTL("{1}'s HP was restored.", b.pbThis))
+    end
+  end
+end
+
+# Aqua Ring's 1/16 end-of-round heal, placed on the chosen ally or the user.
+# It does not share Aqua Ring's flag, so the two can both be up.
+class Battle::Move::CustomRenew < Battle::Move
+  def pbFailsAgainstTarget?(user, target, show_message)
+    if target.effects[PBEffects::Renew]
+      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    target.effects[PBEffects::Renew] = true
+    @battle.pbDisplay(_INTL("{1} was surrounded by a healing light!", target.pbThis))
+  end
+end
+
+# Absorb shield of about 1/4 max HP. Direct hits only; it does not block status.
+class Battle::Move::CustomPowerWordShield < Battle::Move
+  def canSnatch?; return true; end
+
+  def pbMoveFailed?(user, targets)
+    if user.effects[PBEffects::PowerWordShield] > 0
+      @battle.pbDisplay(_INTL("{1} is already shielded!", user.pbThis))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    user.effects[PBEffects::PowerWordShield] = [user.totalhp / 4, 1].max
+    @battle.pbDisplay(_INTL("{1} is protected by a divine shield!", user.pbThis))
+  end
+end
+
+# Several turns of 1/8 max HP residual. Ghost typing, so Normal walls it
+# unless the user is in Shadowform. Reapplying refreshes the duration.
+class Battle::Move::CustomShadowWordPain < Battle::Move
+  DOT_TURNS = 5
+
+  def canMagicCoat?; return true; end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    if Effectiveness.ineffective?(target.damageState.typeMod)
+      @battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true))) if show_message
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    target.effects[PBEffects::ShadowWordPain] = DOT_TURNS
+    @battle.pbDisplay(_INTL("{1} was afflicted with Shadow Word: Pain!", target.pbThis))
+  end
+end
+
+# Outrage-style lock for 2 or 3 turns, including this one. No confusion and
+# no Special Attack drop. While the lock lasts, the target's attacks deal
+# half damage. A miss or Protect does not end the channel; flinch, status,
+# and switching out do.
+class Battle::Move::CustomMindFlay < Battle::Move
+  def pbEffectAfterAllHits(user, target)
+    return if user.fainted?
+    hit = !target.damageState.unaffected
+    if hit && user.effects[PBEffects::MindFlayLock] == 0
+      user.effects[PBEffects::MindFlayLock] = 2 + @battle.pbRandom(2)
+      user.currentMove = @id
+    end
+    return if user.effects[PBEffects::MindFlayLock] <= 0
+    if hit || user.effects[PBEffects::MindFlayTarget] == target.index
+      user.pbApplyMindFlayMark(target)
+    end
+    user.effects[PBEffects::MindFlayLock] -= 1
+    return if user.effects[PBEffects::MindFlayLock] > 0
+    user.pbClearMindFlayChannel
+    @battle.pbDisplay(_INTL("{1} stopped channeling Mind Flay!", user.pbThis))
+  end
+end
+
+# Area fear. Accuracy is rolled per foe by the stock accuracy check.
+# Duration is 1 or 2 lost actions. Dark-type immunity matches Thunder Wave.
+class Battle::Move::CustomPsychicScream < Battle::Move
+  def canMagicCoat?; return true; end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    if Effectiveness.ineffective?(target.damageState.typeMod)
+      @battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true))) if show_message
+      return true
+    end
+    return !target.pbCanFear?(user, show_message, self)
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    target.pbFear(user, 1 + @battle.pbRandom(2))
+  end
+end
+
+# Pure Ghost until the user switches out. Ghost moves hit Normal. Fairy moves
+# cannot be selected. Baton Pass does not copy the effect.
+class Battle::Move::CustomShadowform < Battle::Move
+  def pbMoveFailed?(user, targets)
+    if user.effects[PBEffects::Shadowform]
+      @battle.pbDisplay(_INTL("{1} is already in Shadowform!", user.pbThis))
+      return true
+    end
+    if !user.canChangeType?
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    # Set the type first. pbChangeTypes ignores later changes while the flag is up.
+    user.pbChangeTypes(:GHOST)
+    user.effects[PBEffects::Shadowform] = true
+    @battle.pbDisplay(_INTL("{1} assumed Shadowform!", user.pbThis))
+  end
+end
+
+# Five-turn side Levitate, counted down like Reflect. Gravity ends it early.
+# The Snatch flag is blank in PBS; this is snatchable like Reflect anyway,
+# because the engine checks canSnatch? rather than the PBS flag.
+class Battle::Move::CustomLevitateUserSide < Battle::Move
+  def unusableInGravity?; return true; end
+  def canSnatch?;         return true; end
+
+  def pbMoveFailed?(user, targets)
+    if user.pbOwnSide.effects[PBEffects::Levitate] > 0
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    user.pbOwnSide.effects[PBEffects::Levitate] = 5
+    @battle.pbDisplay(_INTL("{1} lifted {2} off the ground!", @name, user.pbTeam(true)))
+  end
+end
+
+# Five-turn mark. The applier's Ghost moves heal the applier and its adjacent
+# ally for VAMPIRIC_EMBRACE_HEAL_FRACTION of the damage. Fails if already marked.
+class Battle::Move::CustomVampiricEmbrace < Battle::Move
+  def canMagicCoat?; return true; end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    if Effectiveness.ineffective?(target.damageState.typeMod)
+      @battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true))) if show_message
+      return true
+    end
+    if target.effects[PBEffects::VampiricEmbrace] > 0
+      @battle.pbDisplay(_INTL("{1} is already marked!", target.pbThis)) if show_message
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    target.effects[PBEffects::VampiricEmbrace] = Battle::Battler::VAMPIRIC_EMBRACE_TURNS
+    target.effects[PBEffects::VampiricEmbraceUser] = user.index
+    @battle.pbDisplay(_INTL("{1} was marked by shadow!", target.pbThis))
+  end
+end
+
 #-------------------------------------------------------------------------------
 # Spin Out – harshly lowers user's Speed after dealing damage.
 #-------------------------------------------------------------------------------

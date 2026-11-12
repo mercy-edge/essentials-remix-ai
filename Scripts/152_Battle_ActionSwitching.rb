@@ -43,6 +43,12 @@ class Battle
       partyScene&.pbDisplay(_INTL("{1} is encased in ice and can't be switched out!", battler.pbThis))
       return false
     end
+    # Fear prevents switching, including Shed Shell and the Ghost-type escape.
+    # A future warlock Fear uses the same counter.
+    if battler.effects[PBEffects::Fear] > 0
+      partyScene&.pbDisplay(_INTL("{1} is too terrified to switch out!", battler.pbThis))
+      return false
+    end
     # Ability/item effects that allow switching no matter what
     if battler.abilityActive? && Battle::AbilityEffects.triggerCertainSwitching(battler.ability, battler, self)
       return true
