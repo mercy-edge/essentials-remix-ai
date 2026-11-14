@@ -185,11 +185,13 @@ Battle::AbilityEffects::OnSwitchIn.add(:TERAFORMZERO,
       battle.pbShowAbilitySplash(battler) if !showSplash
       battle.field.terrain = :None
       battle.field.terrainDuration = 0
+      battle.field.terrainSetterSide = nil
       case terrain
-      when :Electric then battle.pbDisplay(_INTL("The electric current disappeared from the battlefield!"))
-      when :Grassy   then battle.pbDisplay(_INTL("The grass disappeared from the battlefield!"))
-      when :Psychic  then battle.pbDisplay(_INTL("The mist disappeared from the battlefield!"))
-      when :Misty    then battle.pbDisplay(_INTL("The weirdness disappeared from the battlefield!"))
+      when :Electric     then battle.pbDisplay(_INTL("The electric current disappeared from the battlefield!"))
+      when :Grassy       then battle.pbDisplay(_INTL("The grass disappeared from the battlefield!"))
+      when :Psychic      then battle.pbDisplay(_INTL("The mist disappeared from the battlefield!"))
+      when :Misty        then battle.pbDisplay(_INTL("The weirdness disappeared from the battlefield!"))
+      when :Consecration then battle.pbDisplay(_INTL("The consecration faded from the battlefield!"))
       else
         battle.pbDisplay(_INTL("The battlefield returned to normal."))
       end

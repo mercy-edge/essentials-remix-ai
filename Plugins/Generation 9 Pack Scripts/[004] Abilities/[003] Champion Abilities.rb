@@ -17,6 +17,7 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:HEALER,
       next if b.status == :NONE
       battle.pbShowAbilitySplash(battler)
       oldStatus = b.status
+      was_divine = b.divine_shield?
       b.pbCureStatus(Battle::Scene::USE_ABILITY_SPLASH)
       if !Battle::Scene::USE_ABILITY_SPLASH
         case oldStatus
@@ -29,7 +30,11 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:HEALER,
         when :PARALYSIS
           battle.pbDisplay(_INTL("{1}'s {2} cured its partner's paralysis!", battler.pbThis, battler.abilityName))
         when :FROZEN
-          battle.pbDisplay(_INTL("{1}'s {2} broke its partner out of the ice!", battler.pbThis, battler.abilityName))
+          if was_divine
+            battle.pbDisplay(_INTL("{1}'s {2} dispelled its partner's divine shield!", battler.pbThis, battler.abilityName))
+          else
+            battle.pbDisplay(_INTL("{1}'s {2} broke its partner out of the ice!", battler.pbThis, battler.abilityName))
+          end
         end
       end
       battle.pbHideAbilitySplash(battler)

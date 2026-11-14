@@ -40,7 +40,11 @@ class Battle
     return true if battler.fainted?
     # Ice Block prevents switching, including Shed Shell and similar effects.
     if battler.status == :FROZEN
-      partyScene&.pbDisplay(_INTL("{1} is encased in ice and can't be switched out!", battler.pbThis))
+      if battler.divine_shield?
+        partyScene&.pbDisplay(_INTL("{1} is wrapped in a divine shield and can't be switched out!", battler.pbThis))
+      else
+        partyScene&.pbDisplay(_INTL("{1} is encased in ice and can't be switched out!", battler.pbThis))
+      end
       return false
     end
     # Ability/item effects that allow switching no matter what
@@ -402,7 +406,11 @@ class Battle
     if position.effects[PBEffects::HealingWish]
       if battler.canHeal? || battler.status != :NONE
         pbCommonAnimation("HealingWish", battler)
-        pbDisplay(_INTL("The healing wish came true for {1}!", battler.pbThis(true)))
+        if position.effects[PBEffects::HealingWish] == :LAYONHANDS
+          pbDisplay(_INTL("Lay on Hands restored {1}!", battler.pbThis(true)))
+        else
+          pbDisplay(_INTL("The healing wish came true for {1}!", battler.pbThis(true)))
+        end
         battler.pbRecoverHP(battler.totalhp)
         battler.pbCureStatus(false)
         position.effects[PBEffects::HealingWish] = false
