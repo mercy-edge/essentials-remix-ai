@@ -786,15 +786,22 @@ class Battle
     @field.terrainDuration = -1
   end
 
-  def pbStartTerrain(user, newTerrain, fixedDuration = true)
+  # duration, when given, is the fixed length in turns (Consecration passes
+  # PaladinMoves::CONSECRATION_TERRAIN_TURNS). Nil keeps the stock 5.
+  def pbStartTerrain(user, newTerrain, fixedDuration = true, duration = nil)
     return if @field.terrain == newTerrain
     @field.terrain = newTerrain
-    duration = (fixedDuration) ? 5 : -1
+    if fixedDuration
+      duration = 5 if !duration || duration <= 0
+    else
+      duration = -1
+    end
     if duration > 0 && user && user.itemActive?
       duration = Battle::ItemEffects.triggerTerrainExtender(user.item, newTerrain,
                                                             duration, user, self)
     end
     @field.terrainDuration = duration
+    @field.terrainSetterSide = (user) ? user.idxOwnSide : nil
     terrain_data = GameData::BattleTerrain.try_get(@field.terrain)
     pbCommonAnimation(terrain_data.animation) if terrain_data
     pbHideAbilitySplash(user) if user
@@ -807,6 +814,8 @@ class Battle
       pbDisplay(_INTL("Mist swirled about the battlefield!"))
     when :Psychic
       pbDisplay(_INTL("The battlefield got weird!"))
+    when :Consecration
+      pbDisplay(_INTL("The ground was consecrated!"))
     end
     # Check for abilities/items that trigger upon the terrain changing
     allBattlers.each { |b| b.pbAbilityOnTerrainChange }

@@ -56,3 +56,10 @@ GameData::BattleTerrain.register({
   :name      => _INTL("Psychic"),
   :animation => "PsychicTerrain"
 })
+
+# Consecration has no dedicated common animation. A missing name is skipped.
+GameData::BattleTerrain.register({
+  :id        => :Consecration,
+  :name      => _INTL("Consecration"),
+  :animation => nil
+})

@@ -5594,7 +5594,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = JUDGEMENT
-Description = The user judges the target with divine force. This move's category depends on the user's higher offensive stat.
+Description = Passes judgment on the target. Its type and added effect change with the Seal the user holds, and it uses whichever of the user's Attack or Sp. Atk is higher.
 #-------------------------------
 [TM008]
 Name = TM008
@@ -8246,7 +8246,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = HOLYLIGHT
-Description = A holy spark restores half of the target's max HP.
+Description = A holy light restores half of the user's max HP.
 #-------------------------------
 [TM249]
 Name = TM249
@@ -8257,7 +8257,7 @@ BPPrice = 32
 FieldUse = TR
 Flags = Fling_10
 Move = HAMMEROFJUSTICE
-Description = The user strikes first with righteous force and may make the target flinch.
+Description = The user strikes the target with a hammer of justice. This may also make the target flinch.
 #-------------------------------
 [TM250]
 Name = TM250
@@ -8588,3 +8588,47 @@ FieldUse = TR
 Flags = Fling_10
 Move = BLASTWAVE
 Description = A wave of fire hits opposing Pokémon. This may also make them flinch.
+#-------------------------------
+[TM295]
+Name = TM295
+NamePlural = TM295s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = CONSECRATION
+Description = Consecrates the ground for 5 turns. Grounded Pokémon on the user's side restore a little HP each turn, and grounded foes take a little damage.
+#-------------------------------
+[TM296]
+Name = TM296
+NamePlural = TM296s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = LAYONHANDS
+Description = The user switches out and fully restores the HP and status of the Pokémon that comes in. The user does not faint.
+#-------------------------------
+[TM297]
+Name = TM297
+NamePlural = TM297s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = DIVINESHIELD
+Description = The user is wrapped in a divine shield. It can't attack or switch, but moves can't touch it, and it slowly recovers HP for a few turns.
+#-------------------------------
+[TM298]
+Name = TM298
+NamePlural = TM298s
+Pocket = 4
+Price = 3000
+BPPrice = 32
+FieldUse = TR
+Flags = Fling_10
+Move = HOLYSHOCK
+Description = A burst of holy light. It damages a foe, or restores half the HP of an ally.

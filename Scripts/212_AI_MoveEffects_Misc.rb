@@ -706,3 +706,51 @@ Battle::AI::Handlers::MoveEffectScore.add("RemoveAllScreensAndSafeguard",
     next score
   }
 )
+
+#===============================================================================
+# Paladin moves
+#===============================================================================
+Battle::AI::Handlers::MoveFailureCheck.add("CustomConsecration",
+  proc { |move, user, ai, battle|
+    next battle.field.terrain == :Consecration &&
+         battle.field.terrainSetterSide == user.battler.idxOwnSide
+  }
+)
+Battle::AI::Handlers::MoveEffectScore.add("CustomConsecration",
+  proc { |score, move, user, ai, battle|
+    if ai.trainer.high_skill? && battle.field.terrain != :None
+      score -= ai.get_score_for_terrain(battle.field.terrain, user)
+    end
+    score += ai.get_score_for_terrain(:Consecration, user, true)
+    next score
+  }
+)
+
+Battle::AI::Handlers::MoveFailureCheck.copy("UserFaintsHealAndCureReplacement",
+                                            "CustomLayOnHands")
+Battle::AI::Handlers::MoveEffectScore.add("CustomLayOnHands",
+  proc { |score, move, user, ai, battle|
+    if ai.trainer.medium_skill?
+      need_healing = false
+      battle.eachInTeamFromBattlerIndex(user.index) do |pkmn, _party_index|
+        next if pkmn.hp >= pkmn.totalhp * 0.75 && pkmn.status == :NONE
+        need_healing = true
+        break
+      end
+      next Battle::AI::MOVE_USELESS_SCORE if !need_healing
+      score += 15
+    end
+    next score
+  }
+)
+
+Battle::AI::Handlers::MoveFailureCheck.add("CustomDivineShield",
+  proc { |move, user, ai, battle|
+    next user.battler.status == :FROZEN
+  }
+)
+
+Battle::AI::Handlers::MoveFailureAgainstTargetCheck.copy("HealAllyOrDamageFoe",
+                                                         "CustomHolyShock")
+Battle::AI::Handlers::MoveEffectAgainstTargetScore.copy("HealAllyOrDamageFoe",
+                                                        "CustomHolyShock")

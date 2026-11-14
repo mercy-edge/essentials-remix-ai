@@ -309,6 +309,8 @@ class Battle
       pbDisplay(_INTL("Mist swirls about the battlefield!"))
     when :Psychic
       pbDisplay(_INTL("The battlefield is weird!"))
+    when :Consecration
+      pbDisplay(_INTL("The ground was consecrated!"))
     end
     # Abilities upon entering battle
     pbOnAllBattlersEnteringBattle

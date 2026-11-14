@@ -708,6 +708,9 @@ class Battle::AI
         if b.has_damaging_move_of_type?(:ELECTRIC)
           ret += (b.opposes?(move_user)) ? -10 : 10
         end
+      when :Consecration
+        # Grounded allies heal and grounded foes take damage.
+        ret += 8
       when :Grassy
         # End of round healing
         ret += (b.opposes?(move_user)) ? -8 : 8

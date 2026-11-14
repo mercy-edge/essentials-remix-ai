@@ -333,8 +333,13 @@ class Battle::Battler
     return true if user.effects[PBEffects::TwoTurnAttack]
     # Ice Block: the target is immune to every move while encased in ice.
     if target.status == :FROZEN && user.index != target.index
-      PBDebug.log("[Target immune] #{target.pbThis} is encased in ice")
-      @battle.pbDisplay(_INTL("{1} is encased in ice!", target.pbThis)) if show_message
+      if target.divine_shield?
+        PBDebug.log("[Target immune] #{target.pbThis} is wrapped in a divine shield")
+        @battle.pbDisplay(_INTL("{1} is protected by a divine shield!", target.pbThis)) if show_message
+      else
+        PBDebug.log("[Target immune] #{target.pbThis} is encased in ice")
+        @battle.pbDisplay(_INTL("{1} is encased in ice!", target.pbThis)) if show_message
+      end
       return false
     end
     # Move-specific failures
