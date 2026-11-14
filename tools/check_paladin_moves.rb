@@ -80,7 +80,7 @@ end
 EXPECTED = {
   "JUDGEMENT" => {
     "Name" => "Judgement", "Type" => "NORMAL", "Category" => "Special",
-    "Power" => "80", "Accuracy" => "100", "TotalPP" => "10", "Target" => "NearOther",
+    "Power" => "60", "Accuracy" => "100", "TotalPP" => "10", "Target" => "NearOther",
     "FunctionCode" => "CustomJudgement", "EffectChance" => "20",
     "Flags" => "CanProtect,CanMirrorMove"
   },
@@ -378,16 +378,39 @@ judgement.pbOnStartUse(user, [])
 assert(judgement.specialMove?, "an Attack tie should stay special, matching Photon Geyser")
 
 assert(PaladinMoves::JUDGEMENT_SEALS.empty?, "seal table must ship empty")
-assert_nil = PaladinMoves.judgement_seal(:TESTSEAL, true)
-assert(assert_nil.nil?, "unknown item is not a Seal")
+assert(PaladinMoves.judgement_seal(:TESTSEAL, true).nil?, "unknown item is not a Seal")
+user.item_id = nil
+user.item_on = false
+assert(judgement.pbBaseDamage(60, user, nil) == 60, "no Seal keeps the PBS power of 60")
+
+PaladinMoves.send(:remove_const, :JUDGEMENT_SEALS)
+PaladinMoves.const_set(:JUDGEMENT_SEALS, {
+  :SEALOFTHECRUSADER => [:NORMAL, nil, 100],
+  :SEALOFJUSTICE => [:ELECTRIC, :PARALYZE]
+})
+user.item_id = :SEALOFTHECRUSADER
+user.item_on = true
+crusader = PaladinMoves.judgement_seal(:SEALOFTHECRUSADER, true)
+assert(crusader == [:NORMAL, nil, 100], "Seal of the Crusader stays Normal at power 100, got #{crusader.inspect}")
+assert(judgement.pbBaseType(user) == :NORMAL, "Seal of the Crusader does not change the type")
+assert(judgement.pbBaseDamage(60, user, nil) == 100, "Seal of the Crusader raises power from 60 to 100")
+assert(judgement.pbAdditionalEffectChance(user, nil) == 0, "Seal of the Crusader has no secondary effect")
+justice = PaladinMoves.judgement_seal(:SEALOFJUSTICE, true)
+assert(justice == [:ELECTRIC, :PARALYZE, nil], "a two-field Seal has no power override, got #{justice.inspect}")
+user.item_id = :SEALOFJUSTICE
+assert(judgement.pbBaseDamage(60, user, nil) == 60, "a Seal without a power field keeps 60")
+PaladinMoves.send(:remove_const, :JUDGEMENT_SEALS)
+PaladinMoves.const_set(:JUDGEMENT_SEALS, {}.freeze)
+
 user.item_id = :TESTSEAL
 user.item_on = true
 assert(judgement.pbBaseType(user) == :NORMAL, "no Seal keeps Judgement Normal")
 assert(judgement.pbAdditionalEffectChance(user, nil) == 0, "no Seal means no effect chance")
 
 def PaladinMoves.judgement_seal(item_id, item_active)
-  return [:ELECTRIC, :PARALYZE] if item_id == :TESTSEAL && item_active
-  return [:WATER, nil] if item_id == :TYPEONLY && item_active
+  return [:ELECTRIC, :PARALYZE, nil] if item_id == :TESTSEAL && item_active
+  return [:WATER, nil, nil] if item_id == :TYPEONLY && item_active
+  return [:NORMAL, nil, 100] if item_id == :SEALOFTHECRUSADER && item_active
   return nil
 end
 

@@ -6,13 +6,18 @@
 # stays Normal and has no secondary effect.
 #===============================================================================
 module PaladinMoves
-  # item_id => [type, effect]
-  # type is a type symbol such as :ELECTRIC, :WATER, or :GROUND.
-  # effect is the 20% rider, or nil for a type change only:
+  # item_id => [type, effect, power]
+  # type is a type symbol such as :NORMAL, :ELECTRIC, :WATER, or :GROUND.
+  # effect is the 20% rider, or nil for none:
   #   :BURN, :PARALYZE, :POISON, :SLEEP, :FROSTBITE, :FLINCH, :CONFUSE
+  # power is an optional base-power override. Omit it or pass nil to keep the
+  # PBS power (60). A future Seal of the Crusader would be:
+  #   :SEALOFTHECRUSADER => [:NORMAL, nil, 100]
+  # That keeps Judgement Normal and raises its power from 60 to 100.
   # An unknown effect is ignored so a bad entry cannot crash a battle.
+  # No Seal items are defined yet. The table stays empty.
   JUDGEMENT_SEALS = {
-    # :SEALOFJUSTICE => [:ELECTRIC, :PARALYZE]
+    # :SEALOFTHECRUSADER => [:NORMAL, nil, 100]
   }.freeze
 
   CONSECRATION_TERRAIN_TURNS = 5
@@ -27,7 +32,9 @@ module PaladinMoves
     return nil if !entry.is_a?(Array) || entry.empty?
     type = entry[0]
     return nil if !type || !GameData::Type.exists?(type)
-    return [type, entry[1]]
+    power = entry[2]
+    power = nil if !power.is_a?(Integer) || power <= 0
+    return [type, entry[1], power]
   end
 
   # redirected: the target changed after Lightning Rod, Storm Drain, Follow Me,
@@ -48,10 +55,11 @@ module PaladinMoves
 end
 
 #===============================================================================
-# Normal by default. A held Seal (see PaladinMoves::JUDGEMENT_SEALS) sets the
-# type and the 20% secondary effect. Category follows the user's higher Attack
-# or Special Attack, including stat stages, same as Photon Geyser. Ties stay
-# special.
+# Normal / 60 by default. A held Seal (see PaladinMoves::JUDGEMENT_SEALS) sets
+# the type, the 20% secondary effect, and an optional power override. A future
+# Seal of the Crusader keeps this move Normal and raises its power to 100.
+# Category follows the user's higher Attack or Special Attack, including stat
+# stages, same as Photon Geyser. Ties stay special.
 #===============================================================================
 class Battle::Move::CustomJudgement < Battle::Move::CustomCategoryByHigherAttack
   def pbJudgementSeal(user)
@@ -67,6 +75,13 @@ class Battle::Move::CustomJudgement < Battle::Move::CustomCategoryByHigherAttack
       ret = modified if modified
     end
     return ret
+  end
+
+  # A Seal's third field replaces the PBS power. Nil keeps the base of 60.
+  def pbBaseDamage(baseDmg, user, target)
+    seal = pbJudgementSeal(user)
+    return seal[2] if seal && seal[2]
+    return baseDmg
   end
 
   # No Seal means no rider, so Sheer Force does not treat the move as having one.
