@@ -281,7 +281,7 @@ Battle::ItemEffects::HPHeal.add(:BERRYJUICE,
     itemName = GameData::Item.get(item).name
     PBDebug.log("[Item triggered] Forced consuming of #{itemName}") if forced
     battle.pbCommonAnimation("UseItem", battler) if !forced
-    battler.pbRecoverHP(20)
+    battler.pbRecoverHPFromActiveHeal(20)
     if forced
       battle.pbDisplay(_INTL("{1}'s HP was restored.", battler.pbThis))
     else
@@ -374,7 +374,7 @@ Battle::ItemEffects::HPHeal.add(:ORANBERRY,
     end
     battle.pbCommonAnimation("EatBerry", battler) if !forced
     battle.pbHideAbilitySplash(battler) if ripening
-    battler.pbRecoverHP(amt)
+    battler.pbRecoverHPFromActiveHeal(amt)
     itemName = GameData::Item.get(item).name
     if forced
       PBDebug.log("[Item triggered] Forced consuming of #{itemName}")
@@ -411,7 +411,7 @@ Battle::ItemEffects::HPHeal.add(:SITRUSBERRY,
     end
     battle.pbCommonAnimation("EatBerry", battler) if !forced
     battle.pbHideAbilitySplash(battler) if ripening
-    battler.pbRecoverHP(amt)
+    battler.pbRecoverHPFromActiveHeal(amt)
     itemName = GameData::Item.get(item).name
     if forced
       PBDebug.log("[Item triggered] Forced consuming of #{itemName}")
@@ -543,6 +543,8 @@ Battle::ItemEffects::StatusCure.add(:LUMBERRY,
         battle.pbDisplay(_INTL("{1}'s {2} broke it out of the ice!", battler.pbThis, itemName))
       when :FROSTBITE
         battle.pbDisplay(_INTL("{1}'s {2} healed its frostbite!", battler.pbThis, itemName))
+      when :BLEED
+        battle.pbDisplay(_INTL("{1}'s {2} stopped its bleeding!", battler.pbThis, itemName))
       end
       if oldConfusion
         battle.pbDisplay(_INTL("{1}'s {2} snapped it out of its confusion!", battler.pbThis, itemName))
@@ -1472,7 +1474,7 @@ Battle::ItemEffects::OnBeingHitPositiveBerry.add(:ENIGMABERRY,
     end
     battle.pbCommonAnimation("EatBerry", battler) if !forced
     battle.pbHideAbilitySplash(battler) if ripening
-    battler.pbRecoverHP(amt)
+    battler.pbRecoverHPFromActiveHeal(amt)
     if forced
       battle.pbDisplay(_INTL("{1}'s HP was restored.", battler.pbThis))
     else

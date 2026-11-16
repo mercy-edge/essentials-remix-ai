@@ -614,12 +614,9 @@ class Battle::Move::CustomDrainSoul < Battle::Move
   end
 end
 
-class Battle::Move::CustomRend < Battle::Move
-  def pbEffectWhenDealingDamage(user, target)
-    return if target.fainted? || target.damageState.substitute
-    target.effects[PBEffects::RendBleed] = 3
-    @battle.pbDisplay(_INTL("{1} was left bleeding!", target.pbThis))
-  end
+# Retired function-code name. Rend's PBS code is BleedTarget. This alias keeps
+# a moves.dat compiled before that rename inflicting Bleed on the target.
+class Battle::Move::CustomRend < Battle::Move::BleedTarget
 end
 
 class Battle::Move::CustomThunderClap < Battle::Move
@@ -728,7 +725,7 @@ class Battle::Move::CustomEvocation < Battle::Move
   end
 
   def pbMoveFailed?(user, targets)
-    if user.hp >= user.totalhp && !pbOtherMovesNeedPP?(user)
+    if !user.pbCanReceiveActiveHeal? && !pbOtherMovesNeedPP?(user)
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
@@ -740,8 +737,11 @@ class Battle::Move::CustomEvocation < Battle::Move
     if user.hp < user.totalhp && user.canHeal?
       amt = user.totalhp / 3
       amt = 1 if amt < 1
-      healed = user.pbRecoverHP(amt) > 0
+      healed = user.pbRecoverHPFromActiveHeal(amt) > 0
       @battle.pbDisplay(_INTL("{1}'s HP was restored.", user.pbThis)) if healed
+    elsif user.status == :BLEED && user.effects[PBEffects::HealBlock] == 0
+      user.pbCureStatus
+      healed = true
     end
     restored = false
     user.eachMove do |m|

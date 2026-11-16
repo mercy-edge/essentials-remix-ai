@@ -23,7 +23,10 @@ class Battle::Battler
     return amt
   end
 
-  def pbRecoverHP(amt, anim = true, anyAnim = true)
+  # cureBleed: active healing (a healing move, Wish landing, a bag HP item,
+  # or an HP berry) also ends Bleed, even if the battler was already at full HP.
+  # Passive recovery must leave this false. HP is still restored either way.
+  def pbRecoverHP(amt, anim = true, anyAnim = true, cureBleed = false)
     amt = amt.round
     amt = @totalhp - @hp if amt > @totalhp - @hp
     amt = 1 if amt < 1 && @hp < @totalhp
@@ -34,7 +37,18 @@ class Battle::Battler
     raise _INTL("HP greater than total HP") if @hp > @totalhp
     @battle.scene.pbHPChanged(self, oldHP, anim) if anyAnim && amt > 0
     @droppedBelowHalfHP = false if @hp >= @totalhp / 2
+    # Cure even when no HP was missing. Passive recovery can fill the bar
+    # without ending Bleed, and a healing move or item used then should still
+    # stop it. Healing moves never reach this while Heal Block is up.
+    if cureBleed && @status == :BLEED && !fainted?
+      pbCureStatus
+    end
     return amt
+  end
+
+  # Healing moves, Wish, bag HP items, and HP-restoring berries.
+  def pbRecoverHPFromActiveHeal(amt, anim = true, anyAnim = true)
+    return pbRecoverHP(amt, anim, anyAnim, true)
   end
 
   def pbRecoverHPFromDrain(amt, target, msg = nil)

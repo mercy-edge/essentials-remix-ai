@@ -240,6 +240,8 @@ Battle::ItemEffects::StatusCure.add(:LUMBERRY,
         battle.pbDisplay(_INTL("{1}'s {2} made it alert again!", battler.pbThis, itemName))
       when :FROSTBITE
         battle.pbDisplay(_INTL("{1}'s {2} healed its frostbite!", battler.pbThis, itemName))
+      when :BLEED
+        battle.pbDisplay(_INTL("{1}'s {2} stopped its bleeding!", battler.pbThis, itemName))
       end
       if oldConfusion
         battle.pbDisplay(_INTL("{1}'s {2} snapped it out of its confusion!", battler.pbThis, itemName))

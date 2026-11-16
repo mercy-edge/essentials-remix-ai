@@ -153,6 +153,8 @@ class Battle::AI::AIBattler
       end
     elsif self.status == :FROSTBITE
       ret += [(Settings::MECHANICS_GENERATION >= 7) ? self.totalhp / 16 : self.totalhp / 8, 1].max if battler.takesIndirectDamage?
+    elsif self.status == :BLEED
+      ret += [self.totalhp / 8, 1].max if battler.takesIndirectDamage?
     elsif battler.asleep? && self.statusCount > 1 && self.effects[PBEffects::Nightmare]
       ret += [self.totalhp / 4, 1].max if battler.takesIndirectDamage?
     end
@@ -386,7 +388,7 @@ class Battle::AI::AIBattler
       when :POISONHEAL
         return true if new_status == :POISON
       when :MAGICGUARD   # Want a harmless status problem to prevent getting a harmful one
-        return true if new_status == :POISON ||
+        return true if new_status == :POISON || new_status == :BLEED ||
                        (new_status == :BURN && !@ai.stat_raise_worthwhile?(self, :ATTACK, true))
       end
     end

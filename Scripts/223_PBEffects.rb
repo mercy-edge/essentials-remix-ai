@@ -132,7 +132,7 @@ module PBEffects
   CudChewWasFling     = 127   # Berry was eaten via Fling (replay calls pbHeldItemTriggerCheck(..., true))
   GlaiveRushVulnerable = 128   # Takes double damage until switching out (Glaive Rush)
   HadStatLoweredThisBattle = 129   # Any stat stage decrease this battle (Temper Flare)
-  RendBleed           = 130   # Turns remaining of Rend bleed damage on this battler
+  # 130 was RendBleed, a retired volatile. Bleed is the non-volatile status :BLEED.
   HamstringLock       = 131   # Turns remaining the user is trapped by Hamstring
   OverpowerDodged     = 132   # A move missed this battler since it entered or last moved
   Sundered            = 133   # Turns remaining of Sunder Armor's defense-stage cap
