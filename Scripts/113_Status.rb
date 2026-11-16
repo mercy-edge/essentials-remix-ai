@@ -2,11 +2,15 @@
 #       having Pokérus, in that order, at the bottom of the graphic.
 #       "Graphics/UI/Battle/icon_statuses.png" also contains an icon for bad
 #       poisoning (toxic) at TOXIC_ICON_POSITION, before Frostbite and Polymorph.
+#       Bleed is a placeholder "BLD" frame at BLEED_ICON_POSITION, appended past
+#       the fainted/Pokérus slots so those indexes are not shifted. Replace that
+#       frame in both statuses.png and Battle/icon_statuses.png with final art.
 module GameData
   class Status
     TOXIC_ICON_POSITION    = 5
     FAINTED_ICON_POSITION  = 8
     POKERUS_ICON_POSITION  = 9
+    BLEED_ICON_POSITION    = 10
 
     attr_reader :id
     attr_reader :real_name
@@ -89,4 +93,12 @@ GameData::Status.register({
   :name          => _INTL("Polymorph"),
   :animation     => "Sleep",
   :icon_position => 7
+})
+
+# Non-volatile. No dedicated common animation yet; the status icon is a
+# placeholder frame (see BLEED_ICON_POSITION).
+GameData::Status.register({
+  :id            => :BLEED,
+  :name          => _INTL("Bleed"),
+  :icon_position => GameData::Status::BLEED_ICON_POSITION
 })

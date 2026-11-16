@@ -397,7 +397,7 @@ class Battle::Move::HealingMove < Battle::Move
   def canSnatch?;         return true; end
 
   def pbMoveFailed?(user, targets)
-    if user.hp == user.totalhp
+    if !user.pbCanReceiveActiveHeal?
       @battle.pbDisplay(_INTL("{1}'s HP is full!", user.pbThis))
       return true
     end
@@ -406,8 +406,8 @@ class Battle::Move::HealingMove < Battle::Move
 
   def pbEffectGeneral(user)
     amt = pbHealAmount(user)
-    user.pbRecoverHP(amt)
-    @battle.pbDisplay(_INTL("{1}'s HP was restored.", user.pbThis))
+    healed = user.pbRecoverHPFromActiveHeal(amt)
+    @battle.pbDisplay(_INTL("{1}'s HP was restored.", user.pbThis)) if healed > 0
   end
 end
 

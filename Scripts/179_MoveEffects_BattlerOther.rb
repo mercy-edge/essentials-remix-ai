@@ -92,6 +92,32 @@ class Battle::Move::SleepTargetNextTurn < Battle::Move
 end
 
 #===============================================================================
+# Inflicts the Bleed status. Damaging moves still deal damage if Bleed cannot
+# be applied (immunity, existing non-volatile status, Substitute, Safeguard).
+# The infliction is not an additional-effect roll, so it is not removed by
+# Sheer Force or Shield Dust and does not gain a Sheer Force boost.
+#===============================================================================
+class Battle::Move::BleedTarget < Battle::Move
+  def canMagicCoat?; return true; end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    return false if damagingMove?
+    return !target.pbCanBleed?(user, show_message, self)
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    return if damagingMove?
+    target.pbBleed(user) if target.pbCanBleed?(user, false, self)
+  end
+
+  def pbEffectWhenDealingDamage(user, target)
+    return if !damagingMove?
+    return if target.fainted?
+    target.pbBleed(user) if target.pbCanBleed?(user, false, self)
+  end
+end
+
+#===============================================================================
 # Poisons the target.
 #===============================================================================
 class Battle::Move::PoisonTarget < Battle::Move
@@ -434,7 +460,7 @@ class Battle::Move::CureUserBurnPoisonParalysis < Battle::Move
   def canSnatch?; return true; end
 
   def pbMoveFailed?(user, targets)
-    if ![:BURN, :POISON, :PARALYSIS].include?(user.status)
+    if ![:BURN, :POISON, :PARALYSIS, :BLEED].include?(user.status)
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
@@ -451,6 +477,8 @@ class Battle::Move::CureUserBurnPoisonParalysis < Battle::Move
       @battle.pbDisplay(_INTL("{1} cured its poisoning!", user.pbThis))
     when :PARALYSIS
       @battle.pbDisplay(_INTL("{1} cured its paralysis!", user.pbThis))
+    when :BLEED
+      @battle.pbDisplay(_INTL("{1}'s bleeding stopped!", user.pbThis))
     end
   end
 end
@@ -507,6 +535,8 @@ class Battle::Move::CureUserPartyStatus < Battle::Move
       @battle.pbDisplay(_INTL("{1} broke out of the ice!", curedName))
     when :FROSTBITE
       @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", curedName))
+    when :BLEED
+      @battle.pbDisplay(_INTL("{1}'s bleeding stopped!", curedName))
     end
   end
 

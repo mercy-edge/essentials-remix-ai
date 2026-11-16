@@ -121,9 +121,10 @@ class Battle
       next if !pos || pos.effects[PBEffects::Wish] == 0
       pos.effects[PBEffects::Wish] -= 1
       next if pos.effects[PBEffects::Wish] > 0
-      next if !@battlers[idxPos] || !@battlers[idxPos].canHeal?
+      battler = @battlers[idxPos]
+      next if !battler || !battler.pbCanReceiveActiveHeal?
       wishMaker = pbThisEx(idxPos, pos.effects[PBEffects::WishMaker])
-      @battlers[idxPos].pbRecoverHP(pos.effects[PBEffects::WishAmount])
+      battler.pbRecoverHPFromActiveHeal(pos.effects[PBEffects::WishAmount])
       pbDisplay(_INTL("{1}'s wish came true!", wishMaker))
     end
   end
@@ -259,6 +260,17 @@ class Battle
       battler.pbFaint if battler.fainted?
       battler.droppedBelowHalfHP = false
     end
+    # Damage from bleeding (1/8 max HP, like non-toxic poison)
+    priority.each do |battler|
+      next if battler.status != :BLEED || !battler.takesIndirectDamage?
+      battler.droppedBelowHalfHP = false
+      dmg = battler.totalhp / 8
+      battler.pbContinueStatus { battler.pbReduceHP(dmg, false) }
+      battler.pbItemHPHealCheck
+      battler.pbAbilitiesOnDamageTaken
+      battler.pbFaint if battler.fainted?
+      battler.droppedBelowHalfHP = false
+    end
   end
 
   #=============================================================================
@@ -322,14 +334,6 @@ class Battle
       battler.pbTakeEffectDamage(amt) do |_hp_lost|
         pbDisplay(_INTL("{1} is hurt by Salt Cure!", battler.pbThis))
       end
-    end
-    # Rend bleed
-    priority.each do |battler|
-      next if battler.effects[PBEffects::RendBleed] <= 0 || !battler.takesIndirectDamage?
-      battler.pbTakeEffectDamage([battler.totalhp / 16, 1].max) do |_hp_lost|
-        pbDisplay(_INTL("{1} is hurt by bleeding!", battler.pbThis))
-      end
-      battler.effects[PBEffects::RendBleed] -= 1
     end
     # Syrup Bomb (Speed drops at end of each turn while syrup remains)
     priority.each do |battler|
@@ -719,6 +723,8 @@ class Battle
           pbDisplay(_INTL("{1} shook off its frostbite so you wouldn't worry!", battler.pbThis))
         when :POLYMORPH
           pbDisplay(_INTL("{1} broke free of the polymorph so you wouldn't worry!", battler.pbThis))
+        when :BLEED
+          pbDisplay(_INTL("{1}'s bleeding stopped!", battler.pbThis))
         end
       end
     end

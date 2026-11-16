@@ -165,7 +165,6 @@ class Battle::Battler
     @effects[PBEffects::CudChewWasFling]     = false
     @effects[PBEffects::GlaiveRushVulnerable] = false
     @effects[PBEffects::HadStatLoweredThisBattle] = false
-    @effects[PBEffects::RendBleed]           = 0
     @effects[PBEffects::HamstringLock]       = 0
     @effects[PBEffects::OverpowerDodged]     = false
     @effects[PBEffects::Sundered]            = 0
