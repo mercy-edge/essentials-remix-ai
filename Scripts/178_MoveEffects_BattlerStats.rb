@@ -1793,12 +1793,32 @@ end
 # Resets all target's stat stages to 0. (Clear Smog)
 #===============================================================================
 class Battle::Move::ResetTargetStatStages < Battle::Move
-  def pbEffectAgainstTarget(user, target)
-    if target.damageState.calcDamage > 0 && !target.damageState.substitute &&
-       target.hasAlteredStatStages?
-      target.pbResetStatStages
-      @battle.pbDisplay(_INTL("{1}'s stat changes were removed!", target.pbThis))
+  def canMagicCoat?; return true; end
+
+  # Clear Smog only resets stats after it deals damage. Dispel Magic is the
+  # same code used as a status move, so it resets stats without a damage check.
+  # The damaging path is unchanged.
+  def pbFailsAgainstTarget?(user, target, show_message)
+    return false if damagingMove?
+    if !target.hasAlteredStatStages?
+      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+      return true
     end
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    if damagingMove?
+      if target.damageState.calcDamage > 0 && !target.damageState.substitute &&
+         target.hasAlteredStatStages?
+        target.pbResetStatStages
+        @battle.pbDisplay(_INTL("{1}'s stat changes were removed!", target.pbThis))
+      end
+      return
+    end
+    return if !target.hasAlteredStatStages?
+    target.pbResetStatStages
+    @battle.pbDisplay(_INTL("{1}'s stat changes were removed!", target.pbThis))
   end
 end
 

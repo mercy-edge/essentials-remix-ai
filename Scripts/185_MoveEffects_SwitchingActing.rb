@@ -206,6 +206,10 @@ class Battle::Move::SwitchOutTargetStatusMove < Battle::Move
       next if b.fainted? || b.damageState.unaffected
       next if b.wild?
       next if b.effects[PBEffects::Ingrain]
+      if b.effects[PBEffects::Fear] > 0
+        @battle.pbDisplay(_INTL("{1} is too terrified to be switched out!", b.pbThis))
+        next
+      end
       next if b.hasActiveAbility?([:SUCTIONCUPS, :GUARDDOG]) && !@battle.moldBreaker
       newPkmn = @battle.pbGetReplacementPokemonIndex(b.index, true)   # Random
       next if newPkmn < 0
@@ -241,6 +245,10 @@ class Battle::Move::SwitchOutTargetDamagingMove < Battle::Move
       next if b.fainted? || b.damageState.unaffected || b.damageState.substitute
       next if b.wild?
       next if b.effects[PBEffects::Ingrain]
+      if b.effects[PBEffects::Fear] > 0
+        @battle.pbDisplay(_INTL("{1} is too terrified to be switched out!", b.pbThis))
+        next
+      end
       next if b.hasActiveAbility?([:SUCTIONCUPS, :GUARDDOG]) && !@battle.moldBreaker
       newPkmn = @battle.pbGetReplacementPokemonIndex(b.index, true)   # Random
       next if newPkmn < 0

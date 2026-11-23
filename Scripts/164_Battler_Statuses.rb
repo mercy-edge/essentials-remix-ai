@@ -300,6 +300,12 @@ class Battle::Battler
       @effects[PBEffects::Outrage] = 0
       @currentMove = nil
     end
+    # Sleep and Polymorph stop the move, so a Mind Flay channel ends too.
+    if (@status == :SLEEP || @status == :POLYMORPH) && @effects[PBEffects::MindFlayLock] > 0
+      @effects[PBEffects::MindFlayLock] = 0
+      pbClearMindFlayChannel
+      @currentMove = nil
+    end
   end
 
   #=============================================================================
@@ -456,6 +462,53 @@ class Battle::Battler
 
   def pbFreeze(msg = nil)
     pbInflictStatus(:FROZEN, pbIceBlockDuration, msg)
+  end
+
+  #=============================================================================
+  # Fear
+  # A volatile turn counter. It stacks with burn, poison, frostbite, and the
+  # other non-volatile statuses so a future warlock can DoT then Fear.
+  # Psychic Scream passes 1 or 2. A future single-target warlock Fear should
+  # call pbFear with no duration to roll FEAR_MIN_TURNS..FEAR_MAX_TURNS.
+  #=============================================================================
+  # Percent chance to break free each time this battler loses HP. Tune here.
+  FEAR_BREAK_ON_DAMAGE_CHANCE = 25
+  FEAR_MIN_TURNS = 1
+  FEAR_MAX_TURNS = 3
+  # Ruby 1.8 integer division would make 1/4 equal 0, so this stays a Float.
+  VAMPIRIC_EMBRACE_HEAL_FRACTION = 1.0 / 4
+  VAMPIRIC_EMBRACE_TURNS = 5
+
+  def feared?
+    return @effects[PBEffects::Fear] > 0
+  end
+
+  def pbFearDuration(min_turns = FEAR_MIN_TURNS, max_turns = FEAR_MAX_TURNS)
+    span = max_turns - min_turns + 1
+    span = 1 if span < 1
+    return min_turns + @battle.pbRandom(span)
+  end
+
+  # user and move are accepted so a later Fear move can call this the same
+  # way as pbCanBurn? / pbCanParalyze?.
+  def pbCanFear?(user = nil, showMessages = false, move = nil)
+    return false if fainted?
+    if @effects[PBEffects::Fear] > 0
+      @battle.pbDisplay(_INTL("{1} is already afraid!", pbThis)) if showMessages
+      return false
+    end
+    return true
+  end
+
+  def pbFear(user = nil, duration = nil, msg = nil)
+    duration = pbFearDuration if !duration || duration <= 0
+    # The counter ticks down at end of round. A fear that lands after this
+    # battler has already acted would otherwise expire before their next
+    # action, so add a turn. The number passed in is how many actions they lose.
+    duration += 1 if movedThisRound?
+    @effects[PBEffects::Fear] = duration
+    msg = _INTL("{1} is terrified!", pbThis) if nil_or_empty?(msg)
+    @battle.pbDisplay(msg)
   end
 
   #=============================================================================
