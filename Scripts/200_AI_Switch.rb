@@ -112,7 +112,7 @@ class Battle::AI
     elsif entry_hazard_damage > 0
       score -= 50 * entry_hazard_damage / pkmn.hp
     end
-    if !pkmn.hasItem?(:HEAVYDUTYBOOTS) && !pokemon_airborne?(pkmn)
+    if !pkmn.hasItem?(:HEAVYDUTYBOOTS) && !pokemon_airborne?(pkmn, idxBattler & 1)
       # Toxic Spikes
       if @user.pbOwnSide.effects[PBEffects::ToxicSpikes] > 0
         score -= 20 if pokemon_can_be_poisoned?(pkmn)
@@ -163,7 +163,7 @@ class Battle::AI
       ret += pkmn.totalhp * eff / 8 if !Effectiveness.ineffective?(eff)
     end
     # Spikes
-    if @battle.sides[side].effects[PBEffects::Spikes] > 0 && !pokemon_airborne?(pkmn)
+    if @battle.sides[side].effects[PBEffects::Spikes] > 0 && !pokemon_airborne?(pkmn, side)
       spikes_div = [8, 6, 4][@battle.sides[side].effects[PBEffects::Spikes] - 1]
       ret += pkmn.totalhp / spikes_div
     end

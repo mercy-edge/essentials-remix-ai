@@ -187,11 +187,38 @@ end
 end
 
 assert((tm_by_move["REDEMPTION"] || []).empty?, "REDEMPTION should not have a TM")
-assert(!items.key?("TM280"), "TM280 is reserved for the unmerged priest kit")
-assert(!items.key?("TM294"), "TM294 is reserved for the unmerged priest kit")
-(280..294).each do |n|
+
+# Priest TM280–TM294 landed on master. Paladin stays at TM295–TM298.
+priest_tms = {
+  "TM280" => "HOLYFIRE",
+  "TM281" => "HOLYNOVA",
+  "TM282" => "RENEW",
+  "TM283" => "PRAYEROFHEALING",
+  "TM284" => "RESURRECTION",
+  "TM285" => "DISPELMAGIC",
+  "TM286" => "POWERWORDSHIELD",
+  "TM287" => "SHADOWWORDPAIN",
+  "TM288" => "MINDFLAY",
+  "TM289" => "PSYCHICSCREAM",
+  "TM290" => "SILENCE",
+  "TM291" => "MANABURN",
+  "TM292" => "SHADOWFORM",
+  "TM293" => "LEVITATE",
+  "TM294" => "VAMPIRICEMBRACE"
+}
+priest_tms.each do |tm, move_id|
+  row = items[tm]
+  fail("priest #{tm} missing after merging master") && next if !row
+  fail("#{tm} should teach #{move_id}, found #{row["Move"].inspect}") if row["Move"] != move_id
+  fail("priest move #{move_id} missing") unless moves.key?(move_id)
+end
+paladin_moves = %w[CONSECRATION LAYONHANDS DIVINESHIELD HOLYSHOCK]
+priest_moves = priest_tms.values
+overlap = paladin_moves & priest_moves
+fail("paladin and priest TMs teach the same moves: #{overlap.inspect}") unless overlap.empty?
+(295..298).each do |n|
   id = format("TM%03d", n)
-  fail("#{id} collides with the priest TM range") if items.key?(id)
+  fail("#{id} missing") unless items.key?(id)
 end
 
 #-------------------------------------------------------------------------------

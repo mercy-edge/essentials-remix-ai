@@ -77,16 +77,22 @@ class Battle::Battler
   # Pursuit was used specially to intercept a switching foe.
   # Cancels the use of multi-turn moves and counters thereof. Note that Hyper
   # Beam's effect is NOT cancelled.
-  def pbCancelMoves(full_cancel = false)
+  # keep_channel: a Mind Flay hit that misses or is protected still continues.
+  # Flinch, status, and being forced out pass false and end the channel.
+  def pbCancelMoves(full_cancel = false, keep_channel = false)
     # Outragers get confused anyway if they are disrupted during their final
     # turn of using the move. Mage Blizzard lowers Special Attack instead.
+    # Mind Flay does neither.
     if @effects[PBEffects::Outrage] == 1 && !full_cancel
-      if @currentMove && GameData::Move.exists?(@currentMove) &&
-         GameData::Move.get(@currentMove).function_code == "CustomBlizzard"
+      code = nil
+      if @currentMove && GameData::Move.exists?(@currentMove)
+        code = GameData::Move.get(@currentMove).function_code
+      end
+      if code == "CustomBlizzard"
         if pbCanLowerStatStage?(:SPECIAL_ATTACK, self)
           pbLowerStatStage(:SPECIAL_ATTACK, 1, self)
         end
-      elsif pbCanConfuseSelf?(false)
+      elsif code != "CustomMindFlay" && pbCanConfuseSelf?(false)
         pbConfuse(_INTL("{1} became confused due to fatigue!", pbThis))
       end
     end
@@ -96,7 +102,13 @@ class Battle::Battler
     @effects[PBEffects::Outrage]       = 0
     @effects[PBEffects::Uproar]        = 0
     @effects[PBEffects::Bide]          = 0
-    @currentMove = nil if @effects[PBEffects::HyperBeam] == 0
+    unless keep_channel
+      @effects[PBEffects::MindFlayLock] = 0
+      pbClearMindFlayChannel
+    end
+    if @effects[PBEffects::HyperBeam] == 0 && @effects[PBEffects::MindFlayLock] <= 0
+      @currentMove = nil
+    end
     # Reset counters for moves which increase them when used in succession
     @effects[PBEffects::FuryCutter] = 0
   end
@@ -228,6 +240,14 @@ class Battle::Battler
     end
     # Calculate the move's type during this usage
     move.calcType = move.pbCalcType(self)
+    # Shadowform also blocks moves that become Fairy when used (Pixilate and similar).
+    if @effects[PBEffects::Shadowform] && move.calcType == :FAIRY
+      @battle.pbDisplay(_INTL("{1} can't use Fairy-type moves in Shadowform!", pbThis))
+      @lastMoveFailed = true
+      pbCancelMoves
+      pbEndTurn(choice)
+      return
+    end
     # Start effect of Mold Breaker
     @battle.moldBreaker = hasMoldBreaker?
     # Remember that user chose a two-turn move
@@ -357,7 +377,7 @@ class Battle::Battler
       end
     end
     # Protean
-    if user.hasActiveAbility?([:LIBERO, :PROTEAN]) &&
+    if user.hasActiveAbility?([:LIBERO, :PROTEAN]) && user.canChangeType? &&
        !move.callsAnotherMove? && !move.snatched &&
        user.pbHasOtherType?(move.calcType) && !GameData::Type.get(move.calcType).pseudo_type
       @battle.pbShowAbilitySplash(user)
@@ -624,7 +644,9 @@ class Battle::Battler
         end
         move.pbCrashDamage(user)
         user.pbItemHPHealCheck
-        pbCancelMoves
+        # Mind Flay keeps channeling if the hit misses or is protected.
+        keep_channel = @effects[PBEffects::MindFlayLock] > 0 && @currentMove == :MINDFLAY
+        pbCancelMoves(false, keep_channel)
         return false
       end
     end
@@ -686,6 +708,7 @@ class Battle::Battler
         move.pbHitEffectivenessMessages(user, b, targets.length)
         # Record data about the hit for various effects' purposes
         move.pbRecordDamageLost(user, b)
+        user.pbVampiricEmbraceHeal(b, move)
       end
       # Close Combat/Superpower's stat-lowering, Flame Burst's splash damage,
       # and Incinerate's berry destruction
