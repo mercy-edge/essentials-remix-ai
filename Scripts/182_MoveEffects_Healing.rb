@@ -156,10 +156,10 @@ class Battle::Move::HealUserByTargetAttackLowerTargetAttack1 < Battle::Move
       @battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", user.pbThis))
       @battle.pbHideAbilitySplash(target)
       user.pbItemHPHealCheck
-    elsif user.canHeal?
+    elsif user.pbCanReceiveActiveHeal?
       healAmt = (healAmt * 1.3).floor if user.hasActiveItem?(:BIGROOT)
-      user.pbRecoverHP(healAmt)
-      @battle.pbDisplay(_INTL("{1}'s HP was restored.", user.pbThis))
+      healed = user.pbRecoverHPFromActiveHeal(healAmt)
+      @battle.pbDisplay(_INTL("{1}'s HP was restored.", user.pbThis)) if healed > 0
     end
   end
 end
@@ -219,7 +219,7 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHP < Battle::Move
   def healingMove?; return true; end
 
   def pbMoveFailed?(user, targets)
-    if @battle.allSameSideBattlers(user).none? { |b| b.canHeal? }
+    if @battle.allSameSideBattlers(user).none? { |b| b.pbCanReceiveActiveHeal? }
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
@@ -227,12 +227,12 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHP < Battle::Move
   end
 
   def pbFailsAgainstTarget?(user, target, show_message)
-    return !target.canHeal?
+    return !target.pbCanReceiveActiveHeal?
   end
 
   def pbEffectAgainstTarget(user, target)
-    target.pbRecoverHP(target.totalhp / 4)
-    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
+    healed = target.pbRecoverHPFromActiveHeal(target.totalhp / 4)
+    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis)) if healed > 0
   end
 end
 
@@ -244,7 +244,7 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHPCureStatus < Battle::Move
   def healingMove?; return true; end
 
   def pbMoveFailed?(user, targets)
-    if @battle.allSameSideBattlers(user).none? { |b| b.canHeal? || b.status != :NONE }
+    if @battle.allSameSideBattlers(user).none? { |b| b.pbCanReceiveActiveHeal? || b.status != :NONE }
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
@@ -257,7 +257,7 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHPCureStatus < Battle::Move
 
   def pbEffectAgainstTarget(user, target)
     if target.canHeal?
-      target.pbRecoverHP(target.totalhp / 4)
+      target.pbRecoverHPFromActiveHeal(target.totalhp / 4)
       @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
     end
     if target.status != :NONE
@@ -281,6 +281,8 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHPCureStatus < Battle::Move
         end
       when :FROSTBITE
         @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", target.pbThis))
+      when :BLEED
+        @battle.pbDisplay(_INTL("{1}'s bleeding stopped!", target.pbThis))
       end
     end
   end
@@ -294,11 +296,12 @@ class Battle::Move::HealTargetHalfOfTotalHP < Battle::Move
   def canMagicCoat?; return true; end
 
   def pbFailsAgainstTarget?(user, target, show_message)
-    if target.hp == target.totalhp
-      @battle.pbDisplay(_INTL("{1}'s HP is full!", target.pbThis)) if show_message
-      return true
-    elsif !target.canHeal?
-      @battle.pbDisplay(_INTL("{1} is unaffected!", target.pbThis)) if show_message
+    if !target.pbCanReceiveActiveHeal?
+      if target.hp == target.totalhp
+        @battle.pbDisplay(_INTL("{1}'s HP is full!", target.pbThis)) if show_message
+      else
+        @battle.pbDisplay(_INTL("{1} is unaffected!", target.pbThis)) if show_message
+      end
       return true
     end
     return false
@@ -309,8 +312,8 @@ class Battle::Move::HealTargetHalfOfTotalHP < Battle::Move
     if pulseMove? && user.hasActiveAbility?(:MEGALAUNCHER)
       hpGain = (target.totalhp * 3 / 4.0).round
     end
-    target.pbRecoverHP(hpGain)
-    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
+    healed = target.pbRecoverHPFromActiveHeal(hpGain)
+    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis)) if healed > 0
   end
 end
 
@@ -323,11 +326,12 @@ class Battle::Move::HealTargetDependingOnGrassyTerrain < Battle::Move
   def canMagicCoat?; return true; end
 
   def pbFailsAgainstTarget?(user, target, show_message)
-    if target.hp == target.totalhp
-      @battle.pbDisplay(_INTL("{1}'s HP is full!", target.pbThis)) if show_message
-      return true
-    elsif !target.canHeal?
-      @battle.pbDisplay(_INTL("{1} is unaffected!", target.pbThis)) if show_message
+    if !target.pbCanReceiveActiveHeal?
+      if target.hp == target.totalhp
+        @battle.pbDisplay(_INTL("{1}'s HP is full!", target.pbThis)) if show_message
+      else
+        @battle.pbDisplay(_INTL("{1} is unaffected!", target.pbThis)) if show_message
+      end
       return true
     end
     return false
@@ -336,8 +340,8 @@ class Battle::Move::HealTargetDependingOnGrassyTerrain < Battle::Move
   def pbEffectAgainstTarget(user, target)
     hpGain = (target.totalhp / 2.0).round
     hpGain = (target.totalhp * 2 / 3.0).round if @battle.field.terrain == :Grassy
-    target.pbRecoverHP(hpGain)
-    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
+    healed = target.pbRecoverHPFromActiveHeal(hpGain)
+    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis)) if healed > 0
   end
 end
 

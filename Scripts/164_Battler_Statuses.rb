@@ -42,6 +42,7 @@ class Battle::Battler
           end
         when :FROSTBITE then msg = _INTL("{1} is already frostbitten!", pbThis)
         when :POLYMORPH then msg = _INTL("{1} is already polymorphed!", pbThis)
+        when :BLEED     then msg = _INTL("{1} is already bleeding!", pbThis)
         end
         @battle.pbDisplay(msg)
       end
@@ -105,6 +106,10 @@ class Battle::Battler
       hasImmuneType |= pbHasType?(:ICE)
     when :POLYMORPH
       # No type is immune to polymorph
+    when :BLEED
+      # Bloodless species (every egg group is Amorphous, Mineral, or Ditto)
+      # cannot bleed. Undiscovered is not bloodless.
+      hasImmuneType = pbAllEggGroupsBloodless?
     end
     if hasImmuneType
       @battle.pbDisplay(_INTL("It doesn't affect {1}...", pbThis(true))) if showMessages
@@ -146,6 +151,7 @@ class Battle::Battler
             end
           when :FROSTBITE then msg = _INTL("{1} cannot be frostbitten!", pbThis)
           when :POLYMORPH then msg = _INTL("{1} cannot be polymorphed!", pbThis)
+          when :BLEED     then msg = _INTL("{1} cannot be made to bleed!", pbThis)
           end
         elsif immAlly
           case newStatus
@@ -175,6 +181,9 @@ class Battle::Battler
           when :POLYMORPH
             msg = _INTL("{1} cannot be polymorphed because of {2}'s {3}!",
                         pbThis, immAlly.pbThis(true), immAlly.abilityName)
+          when :BLEED
+            msg = _INTL("{1} cannot be made to bleed because of {2}'s {3}!",
+                        pbThis, immAlly.pbThis(true), immAlly.abilityName)
           end
         else
           case newStatus
@@ -190,6 +199,7 @@ class Battle::Battler
             end
           when :FROSTBITE then msg = _INTL("{1}'s {2} prevents frostbite!", pbThis, abilityName)
           when :POLYMORPH then msg = _INTL("{1}'s {2} prevents polymorph!", pbThis, abilityName)
+          when :BLEED     then msg = _INTL("{1}'s {2} prevents bleeding!", pbThis, abilityName)
           end
         end
         @battle.pbDisplay(msg)
@@ -227,6 +237,8 @@ class Battle::Battler
       hasImmuneType |= pbHasType?(:ICE)
     when :PARALYSIS
       hasImmuneType |= pbHasType?(:ELECTRIC) && Settings::MORE_TYPE_EFFECTS
+    when :BLEED
+      hasImmuneType = pbAllEggGroupsBloodless?
     end
     return false if hasImmuneType
     # Ability immunity
@@ -292,6 +304,8 @@ class Battle::Battler
         @battle.pbDisplay(_INTL("{1} was frostbitten!", pbThis))
       when :POLYMORPH
         @battle.pbDisplay(_INTL("{1} was polymorphed!", pbThis))
+      when :BLEED
+        @battle.pbDisplay(_INTL("{1} is bleeding!", pbThis))
       end
     end
     PBDebug.log("[Status change] #{pbThis}'s sleep count is #{newStatusCount}") if newStatus == :SLEEP
@@ -422,6 +436,40 @@ class Battle::Battler
 
   def pbBurn(user = nil, msg = nil)
     pbInflictStatus(:BURN, 0, msg, user)
+  end
+
+  #=============================================================================
+  # Bleed
+  #-----------------------------------------------------------------------------
+  # Non-volatile, like burn/poison. A Pokémon is immune when every one of its
+  # egg groups is bloodless (Amorphous, Mineral, Ditto). Undiscovered is not
+  # bloodless, so a species in only that group can still bleed. One bloodless
+  # group alongside any other group does not grant immunity.
+  #=============================================================================
+  BLEED_BLOODLESS_EGG_GROUPS = [:Amorphous, :Mineral, :Ditto]
+
+  def bleeding?
+    return pbHasStatus?(:BLEED)
+  end
+
+  def pbAllEggGroupsBloodless?
+    return false if !@species || @species == 0
+    species_data = GameData::Species.get_species_form(@species, @form || 0)
+    return false if !species_data
+    groups = species_data.egg_groups
+    return false if !groups || groups.length == 0
+    groups.each do |group|
+      return false if !BLEED_BLOODLESS_EGG_GROUPS.include?(group)
+    end
+    return true
+  end
+
+  def pbCanBleed?(user, showMessages, move = nil)
+    return pbCanInflictStatus?(:BLEED, user, showMessages, move)
+  end
+
+  def pbBleed(user = nil, msg = nil)
+    pbInflictStatus(:BLEED, 0, msg, user)
   end
 
   #=============================================================================
@@ -587,6 +635,8 @@ class Battle::Battler
       end
     when :POLYMORPH
       @battle.pbDisplay(_INTL("{1} is polymorphed and can't move!", pbThis))
+    when :BLEED
+      @battle.pbDisplay(_INTL("{1} is hurt by its bleeding!", pbThis))
     end
     PBDebug.log("[Status continues] #{pbThis}'s sleep count is #{@statusCount}") if self.status == :SLEEP
     PBDebug.log("[Status continues] #{pbThis}'s polymorph count is #{@statusCount}") if self.status == :POLYMORPH
@@ -611,6 +661,7 @@ class Battle::Battler
           @battle.pbDisplay(_INTL("{1} broke out of the ice!", pbThis))
         end
       when :POLYMORPH then @battle.pbDisplay(_INTL("{1} reverted to normal!", pbThis))
+      when :BLEED     then @battle.pbDisplay(_INTL("{1}'s bleeding stopped!", pbThis))
       end
     end
     PBDebug.log("[Status change] #{pbThis}'s status was cured") if !showMessages

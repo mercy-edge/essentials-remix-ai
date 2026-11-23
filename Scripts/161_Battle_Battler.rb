@@ -614,6 +614,14 @@ class Battle::Battler
     return true
   end
 
+  # Active healing (a healing move, Wish, a bag HP item, an HP berry) is still
+  # worthwhile at full HP when it would stop Bleed. Heal Block blocks both.
+  def pbCanReceiveActiveHeal?
+    return false if fainted? || @effects[PBEffects::HealBlock] > 0
+    return true if @hp < @totalhp || @status == :BLEED
+    return false
+  end
+
   def affectedByContactEffect?(showMsg = false)
     return false if fainted?
     if hasActiveItem?(:PROTECTIVEPADS)

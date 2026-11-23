@@ -339,24 +339,37 @@ def pbItemRestoreHP(pkmn, restoreHP)
 end
 
 def pbHPItem(pkmn, restoreHP, scene)
-  if !pkmn.able? || pkmn.hp == pkmn.totalhp
+  bleeding = pkmn.status == :BLEED
+  if !pkmn.able? || (pkmn.hp == pkmn.totalhp && !bleeding)
     scene.pbDisplay(_INTL("It won't have any effect."))
     return false
   end
   pbSEPlay("Use item in party")
   hpGain = pbItemRestoreHP(pkmn, restoreHP)
+  pkmn.heal_status if bleeding
   scene.pbRefresh
-  scene.pbDisplay(_INTL("{1}'s HP was restored by {2} points.", pkmn.name, hpGain))
+  scene.pbDisplay(_INTL("{1}'s HP was restored by {2} points.", pkmn.name, hpGain)) if hpGain > 0
+  scene.pbDisplay(_INTL("{1}'s bleeding stopped!", pkmn.name)) if bleeding
   return true
 end
 
 def pbBattleHPItem(pkmn, battler, restoreHP, scene)
   if battler
-    if battler.pbRecoverHP(restoreHP) > 0
+    bleeding = battler.status == :BLEED
+    if battler.pbRecoverHPFromActiveHeal(restoreHP) > 0
       scene.pbDisplay(_INTL("{1}'s HP was restored.", battler.pbThis))
     end
-  elsif pbItemRestoreHP(pkmn, restoreHP) > 0
-    scene.pbDisplay(_INTL("{1}'s HP was restored.", pkmn.name))
+    # Full HP restores nothing, so the active-heal flag does not clear Bleed.
+    battler.pbCureStatus if bleeding && battler.status == :BLEED
+  else
+    bleeding = pkmn.status == :BLEED
+    if pbItemRestoreHP(pkmn, restoreHP) > 0
+      scene.pbDisplay(_INTL("{1}'s HP was restored.", pkmn.name))
+    end
+    if bleeding
+      pkmn.heal_status
+      scene.pbDisplay(_INTL("{1}'s bleeding stopped!", pkmn.name))
+    end
   end
   return true
 end

@@ -175,6 +175,47 @@ Battle::AI::Handlers::MoveEffectAgainstTargetScore.copy("PoisonTarget",
                                                         "BadPoisonTarget")
 
 #===============================================================================
+# Bleed is scored like a non-toxic poison: residual 1/8 damage, no attack drop.
+# Active healing and full status cures remove it, so those are treated as ways
+# the target can shrug the status off.
+#===============================================================================
+Battle::AI::Handlers::MoveFailureAgainstTargetCheck.add("BleedTarget",
+  proc { |move, user, target, ai, battle|
+    next move.statusMove? && !target.battler.pbCanBleed?(user.battler, false, move.move)
+  }
+)
+Battle::AI::Handlers::MoveEffectAgainstTargetScore.add("BleedTarget",
+  proc { |score, move, user, target, ai, battle|
+    useless_score = (move.statusMove?) ? Battle::AI::MOVE_USELESS_SCORE : score
+    next useless_score if target.has_active_item?(:LUMBERRY)
+    next useless_score if target.faster_than?(user) &&
+                          target.has_active_ability?(:HYDRATION) &&
+                          [:Rain, :HeavyRain].include?(target.battler.effectiveWeather)
+    if target.battler.pbCanBleed?(user.battler, false, move.move)
+      score += 15
+      if ai.trainer.has_skill_flag?("HPAware")
+        score += 15 * target.hp / target.totalhp
+      end
+      score -= 8 if target.has_active_ability?([:GUTS, :MARVELSCALE, :QUICKFEET])
+      score -= 20 if !target.battler.takesIndirectDamage?
+      if target.has_active_ability?(:SHEDSKIN)
+        score -= 8
+      elsif target.has_active_ability?(:HYDRATION) &&
+            [:Rain, :HeavyRain].include?(target.battler.effectiveWeather)
+        score -= 15
+      end
+      score -= 10 if target.check_for_move { |m| m.healingMove? }
+      ai.each_same_side_battler(target.side) do |b, i|
+        score -= 8 if i != target.index && b.has_active_ability?(:HEALER)
+      end
+    end
+    next score
+  }
+)
+Battle::AI::Handlers::MoveFailureAgainstTargetCheck.copy("BleedTarget", "CustomRend")
+Battle::AI::Handlers::MoveEffectAgainstTargetScore.copy("BleedTarget", "CustomRend")
+
+#===============================================================================
 #
 #===============================================================================
 Battle::AI::Handlers::MoveFailureAgainstTargetCheck.add("ParalyzeTarget",

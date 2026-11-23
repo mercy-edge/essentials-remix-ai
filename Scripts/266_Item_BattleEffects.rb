@@ -64,7 +64,7 @@ ItemHandlers::CanUseInBattle.addIf(:poke_balls,
 )
 
 ItemHandlers::CanUseInBattle.add(:POTION, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
-  if !pokemon.able? || pokemon.hp == pokemon.totalhp
+  if !pokemon.able? || (pokemon.hp == pokemon.totalhp && pokemon.status != :BLEED)
     scene.pbDisplay(_INTL("It won't have any effect.")) if showMessages
     next false
   end
