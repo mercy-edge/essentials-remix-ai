@@ -2199,6 +2199,7 @@ Battle::AbilityEffects::AfterMoveUseFromTarget.add(:BERSERK,
 Battle::AbilityEffects::AfterMoveUseFromTarget.add(:COLORCHANGE,
   proc { |ability, target, user, move, switched_battlers, battle|
     next if target.damageState.calcDamage == 0 || target.damageState.substitute
+    next if !target.canChangeType?
     next if !move.calcType || GameData::Type.get(move.calcType).pseudo_type
     next if target.pbHasType?(move.calcType) && !target.pbHasOtherType?(move.calcType)
     typeName = GameData::Type.get(move.calcType).name
@@ -3157,6 +3158,7 @@ Battle::AbilityEffects::OnBattlerFainting.add(:SOULHEART,
 
 Battle::AbilityEffects::OnTerrainChange.add(:MIMICRY,
   proc { |ability, battler, battle, ability_changed|
+    next if !battler.canChangeType?
     if battle.field.terrain == :None
       # Revert to original typing
       battle.pbShowAbilitySplash(battler)

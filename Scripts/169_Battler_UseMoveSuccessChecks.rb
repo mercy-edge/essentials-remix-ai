@@ -39,6 +39,14 @@ class Battle::Battler
       end
       return false
     end
+    # Shadowform blocks Fairy moves until the user switches out.
+    if @effects[PBEffects::Shadowform] && move.type == :FAIRY
+      if showMessages
+        msg = _INTL("{1} can't use {2} in Shadowform!", pbThis, move.name)
+        (commandPhase) ? @battle.pbDisplayPaused(msg) : @battle.pbDisplay(msg)
+      end
+      return false
+    end
     # Throat Chop
     if @effects[PBEffects::ThroatChop] > 0 && move.soundMove?
       if showMessages
@@ -256,6 +264,14 @@ class Battle::Battler
         @lastMoveFailed = true
         return false
       end
+    end
+    # Fear. The counter ticks down at end of round, so a feared battler loses
+    # every action while it is still above 0. It stacks with the statuses above.
+    if @effects[PBEffects::Fear] > 0
+      @battle.pbDisplay(_INTL("{1} is terrified and can't move!", pbThis))
+      PBDebug.log("[Move failed] #{pbThis} is feared")
+      @lastMoveFailed = true
+      return false
     end
     # Obedience check
     return false if !pbObedienceCheck?(choice)
@@ -544,6 +560,10 @@ class Battle::Battler
       end
       if target.effects[PBEffects::Telekinesis] > 0
         @battle.pbDisplay(_INTL("{1} makes Ground moves miss with Telekinesis!", target.pbThis)) if show_message
+        return false
+      end
+      if target.pbOwnSide.effects[PBEffects::Levitate] > 0
+        @battle.pbDisplay(_INTL("{1} makes Ground moves miss while levitating!", target.pbThis)) if show_message
         return false
       end
     end

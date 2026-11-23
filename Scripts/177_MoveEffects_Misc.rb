@@ -474,7 +474,8 @@ class Battle::Move::SwapSideEffects < Battle::Move
       PBEffects::Spikes,
       PBEffects::Swamp,
       PBEffects::Tailwind,
-      PBEffects::ToxicSpikes
+      PBEffects::ToxicSpikes,
+      PBEffects::Levitate
     ]
     @boolean_effects = [
       PBEffects::StealthRock,

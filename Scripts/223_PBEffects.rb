@@ -136,6 +136,17 @@ module PBEffects
   HamstringLock       = 131   # Turns remaining the user is trapped by Hamstring
   OverpowerDodged     = 132   # A move missed this battler since it entered or last moved
   Sundered            = 133   # Turns remaining of Sunder Armor's defense-stage cap
+  Fear                = 134   # Turns of Fear remaining (0 = not feared). Stacks with status.
+  Renew               = 135   # Healing light on this battler (Aqua Ring timing, ally-targetable)
+  PowerWordShield     = 136   # Damage still left on Power Word: Shield (0 = none)
+  Shadowform          = 137   # User is Ghost, Ghost hits Normal, Fairy moves blocked
+  HolyFire            = 138   # Turns remaining of Holy Fire's residual damage
+  ShadowWordPain      = 139   # Turns remaining of Shadow Word: Pain
+  MindFlayLock        = 140   # Turns left the user is locked into Mind Flay
+  MindFlayTarget      = 141   # Battler index Mind Flay is hitting (-1 if none)
+  MindFlayedBy        = 142   # Battler index channeling Mind Flay on self (-1 if none)
+  VampiricEmbrace     = 143   # Turns remaining of a Vampiric Embrace mark
+  VampiricEmbraceUser = 144   # Battler index that applied the mark (-1 if none)
 
   #=============================================================================
   # These effects apply to a battler position
@@ -175,6 +186,7 @@ module PBEffects
   Tailwind           = 819
   ToxicSpikes        = 820
   WideGuard          = 821
+  Levitate           = 822   # Turns the whole side is airborne (priest Levitate)
 
   #=============================================================================
   # These effects apply to the battle (i.e. both sides)

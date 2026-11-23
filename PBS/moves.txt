@@ -9811,7 +9811,7 @@ Description = The user strikes first with righteous force and may make the targe
 #-------------------------------
 [FADE]
 Name = Fade
-Type = DARK
+Type = GHOST
 Category = Status
 Accuracy = 100
 TotalPP = 20
@@ -9822,16 +9822,16 @@ Description = The user fades from sight, raising its evasiveness.
 #-------------------------------
 [MINDBLAST]
 Name = Mind Blast
-Type = PSYCHIC
+Type = GHOST
 Category = Special
-Power = 40
+Power = 80
 Accuracy = 100
-TotalPP = 20
+TotalPP = 10
 Target = NearOther
-FunctionCode = LowerTargetAttack1
+FunctionCode = FlinchTarget
 Flags = CanProtect,CanMirrorMove
 EffectChance = 20
-Description = The user detonates psychic force that may lower the target's Attack.
+Description = The user blasts the target with shadowy force. This may also make the target flinch.
 #-------------------------------
 [HEALINGWAVE]
 Name = Healing Wave
@@ -10159,3 +10159,170 @@ FunctionCode = FlinchTarget
 Flags = CanProtect,CanMirrorMove
 EffectChance = 30
 Description = A wave of fire hits opposing Pokémon. This may also make them flinch.
+#-------------------------------
+[HOLYFIRE]
+Name = Holy Fire
+Type = FAIRY
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = CustomHolyFire
+Flags = CanProtect,CanMirrorMove
+Description = A bolt of holy fire damages the target and leaves a lingering light that hurts them for several turns.
+#-------------------------------
+[HOLYNOVA]
+Name = Holy Nova
+Type = FAIRY
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = CustomHolyNova
+Flags = CanProtect,CanMirrorMove
+Description = A burst of holy light hits opposing Pokémon and restores a little HP to the user and its ally.
+#-------------------------------
+[RENEW]
+Name = Renew
+Type = FAIRY
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = UserOrNearAlly
+FunctionCode = CustomRenew
+Description = Surrounds the user or an ally with a healing light that restores a little HP every turn.
+#-------------------------------
+[PRAYEROFHEALING]
+Name = Prayer of Healing
+Type = FAIRY
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = UserAndAllies
+FunctionCode = HealUserAndAlliesQuarterOfTotalHP
+Flags = CannotMetronome
+Description = A prayer restores 1/4 of the HP of the user and its allies.
+#-------------------------------
+[RESURRECTION]
+Name = Resurrection
+Type = FAIRY
+Category = Status
+Accuracy = 0
+TotalPP = 1
+Target = User
+FunctionCode = Gen9RevivalBlessing
+Flags = CannotMetronome
+Description = The user prays to revive a fainted party Pokémon and restore half of its HP.
+#-------------------------------
+[DISPELMAGIC]
+Name = Dispel Magic
+Type = FAIRY
+Category = Status
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = ResetTargetStatStages
+Flags = CanProtect,CanMirrorMove,CanMagicCoat
+Description = A dispelling prayer clears the target's stat changes.
+#-------------------------------
+[POWERWORDSHIELD]
+Name = Power Word: Shield
+Type = FAIRY
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = CustomPowerWordShield
+Flags = Snatch
+Description = A divine shield absorbs some of the damage the user takes.
+#-------------------------------
+[SHADOWWORDPAIN]
+Name = Shadow Word: Pain
+Type = GHOST
+Category = Status
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = CustomShadowWordPain
+Flags = CanProtect,CanMirrorMove,CanMagicCoat
+Description = A word of pain haunts the target, hurting it a little at the end of each turn.
+#-------------------------------
+[MINDFLAY]
+Name = Mind Flay
+Type = GHOST
+Category = Special
+Power = 30
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = CustomMindFlay
+Flags = CanProtect,CanMirrorMove
+Description = The user channels shadowy torment for 2-3 turns, dealing damage each turn. The target's attacks deal half damage while the channel lasts. This attack never misses.
+#-------------------------------
+[PSYCHICSCREAM]
+Name = Psychic Scream
+Type = PSYCHIC
+Category = Status
+Accuracy = 70
+TotalPP = 20
+Target = AllNearFoes
+FunctionCode = CustomPsychicScream
+Flags = CanProtect,CanMirrorMove,CanMagicCoat,Sound
+Description = A terrifying scream fears all nearby foes for 1-2 turns. Feared foes cannot move or switch, but may break free when hit.
+#-------------------------------
+[SILENCE]
+Name = Silence
+Type = GHOST
+Category = Status
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = DisableTargetLastMoveUsed
+Flags = CanProtect,CanMirrorMove
+Description = The user silences the target, preventing it from using the move it last used.
+#-------------------------------
+[MANABURN]
+Name = Mana Burn
+Type = GHOST
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = LowerPPOfTargetLastMoveBy3
+Flags = CanProtect,CanMirrorMove,Sound
+EffectChance = 100
+Description = The user burns the target's energy. It also reduces the PP of the move the target last used.
+#-------------------------------
+[SHADOWFORM]
+Name = Shadowform
+Type = GHOST
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = CustomShadowform
+Description = The user assumes Shadowform and becomes a Ghost-type. Ghost-type moves can hit Normal-types. Fairy-type moves can't be used. The effect lasts until the user switches out.
+#-------------------------------
+[LEVITATE]
+Name = Levitate
+Type = FLYING
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = UserSide
+FunctionCode = CustomLevitateUserSide
+Description = Lifts the user's side off the ground for 5 turns. Ground moves miss, and Spikes, Toxic Spikes, and Sticky Web don't affect switch-ins.
+#-------------------------------
+[VAMPIRICEMBRACE]
+Name = Vampiric Embrace
+Type = GHOST
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = CustomVampiricEmbrace
+Flags = CanProtect,CanMirrorMove,CanMagicCoat
+Description = Marks the target with shadow for 5 turns. The user's Ghost-type moves against it heal the user and its ally.
