@@ -58,7 +58,7 @@ class Battle::Move::RandomlyDamageOrHealTarget < Battle::Move
 
   def pbFailsAgainstTarget?(user, target, show_message)
     return false if @presentDmg > 0
-    if !target.canHeal?
+    if !target.pbCanReceiveActiveHeal?
       @battle.pbDisplay(_INTL("But it failed!")) if show_message
       return true
     end
@@ -76,8 +76,8 @@ class Battle::Move::RandomlyDamageOrHealTarget < Battle::Move
 
   def pbEffectAgainstTarget(user, target)
     return if @presentDmg > 0
-    target.pbRecoverHP(target.totalhp / 4)
-    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
+    healed = target.pbRecoverHPFromActiveHeal(target.totalhp / 4)
+    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis)) if healed > 0
   end
 
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
@@ -107,7 +107,7 @@ class Battle::Move::HealAllyOrDamageFoe < Battle::Move
       @battle.pbDisplay(_INTL("But it failed!")) if show_message
       return true
     end
-    if !target.canHeal?
+    if !target.pbCanReceiveActiveHeal?
       @battle.pbDisplay(_INTL("But it failed!")) if show_message
       return true
     end
@@ -121,8 +121,8 @@ class Battle::Move::HealAllyOrDamageFoe < Battle::Move
 
   def pbEffectAgainstTarget(user, target)
     return if !@healing
-    target.pbRecoverHP(target.totalhp / 2)
-    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
+    healed = target.pbRecoverHPFromActiveHeal(target.totalhp / 2)
+    @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis)) if healed > 0
   end
 
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
@@ -609,7 +609,7 @@ class Battle::Move::HealUserDependingOnUserStockpile < Battle::Move
       @battle.pbDisplay(_INTL("But it failed to swallow a thing!"))
       return true
     end
-    if !user.canHeal? &&
+    if !user.pbCanReceiveActiveHeal? &&
        user.effects[PBEffects::StockpileDef] == 0 &&
        user.effects[PBEffects::StockpileSpDef] == 0
       @battle.pbDisplay(_INTL("But it failed!"))
@@ -625,7 +625,7 @@ class Battle::Move::HealUserDependingOnUserStockpile < Battle::Move
     when 2 then hpGain = user.totalhp / 2
     when 3 then hpGain = user.totalhp
     end
-    if user.pbRecoverHP(hpGain) > 0
+    if user.pbRecoverHPFromActiveHeal(hpGain) > 0
       @battle.pbDisplay(_INTL("{1}'s HP was restored.", user.pbThis))
     end
     @battle.pbDisplay(_INTL("{1}'s stockpiled effect wore off!", user.pbThis))

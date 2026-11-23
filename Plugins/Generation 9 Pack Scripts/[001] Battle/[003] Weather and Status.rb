@@ -493,6 +493,8 @@ class Battle::Battler
 	  PBDebug.log("[Status continues] #{pbThis}'s drowsy count is #{@statusCount}")
     when :FROSTBITE
       @battle.pbDisplay(_INTL("{1} was hurt by its frostbite!", pbThis))
+    when :BLEED
+      @battle.pbDisplay(_INTL("{1} is hurt by its bleeding!", pbThis))
     end
   end
   

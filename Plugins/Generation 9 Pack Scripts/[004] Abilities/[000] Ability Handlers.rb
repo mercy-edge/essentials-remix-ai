@@ -142,6 +142,8 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:HEALER,
           battle.pbDisplay(_INTL("{1}'s {2} made its partner alert again!", battler.pbThis, battler.abilityName))
         when :FROSTBITE
           battle.pbDisplay(_INTL("{1}'s {2} healed its partner's frostbite!", battler.pbThis, battler.abilityName))
+        when :BLEED
+          battle.pbDisplay(_INTL("{1}'s {2} stopped its partner's bleeding!", battler.pbThis, battler.abilityName))
         end
       end
       battle.pbHideAbilitySplash(battler)
@@ -177,6 +179,8 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:HYDRATION,
         battle.pbDisplay(_INTL("{1}'s {2} made it alert again!", battler.pbThis, battler.abilityName))
       when :FROSTBITE
         battle.pbDisplay(_INTL("{1}'s {2} healed its frostbite!", battler.pbThis, battler.abilityName))
+      when :BLEED
+        battle.pbDisplay(_INTL("{1}'s {2} stopped its bleeding!", battler.pbThis, battler.abilityName))
       end
     end
     battle.pbHideAbilitySplash(battler)
@@ -211,6 +215,8 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:SHEDSKIN,
         battle.pbDisplay(_INTL("{1}'s {2} made it alert again!", battler.pbThis, battler.abilityName))
       when :FROSTBITE
         battle.pbDisplay(_INTL("{1}'s {2} healed its frostbite!", battler.pbThis, battler.abilityName))
+      when :BLEED
+        battle.pbDisplay(_INTL("{1}'s {2} stopped its bleeding!", battler.pbThis, battler.abilityName))
       end
     end
     battle.pbHideAbilitySplash(battler)

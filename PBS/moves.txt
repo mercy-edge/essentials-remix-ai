@@ -9927,9 +9927,9 @@ Power = 40
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = CustomRend
+FunctionCode = BleedTarget
 Flags = Contact,CanProtect,CanMirrorMove
-Description = A vicious strike that leaves the target bleeding for a short time.
+Description = A vicious strike that makes the target bleed.
 #-------------------------------
 [HAMSTRING]
 Name = Hamstring

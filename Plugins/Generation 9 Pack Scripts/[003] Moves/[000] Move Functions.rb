@@ -59,6 +59,8 @@ class Battle::Move::CureUserPartyStatus < Battle::Move
       @battle.pbDisplay(_INTL("{1} became alert again.", curedName))
     when :FROSTBITE
       @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", curedName))
+    when :BLEED
+      @battle.pbDisplay(_INTL("{1}'s bleeding stopped!", curedName))
     end
   end
 end
@@ -71,7 +73,7 @@ end
 class Battle::Move::HealUserAndAlliesQuarterOfTotalHPCureStatus < Battle::Move
   def pbEffectAgainstTarget(user, target)
     if target.canHeal?
-      target.pbRecoverHP(target.totalhp / 4)
+      target.pbRecoverHPFromActiveHeal(target.totalhp / 4)
       @battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
     end
     if target.status != :NONE
@@ -92,6 +94,8 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHPCureStatus < Battle::Move
         @battle.pbDisplay(_INTL("{1} became alert again.", target.pbThis))
       when :FROSTBITE
         @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", target.pbThis))
+      when :BLEED
+        @battle.pbDisplay(_INTL("{1}'s bleeding stopped!", target.pbThis))
       end
     end
   end
