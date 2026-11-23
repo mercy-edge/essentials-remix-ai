@@ -34,7 +34,12 @@ class Battle::Battler
         when :POISON    then msg = _INTL("{1} is already poisoned!", pbThis)
         when :BURN      then msg = _INTL("{1} already has a burn!", pbThis)
         when :PARALYSIS then msg = _INTL("{1} is already paralyzed!", pbThis)
-        when :FROZEN    then msg = _INTL("{1} is already encased in ice!", pbThis)
+        when :FROZEN
+          if divine_shield?
+            msg = _INTL("{1} is already wrapped in a divine shield!", pbThis)
+          else
+            msg = _INTL("{1} is already encased in ice!", pbThis)
+          end
         when :FROSTBITE then msg = _INTL("{1} is already frostbitten!", pbThis)
         when :POLYMORPH then msg = _INTL("{1} is already polymorphed!", pbThis)
         when :BLEED     then msg = _INTL("{1} is already bleeding!", pbThis)
@@ -138,7 +143,12 @@ class Battle::Battler
           when :POISON    then msg = _INTL("{1} cannot be poisoned!", pbThis)
           when :BURN      then msg = _INTL("{1} cannot be burned!", pbThis)
           when :PARALYSIS then msg = _INTL("{1} cannot be paralyzed!", pbThis)
-          when :FROZEN    then msg = _INTL("{1} cannot be encased in ice!", pbThis)
+          when :FROZEN
+            if divine_shield? || (move && move.function_code == "CustomDivineShield")
+              msg = _INTL("{1} cannot be wrapped in a divine shield!", pbThis)
+            else
+              msg = _INTL("{1} cannot be encased in ice!", pbThis)
+            end
           when :FROSTBITE then msg = _INTL("{1} cannot be frostbitten!", pbThis)
           when :POLYMORPH then msg = _INTL("{1} cannot be polymorphed!", pbThis)
           when :BLEED     then msg = _INTL("{1} cannot be made to bleed!", pbThis)
@@ -158,8 +168,13 @@ class Battle::Battler
             msg = _INTL("{1} cannot be paralyzed because of {2}'s {3}!",
                         pbThis, immAlly.pbThis(true), immAlly.abilityName)
           when :FROZEN
-            msg = _INTL("{1} cannot be encased in ice because of {2}'s {3}!",
-                        pbThis, immAlly.pbThis(true), immAlly.abilityName)
+            if divine_shield? || (move && move.function_code == "CustomDivineShield")
+              msg = _INTL("{1} cannot be wrapped in a divine shield because of {2}'s {3}!",
+                          pbThis, immAlly.pbThis(true), immAlly.abilityName)
+            else
+              msg = _INTL("{1} cannot be encased in ice because of {2}'s {3}!",
+                          pbThis, immAlly.pbThis(true), immAlly.abilityName)
+            end
           when :FROSTBITE
             msg = _INTL("{1} cannot be frostbitten because of {2}'s {3}!",
                         pbThis, immAlly.pbThis(true), immAlly.abilityName)
@@ -176,7 +191,12 @@ class Battle::Battler
           when :POISON    then msg = _INTL("{1}'s {2} prevents poisoning!", pbThis, abilityName)
           when :BURN      then msg = _INTL("{1}'s {2} prevents burns!", pbThis, abilityName)
           when :PARALYSIS then msg = _INTL("{1}'s {2} prevents paralysis!", pbThis, abilityName)
-          when :FROZEN    then msg = _INTL("{1}'s {2} prevents Ice Block!", pbThis, abilityName)
+          when :FROZEN
+            if divine_shield? || (move && move.function_code == "CustomDivineShield")
+              msg = _INTL("{1}'s {2} prevents a divine shield!", pbThis, abilityName)
+            else
+              msg = _INTL("{1}'s {2} prevents Ice Block!", pbThis, abilityName)
+            end
           when :FROSTBITE then msg = _INTL("{1}'s {2} prevents frostbite!", pbThis, abilityName)
           when :POLYMORPH then msg = _INTL("{1}'s {2} prevents polymorph!", pbThis, abilityName)
           when :BLEED     then msg = _INTL("{1}'s {2} prevents bleeding!", pbThis, abilityName)
@@ -275,7 +295,11 @@ class Battle::Battler
       when :PARALYSIS
         @battle.pbDisplay(_INTL("{1} is paralyzed! It may be unable to move!", pbThis))
       when :FROZEN
-        @battle.pbDisplay(_INTL("{1} became encased in ice!", pbThis))
+        if divine_shield?
+          @battle.pbDisplay(_INTL("{1} became wrapped in a divine shield!", pbThis))
+        else
+          @battle.pbDisplay(_INTL("{1} became encased in ice!", pbThis))
+        end
       when :FROSTBITE
         @battle.pbDisplay(_INTL("{1} was frostbitten!", pbThis))
       when :POLYMORPH
@@ -604,7 +628,11 @@ class Battle::Battler
     when :PARALYSIS
       @battle.pbDisplay(_INTL("{1} is paralyzed! It can't move!", pbThis))
     when :FROZEN
-      @battle.pbDisplay(_INTL("{1} is encased in ice and can't move!", pbThis))
+      if divine_shield?
+        @battle.pbDisplay(_INTL("{1} is wrapped in a divine shield and can't move!", pbThis))
+      else
+        @battle.pbDisplay(_INTL("{1} is encased in ice and can't move!", pbThis))
+      end
     when :POLYMORPH
       @battle.pbDisplay(_INTL("{1} is polymorphed and can't move!", pbThis))
     when :BLEED
@@ -616,6 +644,7 @@ class Battle::Battler
 
   def pbCureStatus(showMessages = true)
     oldStatus = status
+    was_divine_shield = divine_shield?
     self.status = :NONE
     if showMessages
       case oldStatus
@@ -624,7 +653,13 @@ class Battle::Battler
       when :BURN      then @battle.pbDisplay(_INTL("{1}'s burn was healed.", pbThis))
       when :FROSTBITE then @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", pbThis))
       when :PARALYSIS then @battle.pbDisplay(_INTL("{1} was cured of paralysis.", pbThis))
-      when :FROZEN    then @battle.pbDisplay(_INTL("{1} broke out of the ice!", pbThis))
+      when :FROZEN
+        # status= clears the Pokémon flag, so read it before that assignment.
+        if was_divine_shield
+          @battle.pbDisplay(_INTL("{1}'s divine shield faded!", pbThis))
+        else
+          @battle.pbDisplay(_INTL("{1} broke out of the ice!", pbThis))
+        end
       when :POLYMORPH then @battle.pbDisplay(_INTL("{1} reverted to normal!", pbThis))
       when :BLEED     then @battle.pbDisplay(_INTL("{1}'s bleeding stopped!", pbThis))
       end

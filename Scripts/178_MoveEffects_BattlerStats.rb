@@ -1305,8 +1305,11 @@ class Battle::Move::LowerTargetEvasion1RemoveSideEffects < Battle::Move::TargetS
         @battle.pbDisplay(_INTL("The mist disappeared from the battlefield."))
       when :Psychic
         @battle.pbDisplay(_INTL("The weirdness disappeared from the battlefield."))
+      when :Consecration
+        @battle.pbDisplay(_INTL("The consecration faded from the battlefield."))
       end
       @battle.field.terrain = :None
+      @battle.field.terrainSetterSide = nil
     end
   end
 end

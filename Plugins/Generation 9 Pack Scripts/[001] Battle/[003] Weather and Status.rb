@@ -73,10 +73,11 @@ class Battle
   #-----------------------------------------------------------------------------
   def pbTerrainStartMessage
     case @field.terrain
-    when :Electric then pbDisplay(_INTL("An electric current runs across the battlefield!"))
-    when :Grassy   then pbDisplay(_INTL("Grass is covering the battlefield!"))
-    when :Misty    then pbDisplay(_INTL("Mist swirls about the battlefield!"))
-    when :Psychic  then pbDisplay(_INTL("The battlefield is weird!"))
+    when :Electric     then pbDisplay(_INTL("An electric current runs across the battlefield!"))
+    when :Grassy       then pbDisplay(_INTL("Grass is covering the battlefield!"))
+    when :Misty        then pbDisplay(_INTL("Mist swirls about the battlefield!"))
+    when :Psychic      then pbDisplay(_INTL("The battlefield is weird!"))
+    when :Consecration then pbDisplay(_INTL("The ground was consecrated!"))
     end
   end
   
@@ -484,7 +485,11 @@ class Battle::Battler
     when :PARALYSIS
       @battle.pbDisplay(_INTL("{1} is paralyzed! It can't move!", pbThis))
     when :FROZEN
-      @battle.pbDisplay(_INTL("{1} is encased in ice and can't move!", pbThis))
+      if divine_shield?
+        @battle.pbDisplay(_INTL("{1} is wrapped in a divine shield and can't move!", pbThis))
+      else
+        @battle.pbDisplay(_INTL("{1} is encased in ice and can't move!", pbThis))
+      end
     when :POLYMORPH
       @battle.pbDisplay(_INTL("{1} is polymorphed and can't move!", pbThis))
       PBDebug.log("[Status continues] #{pbThis}'s polymorph count is #{@statusCount}")

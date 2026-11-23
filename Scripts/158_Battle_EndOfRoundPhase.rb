@@ -161,6 +161,26 @@ class Battle
       battler.pbRecoverHP(battler.totalhp / 16)
       pbDisplay(_INTL("{1}'s HP was restored.", battler.pbThis))
     end
+    # Consecration: grounded allies of the setter heal 1/16, grounded foes lose 1/16.
+    if @field.terrain == :Consecration && !@field.terrainSetterSide.nil?
+      tick = PaladinMoves.consecration_tick(
+        battler.idxOwnSide == @field.terrainSetterSide,
+        battler.affectedByTerrain?,
+        battler.canHeal?,
+        battler.takesIndirectDamage?
+      )
+      fraction = battler.totalhp / 16
+      if tick == :heal
+        PBDebug.log("[Lingering effect] Consecration heals #{battler.pbThis(true)}")
+        healed = battler.pbRecoverHP(fraction)
+        pbDisplay(_INTL("{1} is healed by the consecrated ground!", battler.pbThis)) if healed > 0
+      elsif tick == :damage
+        PBDebug.log("[Lingering effect] Consecration sears #{battler.pbThis(true)}")
+        battler.pbTakeEffectDamage(fraction, false) do |_hp_lost|
+          pbDisplay(_INTL("{1} is seared by the consecrated ground!", battler.pbThis))
+        end
+      end
+    end
   end
 
   #=============================================================================
@@ -312,7 +332,11 @@ class Battle
       amt = battler.totalhp / 16
       healed = battler.pbRecoverHP(amt)
       next if healed <= 0
-      pbDisplay(_INTL("{1} regained HP while encased in ice!", battler.pbThis))
+      if battler.divine_shield?
+        pbDisplay(_INTL("{1} regained HP behind its divine shield!", battler.pbThis))
+      else
+        pbDisplay(_INTL("{1} regained HP while encased in ice!", battler.pbThis))
+      end
     end
   end
 
@@ -607,8 +631,11 @@ class Battle
         pbDisplay(_INTL("The mist disappeared from the battlefield!"))
       when :Psychic
         pbDisplay(_INTL("The weirdness disappeared from the battlefield!"))
+      when :Consecration
+        pbDisplay(_INTL("The consecration faded from the battlefield!"))
       end
       @field.terrain = :None
+      @field.terrainSetterSide = nil
       allBattlers.each { |battler| battler.pbAbilityOnTerrainChange }
       # Start up the default terrain
       if @field.defaultTerrain != :None
@@ -622,10 +649,11 @@ class Battle
     terrain_data = GameData::BattleTerrain.try_get(@field.terrain)
     pbCommonAnimation(terrain_data.animation) if terrain_data
     case @field.terrain
-    when :Electric then pbDisplay(_INTL("An electric current is running across the battlefield."))
-    when :Grassy   then pbDisplay(_INTL("Grass is covering the battlefield."))
-    when :Misty    then pbDisplay(_INTL("Mist is swirling about the battlefield."))
-    when :Psychic  then pbDisplay(_INTL("The battlefield is weird."))
+    when :Electric     then pbDisplay(_INTL("An electric current is running across the battlefield."))
+    when :Grassy       then pbDisplay(_INTL("Grass is covering the battlefield."))
+    when :Misty        then pbDisplay(_INTL("Mist is swirling about the battlefield."))
+    when :Psychic      then pbDisplay(_INTL("The battlefield is weird."))
+    when :Consecration then pbDisplay(_INTL("The ground is consecrated."))
     end
   end
 
@@ -754,6 +782,7 @@ class Battle
         next if !battler.pbOwnedByPlayer? || battler.affection_level < 4 || battler.mega?
         next if pbRandom(100) < 80
         old_status = battler.status
+        was_divine = battler.divine_shield?
         battler.pbCureStatus(false)
         case old_status
         when :SLEEP
@@ -765,7 +794,11 @@ class Battle
         when :PARALYSIS
           pbDisplay(_INTL("{1} gathered all its energy to break through its paralysis so you wouldn't worry!", battler.pbThis))
         when :FROZEN
-          pbDisplay(_INTL("{1} broke out of the ice so you wouldn't worry!", battler.pbThis))
+          if was_divine
+            pbDisplay(_INTL("{1} let its divine shield fade so you wouldn't worry!", battler.pbThis))
+          else
+            pbDisplay(_INTL("{1} broke out of the ice so you wouldn't worry!", battler.pbThis))
+          end
         when :FROSTBITE
           pbDisplay(_INTL("{1} shook off its frostbite so you wouldn't worry!", battler.pbThis))
         when :POLYMORPH

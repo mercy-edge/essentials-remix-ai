@@ -262,6 +262,7 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHPCureStatus < Battle::Move
     end
     if target.status != :NONE
       old_status = target.status
+      was_divine = target.divine_shield?
       target.pbCureStatus(false)
       case old_status
       when :SLEEP
@@ -273,7 +274,11 @@ class Battle::Move::HealUserAndAlliesQuarterOfTotalHPCureStatus < Battle::Move
       when :PARALYSIS
         @battle.pbDisplay(_INTL("{1} was cured of paralysis.", target.pbThis))
       when :FROZEN
-        @battle.pbDisplay(_INTL("{1} broke out of the ice!", target.pbThis))
+        if was_divine
+          @battle.pbDisplay(_INTL("{1}'s divine shield faded!", target.pbThis))
+        else
+          @battle.pbDisplay(_INTL("{1} broke out of the ice!", target.pbThis))
+        end
       when :FROSTBITE
         @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", target.pbThis))
       when :BLEED

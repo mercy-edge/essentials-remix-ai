@@ -443,8 +443,15 @@ class Battle::Move::GiveUserStatusToTarget < Battle::Move
       target.pbFrostbite(user)
       msg = _INTL("{1}'s frostbite was healed.", user.pbThis)
     when :FROZEN
+      was_divine = user.divine_shield?
+      # Set the marker before pbFreeze so the inflict message matches the shield.
+      target.pokemon.divine_shield = was_divine ? true : false if target.pokemon
       target.pbFreeze
-      msg = _INTL("{1} broke out of the ice!", user.pbThis)
+      if was_divine
+        msg = _INTL("{1}'s divine shield faded!", user.pbThis)
+      else
+        msg = _INTL("{1} broke out of the ice!", user.pbThis)
+      end
     end
     if msg != ""
       user.pbCureStatus(false)
@@ -516,6 +523,7 @@ class Battle::Move::CureUserPartyStatus < Battle::Move
   def pbAromatherapyHeal(pkmn, battler = nil)
     oldStatus = (battler) ? battler.status : pkmn.status
     curedName = (battler) ? battler.pbThis : pkmn.name
+    was_divine = (battler) ? battler.divine_shield? : pkmn.divine_shield
     if battler
       battler.pbCureStatus(false)
     else
@@ -532,7 +540,11 @@ class Battle::Move::CureUserPartyStatus < Battle::Move
     when :PARALYSIS
       @battle.pbDisplay(_INTL("{1} was cured of paralysis.", curedName))
     when :FROZEN
-      @battle.pbDisplay(_INTL("{1} broke out of the ice!", curedName))
+      if was_divine
+        @battle.pbDisplay(_INTL("{1}'s divine shield faded!", curedName))
+      else
+        @battle.pbDisplay(_INTL("{1} broke out of the ice!", curedName))
+      end
     when :FROSTBITE
       @battle.pbDisplay(_INTL("{1}'s frostbite was healed.", curedName))
     when :BLEED

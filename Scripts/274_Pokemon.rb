@@ -23,6 +23,9 @@ class Pokemon
   # @return [Integer] sleep count / toxic flag / 0:
   #   sleep (number of rounds before waking up), toxic (0 = regular poison, 1 = toxic)
   attr_accessor :statusCount
+  # True when this Pokémon's :FROZEN status is Divine Shield, not Ice Block.
+  # Cleared whenever the status stops being :FROZEN. Old saves load this as nil.
+  attr_accessor :divine_shield
   # This Pokémon's shininess (true, false, nil). Is recalculated if made nil.
   # @param value [Boolean, nil] whether this Pokémon is shiny
   attr_writer   :shiny
@@ -258,6 +261,7 @@ class Pokemon
       raise ArgumentError, _INTL("Attempted to set {1} as Pokémon status", value.class.name)
     end
     @status = new_status.id
+    @divine_shield = false if @status != :FROZEN
   end
 
   # @return [Boolean] whether the Pokémon is not fainted and not an egg
@@ -279,8 +283,9 @@ class Pokemon
   # Heals the status problem of this Pokémon.
   def heal_status
     return if egg?
-    @status      = :NONE
-    @statusCount = 0
+    @status        = :NONE
+    @statusCount   = 0
+    @divine_shield = false
   end
 
   # Restores all PP of this Pokémon. If a move index is given, restores the PP
@@ -1206,6 +1211,7 @@ class Pokemon
     self.level        = level
     @steps_to_hatch   = 0
     heal_status
+    @divine_shield    = false
     @gender           = nil
     @shiny            = nil
     @ability_index    = nil

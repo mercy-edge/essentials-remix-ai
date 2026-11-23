@@ -9,6 +9,7 @@ class Battle::ActiveField
   attr_accessor :defaultTerrain
   attr_accessor :terrain
   attr_accessor :terrainDuration
+  attr_accessor :terrainSetterSide   # idxOwnSide of the battler who set the terrain
 
   def initialize
     @effects = []
@@ -29,8 +30,9 @@ class Battle::ActiveField
     @weather         = :None
     @weatherDuration = 0
     @defaultTerrain  = :None
-    @terrain         = :None
-    @terrainDuration = 0
+    @terrain           = :None
+    @terrainDuration   = 0
+    @terrainSetterSide = nil
   end
 end
 

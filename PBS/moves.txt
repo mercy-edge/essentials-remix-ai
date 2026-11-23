@@ -9575,16 +9575,17 @@ EffectChance = 20
 Description = The user lands a heroic blow. It may raise the user's Attack.
 #-------------------------------
 [JUDGEMENT]
-Name = Judgment
+Name = Judgement
 Type = NORMAL
 Category = Special
-Power = 40
+Power = 60
 Accuracy = 100
-TotalPP = 25
+TotalPP = 10
 Target = NearOther
-FunctionCode = CustomCategoryByHigherAttack
+FunctionCode = CustomJudgement
 Flags = CanProtect,CanMirrorMove
-Description = The user judges the target with divine force. This move's category depends on the user's higher offensive stat.
+EffectChance = 20
+Description = Passes judgment on the target. Its type and added effect change with the Seal the user holds, and it uses whichever of the user's Attack or Sp. Atk is higher.
 #-------------------------------
 [LIGHTNINGBOLT]
 Name = Lightning Bolt
@@ -9786,28 +9787,28 @@ Description = The user unleashes arcane missiles that hit three times and never 
 #-------------------------------
 [HOLYLIGHT]
 Name = Holy Light
-Type = FAIRY
+Type = ELECTRIC
 Category = Status
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = HealTargetHalfOfTotalHP
-Flags = CanProtect,CanMirrorMove
-Description = A holy spark restores half of the target's max HP.
+Accuracy = 0
+TotalPP = 5
+Target = User
+FunctionCode = HealUserHalfOfTotalHP
+Flags = Snatch
+Description = A holy light restores half of the user's max HP.
 #-------------------------------
 [HAMMEROFJUSTICE]
 Name = Hammer of Justice
-Type = FAIRY
+Type = GROUND
 Category = Physical
 Power = 40
 Accuracy = 100
-TotalPP = 20
+TotalPP = 15
 Target = NearOther
 Priority = 1
 FunctionCode = FlinchTarget
 Flags = Contact,CanProtect,CanMirrorMove
-EffectChance = 20
-Description = The user strikes first with righteous force and may make the target flinch.
+EffectChance = 30
+Description = The user strikes the target with a hammer of justice. This may also make the target flinch.
 #-------------------------------
 [FADE]
 Name = Fade
@@ -10326,3 +10327,57 @@ Target = NearOther
 FunctionCode = CustomVampiricEmbrace
 Flags = CanProtect,CanMirrorMove,CanMagicCoat
 Description = Marks the target with shadow for 5 turns. The user's Ghost-type moves against it heal the user and its ally.
+#-------------------------------
+[CONSECRATION]
+Name = Consecration
+Type = GROUND
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = BothSides
+FunctionCode = CustomConsecration
+Description = Consecrates the ground for 5 turns. Grounded Pokémon on the user's side restore a little HP each turn, and grounded foes take a little damage.
+#-------------------------------
+[LAYONHANDS]
+Name = Lay on Hands
+Type = WATER
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = User
+FunctionCode = CustomLayOnHands
+Description = The user switches out and fully restores the HP and status of the Pokémon that comes in. The user does not faint.
+#-------------------------------
+[REDEMPTION]
+Name = Redemption
+Type = WATER
+Category = Status
+Accuracy = 0
+TotalPP = 1
+Target = User
+FunctionCode = Gen9RevivalBlessing
+Flags = CannotMetronome
+Description = The user's holy light revives a fainted party Pokémon and restores half of its max HP.
+#-------------------------------
+[DIVINESHIELD]
+Name = Divine Shield
+Type = ELECTRIC
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = User
+Priority = 4
+FunctionCode = CustomDivineShield
+Description = The user is wrapped in a divine shield. It can't attack or switch, but moves can't touch it, and it slowly recovers HP for a few turns.
+#-------------------------------
+[HOLYSHOCK]
+Name = Holy Shock
+Type = ELECTRIC
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = CustomHolyShock
+Flags = CanProtect,CanMirrorMove
+Description = A burst of holy light. It damages a foe, or restores half the HP of an ally.

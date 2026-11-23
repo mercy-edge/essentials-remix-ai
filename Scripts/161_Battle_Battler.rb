@@ -73,6 +73,13 @@ class Battle::Battler
     return GameData::Ability.try_get(@ability_id)
   end
 
+  # True while this Pokémon's :FROZEN status is Divine Shield rather than Ice Block.
+  # The marker is stored on the Pokémon so a forced switch does not turn the
+  # messages back into ice. Ice Block never sets it, and curing :FROZEN clears it.
+  def divine_shield?
+    return @pokemon && @pokemon.divine_shield ? true : false
+  end
+
   def ability=(value)
     new_ability = GameData::Ability.try_get(value)
     @ability_id = (new_ability) ? new_ability.id : nil
