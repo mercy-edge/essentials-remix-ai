@@ -130,6 +130,7 @@ def pbApplyStarterGenderMatchPlayer!(pkmn)
 end
 
 # Adds the race/class starter at level 1 without obtain screen. Call once after class + name are set on a new game.
+# Every class starter has 5 in each IV. Other silent gifts are unchanged.
 def pbGiveNewGameRaceClassStarterPokemonSilent
   return false if !$player
   $PokemonGlobal = PokemonGlobalMetadata.new if !$PokemonGlobal
@@ -144,6 +145,7 @@ def pbGiveNewGameRaceClassStarterPokemonSilent
 
   pkmn = Pokemon.new(species, 1)
   pbApplyStarterGenderMatchPlayer!(pkmn)
+  pbSetAllIVs(pkmn, 5)
   ok = pbAddPokemonSilent(pkmn, 1, true)
   $PokemonGlobal.race_class_starter_given = true if ok
   ok

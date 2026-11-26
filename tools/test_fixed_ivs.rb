@@ -481,6 +481,17 @@ check(failures, "feathers raise one IV and stop at 31") do
   raise "Health Feather does not raise IVs" unless handlers.include?("pbUseIVRaisingItem(:HP, 1,")
 end
 
+check(failures, "race/class starters are given 5 IVs before the silent gift") do
+  src = File.read(File.join(ROOT, "Plugins/Player Class Selection/PlayerClassSelection.rb"))
+  gift = src[/^def pbGiveNewGameRaceClassStarterPokemonSilent.*?^end/m]
+  raise "starter gift missing" unless gift
+  raise "starter gift does not set every IV to 5" unless gift.include?("pbSetAllIVs(pkmn, 5)")
+  raise "IVs are set after the Pokémon is added" unless gift.index("pbSetAllIVs(pkmn, 5)") < gift.index("pbAddPokemonSilent")
+  [:MACHOP, :TRAPINCH, :BUDEW, :PICHU, :CYNDAQUIL, :AXEW].each do |species|
+    raise "starter list missing #{species}" unless src.include?(":#{species}")
+  end
+end
+
 check(failures, "Oak lab map events call pbAddPokemon for the three starters") do
   blob = File.binread(File.join(ROOT, "Data/Map004.rxdata"))
   [":CHARMANDER, 5", ":SQUIRTLE, 5", ":BULBASAUR, 5"].each do |fragment|
